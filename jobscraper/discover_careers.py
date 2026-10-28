@@ -24,6 +24,8 @@ log = logging.getLogger("discover")
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "careers_sites.json"
 MANUAL = ROOT / "careers_sites_manual.yaml"
+CANDIDATES = ROOT / "careers_candidates.yaml"
+REPORT = ROOT / "data" / "careers_report.json"
 
 
 def slugs(name: str) -> list[str]:
@@ -110,29 +112,79 @@ def verify(s, site: dict) -> bool:
     return True
 
 
+def workday_root_site(s, tenant: str, wd: str) -> str | None:
+    """The default site a Workday tenant redirects to, if any."""
+    try:
+        r = s.get(f"https://{tenant}.{wd}.myworkdayjobs.com/", timeout=30, allow_redirects=True)
+    except Exception:
+        return None
+    m = re.search(rf"/wday/cxs/{re.escape(tenant)}/([A-Za-z0-9_-]+)", r.text) or \
+        re.match(rf"https://{re.escape(tenant)}\.{wd}\.myworkdayjobs\.com/(?:[a-z]{{2}}-[A-Z]{{2}}/)?([A-Za-z0-9_-]+)", r.url)
+    return m.group(1) if m else None
+
+
+def try_candidate(s, cand: dict, platform: str) -> dict | None:
+    if platform == "oracle":
+        for num in cand["sites"]:
+            site = {"platform": "oracle", "id": f"{cand['host']}/{num}"}
+            if verify(s, site):
+                return site
+        return None
+    wds = [f"wd{n}" for n in cand.get("wd", [])] + [w for w in ("wd1", "wd3", "wd5", "wd12", "wd103")
+                                                  if w not in {f"wd{n}" for n in cand.get("wd", [])}]
+    for i, wd in enumerate(wds):
+        sites = list(cand.get("sites", [])) if i < len(cand.get("wd", [])) or i == 0 else []
+        root = workday_root_site(s, cand["tenant"], wd)
+        if root and root not in sites:
+            sites.append(root)
+        for name in sites:
+            site = {"platform": "workday", "id": f"{cand['tenant']}.{wd}/{name}"}
+            if verify(s, site):
+                return site
+    return None
+
+
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
-    manual = (yaml.safe_load(MANUAL.read_text()) or {}).get("sites", []) if MANUAL.exists() else []
+    manual_cfg = (yaml.safe_load(MANUAL.read_text()) or {}) if MANUAL.exists() else {}
+    manual = manual_cfg.get("sites") or []
+    excluded = {(x["platform"], x["id"]) for x in manual_cfg.get("exclude") or []}
     manual_names = {institutions.norm(m["institution"]) for m in manual}
+    cands = yaml.safe_load(CANDIDATES.read_text()) if CANDIDATES.exists() else {}
+    cand_by_name = {}
+    for platform in ("workday", "oracle"):
+        for c in cands.get(platform) or []:
+            cand_by_name.setdefault(institutions.norm(c["institution"]), []).append((platform, c))
     previous = {institutions.norm(x["institution"]): x for x in json.loads(OUT.read_text())} if OUT.exists() else {}
     todo = [i for i in institutions.load() if i["key"] not in manual_names]
 
     def find(inst):
         s = session()
-        site = probe_apis(s, inst["name"])
+        site = None
+        for platform, cand in cand_by_name.get(inst["key"], []):
+            site = try_candidate(s, cand, platform)
+            if site:
+                break
+        if not site:
+            site = probe_apis(s, inst["name"])
+        if site and (site["platform"], site["id"]) in excluded:
+            site = None
         if not site:
             site = search_web(s, inst["name"])
             if site and not verify(s, site):
                 site = None
-        if not site and inst["key"] in previous:  # keep last week's answer if today's lookup failed
-            return previous[inst["key"]]
+        prev = previous.get(inst["key"])
+        if not site and prev and (prev["platform"], prev["id"]) not in excluded:
+            return prev  # keep last week's answer if today's lookup failed
         if site:
             site["institution"] = inst["name"]
             log.info("%s -> %s %s", inst["name"], site["platform"], site["id"])
         return site
 
-    with ThreadPoolExecutor(max_workers=4) as pool:
-        found = [x for x in pool.map(find, todo) if x]
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        results = list(pool.map(find, todo))
+    found = [x for x in results if x]
+    missing = [inst["name"] for inst, x in zip(todo, results) if not x]
     sites = manual + found
     # The same careers site can serve several names on the list (e.g. "LSEG" and "London Stock Exchange Group").
     unique = {}
@@ -144,6 +196,8 @@ def main() -> None:
     for x in unique.values():
         by[x["platform"]] = by.get(x["platform"], 0) + 1
     log.info("Found careers sites for %d institutions: %s", len(unique), by)
+    REPORT.write_text(json.dumps({"found": len(unique), "by_platform": by,
+                                  "not_found (searched on LinkedIn by name instead)": missing}, indent=1))
 
 
 if __name__ == "__main__":

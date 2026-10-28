@@ -28,7 +28,7 @@ jobs:
         run: |
           git config user.name "job-digest-bot"
           git config user.email "job-digest-bot@users.noreply.github.com"
-          git add data/careers_sites.json
+          git add data/careers_sites.json data/careers_report.json
           git diff --cached --quiet || git commit -m "Update careers sites [skip ci]"
           git pull --rebase --autostash || true
           git push

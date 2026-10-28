@@ -5,3 +5,10 @@
 #   oracle:   <host>/<site number>        from https://<host>/hcmUI/CandidateExperience/en/sites/<site number>
 #   greenhouse / lever / ashby / smartrecruiters: the board name in the URL
 sites: []
+
+# Matches that belong to a different company with the same name.
+exclude:
+  - {platform: ashby, id: unit}
+  - {platform: ashby, id: pic}
+  - {platform: greenhouse, id: iex}
+  - {platform: ashby, id: artemis}

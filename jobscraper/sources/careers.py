@@ -28,6 +28,7 @@ def load_sites() -> list[dict]:
     return json.loads(SITES_FILE.read_text()) if SITES_FILE.exists() else []
 
 
+
 def fetch_site(site: dict, cfg: dict) -> list[Job]:
     platform = site["platform"]
     s = session()

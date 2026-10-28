@@ -1,0 +1,100 @@
+# Likely Workday / Oracle careers sites for big institutions on the list.
+# discover_careers tries each one and keeps only those that answer, so wrong
+# guesses are harmless. Format: institution, platform, tenant, wd (Workday data
+# centre numbers to try) and sites (site names to try).
+workday:
+  - {institution: Deutsche Bank, tenant: db, wd: [3], sites: [DBWebsite]}
+  - {institution: BlackRock, tenant: blackrock, wd: [1], sites: [BlackRock_Professional, BlackRock_Campus]}
+  - {institution: State Street, tenant: statestreet, wd: [1], sites: [Global]}
+  - {institution: Northern Trust, tenant: ntrs, wd: [1], sites: [northerntrust]}
+  - {institution: Bank of New York Mellon, tenant: bnymellon, wd: [5, 1], sites: [BNY_Careers, BNYMellonCareers]}
+  - {institution: Citi, tenant: citi, wd: [5], sites: ["2", Citi]}
+  - {institution: Wells Fargo, tenant: wf, wd: [1], sites: [WellsFargoJobs]}
+  - {institution: Morgan Stanley, tenant: ms, wd: [5], sites: [External]}
+  - {institution: Nomura, tenant: nomura, wd: [3, 1], sites: [Nomura_Careers, Nomura_Campus, External]}
+  - {institution: Barclays, tenant: barclays, wd: [3], sites: [External_Career_Site_Barclays, Barclays]}
+  - {institution: HSBC, tenant: hsbc, wd: [3], sites: [external, HSBC_Careers]}
+  - {institution: Standard Chartered, tenant: scb, wd: [3], sites: [External, Careers]}
+  - {institution: UBS, tenant: ubs, wd: [3], sites: [UBS_Experienced_Careers, UBS_Graduate_Careers, External]}
+  - {institution: Lloyds Banking Group, tenant: lbg, wd: [3], sites: [LBG_Careers, External]}
+  - {institution: NatWest Group, tenant: rbs, wd: [3], sites: [RBS, NatWest_Group, External]}
+  - {institution: MUFG, tenant: mufgub, wd: [3, 1], sites: [MUFG-Careers]}
+  - {institution: Mizuho, tenant: mizuho, wd: [1], sites: [mizuhoamericas, External]}
+  - {institution: SMBC, tenant: smbcgroup, wd: [1], sites: [SMBC, External]}
+  - {institution: RBC, tenant: rbc, wd: [3], sites: [RBCGLOBAL1]}
+  - {institution: BMO, tenant: bmo, wd: [3], sites: [External]}
+  - {institution: TD Bank, tenant: td, wd: [3], sites: [TD_Bank_Careers]}
+  - {institution: CIBC, tenant: cibc, wd: [3], sites: [search, campus]}
+  - {institution: Scotiabank, tenant: scotiabank, wd: [3], sites: [Scotiabank, External]}
+  - {institution: Macquarie, tenant: macquarie, wd: [3], sites: [Careers, External]}
+  - {institution: PNC, tenant: pnc, wd: [5], sites: [External]}
+  - {institution: Truist, tenant: truist, wd: [1], sites: [Careers]}
+  - {institution: U.S. Bank, tenant: usbank, wd: [1], sites: [US_Bank_Careers]}
+  - {institution: Fifth Third Bank, tenant: fifththird, wd: [5], sites: [53careers]}
+  - {institution: KeyBank, tenant: keybank, wd: [5], sites: [External_Career_Site]}
+  - {institution: M&T Bank, tenant: mtb, wd: [5], sites: [MTB]}
+  - {institution: Huntington Bancshares, tenant: huntington, wd: [12], sites: [HNBcareers]}
+  - {institution: Citizens Financial Group, tenant: citizens, wd: [5], sites: [CitizensBank, External]}
+  - {institution: Regions Financial, tenant: regions, wd: [5], sites: [Regions_Careers]}
+  - {institution: Comerica, tenant: comerica, wd: [5], sites: [External]}
+  - {institution: Capital Group, tenant: capgroup, wd: [1], sites: [capitalgroupcareers]}
+  - {institution: T. Rowe Price, tenant: troweprice, wd: [5], sites: [TRowePrice]}
+  - {institution: Vanguard, tenant: vanguard, wd: [5], sites: [vanguard_external]}
+  - {institution: Fidelity International, tenant: fil, wd: [3], sites: ["001"]}
+  - {institution: Invesco, tenant: invesco, wd: [1], sites: [IVZ]}
+  - {institution: Franklin Templeton, tenant: franklintempleton, wd: [5], sites: [Primary-External-1]}
+  - {institution: AllianceBernstein, tenant: alliancebernstein, wd: [1], sites: [alliancebernsteincareers]}
+  - {institution: Janus Henderson, tenant: janushenderson, wd: [1], sites: [JanusHendersonCareers, External]}
+  - {institution: Wellington Management, tenant: wellington, wd: [5], sites: [External]}
+  - {institution: Nuveen, tenant: tiaa, wd: [1], sites: [Search]}
+  - {institution: Prudential Financial, tenant: pru, wd: [5], sites: [Careers]}
+  - {institution: Principal Global Investors, tenant: principal, wd: [5], sites: [Principal]}
+  - {institution: Chubb, tenant: chubb, wd: [3], sites: [ExternalCareers, Chubb_Careers]}
+  - {institution: AIG, tenant: aig, wd: [1], sites: [aig]}
+  - {institution: Travelers, tenant: travelers, wd: [5], sites: [External]}
+  - {institution: Marsh, tenant: mmc, wd: [1], sites: [MMC]}
+  - {institution: Willis Towers Watson, tenant: wtwco, wd: [1], sites: [Careers]}
+  - {institution: Arthur J. Gallagher, tenant: ajg, wd: [1], sites: [AJG, External]}
+  - {institution: Swiss Re, tenant: swissre, wd: [3], sites: [SwissReCareers]}
+  - {institution: Munich Re, tenant: munichre, wd: [3], sites: [MunichRe, External]}
+  - {institution: Zurich Insurance, tenant: zurich, wd: [3], sites: [Zurich, External]}
+  - {institution: Moody's, tenant: moodys, wd: [5], sites: [Moodys, External]}
+  - {institution: S&P Global, tenant: spgi, wd: [5], sites: [SPGI_Careers]}
+  - {institution: MSCI, tenant: msci, wd: [1], sites: [MSCI, External]}
+  - {institution: London Stock Exchange Group, tenant: lseg, wd: [3], sites: [Careers]}
+  - {institution: Intercontinental Exchange, tenant: ice, wd: [1], sites: [ICE, External]}
+  - {institution: CME Group, tenant: cmegroup, wd: [1], sites: [cme_careers]}
+  - {institution: Cboe Global Markets, tenant: cboe, wd: [1], sites: [External_Career_CBOE]}
+  - {institution: DTCC, tenant: dtcc, wd: [1], sites: [DTCC_Careers, External]}
+  - {institution: FIS, tenant: fis, wd: [5], sites: [SearchJobs]}
+  - {institution: Fiserv, tenant: fiserv, wd: [5], sites: [EXT]}
+  - {institution: Global Payments, tenant: tsys, wd: [1], sites: [TSYS]}
+  - {institution: Morningstar, tenant: morningstar, wd: [5], sites: [Americas, Global]}
+  - {institution: FactSet, tenant: factset, wd: [1], sites: [FactSetCareers]}
+  - {institution: Accenture, tenant: accenture, wd: [103], sites: [AccentureCareers]}
+  - {institution: PwC, tenant: pwc, wd: [3], sites: [Global_Experienced_Careers, Global_Campus_Careers]}
+  - {institution: Kroll, tenant: kroll, wd: [1], sites: [External]}
+  - {institution: Houlihan Lokey, tenant: hl, wd: [1], sites: [Campus, Experienced]}
+  - {institution: Brookfield, tenant: brookfield, wd: [5], sites: [brookfield]}
+  - {institution: Blackstone, tenant: blackstone, wd: [1], sites: [Blackstone_Careers]}
+  - {institution: KKR, tenant: kkr, wd: [1], sites: [KKR_Careers]}
+  - {institution: Carlyle, tenant: carlyle, wd: [1], sites: [External_Careers]}
+  - {institution: Apollo Global Management, tenant: athene, wd: [5], sites: [Apollo_Careers, Apollo]}
+  - {institution: Ares Management, tenant: ares, wd: [1], sites: [External]}
+  - {institution: Schroders, tenant: schroders, wd: [3], sites: [Schroders_Careers, External]}
+  - {institution: abrdn, tenant: abrdn, wd: [3], sites: [abrdncareers, External]}
+  - {institution: M&G plc, tenant: mandg, wd: [3], sites: [MandGCareers, External]}
+  - {institution: Aviva, tenant: aviva, wd: [3, 1], sites: [External, Aviva]}
+  - {institution: Allianz, tenant: allianz, wd: [3], sites: [Allianz, External]}
+  - {institution: Santander UK, tenant: santander, wd: [3], sites: [SantanderCareers, External]}
+  - {institution: Julius Baer, tenant: juliusbaer, wd: [3], sites: [External]}
+  - {institution: Bank of Ireland UK, tenant: boi, wd: [3], sites: [BOI_Careers, External]}
+  - {institution: Nordea, tenant: nordea, wd: [3], sites: [nordea, External]}
+  - {institution: ING, tenant: ing, wd: [3], sites: [ICSGBLCOR, External]}
+  - {institution: ABN AMRO, tenant: abnamro, wd: [3], sites: [External]}
+  - {institution: Westpac, tenant: westpac, wd: [3], sites: [External]}
+  - {institution: ANZ, tenant: anz, wd: [3], sites: [External]}
+  - {institution: National Australia Bank, tenant: nab, wd: [3], sites: [External]}
+
+oracle:
+  - {institution: JPMorgan Chase, host: jpmc.fa.oraclecloud.com, sites: [CX_1001]}
