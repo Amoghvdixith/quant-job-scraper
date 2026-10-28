@@ -4,11 +4,35 @@
 max_age_days: 5
 
 # Sources to search. Remove one to switch it off.
-sources: [linkedin, google, efinancialcareers]
+sources: [linkedin, google, efinancialcareers, indeed, careers]
 
 # LinkedIn location filter. "Worldwide" covers every country; add specific
 # countries (e.g. "United Kingdom", "Singapore") to get more results there.
 linkedin_locations: [Worldwide]
+# Countries searched on top of Worldwide, a few per run in rotation
+# (Worldwide alone stops at ~1,000 results, mostly from the biggest markets).
+linkedin_rotating_locations:
+  - United Kingdom
+  - United States
+  - Singapore
+  - Hong Kong SAR
+  - Ireland
+  - Germany
+  - Netherlands
+  - Switzerland
+  - France
+  - Luxembourg
+  - Canada
+  - Australia
+  - Japan
+  - Poland
+  - Belgium
+  - Spain
+linkedin_locations_per_run: 2
+# Firms from institutions.csv searched by name on LinkedIn each run (those without
+# a careers site we can read directly). 80 per run covers the list about every day.
+linkedin_target_firms_per_run: 80
+linkedin_target_firm_pages: 2
 # LinkedIn experience levels: 1 = Internship, 2 = Entry level, 3 = Associate.
 linkedin_experience_levels: [1, 2, 3]
 # Result pages fetched per search (LinkedIn returns ~10 jobs per page).
@@ -16,6 +40,12 @@ linkedin_max_pages: 3
 
 # Google Jobs: one search per role title (not every keyword) to avoid being blocked.
 google_results_per_search: 20
+
+# Indeed: countries searched, a few per run in rotation (names as Indeed uses them).
+indeed_countries: [uk, usa, singapore, hong kong, ireland, germany, netherlands, switzerland,
+                   france, luxembourg, canada, australia, japan, poland, belgium, spain]
+indeed_countries_per_run: 3
+indeed_results_per_search: 30
 
 # eFinancialCareers: result pages per keyword.
 efc_max_pages: 2
@@ -60,6 +90,9 @@ senior_title_words:
   - head
   - director
   - vp
+  - svp
+  - evp
+  - md
   - avp
   - vice president
   - principal

@@ -11,7 +11,7 @@ from .models import Job
 
 COLUMNS = [
     ("New", 7), ("Tier", 6), ("Category", 22), ("Matched Role", 30), ("Job Title", 45),
-    ("Company", 28), ("Location", 30), ("Posted", 11), ("Days Old", 9), ("Source", 18),
+    ("Company", 28), ("On Your Target List", 22), ("Location", 30), ("Posted", 11), ("Days Old", 9), ("Source", 18),
     ("Visa Sponsorship", 16), ("UK Licensed Sponsor", 18), ("Years Exp. Asked", 15),
     ("Apply Link", 14), ("Sponsorship Evidence", 60),
 ]
@@ -41,6 +41,7 @@ def write_workbook(jobs: list[Job], new_keys: set[str], stats: dict, path: Path)
             job.role_title,
             job.title,
             job.company,
+            job.target_firm,
             job.location,
             job.posted,
             (today - job.posted).days if job.posted else None,
@@ -52,16 +53,18 @@ def write_workbook(jobs: list[Job], new_keys: set[str], stats: dict, path: Path)
             job.sponsorship_evidence,
         ])
         row = ws.max_row
-        link = ws.cell(row=row, column=14)
+        link = ws.cell(row=row, column=15)
         link.hyperlink = job.url
         link.font = Font(color="0563C1", underline="single")
-        ws.cell(row=row, column=8).number_format = "yyyy-mm-dd"
+        ws.cell(row=row, column=9).number_format = "yyyy-mm-dd"
         if is_new:
             ws.cell(row=row, column=1).fill = NEW_FILL
         if job.sponsorship == "Yes":
-            ws.cell(row=row, column=11).fill = YES_FILL
-        if job.uk_licensed_sponsor == "Yes":
             ws.cell(row=row, column=12).fill = YES_FILL
+        if job.uk_licensed_sponsor == "Yes":
+            ws.cell(row=row, column=13).fill = YES_FILL
+        if job.target_firm:
+            ws.cell(row=row, column=7).fill = YES_FILL
     ws.freeze_panes = "A2"
     ws.auto_filter.ref = ws.dimensions
 
@@ -73,6 +76,7 @@ def write_workbook(jobs: list[Job], new_keys: set[str], stats: dict, path: Path)
         ("Jobs in this sheet", len(jobs)),
         ("New since last email", len(new_keys)),
         ("Offer visa sponsorship", sum(j.sponsorship == "Yes" for j in jobs)),
+        ("At your target institutions", sum(bool(j.target_firm) for j in jobs)),
         ("", ""),
         ("Source", "Jobs found this run"),
     ]

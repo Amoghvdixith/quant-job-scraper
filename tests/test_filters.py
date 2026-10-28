@@ -83,7 +83,7 @@ def test_linkedin_card_parsing():
     from bs4 import BeautifulSoup
     card = BeautifulSoup(LINKEDIN_HTML, "html.parser").select("div.base-search-card, div.job-search-card")
     assert len(card) == 1
-    job = linkedin._parse_card(card[0], ROLES[0])
+    job = linkedin._parse_card(card[0], "Market Risk Analyst")
     assert job.title == "Graduate Market Risk Analyst"
     assert job.company == "Barclays"
     assert job.url == "https://www.linkedin.com/jobs/view/4012345678"
@@ -116,7 +116,26 @@ def test_excel_and_email(tmp_path):
     path = write_workbook(jobs, {jobs[0].key}, stats, tmp_path / "t.xlsx")
     ws = load_workbook(path)["Jobs"]
     assert ws["A2"].value == "NEW" and ws["E2"].value == "Market Risk Analyst"
-    assert ws["N2"].hyperlink.target == "https://x/1"
+    assert ws["O2"].hyperlink.target == "https://x/1"
     msg = build_email(jobs, {jobs[0].key}, stats, path, "a@gmail.com", "b@gmail.com")
     assert msg["To"] == "b@gmail.com"
     assert "1 new" in msg["Subject"]
+
+
+def test_target_firms():
+    from jobscraper import institutions
+    assert institutions.match("Barclays") == "Barclays"
+    assert institutions.match("Goldman Sachs Asset Management") == "Goldman Sachs"
+    assert institutions.match("Two Sigma Investments, LP") == "Two Sigma"
+    assert institutions.match("Jane Street Capital") == "Jane Street"
+    assert institutions.match("Acme Widgets Ltd") == ""
+
+
+def test_rotation():
+    from jobscraper.main import rotate
+    items = list(range(10))
+    seen = set()
+    for slot in range(4):
+        seen |= set(rotate(items, 3, slot))
+    assert seen == set(items)
+    assert rotate(items, 20, 5) == items

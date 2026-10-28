@@ -1,0 +1,7 @@
+# Careers sites added by hand. These override what discover_careers finds.
+# platform: workday | oracle | greenhouse | lever | ashby | smartrecruiters
+# id formats:
+#   workday:  <tenant>.<wdN>/<site>       from https://<tenant>.<wdN>.myworkdayjobs.com/<site>
+#   oracle:   <host>/<site number>        from https://<host>/hcmUI/CandidateExperience/en/sites/<site number>
+#   greenhouse / lever / ashby / smartrecruiters: the board name in the URL
+sites: []

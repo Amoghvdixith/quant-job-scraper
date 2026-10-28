@@ -24,6 +24,7 @@ class Job:
     sponsorship_evidence: str = ""
     years_required: int | None = None
     uk_licensed_sponsor: str = ""
+    target_firm: str = ""
     first_seen: str = ""
     sources: list[str] = field(default_factory=list)
 

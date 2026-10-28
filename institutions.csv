@@ -1,0 +1,501 @@
+Institution,Sector
+JPMorgan Chase,Global investment & universal banks
+Goldman Sachs,Global investment & universal banks
+Morgan Stanley,Global investment & universal banks
+Bank of America,Global investment & universal banks
+Citi,Global investment & universal banks
+Barclays,Global investment & universal banks
+HSBC,Global investment & universal banks
+UBS,Global investment & universal banks
+Deutsche Bank,Global investment & universal banks
+BNP Paribas,Global investment & universal banks
+Societe Generale,Global investment & universal banks
+Credit Agricole CIB,Global investment & universal banks
+Natixis,Global investment & universal banks
+Banco Santander,Global investment & universal banks
+BBVA,Global investment & universal banks
+ING,Global investment & universal banks
+Rabobank,Global investment & universal banks
+ABN AMRO,Global investment & universal banks
+Danske Bank,Global investment & universal banks
+Nordea,Global investment & universal banks
+SEB,Global investment & universal banks
+Swedbank,Global investment & universal banks
+DNB,Global investment & universal banks
+Standard Chartered,Global investment & universal banks
+MUFG,Global investment & universal banks
+Mizuho,Global investment & universal banks
+SMBC,Global investment & universal banks
+Nomura,Global investment & universal banks
+Daiwa Securities,Global investment & universal banks
+Macquarie,Global investment & universal banks
+Westpac,Global investment & universal banks
+ANZ,Global investment & universal banks
+National Australia Bank,Global investment & universal banks
+CIBC,Global investment & universal banks
+RBC,Global investment & universal banks
+BMO,Global investment & universal banks
+Scotiabank,Global investment & universal banks
+TD Bank,Global investment & universal banks
+Wells Fargo,Global investment & universal banks
+Truist,Global investment & universal banks
+PNC,Global investment & universal banks
+U.S. Bank,Global investment & universal banks
+Citizens Financial Group,Global investment & universal banks
+Fifth Third Bank,Global investment & universal banks
+KeyBank,Global investment & universal banks
+Regions Financial,Global investment & universal banks
+M&T Bank,Global investment & universal banks
+Huntington Bancshares,Global investment & universal banks
+Comerica,Global investment & universal banks
+Zions Bancorporation,Global investment & universal banks
+First Horizon,Global investment & universal banks
+Synovus,Global investment & universal banks
+East West Bancorp,Global investment & universal banks
+Bank of Montreal,Global investment & universal banks
+Bank of New York Mellon,Global investment & universal banks
+State Street,Global investment & universal banks
+Northern Trust,Global investment & universal banks
+JP Morgan,Global investment & universal banks
+Credit Suisse,Global investment & universal banks
+Lazard,Global investment & universal banks
+Lloyds Banking Group,"UK banks, challenger banks & building societies"
+NatWest Group,"UK banks, challenger banks & building societies"
+Barclays UK,"UK banks, challenger banks & building societies"
+HSBC UK,"UK banks, challenger banks & building societies"
+Santander UK,"UK banks, challenger banks & building societies"
+Virgin Money UK,"UK banks, challenger banks & building societies"
+TSB Bank,"UK banks, challenger banks & building societies"
+Metro Bank,"UK banks, challenger banks & building societies"
+Aldermore,"UK banks, challenger banks & building societies"
+Shawbrook Bank,"UK banks, challenger banks & building societies"
+Paragon Banking Group,"UK banks, challenger banks & building societies"
+Close Brothers,"UK banks, challenger banks & building societies"
+Investec,"UK banks, challenger banks & building societies"
+Arbuthnot Latham,"UK banks, challenger banks & building societies"
+Coutts,"UK banks, challenger banks & building societies"
+Clydesdale Bank,"UK banks, challenger banks & building societies"
+Yorkshire Bank,"UK banks, challenger banks & building societies"
+Bank of Ireland UK,"UK banks, challenger banks & building societies"
+Allied Irish Banks,"UK banks, challenger banks & building societies"
+Ulster Bank,"UK banks, challenger banks & building societies"
+Clydesdale Financial Services,"UK banks, challenger banks & building societies"
+OneSavings Bank,"UK banks, challenger banks & building societies"
+OSB Group,"UK banks, challenger banks & building societies"
+Vanquis Banking Group,"UK banks, challenger banks & building societies"
+Charter Court Financial Services,"UK banks, challenger banks & building societies"
+Precise Mortgages,"UK banks, challenger banks & building societies"
+Kensington Mortgages,"UK banks, challenger banks & building societies"
+Gen H,"UK banks, challenger banks & building societies"
+Atom Bank,"UK banks, challenger banks & building societies"
+Monzo,"UK banks, challenger banks & building societies"
+Starling Bank,"UK banks, challenger banks & building societies"
+Chase UK,"UK banks, challenger banks & building societies"
+Chetwood Financial,"UK banks, challenger banks & building societies"
+Allica Bank,"UK banks, challenger banks & building societies"
+OakNorth Bank,"UK banks, challenger banks & building societies"
+Tandem Bank,"UK banks, challenger banks & building societies"
+Zopa Bank,"UK banks, challenger banks & building societies"
+Revolut,"UK banks, challenger banks & building societies"
+Wise,"UK banks, challenger banks & building societies"
+ClearBank,"UK banks, challenger banks & building societies"
+BlackRock,Asset managers & wealth managers
+Vanguard,Asset managers & wealth managers
+Fidelity International,Asset managers & wealth managers
+Schroders,Asset managers & wealth managers
+abrdn,Asset managers & wealth managers
+Legal & General Investment Management,Asset managers & wealth managers
+M&G Investments,Asset managers & wealth managers
+Invesco,Asset managers & wealth managers
+Amundi,Asset managers & wealth managers
+Allianz Global Investors,Asset managers & wealth managers
+DWS,Asset managers & wealth managers
+Union Bancaire Privee,Asset managers & wealth managers
+Pictet Asset Management,Asset managers & wealth managers
+BNP Paribas Asset Management,Asset managers & wealth managers
+AXA Investment Managers,Asset managers & wealth managers
+Natixis Investment Managers,Asset managers & wealth managers
+Candriam,Asset managers & wealth managers
+Ossiam,Asset managers & wealth managers
+Lyxor,Asset managers & wealth managers
+Franklin Templeton,Asset managers & wealth managers
+T. Rowe Price,Asset managers & wealth managers
+Wellington Management,Asset managers & wealth managers
+Capital Group,Asset managers & wealth managers
+AllianceBernstein,Asset managers & wealth managers
+Janus Henderson,Asset managers & wealth managers
+Ninety One,Asset managers & wealth managers
+Jupiter Asset Management,Asset managers & wealth managers
+Polar Capital,Asset managers & wealth managers
+Liontrust,Asset managers & wealth managers
+Rathbones,Asset managers & wealth managers
+Brooks Macdonald,Asset managers & wealth managers
+Quilter,Asset managers & wealth managers
+St. James's Place,Asset managers & wealth managers
+Tilney Smith & Williamson,Asset managers & wealth managers
+Evelyn Partners,Asset managers & wealth managers
+Canaccord Genuity Wealth,Asset managers & wealth managers
+Charles Stanley,Asset managers & wealth managers
+Killik & Co,Asset managers & wealth managers
+Hargreaves Lansdown,Asset managers & wealth managers
+AJ Bell,Asset managers & wealth managers
+Interactive Investor,Asset managers & wealth managers
+Vanguard UK,Asset managers & wealth managers
+iShares,Asset managers & wealth managers
+SPDR,Asset managers & wealth managers
+First Eagle Investment Management,Asset managers & wealth managers
+Baillie Gifford,Asset managers & wealth managers
+Edinburgh Partners,Asset managers & wealth managers
+Sarasin & Partners,Asset managers & wealth managers
+Ruffer,Asset managers & wealth managers
+J O Hambro Capital Management,Asset managers & wealth managers
+Premier Miton,Asset managers & wealth managers
+Fidelity International UK,Asset managers & wealth managers
+Guinness Asset Management,Asset managers & wealth managers
+GAM,Asset managers & wealth managers
+Man Group,Asset managers & wealth managers
+Man AHL,Asset managers & wealth managers
+Man Numeric,Asset managers & wealth managers
+GAM Systematic,Asset managers & wealth managers
+Schroders Capital,Asset managers & wealth managers
+LGIM Real Assets,Asset managers & wealth managers
+M&G Real Estate,Asset managers & wealth managers
+Aberdeen Standard Investments,Asset managers & wealth managers
+Aegon Asset Management,Asset managers & wealth managers
+Royal London Asset Management,Asset managers & wealth managers
+Aviva Investors,Asset managers & wealth managers
+Phoenix Asset Management,Asset managers & wealth managers
+Pictet Wealth Management,Asset managers & wealth managers
+Julius Baer,Asset managers & wealth managers
+Lombard Odier,Asset managers & wealth managers
+Vontobel,Asset managers & wealth managers
+EFG International,Asset managers & wealth managers
+UBS Asset Management,Asset managers & wealth managers
+Goldman Sachs Asset Management,Asset managers & wealth managers
+JPMorgan Asset Management,Asset managers & wealth managers
+Morgan Stanley Investment Management,Asset managers & wealth managers
+Morgan Stanley Alternative Investment Partners,Asset managers & wealth managers
+Blackstone,Asset managers & wealth managers
+BlackRock Alternative Investors,Asset managers & wealth managers
+State Street Global Advisors,Asset managers & wealth managers
+Northern Trust Asset Management,Asset managers & wealth managers
+Federated Hermes,Asset managers & wealth managers
+Nuveen,Asset managers & wealth managers
+PGIM,Asset managers & wealth managers
+Principal Global Investors,Asset managers & wealth managers
+American Century Investments,Asset managers & wealth managers
+Dimensional Fund Advisors,Asset managers & wealth managers
+Robeco,Asset managers & wealth managers
+Kempen,Asset managers & wealth managers
+NN Investment Partners,Asset managers & wealth managers
+Carmignac,Asset managers & wealth managers
+Eurizon,Asset managers & wealth managers
+Mediolanum,Asset managers & wealth managers
+Artemis,Asset managers & wealth managers
+Fundsmith,Asset managers & wealth managers
+Lindsell Train,Asset managers & wealth managers
+Marlborough,Asset managers & wealth managers
+Vanguard Asset Management,Asset managers & wealth managers
+Aviva,"Insurers, reinsurers & insurance brokers"
+Legal & General,"Insurers, reinsurers & insurance brokers"
+Prudential plc,"Insurers, reinsurers & insurance brokers"
+Phoenix Group,"Insurers, reinsurers & insurance brokers"
+M&G plc,"Insurers, reinsurers & insurance brokers"
+Admiral Group,"Insurers, reinsurers & insurance brokers"
+Direct Line Group,"Insurers, reinsurers & insurance brokers"
+RSA Insurance,"Insurers, reinsurers & insurance brokers"
+Zurich Insurance,"Insurers, reinsurers & insurance brokers"
+Allianz,"Insurers, reinsurers & insurance brokers"
+AXA,"Insurers, reinsurers & insurance brokers"
+Aegon,"Insurers, reinsurers & insurance brokers"
+Royal London,"Insurers, reinsurers & insurance brokers"
+Scottish Widows,"Insurers, reinsurers & insurance brokers"
+Standard Life,"Insurers, reinsurers & insurance brokers"
+Old Mutual,"Insurers, reinsurers & insurance brokers"
+Just Group,"Insurers, reinsurers & insurance brokers"
+Rothesay,"Insurers, reinsurers & insurance brokers"
+Pension Insurance Corporation,"Insurers, reinsurers & insurance brokers"
+PIC,"Insurers, reinsurers & insurance brokers"
+M&G Prudential,"Insurers, reinsurers & insurance brokers"
+Sagacity,"Insurers, reinsurers & insurance brokers"
+Chesnara,"Insurers, reinsurers & insurance brokers"
+Hansard Global,"Insurers, reinsurers & insurance brokers"
+Lancashire Holdings,"Insurers, reinsurers & insurance brokers"
+Beazley,"Insurers, reinsurers & insurance brokers"
+Hiscox,"Insurers, reinsurers & insurance brokers"
+Chubb,"Insurers, reinsurers & insurance brokers"
+AIG,"Insurers, reinsurers & insurance brokers"
+Travelers,"Insurers, reinsurers & insurance brokers"
+Marsh,"Insurers, reinsurers & insurance brokers"
+Aon,"Insurers, reinsurers & insurance brokers"
+Willis Towers Watson,"Insurers, reinsurers & insurance brokers"
+Gallagher,"Insurers, reinsurers & insurance brokers"
+Lockton,"Insurers, reinsurers & insurance brokers"
+Howden,"Insurers, reinsurers & insurance brokers"
+Arthur J. Gallagher,"Insurers, reinsurers & insurance brokers"
+Munich Re,"Insurers, reinsurers & insurance brokers"
+Swiss Re,"Insurers, reinsurers & insurance brokers"
+Hannover Re,"Insurers, reinsurers & insurance brokers"
+SCOR,"Insurers, reinsurers & insurance brokers"
+Gen Re,"Insurers, reinsurers & insurance brokers"
+RGA,"Insurers, reinsurers & insurance brokers"
+SCOR Global Life,"Insurers, reinsurers & insurance brokers"
+PartnerRe,"Insurers, reinsurers & insurance brokers"
+Everest Re,"Insurers, reinsurers & insurance brokers"
+RenaissanceRe,"Insurers, reinsurers & insurance brokers"
+Arch Capital,"Insurers, reinsurers & insurance brokers"
+Axis Capital,"Insurers, reinsurers & insurance brokers"
+Aspen Insurance,"Insurers, reinsurers & insurance brokers"
+Conduit Re,"Insurers, reinsurers & insurance brokers"
+Lloyd's of London,"Insurers, reinsurers & insurance brokers"
+MS Amlin,"Insurers, reinsurers & insurance brokers"
+Canopius,"Insurers, reinsurers & insurance brokers"
+Argo Group,"Insurers, reinsurers & insurance brokers"
+QBE,"Insurers, reinsurers & insurance brokers"
+Tokio Marine,"Insurers, reinsurers & insurance brokers"
+Sompo,"Insurers, reinsurers & insurance brokers"
+Mitsui Sumitomo,"Insurers, reinsurers & insurance brokers"
+MS&AD,"Insurers, reinsurers & insurance brokers"
+Fidelis,"Insurers, reinsurers & insurance brokers"
+Hamilton,"Insurers, reinsurers & insurance brokers"
+Lancashire,"Insurers, reinsurers & insurance brokers"
+Hiscox UK,"Insurers, reinsurers & insurance brokers"
+Aegon UK,"Insurers, reinsurers & insurance brokers"
+Legal & General America,"Insurers, reinsurers & insurance brokers"
+Prudential Financial,"Insurers, reinsurers & insurance brokers"
+MetLife,"Insurers, reinsurers & insurance brokers"
+Aflac,"Insurers, reinsurers & insurance brokers"
+Unum,"Insurers, reinsurers & insurance brokers"
+Vitality,"Insurers, reinsurers & insurance brokers"
+Bupa,"Insurers, reinsurers & insurance brokers"
+AXA Health,"Insurers, reinsurers & insurance brokers"
+Aviva Health,"Insurers, reinsurers & insurance brokers"
+National Employment Savings Trust,Pension schemes & asset owners
+The Pensions Trust,Pension schemes & asset owners
+Railways Pension Scheme,Pension schemes & asset owners
+Universities Superannuation Scheme,Pension schemes & asset owners
+British Airways Pension Scheme,Pension schemes & asset owners
+BT Pension Scheme,Pension schemes & asset owners
+Aviva Staff Pension Scheme,Pension schemes & asset owners
+BP Pension Fund,Pension schemes & asset owners
+Shell Pension Trust,Pension schemes & asset owners
+HSBC Pension Trust,Pension schemes & asset owners
+Barclays Pension Fund,Pension schemes & asset owners
+Lloyds Banking Group Pensions,Pension schemes & asset owners
+NatWest Pension Fund,Pension schemes & asset owners
+Santander UK Pension Scheme,Pension schemes & asset owners
+AstraZeneca Pension Trust,Pension schemes & asset owners
+GSK Pension Fund,Pension schemes & asset owners
+Unilever Pension Fund,Pension schemes & asset owners
+Vodafone Pension Trust,Pension schemes & asset owners
+Tesco Pension Fund,Pension schemes & asset owners
+Sainsbury's Pension Scheme,Pension schemes & asset owners
+Marks & Spencer Pension Scheme,Pension schemes & asset owners
+Civil Service Pension Scheme,Pension schemes & asset owners
+NHS Pension Scheme,Pension schemes & asset owners
+Teachers' Pension Scheme,Pension schemes & asset owners
+Bridgewater Associates,Hedge funds & systematic managers
+Renaissance Technologies,Hedge funds & systematic managers
+Two Sigma,Hedge funds & systematic managers
+D.E. Shaw,Hedge funds & systematic managers
+Citadel,Hedge funds & systematic managers
+Citadel Securities,Hedge funds & systematic managers
+Millennium Management,Hedge funds & systematic managers
+Point72,Hedge funds & systematic managers
+Balyasny Asset Management,Hedge funds & systematic managers
+ExodusPoint,Hedge funds & systematic managers
+Brevan Howard,Hedge funds & systematic managers
+Marshall Wace,Hedge funds & systematic managers
+Capula Investment Management,Hedge funds & systematic managers
+BlueCrest Capital Management,Hedge funds & systematic managers
+Lansdowne Partners,Hedge funds & systematic managers
+Marshall Wace UK,Hedge funds & systematic managers
+Pershing Square,Hedge funds & systematic managers
+Elliott Management,Hedge funds & systematic managers
+Third Point,Hedge funds & systematic managers
+Tiger Global,Hedge funds & systematic managers
+Coatue,Hedge funds & systematic managers
+Viking Global,Hedge funds & systematic managers
+Lone Pine Capital,Hedge funds & systematic managers
+Maverick Capital,Hedge funds & systematic managers
+King Street Capital,Hedge funds & systematic managers
+Davidson Kempner,Hedge funds & systematic managers
+Apollo Global Management,Hedge funds & systematic managers
+Ares Management,Hedge funds & systematic managers
+Oaktree Capital Management,Hedge funds & systematic managers
+Fortress Investment Group,Hedge funds & systematic managers
+Angelo Gordon,Hedge funds & systematic managers
+Sculptor Capital,Hedge funds & systematic managers
+Marshall Wace LLP,Hedge funds & systematic managers
+CQS,Hedge funds & systematic managers
+Sculptor,Hedge funds & systematic managers
+Algebris Investments,Hedge funds & systematic managers
+Cheyne Capital,Hedge funds & systematic managers
+CQS UK,Hedge funds & systematic managers
+BlueBay Asset Management,Hedge funds & systematic managers
+CQS (UK) LLP,Hedge funds & systematic managers
+Sculptor Capital Management,Hedge funds & systematic managers
+Marshall Wace Asset Management,Hedge funds & systematic managers
+Brevan Howard Asset Management,Hedge funds & systematic managers
+Capula,Hedge funds & systematic managers
+Algebris,Hedge funds & systematic managers
+Cheyne,Hedge funds & systematic managers
+BlueBay,Hedge funds & systematic managers
+Sculptor UK,Hedge funds & systematic managers
+Man GLG,Hedge funds & systematic managers
+Man Numeric UK,Hedge funds & systematic managers
+Winton Group,Hedge funds & systematic managers
+GAM Systematic Cantab,Hedge funds & systematic managers
+Qube Research & Technologies,Hedge funds & systematic managers
+Squarepoint Capital,Hedge funds & systematic managers
+WorldQuant,Hedge funds & systematic managers
+G-Research,Hedge funds & systematic managers
+XTX Markets,Hedge funds & systematic managers
+Jane Street,Hedge funds & systematic managers
+Jump Trading,Hedge funds & systematic managers
+Tower Research Capital,Hedge funds & systematic managers
+Optiver,Hedge funds & systematic managers
+IMC Trading,Hedge funds & systematic managers
+Flow Traders,Hedge funds & systematic managers
+Marex,Hedge funds & systematic managers
+Marex Financial,Hedge funds & systematic managers
+Virtu Financial,Proprietary trading & market makers
+Susquehanna International Group,Proprietary trading & market makers
+DRW,Proprietary trading & market makers
+Hudson River Trading,Proprietary trading & market makers
+Akuna Capital,Proprietary trading & market makers
+Belvedere Trading,Proprietary trading & market makers
+Marex Spectron,Proprietary trading & market makers
+StoneX,Proprietary trading & market makers
+Marex UK,Proprietary trading & market makers
+TP ICAP,Proprietary trading & market makers
+Marex North America,Proprietary trading & market makers
+Marex Capital Markets,Proprietary trading & market makers
+Marex Solutions,Proprietary trading & market makers
+Marex Financial Products,Proprietary trading & market makers
+Marex Energy,Proprietary trading & market makers
+KKR,Private equity & private credit
+Carlyle,Private equity & private credit
+TPG,Private equity & private credit
+Warburg Pincus,Private equity & private credit
+Bain Capital,Private equity & private credit
+Advent International,Private equity & private credit
+CVC Capital Partners,Private equity & private credit
+Permira,Private equity & private credit
+Bridgepoint,Private equity & private credit
+Cinven,Private equity & private credit
+Charterhouse,Private equity & private credit
+Apax Partners,Private equity & private credit
+Triton,Private equity & private credit
+Inflexion,Private equity & private credit
+Livingbridge,Private equity & private credit
+EQT,Private equity & private credit
+Nordic Capital,Private equity & private credit
+PAI Partners,Private equity & private credit
+Ardian,Private equity & private credit
+Antin Infrastructure Partners,Private equity & private credit
+Brookfield,Private equity & private credit
+Macquarie Infrastructure and Real Assets,Private equity & private credit
+Stonepeak,Private equity & private credit
+I Squared Capital,Private equity & private credit
+Global Infrastructure Partners,Private equity & private credit
+Blue Owl Capital,Private equity & private credit
+London Stock Exchange Group,"Exchanges, clearing houses & market infrastructure"
+LSEG,"Exchanges, clearing houses & market infrastructure"
+Euronext,"Exchanges, clearing houses & market infrastructure"
+Deutsche Boerse,"Exchanges, clearing houses & market infrastructure"
+Cboe Global Markets,"Exchanges, clearing houses & market infrastructure"
+CME Group,"Exchanges, clearing houses & market infrastructure"
+Intercontinental Exchange,"Exchanges, clearing houses & market infrastructure"
+Nasdaq,"Exchanges, clearing houses & market infrastructure"
+CME,"Exchanges, clearing houses & market infrastructure"
+ICE Clear Europe,"Exchanges, clearing houses & market infrastructure"
+LCH,"Exchanges, clearing houses & market infrastructure"
+LCH Clearnet,"Exchanges, clearing houses & market infrastructure"
+Euroclear,"Exchanges, clearing houses & market infrastructure"
+Clearstream,"Exchanges, clearing houses & market infrastructure"
+DTCC,"Exchanges, clearing houses & market infrastructure"
+Depository Trust & Clearing Corporation,"Exchanges, clearing houses & market infrastructure"
+Euroclear UK & International,"Exchanges, clearing houses & market infrastructure"
+CrestCo,"Exchanges, clearing houses & market infrastructure"
+SIX Group,"Exchanges, clearing houses & market infrastructure"
+Australian Securities Exchange,"Exchanges, clearing houses & market infrastructure"
+Hong Kong Exchanges and Clearing,"Exchanges, clearing houses & market infrastructure"
+Singapore Exchange,"Exchanges, clearing houses & market infrastructure"
+Japan Exchange Group,"Exchanges, clearing houses & market infrastructure"
+TMX Group,"Exchanges, clearing houses & market infrastructure"
+B3,"Exchanges, clearing houses & market infrastructure"
+Stripe,"Fintech, payments & digital banks"
+Adyen,"Fintech, payments & digital banks"
+Checkout.com,"Fintech, payments & digital banks"
+Klarna,"Fintech, payments & digital banks"
+Zopa,"Fintech, payments & digital banks"
+Nutmeg,"Fintech, payments & digital banks"
+Moneybox,"Fintech, payments & digital banks"
+Plum,"Fintech, payments & digital banks"
+Cleo,"Fintech, payments & digital banks"
+Curve,"Fintech, payments & digital banks"
+Tandem,"Fintech, payments & digital banks"
+Chetwood,"Fintech, payments & digital banks"
+Allica,"Fintech, payments & digital banks"
+OakNorth,"Fintech, payments & digital banks"
+Form3,"Fintech, payments & digital banks"
+Modulr,"Fintech, payments & digital banks"
+Paysafe,"Fintech, payments & digital banks"
+Worldpay,"Fintech, payments & digital banks"
+FIS,"Fintech, payments & digital banks"
+Fiserv,"Fintech, payments & digital banks"
+Global Payments,"Fintech, payments & digital banks"
+ACI Worldwide,"Fintech, payments & digital banks"
+Nium,"Fintech, payments & digital banks"
+Airwallex,"Fintech, payments & digital banks"
+Payoneer,"Fintech, payments & digital banks"
+Marqeta,"Fintech, payments & digital banks"
+Unit,"Fintech, payments & digital banks"
+TrueLayer,"Fintech, payments & digital banks"
+Plaid,"Fintech, payments & digital banks"
+Yapily,"Fintech, payments & digital banks"
+Bud,"Fintech, payments & digital banks"
+Openwrks,"Fintech, payments & digital banks"
+Tink,"Fintech, payments & digital banks"
+OpenPayd,"Fintech, payments & digital banks"
+Currencycloud,"Fintech, payments & digital banks"
+iex,"Fintech, payments & digital banks"
+Deloitte,"Consulting, advisory & professional services"
+PwC,"Consulting, advisory & professional services"
+EY,"Consulting, advisory & professional services"
+KPMG,"Consulting, advisory & professional services"
+McKinsey & Company,"Consulting, advisory & professional services"
+Boston Consulting Group,"Consulting, advisory & professional services"
+Bain & Company,"Consulting, advisory & professional services"
+Oliver Wyman,"Consulting, advisory & professional services"
+Accenture,"Consulting, advisory & professional services"
+Capgemini Invent,"Consulting, advisory & professional services"
+Capco,"Consulting, advisory & professional services"
+Baringa,"Consulting, advisory & professional services"
+Zanders,"Consulting, advisory & professional services"
+FTI Consulting,"Consulting, advisory & professional services"
+Alvarez & Marsal,"Consulting, advisory & professional services"
+Kroll,"Consulting, advisory & professional services"
+Duff & Phelps,"Consulting, advisory & professional services"
+Houlihan Lokey,"Consulting, advisory & professional services"
+Rothschild & Co,"Consulting, advisory & professional services"
+Bloomberg,"Market data, ratings & risk-analytics vendors"
+MSCI,"Market data, ratings & risk-analytics vendors"
+LSEG Data & Analytics,"Market data, ratings & risk-analytics vendors"
+Refinitiv,"Market data, ratings & risk-analytics vendors"
+S&P Global,"Market data, ratings & risk-analytics vendors"
+Moody's,"Market data, ratings & risk-analytics vendors"
+Fitch Ratings,"Market data, ratings & risk-analytics vendors"
+Morningstar,"Market data, ratings & risk-analytics vendors"
+FactSet,"Market data, ratings & risk-analytics vendors"
+MSCI ESG Research,"Market data, ratings & risk-analytics vendors"
+Sustainalytics,"Market data, ratings & risk-analytics vendors"
+ISS,"Market data, ratings & risk-analytics vendors"
+Bloomberg NEF,"Market data, ratings & risk-analytics vendors"
+Markit,"Market data, ratings & risk-analytics vendors"
+IHS Markit,"Market data, ratings & risk-analytics vendors"
+Bloomberg Law,"Market data, ratings & risk-analytics vendors"
+Moody's Analytics,"Market data, ratings & risk-analytics vendors"
+S&P Global Market Intelligence,"Market data, ratings & risk-analytics vendors"
+S&P Global Ratings,"Market data, ratings & risk-analytics vendors"

@@ -11,43 +11,101 @@ from pathlib import Path
 
 import yaml
 
-from . import filters
+from . import filters, institutions
 from .excel import write_workbook
 from .mailer import build_email, send
 from .models import Job
-from .sources import efinancialcareers, google, linkedin
+from .sources import careers, efinancialcareers, google, indeed, linkedin
 from .uk_sponsors import UKSponsorRegister
 
 log = logging.getLogger("jobscraper")
 ROOT = Path(__file__).resolve().parent.parent
 STORE = ROOT / "data" / "jobs.json"
-SOURCES = {"linkedin": ("LinkedIn", linkedin), "google": ("Google Jobs", google),
-           "efinancialcareers": ("eFinancialCareers", efinancialcareers)}
 MAX_DESCRIPTION_FETCHES = 300
 KEEP_STORE_DAYS = 30
 
 
-def scrape(cfg: dict, roles: list[dict]) -> tuple[list[Job], dict]:
-    stats = {SOURCES[s][0]: {"found": 0, "errors": 0} for s in cfg["sources"]}
+def rotate(items: list, per_run: int, slot: int) -> list:
+    """A different slice of `items` each run, so everything is covered over a day or two."""
+    if not items or per_run <= 0:
+        return []
+    if per_run >= len(items):
+        return list(items)
+    start = (slot * per_run) % len(items)
+    return (items + items)[start:start + per_run]
 
-    def run_source(name: str) -> list[Job]:
-        label, module = SOURCES[name]
+
+def plan(cfg: dict, roles: list[dict], slot: int) -> dict[str, list]:
+    """Every search this run will make, grouped by site. Each site's searches run one after another."""
+    tasks: dict[str, list] = {}
+    sources = cfg["sources"]
+    if "linkedin" in sources:
+        locations = cfg.get("linkedin_locations", ["Worldwide"]) + rotate(
+            cfg.get("linkedin_rotating_locations", []), cfg.get("linkedin_locations_per_run", 2), slot)
+        tasks["LinkedIn"] = [
+            (f"{role['title']} @ {loc}", lambda st, role=role, loc=loc: linkedin.search(role, cfg, st, loc))
+            for loc in locations for role in roles
+        ]
+        if "careers" in sources or cfg.get("linkedin_target_firms_per_run"):
+            have_site = {institutions.norm(x["institution"]) for x in careers.load_sites()}
+            firms = [i for i in institutions.load() if i["key"] not in have_site]
+            tasks["LinkedIn"] += [
+                (f"firm {inst['name']}", lambda st, inst=inst: linkedin.search_company(inst["name"], cfg, st))
+                for inst in rotate(firms, cfg.get("linkedin_target_firms_per_run", 80), slot)
+            ]
+    if "google" in sources:
+        tasks["Google Jobs"] = [(role["title"], lambda st, role=role: google.search(role, cfg, st)) for role in roles]
+    if "efinancialcareers" in sources:
+        tasks["eFinancialCareers"] = [
+            (role["title"], lambda st, role=role: efinancialcareers.search(role, cfg, st)) for role in roles]
+    if "indeed" in sources:
+        countries = rotate(cfg.get("indeed_countries", ["uk"]), cfg.get("indeed_countries_per_run", 3), slot)
+        tasks["Indeed"] = [
+            (f"{role['title']} @ {c}", lambda st, role=role, c=c: indeed.search(role, cfg, st, c))
+            for c in countries for role in roles
+        ]
+    if "careers" in sources:
+        tasks["Careers sites"] = [
+            (site["institution"], lambda st, site=site: careers.fetch_site(site, cfg)) for site in careers.load_sites()]
+    return tasks
+
+
+def scrape(cfg: dict, roles: list[dict], slot: int) -> tuple[list[Job], dict]:
+    tasks = plan(cfg, roles, slot)
+    stats = {label: {"found": 0, "errors": 0} for label in tasks}
+
+    def run(label: str) -> list[Job]:
         out: list[Job] = []
-        for role in roles:
+        for name, fn in tasks[label]:
             try:
-                found = module.search(role, cfg, stats[label])
-            except Exception:
-                log.exception("%s search for %s crashed", label, role["title"])
+                found = fn(stats[label])
+            except Exception as e:
+                log.warning("%s | %s failed: %s", label, name, e)
                 stats[label]["errors"] += 1
                 continue
-            log.info("%s | %s | %d results", label, role["title"], len(found))
+            log.info("%s | %s | %d results", label, name, len(found))
             out.extend(found)
         stats[label]["found"] = len(out)
         return out
 
-    # Each source runs in its own thread; requests to one site stay sequential and paced.
-    with ThreadPoolExecutor(max_workers=len(cfg["sources"])) as pool:
-        results = list(pool.map(run_source, cfg["sources"]))
+    def run_careers(label: str) -> list[Job]:
+        # Careers sites are all different hosts, so they can run side by side.
+        def one(item):
+            name, fn = item
+            try:
+                return fn(stats[label])
+            except Exception as e:
+                log.warning("%s | %s failed: %s", label, name, e)
+                stats[label]["errors"] += 1
+                return []
+        with ThreadPoolExecutor(max_workers=8) as pool:
+            out = [j for batch in pool.map(one, tasks[label]) for j in batch]
+        stats[label]["found"] = len(out)
+        return out
+
+    with ThreadPoolExecutor(max_workers=max(1, len(tasks))) as pool:
+        futures = [pool.submit(run_careers if label == "Careers sites" else run, label) for label in tasks]
+        results = [f.result() for f in futures]
     return [j for batch in results for j in batch], stats
 
 
@@ -69,6 +127,7 @@ def apply_filters(jobs: list[Job], cfg: dict, matcher: filters.RoleMatcher) -> d
         if filters.is_excluded_location(job.location, cfg["excluded_locations"]):
             continue
         role, _ = match
+        job.target_firm = institutions.match(job.company)
         job.role_id, job.role_title, job.category, job.tier = role["id"], role["title"], role["category"], role["tier"]
         if job.key in kept:
             existing = kept[job.key]
@@ -99,6 +158,8 @@ def enrich(job: Job, cfg: dict, register: UKSponsorRegister) -> str | None:
     text = job.description
     if not text and "LinkedIn" in job.sources:
         text = linkedin.fetch_description(job)
+    elif not text and "myworkdayjobs.com" in job.url:
+        text = careers.fetch_description(job)
     job.years_required = filters.years_required(text)
     job.sponsorship, job.sponsorship_evidence = filters.sponsorship(text) if text else ("Not checked", "")
     job.uk_licensed_sponsor = register.check(job.company, job.location)
@@ -115,6 +176,8 @@ def main() -> None:
     parser.add_argument("--roles", help="comma-separated role ids to search (for testing)")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
+    logging.getLogger().addHandler(WARNINGS)
+    WARNINGS.setFormatter(logging.Formatter("%(asctime)s %(name)s: %(message)s"))
 
     cfg = yaml.safe_load((ROOT / "config.yaml").read_text())
     roles = yaml.safe_load((ROOT / "roles.yaml").read_text())["roles"]
@@ -122,7 +185,9 @@ def main() -> None:
         wanted = set(args.roles.split(","))
         roles = [r for r in roles if r["id"] in wanted]
 
-    raw, stats = scrape(cfg, roles)
+    now_utc = datetime.now(timezone.utc)
+    slot = now_utc.toordinal() * 6 + now_utc.hour // 4
+    raw, stats = scrape(cfg, roles, slot)
     candidates = apply_filters(raw, cfg, filters.RoleMatcher(roles))
     log.info("%d raw results, %d after title/seniority/location/date filters", len(raw), len(candidates))
 
@@ -177,6 +242,35 @@ def main() -> None:
         for key in new_keys:
             store[key]["emailed"] = True
     save_store(store)
+    write_report(stats, len(raw), len(candidates), current, new_keys, slot)
+
+
+class _WarningBuffer(logging.Handler):
+    def __init__(self) -> None:
+        super().__init__(logging.WARNING)
+        self.lines: list[str] = []
+
+    def emit(self, record: logging.LogRecord) -> None:
+        if len(self.lines) < 200:
+            self.lines.append(self.format(record))
+
+
+WARNINGS = _WarningBuffer()
+
+
+def write_report(stats, raw_count, candidate_count, current, new_keys, slot) -> None:
+    """data/last_run.json: what the last run found, readable without the Actions logs."""
+    report = {
+        "finished_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "rotation_slot": slot,
+        "sources": stats,
+        "raw_results": raw_count,
+        "after_filters": candidate_count,
+        "jobs_in_email": len(current),
+        "new_jobs": len(new_keys),
+        "warnings": WARNINGS.lines,
+    }
+    (ROOT / "data" / "last_run.json").write_text(json.dumps(report, indent=1))
 
 
 if __name__ == "__main__":

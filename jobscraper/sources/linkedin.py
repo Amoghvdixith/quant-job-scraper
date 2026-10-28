@@ -21,41 +21,50 @@ def build_keywords(keywords: list[str]) -> str:
     return " OR ".join(f'"{k}"' for k in keywords)
 
 
-def search(role: dict, cfg: dict, stats: dict) -> list[Job]:
+def search(role: dict, cfg: dict, stats: dict, location: str = "Worldwide") -> list[Job]:
+    return _search(build_keywords(role["keywords"]), role["title"], cfg, stats, location,
+                   cfg.get("linkedin_max_pages", 3))
+
+
+def search_company(company: str, cfg: dict, stats: dict) -> list[Job]:
+    """Entry-level postings at one target institution, any title (the title filter runs later)."""
+    return _search(f'"{company}"', f"firm: {company}", cfg, stats, "Worldwide",
+                   cfg.get("linkedin_target_firm_pages", 2))
+
+
+def _search(keywords: str, label: str, cfg: dict, stats: dict, location: str, max_pages: int) -> list[Job]:
     s = session()
     jobs: list[Job] = []
     seen: set[str] = set()
-    keywords = build_keywords(role["keywords"])
-    for location in cfg.get("linkedin_locations", ["Worldwide"]):
-        params = {
-            "keywords": keywords,
-            "f_TPR": f"r{cfg['max_age_days'] * 86400}",
-            "f_E": ",".join(str(x) for x in cfg.get("linkedin_experience_levels", [1, 2, 3])),
-            "sortBy": "DD",
-        }
-        if location.lower() == "worldwide":
-            params["geoId"] = WORLDWIDE_GEO_ID
-        else:
-            params["location"] = location
-        for page in range(cfg.get("linkedin_max_pages", 3)):
-            r = polite_get(s, SEARCH, params={**params, "start": page * 10})
-            if r is None:
-                stats["errors"] += 1
-                break
-            cards = BeautifulSoup(r.text, "html.parser").select("div.base-search-card, div.job-search-card")
-            page_jobs = [j for j in (_parse_card(c, role) for c in cards) if j]
-            new = [j for j in page_jobs if j.url not in seen]
-            if not new:
-                break
-            for j in new:
-                seen.add(j.url)
-            jobs.extend(new)
-            if len(page_jobs) < 10:
-                break
+    params = {
+        "keywords": keywords,
+        "f_TPR": f"r{cfg['max_age_days'] * 86400}",
+        "f_E": ",".join(str(x) for x in cfg.get("linkedin_experience_levels", [1, 2, 3])),
+        "sortBy": "DD",
+    }
+    if location.lower() == "worldwide":
+        params["geoId"] = WORLDWIDE_GEO_ID
+    else:
+        params["location"] = location
+    for page in range(max_pages):
+        r = polite_get(s, SEARCH, params={**params, "start": page * 10})
+        if r is None:
+            stats["errors"] += 1
+            break
+        cards = BeautifulSoup(r.text, "html.parser").select("div.base-search-card, div.job-search-card")
+        page_jobs = [j for j in (_parse_card(c, label) for c in cards) if j]
+        new = [j for j in page_jobs if j.url not in seen]
+        if not new:
+            break
+        for j in new:
+            seen.add(j.url)
+        jobs.extend(new)
+        if len(page_jobs) < 10:
+            break
     return jobs
 
 
-def _parse_card(card, role: dict) -> Job | None:
+def _parse_card(card, label: str) -> Job | None:
     urn = card.get("data-entity-urn") or ""
     link = card.select_one("a.base-card__full-link, a[href*='/jobs/view/']")
     title = card.select_one(".base-search-card__title")
@@ -81,7 +90,7 @@ def _parse_card(card, role: dict) -> Job | None:
         location=location.get_text(strip=True) if location else "",
         url=f"https://www.linkedin.com/jobs/view/{job_id}" if job_id.isdigit() else url,
         posted=posted,
-        search_term=role["title"],
+        search_term=label,
     )
 
 

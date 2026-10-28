@@ -1,6 +1,7 @@
 # Quant job digest
 
-Every 4 hours this searches LinkedIn, Google Jobs and eFinancialCareers for the
+Every 4 hours this searches LinkedIn, Indeed, Google Jobs, eFinancialCareers and
+the careers sites of the 500 institutions in `institutions.csv` for the
 entry-level quant / risk / valuation roles in `roles.yaml`, and emails an Excel
 file of matching jobs posted in the last 5 days. There is no website: it runs on
 GitHub Actions and the email is the only output.
@@ -36,10 +37,28 @@ what was already sent; the workflow commits it back after each run.
 After that it runs by itself at 00:00, 04:00, 08:00, 12:00, 16:00 and 20:00 UTC.
 GitHub can start scheduled runs a few minutes late.
 
+## Target institutions
+
+`institutions.csv` is your list of 500 firms. They are covered three ways:
+
+- **Their own careers sites.** The weekly "Find careers sites" workflow works out
+  which hiring platform each firm uses (Workday, Oracle, Greenhouse, Lever, Ashby,
+  SmartRecruiters) and saves it to `data/careers_sites.json`. Every run then reads
+  those sites directly. If a firm is missing or wrong, add it to
+  `careers_sites_manual.yaml`.
+- **LinkedIn by company name** for firms without a readable careers site,
+  80 firms per run in rotation, so the whole list is covered roughly once a day.
+- The **"On Your Target List"** column marks any job, from any source, at one of these firms.
+
+LinkedIn also searches a couple of extra countries per run and Indeed three
+countries per run, in rotation (see `config.yaml`). After each run,
+`data/last_run.json` shows how many jobs each source returned and any errors.
+
 ## Changing what it searches
 
 - Roles and keywords: `roles.yaml`
-- Age limit, excluded countries, seniority words, LinkedIn locations and pages: `config.yaml`
+- Age limit, excluded countries, seniority words, countries, pages per search: `config.yaml`
+- Target institutions: `institutions.csv`
 
 ## Run locally
 
