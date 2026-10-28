@@ -1,0 +1,81 @@
+# Search settings. Secrets (Gmail login, recipient) live in GitHub Actions secrets, not here.
+
+# Only keep postings published within this many days.
+max_age_days: 5
+
+# Sources to search. Remove one to switch it off.
+sources: [linkedin, google, efinancialcareers]
+
+# LinkedIn location filter. "Worldwide" covers every country; add specific
+# countries (e.g. "United Kingdom", "Singapore") to get more results there.
+linkedin_locations: [Worldwide]
+# LinkedIn experience levels: 1 = Internship, 2 = Entry level, 3 = Associate.
+linkedin_experience_levels: [1, 2, 3]
+# Result pages fetched per search (LinkedIn returns ~10 jobs per page).
+linkedin_max_pages: 3
+
+# Google Jobs: one search per role title (not every keyword) to avoid being blocked.
+google_results_per_search: 20
+
+# eFinancialCareers: result pages per keyword.
+efc_max_pages: 2
+
+# Postings in these countries are dropped. Matched against the location text.
+excluded_locations:
+  - India
+  - United Arab Emirates
+  - UAE
+  - Dubai
+  - Abu Dhabi
+  - Sharjah
+  - Ajman
+  - Ras Al Khaimah
+  - Bengaluru
+  - Bangalore
+  - Mumbai
+  - Pune
+  - Hyderabad
+  - Chennai
+  - Gurugram
+  - Gurgaon
+  - Noida
+  - New Delhi
+  - Delhi
+  - Kolkata
+  - Ahmedabad
+  - Jaipur
+  - Kochi
+  - Coimbatore
+  - Indore
+  - Chandigarh
+  - Thiruvananthapuram
+  - Vadodara
+  - Mohali
+
+# Titles containing any of these words are treated as too senior and dropped.
+senior_title_words:
+  - senior
+  - sr
+  - lead
+  - head
+  - director
+  - vp
+  - avp
+  - vice president
+  - principal
+  - manager
+  - staff
+  - chief
+  - executive director
+  - managing director
+  - expert
+  - experienced
+  - partner
+  - supervisor
+
+# Drop postings whose description asks for more than this many years of experience.
+max_years_experience: 2
+
+# Visa sponsorship: postings that explicitly say "no sponsorship" are dropped.
+# Postings that say they sponsor are listed first; "Not stated" ones are kept.
+drop_no_sponsorship: true

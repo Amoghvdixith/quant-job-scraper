@@ -1,0 +1,78 @@
+# Target roles, taken from Quant_Finance_Job_Roles.xlsx (Tier 1 + Tier 2 sheets).
+# `keywords` are the job titles searched on every source. A posting is kept when
+# its title contains all the meaningful words of at least one keyword
+# (generic words like "analyst", "associate", "junior" and "graduate" are ignored
+# for matching, so "Graduate Market Risk Analyst" still matches "Market Risk Analyst").
+# Add, remove or edit keywords freely; the next scheduled run picks them up.
+
+roles:
+  - {id: T1-1, tier: 1, category: Market Risk, title: Market Risk Analyst,
+     keywords: [Market Risk Analyst, Traded Risk Analyst, Trading Risk Analyst]}
+  - {id: T1-2, tier: 1, category: Market Risk, title: VaR / Risk Methodology Analyst,
+     keywords: [VaR Analyst, Risk Methodology Analyst, Market Risk Methodology Analyst]}
+  - {id: T1-3, tier: 1, category: Market Risk, title: Stress Testing Analyst,
+     keywords: [Stress Testing Analyst, Scenario Analysis Analyst]}
+  - {id: T1-4, tier: 1, category: Market Risk, title: Risk Reporting Analyst,
+     keywords: [Risk Reporting Analyst, Risk MI Analyst, Risk Data Analyst]}
+  - {id: T1-5, tier: 1, category: Market Risk, title: Counterparty Credit Risk Analyst,
+     keywords: [Counterparty Credit Risk Analyst, Counterparty Risk Analyst, CCR Analyst, Exposure Analyst]}
+  - {id: T1-6, tier: 1, category: Model Risk & Validation, title: Model Validation Analyst,
+     keywords: [Model Validation Analyst, Model Validation Associate, Independent Model Validation]}
+  - {id: T1-7, tier: 1, category: Model Risk & Validation, title: Model Risk Analyst,
+     keywords: [Model Risk Analyst, Model Risk Management Analyst, Model Governance Analyst]}
+  - {id: T1-8, tier: 1, category: Model Risk & Validation, title: Quantitative Model Reviewer,
+     keywords: [Quantitative Model Reviewer, Model Reviewer, Model Testing Analyst]}
+  - {id: T1-9, tier: 1, category: Model Risk & Validation, title: Risk Model Backtesting Analyst,
+     keywords: [Backtesting Analyst, Model Performance Analyst]}
+  - {id: T1-10, tier: 1, category: Product Control & Valuation, title: Product Control Analyst,
+     keywords: [Product Control Analyst, Product Controller, Derivatives Product Control]}
+  - {id: T1-11, tier: 1, category: Product Control & Valuation, title: IPV / Valuation Control Analyst,
+     keywords: [IPV Analyst, Independent Price Verification, Valuation Control Analyst]}
+  - {id: T1-12, tier: 1, category: Product Control & Valuation, title: P&L Attribution Analyst,
+     keywords: [P&L Attribution Analyst, P&L Explain Analyst, P&L Analyst]}
+  - {id: T1-13, tier: 1, category: Product Control & Valuation, title: Derivatives Valuation Analyst,
+     keywords: [Derivatives Valuation Analyst, Valuation Services Analyst, Financial Instruments Valuation, Valuation Analyst]}
+  - {id: T1-14, tier: 1, category: Derivatives & Fixed Income, title: Derivatives Analyst,
+     keywords: [Derivatives Analyst, Derivatives Operations Analyst, Derivatives Support Analyst]}
+  - {id: T1-15, tier: 1, category: Derivatives & Fixed Income, title: Fixed Income Analyst,
+     keywords: [Fixed Income Analyst, Credit Analyst, Rates Analyst, Bond Analyst]}
+  - {id: T1-16, tier: 1, category: Derivatives & Fixed Income, title: Rates Risk Analyst,
+     keywords: [Rates Risk Analyst, Interest Rate Risk Analyst]}
+  - {id: T1-17, tier: 1, category: Derivatives & Fixed Income, title: Structured Products Analyst,
+     keywords: [Structured Products Analyst, Structured Notes Analyst, Exotics Analyst]}
+  - {id: T1-18, tier: 1, category: Derivatives & Fixed Income, title: Middle Office / Trade Support Analyst,
+     keywords: [Middle Office Analyst, Trade Support Analyst]}
+  - {id: T1-19, tier: 1, category: Derivatives & Fixed Income, title: Collateral & Margin Analyst,
+     keywords: [Collateral Analyst, Margin Analyst, Collateral Management Analyst]}
+  - {id: T1-20, tier: 1, category: Buy Side, title: Investment Risk Analyst,
+     keywords: [Investment Risk Analyst, Portfolio Risk Analyst, Investment Risk Associate]}
+  - {id: T1-21, tier: 1, category: Buy Side, title: Performance & Risk Analyst,
+     keywords: [Performance and Risk Analyst, Performance Measurement Analyst, Performance Attribution Analyst]}
+  - {id: T1-22, tier: 1, category: Buy Side, title: Fund Risk Analyst,
+     keywords: [Fund Risk Analyst, UCITS Risk Analyst, AIFMD Risk Analyst, Fund Risk Officer]}
+  - {id: T2-1, tier: 2, category: Quant, title: Quantitative Analyst,
+     keywords: [Quantitative Analyst, Quant Analyst, Risk Quant Analyst]}
+  - {id: T2-2, tier: 2, category: Quant, title: Quant Graduate Programme,
+     keywords: [Graduate Quant Analyst, Quantitative Analytics Graduate, Quant Graduate Programme]}
+  - {id: T2-3, tier: 2, category: Quant, title: Quantitative Risk Analyst,
+     keywords: [Quantitative Risk Analyst, Risk Quant, Quantitative Risk Associate]}
+  - {id: T2-4, tier: 2, category: Quant, title: Financial Engineer,
+     keywords: [Financial Engineer, Pricing Analyst]}
+  - {id: T2-5, tier: 2, category: Quant, title: Junior Quant Developer,
+     keywords: [Quant Developer, Risk Analytics Developer, Python Developer Risk]}
+  - {id: T2-6, tier: 2, category: Trading, title: Desk Strategist / Desk Analyst,
+     keywords: [Desk Strategist, Desk Analyst, Desk Quant, Trading Desk Analyst]}
+  - {id: T2-7, tier: 2, category: Trading, title: Trading Assistant / Junior Trader,
+     keywords: [Trading Assistant, Junior Trader, Options Trading Assistant, Graduate Trader]}
+  - {id: T2-8, tier: 2, category: Trading, title: Volatility / Options Analyst,
+     keywords: [Volatility Analyst, Options Analyst, Equity Derivatives Analyst]}
+  - {id: T2-9, tier: 2, category: Treasury & ALM, title: Treasury / ALM Analyst,
+     keywords: [Treasury Analyst, ALM Analyst, IRRBB Analyst, Balance Sheet Risk Analyst]}
+  - {id: T2-10, tier: 2, category: Treasury & ALM, title: Insurance Market Risk / ALM Analyst,
+     keywords: [Solvency II Analyst, Insurance Market Risk Analyst, Insurance ALM Analyst]}
+  - {id: T2-11, tier: 2, category: Treasury & ALM, title: Commodities Risk Analyst,
+     keywords: [Commodities Risk Analyst, Commodity Risk Analyst, Energy Trading Risk Analyst]}
+  - {id: T2-12, tier: 2, category: Consulting & Vendors, title: Financial Risk Management Consultant,
+     keywords: [Financial Risk Management Consultant, FRM Consultant, Risk Advisory Analyst, Risk Consultant]}
+  - {id: T2-13, tier: 2, category: Consulting & Vendors, title: Risk Analytics Analyst,
+     keywords: [Risk Analytics Analyst, Quant Analytics Analyst, Risk Analyst]}

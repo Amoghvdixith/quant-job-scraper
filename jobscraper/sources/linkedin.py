@@ -1,0 +1,98 @@
+"""LinkedIn public (logged-out) job search."""
+from __future__ import annotations
+
+import logging
+from datetime import date
+
+from bs4 import BeautifulSoup
+
+from ..http import polite_get, session
+from ..models import Job
+
+log = logging.getLogger(__name__)
+
+SEARCH = "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search"
+POSTING = "https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/{id}"
+WORLDWIDE_GEO_ID = "92000000"
+
+
+def build_keywords(keywords: list[str]) -> str:
+    """One LinkedIn search per role: "A" OR "B" OR "C"."""
+    return " OR ".join(f'"{k}"' for k in keywords)
+
+
+def search(role: dict, cfg: dict, stats: dict) -> list[Job]:
+    s = session()
+    jobs: list[Job] = []
+    seen: set[str] = set()
+    keywords = build_keywords(role["keywords"])
+    for location in cfg.get("linkedin_locations", ["Worldwide"]):
+        params = {
+            "keywords": keywords,
+            "f_TPR": f"r{cfg['max_age_days'] * 86400}",
+            "f_E": ",".join(str(x) for x in cfg.get("linkedin_experience_levels", [1, 2, 3])),
+            "sortBy": "DD",
+        }
+        if location.lower() == "worldwide":
+            params["geoId"] = WORLDWIDE_GEO_ID
+        else:
+            params["location"] = location
+        for page in range(cfg.get("linkedin_max_pages", 3)):
+            r = polite_get(s, SEARCH, params={**params, "start": page * 10})
+            if r is None:
+                stats["errors"] += 1
+                break
+            cards = BeautifulSoup(r.text, "html.parser").select("div.base-search-card, div.job-search-card")
+            page_jobs = [j for j in (_parse_card(c, role) for c in cards) if j]
+            new = [j for j in page_jobs if j.url not in seen]
+            if not new:
+                break
+            for j in new:
+                seen.add(j.url)
+            jobs.extend(new)
+            if len(page_jobs) < 10:
+                break
+    return jobs
+
+
+def _parse_card(card, role: dict) -> Job | None:
+    urn = card.get("data-entity-urn") or ""
+    link = card.select_one("a.base-card__full-link, a[href*='/jobs/view/']")
+    title = card.select_one(".base-search-card__title")
+    if not link or not title:
+        return None
+    job_id = urn.rsplit(":", 1)[-1] if urn else ""
+    url = link["href"].split("?")[0]
+    if not job_id:
+        job_id = url.rstrip("/").rsplit("-", 1)[-1]
+    company = card.select_one(".base-search-card__subtitle")
+    location = card.select_one(".job-search-card__location")
+    when = card.select_one("time")
+    posted = None
+    if when and when.get("datetime"):
+        try:
+            posted = date.fromisoformat(when["datetime"][:10])
+        except ValueError:
+            pass
+    return Job(
+        source="LinkedIn",
+        title=title.get_text(strip=True),
+        company=company.get_text(strip=True) if company else "",
+        location=location.get_text(strip=True) if location else "",
+        url=f"https://www.linkedin.com/jobs/view/{job_id}" if job_id.isdigit() else url,
+        posted=posted,
+        search_term=role["title"],
+    )
+
+
+def fetch_description(job: Job) -> str:
+    job_id = job.url.rstrip("/").rsplit("/", 1)[-1]
+    if not job_id.isdigit():
+        return ""
+    r = polite_get(session(), POSTING.format(id=job_id), delay=(1.0, 2.5))
+    if r is None:
+        return ""
+    soup = BeautifulSoup(r.text, "html.parser")
+    body = soup.select_one(".show-more-less-html__markup, .description__text")
+    criteria = " ".join(li.get_text(" ", strip=True) for li in soup.select(".description__job-criteria-item"))
+    return ((body.get_text(" ", strip=True) if body else "") + " " + criteria).strip()
