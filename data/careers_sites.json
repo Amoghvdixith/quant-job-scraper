@@ -1,0 +1,252 @@
+[
+ {
+  "platform": "greenhouse",
+  "id": "adyen",
+  "institution": "Adyen"
+ },
+ {
+  "platform": "ashby",
+  "id": "airwallex",
+  "institution": "Airwallex"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "akunacapital",
+  "institution": "Akuna Capital"
+ },
+ {
+  "platform": "ashby",
+  "id": "allica-bank",
+  "institution": "Allica Bank"
+ },
+ {
+  "platform": "ashby",
+  "id": "artemis",
+  "institution": "Artemis"
+ },
+ {
+  "platform": "ashby",
+  "id": "bain-capital",
+  "institution": "Bain Capital"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "baringa",
+  "institution": "Baringa"
+ },
+ {
+  "platform": "lever",
+  "id": "belvederetrading",
+  "institution": "Belvedere Trading"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "capco",
+  "institution": "Capco"
+ },
+ {
+  "platform": "ashby",
+  "id": "clearbank",
+  "institution": "ClearBank"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "cleo",
+  "institution": "Cleo"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "creditagricolecib",
+  "institution": "Credit Agricole CIB"
+ },
+ {
+  "platform": "lever",
+  "id": "dnb",
+  "institution": "DNB"
+ },
+ {
+  "platform": "smartrecruiters",
+  "id": "evelynpartners",
+  "institution": "Evelyn Partners"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "exoduspoint",
+  "institution": "ExodusPoint"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "flowtraders",
+  "institution": "Flow Traders"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "form3",
+  "institution": "Form3"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "isquaredcapital",
+  "institution": "I Squared Capital"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "janestreet",
+  "institution": "Jane Street"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "jumptrading",
+  "institution": "Jump Trading"
+ },
+ {
+  "platform": "lever",
+  "id": "kpmg",
+  "institution": "KPMG"
+ },
+ {
+  "platform": "smartrecruiters",
+  "id": "lockton",
+  "institution": "Lockton"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "lonepinecapital",
+  "institution": "Lone Pine Capital"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "mangroup",
+  "institution": "Man Group"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "marshallwace",
+  "institution": "Marshall Wace"
+ },
+ {
+  "platform": "lever",
+  "id": "metlife",
+  "institution": "MetLife"
+ },
+ {
+  "platform": "ashby",
+  "id": "moneybox",
+  "institution": "Moneybox"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "monzo",
+  "institution": "Monzo"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "nasdaq",
+  "institution": "Nasdaq"
+ },
+ {
+  "platform": "lever",
+  "id": "nium",
+  "institution": "Nium"
+ },
+ {
+  "platform": "lever",
+  "id": "oliverwyman",
+  "institution": "Oliver Wyman"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "optiver",
+  "institution": "Optiver"
+ },
+ {
+  "platform": "ashby",
+  "id": "pic",
+  "institution": "PIC"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "payoneer",
+  "institution": "Payoneer"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "permira",
+  "institution": "Permira"
+ },
+ {
+  "platform": "ashby",
+  "id": "plaid",
+  "institution": "Plaid"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "point72",
+  "institution": "Point72"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "quberesearchandtechnologies",
+  "institution": "Qube Research & Technologies"
+ },
+ {
+  "platform": "ashby",
+  "id": "quilter",
+  "institution": "Quilter"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "rga",
+  "institution": "RGA"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "squarepointcapital",
+  "institution": "Squarepoint Capital"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "stripe",
+  "institution": "Stripe"
+ },
+ {
+  "platform": "smartrecruiters",
+  "id": "tpicap",
+  "institution": "TP ICAP"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "towerresearchcapital",
+  "institution": "Tower Research Capital"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "truelayer",
+  "institution": "TrueLayer"
+ },
+ {
+  "platform": "ashby",
+  "id": "unit",
+  "institution": "Unit"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "winton",
+  "institution": "Winton Group"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "wise",
+  "institution": "Wise"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "worldquant",
+  "institution": "WorldQuant"
+ },
+ {
+  "platform": "greenhouse",
+  "id": "iex",
+  "institution": "iex"
+ }
+]
