@@ -1,5 +1,15 @@
 [
  {
+  "platform": "workday",
+  "id": "aig.wd1/aig",
+  "institution": "AIG"
+ },
+ {
+  "platform": "workday",
+  "id": "accenture.wd103/AccentureCareers",
+  "institution": "Accenture"
+ },
+ {
   "platform": "greenhouse",
   "id": "adyen",
   "institution": "Adyen"
@@ -20,14 +30,29 @@
   "institution": "Allica Bank"
  },
  {
-  "platform": "ashby",
-  "id": "artemis",
-  "institution": "Artemis"
+  "platform": "workday",
+  "id": "athene.wd5/Apollo_Careers",
+  "institution": "Apollo Global Management"
+ },
+ {
+  "platform": "workday",
+  "id": "aviva.wd1/External",
+  "institution": "Aviva"
+ },
+ {
+  "platform": "workday",
+  "id": "bmo.wd3/External",
+  "institution": "BMO"
  },
  {
   "platform": "ashby",
   "id": "bain-capital",
   "institution": "Bain Capital"
+ },
+ {
+  "platform": "workday",
+  "id": "barclays.wd3/External_Career_Site_Barclays",
+  "institution": "Barclays"
  },
  {
   "platform": "greenhouse",
@@ -40,9 +65,44 @@
   "institution": "Belvedere Trading"
  },
  {
+  "platform": "workday",
+  "id": "blackrock.wd1/BlackRock_Professional",
+  "institution": "BlackRock"
+ },
+ {
+  "platform": "workday",
+  "id": "blackstone.wd1/Blackstone_Careers",
+  "institution": "Blackstone"
+ },
+ {
+  "platform": "workday",
+  "id": "brookfield.wd5/brookfield",
+  "institution": "Brookfield"
+ },
+ {
+  "platform": "workday",
+  "id": "cibc.wd3/search",
+  "institution": "CIBC"
+ },
+ {
+  "platform": "workday",
+  "id": "cmegroup.wd1/cme_careers",
+  "institution": "CME Group"
+ },
+ {
   "platform": "greenhouse",
   "id": "capco",
   "institution": "Capco"
+ },
+ {
+  "platform": "workday",
+  "id": "cboe.wd1/External_Career_CBOE",
+  "institution": "Cboe Global Markets"
+ },
+ {
+  "platform": "workday",
+  "id": "citi.wd5/2",
+  "institution": "Citi"
  },
  {
   "platform": "ashby",
@@ -65,6 +125,11 @@
   "institution": "DNB"
  },
  {
+  "platform": "workday",
+  "id": "db.wd3/DBWebsite",
+  "institution": "Deutsche Bank"
+ },
+ {
   "platform": "smartrecruiters",
   "id": "evelynpartners",
   "institution": "Evelyn Partners"
@@ -73,6 +138,26 @@
   "platform": "greenhouse",
   "id": "exoduspoint",
   "institution": "ExodusPoint"
+ },
+ {
+  "platform": "workday",
+  "id": "fis.wd5/SearchJobs",
+  "institution": "FIS"
+ },
+ {
+  "platform": "workday",
+  "id": "fil.wd3/001",
+  "institution": "Fidelity International"
+ },
+ {
+  "platform": "workday",
+  "id": "fifththird.wd5/53careers",
+  "institution": "Fifth Third Bank"
+ },
+ {
+  "platform": "workday",
+  "id": "fiserv.wd5/EXT",
+  "institution": "Fiserv"
  },
  {
   "platform": "greenhouse",
@@ -85,14 +170,49 @@
   "institution": "Form3"
  },
  {
+  "platform": "workday",
+  "id": "franklintempleton.wd5/Primary-External-1",
+  "institution": "Franklin Templeton"
+ },
+ {
+  "platform": "workday",
+  "id": "tsys.wd1/TSYS",
+  "institution": "Global Payments"
+ },
+ {
+  "platform": "workday",
+  "id": "hl.wd1/Campus",
+  "institution": "Houlihan Lokey"
+ },
+ {
   "platform": "greenhouse",
   "id": "isquaredcapital",
   "institution": "I Squared Capital"
  },
  {
+  "platform": "workday",
+  "id": "ing.wd3/ICSGBLCOR",
+  "institution": "ING"
+ },
+ {
+  "platform": "workday",
+  "id": "invesco.wd1/IVZ",
+  "institution": "Invesco"
+ },
+ {
+  "platform": "oracle",
+  "id": "jpmc.fa.oraclecloud.com/CX_1001",
+  "institution": "JPMorgan Chase"
+ },
+ {
   "platform": "greenhouse",
   "id": "janestreet",
   "institution": "Jane Street"
+ },
+ {
+  "platform": "workday",
+  "id": "juliusbaer.wd3/External",
+  "institution": "Julius Baer"
  },
  {
   "platform": "greenhouse",
@@ -105,9 +225,24 @@
   "institution": "KPMG"
  },
  {
+  "platform": "workday",
+  "id": "keybank.wd5/External_Career_Site",
+  "institution": "KeyBank"
+ },
+ {
+  "platform": "workday",
+  "id": "lbg.wd3/LBG_Careers",
+  "institution": "Lloyds Banking Group"
+ },
+ {
   "platform": "smartrecruiters",
   "id": "lockton",
   "institution": "Lockton"
+ },
+ {
+  "platform": "workday",
+  "id": "lseg.wd3/Careers",
+  "institution": "London Stock Exchange Group"
  },
  {
   "platform": "greenhouse",
@@ -115,9 +250,24 @@
   "institution": "Lone Pine Capital"
  },
  {
+  "platform": "workday",
+  "id": "mtb.wd5/MTB",
+  "institution": "M&T Bank"
+ },
+ {
+  "platform": "workday",
+  "id": "mufgub.wd3/MUFG-Careers",
+  "institution": "MUFG"
+ },
+ {
   "platform": "greenhouse",
   "id": "mangroup",
   "institution": "Man Group"
+ },
+ {
+  "platform": "workday",
+  "id": "mmc.wd1/MMC",
+  "institution": "Marsh"
  },
  {
   "platform": "greenhouse",
@@ -130,6 +280,11 @@
   "institution": "MetLife"
  },
  {
+  "platform": "workday",
+  "id": "mizuho.wd1/mizuhoamericas",
+  "institution": "Mizuho"
+ },
+ {
   "platform": "ashby",
   "id": "moneybox",
   "institution": "Moneybox"
@@ -140,14 +295,39 @@
   "institution": "Monzo"
  },
  {
+  "platform": "workday",
+  "id": "ms.wd5/External",
+  "institution": "Morgan Stanley"
+ },
+ {
+  "platform": "workday",
+  "id": "morningstar.wd5/Americas",
+  "institution": "Morningstar"
+ },
+ {
   "platform": "greenhouse",
   "id": "nasdaq",
   "institution": "Nasdaq"
  },
  {
+  "platform": "workday",
+  "id": "rbs.wd3/RBS",
+  "institution": "NatWest Group"
+ },
+ {
   "platform": "lever",
   "id": "nium",
   "institution": "Nium"
+ },
+ {
+  "platform": "workday",
+  "id": "ntrs.wd1/northerntrust",
+  "institution": "Northern Trust"
+ },
+ {
+  "platform": "workday",
+  "id": "tiaa.wd1/Search",
+  "institution": "Nuveen"
  },
  {
   "platform": "lever",
@@ -160,9 +340,9 @@
   "institution": "Optiver"
  },
  {
-  "platform": "ashby",
-  "id": "pic",
-  "institution": "PIC"
+  "platform": "workday",
+  "id": "pnc.wd5/External",
+  "institution": "PNC"
  },
  {
   "platform": "greenhouse",
@@ -185,6 +365,16 @@
   "institution": "Point72"
  },
  {
+  "platform": "workday",
+  "id": "pru.wd5/Careers",
+  "institution": "Prudential plc"
+ },
+ {
+  "platform": "workday",
+  "id": "pwc.wd3/Global_Experienced_Careers",
+  "institution": "PwC"
+ },
+ {
   "platform": "greenhouse",
   "id": "quberesearchandtechnologies",
   "institution": "Qube Research & Technologies"
@@ -195,9 +385,24 @@
   "institution": "Quilter"
  },
  {
+  "platform": "workday",
+  "id": "rbc.wd3/RBCGLOBAL1",
+  "institution": "RBC"
+ },
+ {
   "platform": "greenhouse",
   "id": "rga",
   "institution": "RGA"
+ },
+ {
+  "platform": "workday",
+  "id": "spgi.wd5/SPGI_Careers",
+  "institution": "S&P Global"
+ },
+ {
+  "platform": "workday",
+  "id": "santander.wd3/SantanderCareers",
+  "institution": "Santander UK"
  },
  {
   "platform": "greenhouse",
@@ -205,9 +410,24 @@
   "institution": "Squarepoint Capital"
  },
  {
+  "platform": "workday",
+  "id": "statestreet.wd1/Global",
+  "institution": "State Street"
+ },
+ {
   "platform": "greenhouse",
   "id": "stripe",
   "institution": "Stripe"
+ },
+ {
+  "platform": "workday",
+  "id": "troweprice.wd5/TRowePrice",
+  "institution": "T. Rowe Price"
+ },
+ {
+  "platform": "workday",
+  "id": "td.wd3/TD_Bank_Careers",
+  "institution": "TD Bank"
  },
  {
   "platform": "smartrecruiters",
@@ -220,14 +440,34 @@
   "institution": "Tower Research Capital"
  },
  {
+  "platform": "workday",
+  "id": "travelers.wd5/External",
+  "institution": "Travelers"
+ },
+ {
   "platform": "greenhouse",
   "id": "truelayer",
   "institution": "TrueLayer"
  },
  {
-  "platform": "ashby",
-  "id": "unit",
-  "institution": "Unit"
+  "platform": "workday",
+  "id": "usbank.wd1/US_Bank_Careers",
+  "institution": "U.S. Bank"
+ },
+ {
+  "platform": "workday",
+  "id": "vanguard.wd5/vanguard_external",
+  "institution": "Vanguard"
+ },
+ {
+  "platform": "workday",
+  "id": "wellington.wd5/External",
+  "institution": "Wellington Management"
+ },
+ {
+  "platform": "workday",
+  "id": "wf.wd1/WellsFargoJobs",
+  "institution": "Wells Fargo"
  },
  {
   "platform": "greenhouse",
@@ -243,10 +483,5 @@
   "platform": "greenhouse",
   "id": "worldquant",
   "institution": "WorldQuant"
- },
- {
-  "platform": "greenhouse",
-  "id": "iex",
-  "institution": "iex"
  }
 ]
