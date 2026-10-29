@@ -21,7 +21,7 @@ from .uk_sponsors import UKSponsorRegister
 log = logging.getLogger("jobscraper")
 ROOT = Path(__file__).resolve().parent.parent
 STORE = ROOT / "data" / "jobs.json"
-MAX_DESCRIPTION_FETCHES = 300
+MAX_DESCRIPTION_FETCHES = 400
 KEEP_STORE_DAYS = 30
 
 
@@ -143,7 +143,18 @@ def apply_filters(jobs: list[Job], cfg: dict, matcher: filters.RoleMatcher) -> d
 
 
 def load_store() -> dict[str, dict]:
-    return json.loads(STORE.read_text()) if STORE.exists() else {}
+    raw = json.loads(STORE.read_text()) if STORE.exists() else {}
+    # Re-key in case the duplicate-matching rules changed since the jobs were saved.
+    store: dict[str, dict] = {}
+    for rec in raw.values():
+        key = Job.from_dict(rec).key
+        if key in store:
+            kept = store[key]
+            kept["sources"] = sorted(set(kept.get("sources", [])) | set(rec.get("sources", [])))
+            kept["emailed"] = kept.get("emailed") or rec.get("emailed")
+        else:
+            store[key] = rec
+    return store
 
 
 def save_store(store: dict[str, dict]) -> None:
@@ -153,21 +164,75 @@ def save_store(store: dict[str, dict]) -> None:
     STORE.write_text(json.dumps(store, indent=1, sort_keys=True))
 
 
-def enrich(job: Job, cfg: dict, register: UKSponsorRegister) -> str | None:
-    """Reads the description; returns a reason if the job should be dropped."""
-    text = job.description
-    if not text and "LinkedIn" in job.sources:
-        text = linkedin.fetch_description(job)
-    elif not text and "myworkdayjobs.com" in job.url:
-        text = careers.fetch_description(job)
+def fetch_full_description(job: Job) -> str:
+    """The job's full text. Search results often only carry a short summary."""
+    text = job.description or ""
+    if len(text) >= 600:
+        return text
+    fetched = ""
+    if "linkedin.com" in job.url:
+        fetched = linkedin.fetch_description(job)
+    elif "efinancialcareers" in job.url:
+        fetched = efinancialcareers.fetch_description(job)
+    elif "myworkdayjobs.com" in job.url:
+        fetched = careers.fetch_description(job)
+    return fetched if len(fetched) > len(text) else text
+
+
+def enrich(job: Job, text: str, register: UKSponsorRegister) -> None:
+    """Fills in what we learn from the description."""
+    job.description_checked = len(text) >= 200
     job.years_required = filters.years_required(text)
     job.sponsorship, job.sponsorship_evidence = filters.sponsorship(text) if text else ("Not checked", "")
     job.uk_licensed_sponsor = register.check(job.company, job.location)
+    if text.startswith(linkedin.CLOSED_MARKER):
+        job.sponsorship_evidence = "posting closed"
+
+
+def rule_broken(job: Job, cfg: dict, matcher: filters.RoleMatcher) -> str | None:
+    """Every rule a job must pass to be emailed. Checked again on each run, so
+    changes to config.yaml or roles.yaml also apply to jobs found earlier."""
+    if not matcher.match(job.title):
+        return "title doesn't match a target role"
+    if filters.is_senior(job.title, cfg["senior_title_words"]):
+        return "too senior"
+    if filters.is_excluded_location(job.location, cfg["excluded_locations"]):
+        return "excluded country"
     if job.years_required is not None and job.years_required > cfg["max_years_experience"]:
         return f"asks for {job.years_required}+ years"
     if cfg.get("drop_no_sponsorship", True) and job.sponsorship == "No":
         return "no sponsorship"
+    if job.sponsorship_evidence == "posting closed":
+        return "posting closed"
+    cutoff = date.today() - timedelta(days=cfg["max_age_days"])
+    if (job.posted or date.fromisoformat(job.first_seen[:10])) < cutoff:
+        return "older than the age limit"
     return None
+
+
+def enrich_all(jobs: list[Job], register: UKSponsorRegister) -> None:
+    """Reads descriptions: LinkedIn one at a time (it blocks fast readers), other sites in parallel."""
+    slow = [j for j in jobs if "linkedin.com" in j.url and len(j.description or "") < 600]
+    fast = [j for j in jobs if j not in slow]
+
+    def one(job: Job) -> None:
+        try:
+            enrich(job, fetch_full_description(job), register)
+        except Exception as e:
+            log.info("description for %s failed: %s", job.url, e)
+            enrich(job, job.description or "", register)
+
+    def run_slow() -> None:
+        for job in slow[:MAX_DESCRIPTION_FETCHES]:
+            one(job)
+        for job in slow[MAX_DESCRIPTION_FETCHES:]:  # the rest are read on the next run
+            enrich(job, job.description or "", register)
+            job.sponsorship = "Not checked"
+
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        slow_done = pool.submit(run_slow)
+        list(pool.map(one, fast))
+        slow_done.result()
 
 
 def main() -> None:
@@ -195,42 +260,40 @@ def main() -> None:
     store = load_store()
     register = UKSponsorRegister()
     now = datetime.now(timezone.utc).replace(tzinfo=None).isoformat(timespec="seconds")
-    fetched = 0
+    to_read = []
     for key, job in candidates.items():
         prev = store.get(key)
-        if prev and prev.get("sponsorship") != "Not checked":
-            # Seen before: keep what we learned, but record any new source.
+        if prev and prev.get("sponsorship") != "Not checked" and "description_checked" in prev:
+            # Seen before and already read: keep what we learned, but record any new source.
             prev["sources"] = sorted(set(prev.get("sources", [])) | set(job.sources))
             continue
-        if fetched >= MAX_DESCRIPTION_FETCHES and not job.description:
-            job.sponsorship = "Not checked"
-        else:
-            fetched += not job.description
-            reason = enrich(job, cfg, register)
-            job.first_seen = prev["first_seen"] if prev else now
-            record = job.to_dict()
-            record["excluded"] = reason
-            record["emailed"] = bool(prev and prev.get("emailed"))
-            store[key] = record
-            continue
-        job.first_seen = now
-        store[key] = {**job.to_dict(), "excluded": None, "emailed": False}
-
-    cutoff = date.today() - timedelta(days=cfg["max_age_days"])
-    current = []
+        job.first_seen = prev["first_seen"] if prev else now
+        to_read.append((key, job, bool(prev and prev.get("emailed"))))
+    # Jobs saved by older versions that never had their description read.
     for key, rec in store.items():
-        if rec.get("excluded"):
-            continue
+        if "description_checked" not in rec and key not in candidates and not rec.get("excluded"):
+            to_read.append((key, Job.from_dict(rec), bool(rec.get("emailed"))))
+    log.info("Reading %d job descriptions", len(to_read))
+    enrich_all([job for _, job, _ in to_read], register)
+    for key, job, emailed in to_read:
+        store[key] = {**job.to_dict(), "excluded": None, "emailed": emailed}
+
+    current = []
+    dropped: dict[str, int] = {}
+    for key, rec in store.items():
         job = Job.from_dict(rec)
-        if not matcher.match(job.title):  # re-check old finds against the current roles.yaml
-            continue
         job.target_firm = institutions.match(job.company)
-        posted = job.posted or date.fromisoformat(rec["first_seen"][:10])
-        if posted >= cutoff:
+        job.recruiter = filters.is_recruiter(job.company)
+        reason = rule_broken(job, cfg, matcher)
+        rec["excluded"] = reason
+        if reason:
+            dropped[reason] = dropped.get(reason, 0) + 1
+        else:
             current.append(job)
+    log.info("Dropped from the saved list: %s", dropped)
     new_keys = {j.key for j in current if not store[j.key].get("emailed")}
     current.sort(key=lambda j: (
-        j.key not in new_keys, j.sponsorship != "Yes", j.uk_licensed_sponsor != "Yes",
+        j.key not in new_keys, j.recruiter, j.sponsorship != "Yes", j.uk_licensed_sponsor != "Yes",
         j.tier, -(j.posted or date.min).toordinal(),
     ))
 
@@ -246,7 +309,7 @@ def main() -> None:
         for key in new_keys:
             store[key]["emailed"] = True
     save_store(store)
-    write_report(stats, len(raw), len(candidates), current, new_keys, slot)
+    write_report(stats, len(raw), len(candidates), current, new_keys, slot, dropped)
 
 
 class _WarningBuffer(logging.Handler):
@@ -262,7 +325,7 @@ class _WarningBuffer(logging.Handler):
 WARNINGS = _WarningBuffer()
 
 
-def write_report(stats, raw_count, candidate_count, current, new_keys, slot) -> None:
+def write_report(stats, raw_count, candidate_count, current, new_keys, slot, dropped) -> None:
     """data/last_run.json: what the last run found, readable without the Actions logs."""
     report = {
         "finished_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -272,6 +335,9 @@ def write_report(stats, raw_count, candidate_count, current, new_keys, slot) -> 
         "after_filters": candidate_count,
         "jobs_in_email": len(current),
         "new_jobs": len(new_keys),
+        "descriptions_read": sum(j.description_checked for j in current),
+        "posted_by_recruiters": sum(j.recruiter for j in current),
+        "saved_jobs_dropped_by_rule": dropped,
         "warnings": WARNINGS.lines,
     }
     (ROOT / "data" / "last_run.json").write_text(json.dumps(report, indent=1))

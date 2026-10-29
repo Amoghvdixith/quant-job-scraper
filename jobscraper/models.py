@@ -25,12 +25,14 @@ class Job:
     years_required: int | None = None
     uk_licensed_sponsor: str = ""
     target_firm: str = ""
+    recruiter: bool = False
+    description_checked: bool = False
     first_seen: str = ""
     sources: list[str] = field(default_factory=list)
 
     @property
     def key(self) -> str:
-        return f"{_norm(self.title)}|{_norm(self.company)}"
+        return f"{_norm(self.title)}|{_company_key(self.company)}"
 
     def to_dict(self) -> dict:
         d = asdict(self)
@@ -47,3 +49,15 @@ class Job:
 
 def _norm(s: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).strip()
+
+
+_COMPANY_NOISE = re.compile(
+    r"\b(group|holdings?|plc|ltd|limited|llp|llc|inc|corp|corporation|company|co|bank|banking|"
+    r"international|securities|the|and)\b")
+
+
+def _company_key(name: str) -> str:
+    """Same employer written differently ("JPMorgan Chase" / "JPMorganChase", "ABN AMRO Bank N.V." / "ABN AMRO NL")."""
+    words = _COMPANY_NOISE.sub(" ", _norm(name)).split()
+    long_words = [w for w in words if len(w) > 2] or words
+    return "".join(long_words)

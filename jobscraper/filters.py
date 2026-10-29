@@ -72,18 +72,44 @@ def is_excluded_location(location: str, excluded: list[str]) -> bool:
     return any(re.search(rf"\b{re.escape(place.lower())}\b", loc) for place in excluded)
 
 
-_YEARS = re.compile(
-    r"(?:minimum of |at least |min\.? )?(\d{1,2})\s*(?:\+|plus)?\s*(?:-|to|–)?\s*(\d{1,2})?\s*\+?\s*"
-    r"(?:years?|yrs?)(?:'|’)?\s*(?:of\s+)?(?:relevant\s+|professional\s+|work\s+|industry\s+|proven\s+)?"
-    r"(?:experience|exp\b)",
-    re.I,
-)
+_YEARS = re.compile(r"(\d{1,2})\s*\+?\s*(?:(?:-|to|–)\s*\d{1,2}\s*\+?\s*)?(?:years?|yrs?)\b", re.I)
+_EXPERIENCE = re.compile(r"experience|exp\b|background|track record", re.I)
 
 
 def years_required(description: str) -> int | None:
-    """Smallest 'N years experience' figure in the description, if any."""
-    found = [int(m.group(1)) for m in _YEARS.finditer(description or "") if int(m.group(1)) <= 20]
+    """Smallest 'N years (of) experience' figure in the description, if any."""
+    text = description or ""
+    found = []
+    for m in _YEARS.finditer(text):
+        n = int(m.group(1))
+        window = text[max(0, m.start() - 60): m.end() + 60]
+        if 1 <= n <= 20 and _EXPERIENCE.search(window) and not re.search(r"years? old|year (?:programme|program|contract)", window, re.I):
+            found.append(n)
     return min(found) if found else None
+
+
+# Recruitment agencies: real postings, but the hiring firm is hidden and they often
+# re-post the same role many times.
+_RECRUITER_WORDS = re.compile(
+    r"\b(recruit\w*|staffing|talent|headhunt\w*|search|selection|executive search|resourcing|appointments|"
+    r"personnel|employment|careers? agency|hr services)\b", re.I)
+_RECRUITERS = {
+    "oxford knight", "selby jennings", "mondrian alpha", "gravitas recruitment group", "hays", "michael page",
+    "page executive", "robert walters", "robert half", "harnham", "morgan mckinley", "huxley", "durlston partners",
+    "hunter bond", "nls", "anson mccade", "caspian one", "pinpoint partners", "odyssey search partners",
+    "harrington starr", "joseph harry", "eka finance", "westbourne partners", "venture search", "paragon alpha",
+    "stanton chase", "phaidon international", "jefferson frank", "glocomms", "hamlyn williams", "korn ferry",
+    "goodman masson", "barclay simpson", "marks sattin", "hudson shribman", "investigo", "sthree",
+    "fintech recruiters", "aston carter", "randstad", "adecco", "manpower", "kforce", "teksystems",
+    "options group", "proactive appointments", "radley james", "ipsos jobs", "jobot", "cyber talent",
+    "dlc partners", "tiro partners", "bruin", "quant capital", "vertex search", "trireme", "ascension",
+}
+
+
+def is_recruiter(company: str) -> bool:
+    c = re.sub(r"[^a-z0-9 ]+", " ", (company or "").lower())
+    c = re.sub(r"\s+", " ", c).strip()
+    return any(c == r or c.startswith(r + " ") for r in _RECRUITERS) or bool(_RECRUITER_WORDS.search(c))
 
 
 _NO_SPONSOR = [

@@ -147,3 +147,22 @@ def _parse_date(value) -> date | None:
         return datetime.fromtimestamp(ts, timezone.utc).date()
     m = re.match(r"(\d{4}-\d{2}-\d{2})", str(value))
     return date.fromisoformat(m.group(1)) if m else None
+
+
+def fetch_description(job: Job) -> str:
+    """Full description from the job's own page (search results only carry a summary)."""
+    r = polite_get(session(), job.url, delay=(0.5, 1.5), retries=1)
+    if r is None:
+        return ""
+    soup = BeautifulSoup(r.text, "html.parser")
+    for script in soup.find_all("script", type="application/ld+json"):
+        try:
+            data = json.loads(script.string or "")
+        except ValueError:
+            continue
+        for item in data if isinstance(data, list) else [data]:
+            if isinstance(item, dict) and item.get("@type") == "JobPosting":
+                extra = " ".join(str(item.get(k) or "") for k in ("experienceRequirements", "qualifications"))
+                return BeautifulSoup(str(item.get("description") or ""), "html.parser").get_text(" ", strip=True) + " " + extra
+    main = soup.select_one("main") or soup.body
+    return main.get_text(" ", strip=True) if main else ""

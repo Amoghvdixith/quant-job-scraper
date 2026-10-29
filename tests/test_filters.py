@@ -146,3 +146,29 @@ def test_one_word_keywords_need_the_phrase():
     assert role_of("Trading Systems Engineer - Global Options") is None
     assert role_of("Credit Analyst - Leveraged Finance") == "T1-15"
     assert role_of("Graduate Treasury Analyst") == "T2-9"
+
+
+def test_rules_rechecked_on_saved_jobs():
+    from jobscraper.main import rule_broken
+    ok = Job("LinkedIn", "Graduate Market Risk Analyst", "Barclays", "London, UK", "u",
+             posted=date.today(), first_seen=date.today().isoformat())
+    assert rule_broken(ok, CFG, matcher) is None
+    for change, reason in [
+        (dict(title="Senior Market Risk Analyst"), "too senior"),
+        (dict(title="Market Risk Analyst II"), "too senior"),
+        (dict(location="Mumbai, India"), "excluded country"),
+        (dict(years_required=5), "asks for 5+ years"),
+        (dict(sponsorship="No"), "no sponsorship"),
+        (dict(posted=date.today() - timedelta(days=9)), "older than the age limit"),
+        (dict(title="Software Engineer"), "title doesn't match a target role"),
+    ]:
+        job = Job(**{**ok.__dict__, **change})
+        assert rule_broken(job, CFG, matcher) == reason, change
+
+
+def test_recruiters_and_duplicates():
+    assert filters.is_recruiter("Oxford Knight")
+    assert not filters.is_recruiter("Goldman Sachs")
+    a = Job("LinkedIn", "Market Risk Analyst", "JPMorgan Chase", "", "u")
+    b = Job("Careers", "Market Risk Analyst", "JPMorganChase", "", "v")
+    assert a.key == b.key

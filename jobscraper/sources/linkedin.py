@@ -104,4 +104,11 @@ def fetch_description(job: Job) -> str:
     soup = BeautifulSoup(r.text, "html.parser")
     body = soup.select_one(".show-more-less-html__markup, .description__text")
     criteria = " ".join(li.get_text(" ", strip=True) for li in soup.select(".description__job-criteria-item"))
-    return ((body.get_text(" ", strip=True) if body else "") + " " + criteria).strip()
+    text = ((body.get_text(" ", strip=True) if body else "") + " " + criteria).strip()
+    if "no longer accepting applications" in r.text.lower():
+        text = f"{CLOSED_MARKER} {text}"
+    return text
+
+
+# Put at the start of a description when the posting has closed.
+CLOSED_MARKER = "[POSTING CLOSED]"

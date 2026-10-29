@@ -13,7 +13,7 @@ COLUMNS = [
     ("New", 7), ("Tier", 6), ("Category", 22), ("Matched Role", 30), ("Job Title", 45),
     ("Company", 28), ("On Your Target List", 22), ("Location", 30), ("Posted", 11), ("Days Old", 9), ("Source", 18),
     ("Visa Sponsorship", 16), ("UK Licensed Sponsor", 18), ("Years Exp. Asked", 15),
-    ("Apply Link", 14), ("Sponsorship Evidence", 60),
+    ("Apply Link", 14), ("Posted By", 18), ("Description Checked", 12), ("Sponsorship Evidence", 60),
 ]
 HEADER_FILL = PatternFill("solid", fgColor="1F3864")
 NEW_FILL = PatternFill("solid", fgColor="E2EFDA")
@@ -50,6 +50,8 @@ def write_workbook(jobs: list[Job], new_keys: set[str], stats: dict, path: Path)
             job.uk_licensed_sponsor,
             job.years_required,
             "Open",
+            "Recruitment agency" if job.recruiter else "Employer",
+            "Yes" if job.description_checked else "No",
             job.sponsorship_evidence,
         ])
         row = ws.max_row
@@ -77,6 +79,7 @@ def write_workbook(jobs: list[Job], new_keys: set[str], stats: dict, path: Path)
         ("New since last email", len(new_keys)),
         ("Offer visa sponsorship", sum(j.sponsorship == "Yes" for j in jobs)),
         ("At your target institutions", sum(bool(j.target_firm) for j in jobs)),
+        ("Posted by recruitment agencies", sum(j.recruiter for j in jobs)),
         ("", ""),
         ("Source", "Jobs found this run"),
     ]

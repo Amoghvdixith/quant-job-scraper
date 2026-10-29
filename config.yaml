@@ -105,6 +105,10 @@ senior_title_words:
   - experienced
   - partner
   - supervisor
+  # Levels like "Analyst II" usually want a few years' experience.
+  - ii
+  - iii
+  - iv
 
 # Drop postings whose description asks for more than this many years of experience.
 max_years_experience: 2
