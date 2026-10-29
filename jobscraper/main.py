@@ -188,7 +188,8 @@ def main() -> None:
     now_utc = datetime.now(timezone.utc)
     slot = now_utc.toordinal() * 6 + now_utc.hour // 4
     raw, stats = scrape(cfg, roles, slot)
-    candidates = apply_filters(raw, cfg, filters.RoleMatcher(roles))
+    matcher = filters.RoleMatcher(roles)
+    candidates = apply_filters(raw, cfg, matcher)
     log.info("%d raw results, %d after title/seniority/location/date filters", len(raw), len(candidates))
 
     store = load_store()
@@ -221,6 +222,9 @@ def main() -> None:
         if rec.get("excluded"):
             continue
         job = Job.from_dict(rec)
+        if not matcher.match(job.title):  # re-check old finds against the current roles.yaml
+            continue
+        job.target_firm = institutions.match(job.company)
         posted = job.posted or date.fromisoformat(rec["first_seen"][:10])
         if posted >= cutoff:
             current.append(job)

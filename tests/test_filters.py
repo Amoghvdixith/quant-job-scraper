@@ -139,3 +139,10 @@ def test_rotation():
         seen |= set(rotate(items, 3, slot))
     assert seen == set(items)
     assert rotate(items, 20, 5) == items
+
+
+def test_one_word_keywords_need_the_phrase():
+    assert role_of("Associate, Fundraise Management, Liquid Credit Strategies") is None
+    assert role_of("Trading Systems Engineer - Global Options") is None
+    assert role_of("Credit Analyst - Leveraged Finance") == "T1-15"
+    assert role_of("Graduate Treasury Analyst") == "T2-9"

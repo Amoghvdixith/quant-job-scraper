@@ -31,11 +31,11 @@ roles:
   - {id: T1-12, tier: 1, category: Product Control & Valuation, title: P&L Attribution Analyst,
      keywords: [P&L Attribution Analyst, P&L Explain Analyst, P&L Analyst]}
   - {id: T1-13, tier: 1, category: Product Control & Valuation, title: Derivatives Valuation Analyst,
-     keywords: [Derivatives Valuation Analyst, Valuation Services Analyst, Financial Instruments Valuation, Valuation Analyst]}
+     keywords: [Derivatives Valuation Analyst, Valuation Services Analyst, Financial Instruments Valuation, Valuation Analyst, Valuations Associate, Valuation Associate]}
   - {id: T1-14, tier: 1, category: Derivatives & Fixed Income, title: Derivatives Analyst,
      keywords: [Derivatives Analyst, Derivatives Operations Analyst, Derivatives Support Analyst]}
   - {id: T1-15, tier: 1, category: Derivatives & Fixed Income, title: Fixed Income Analyst,
-     keywords: [Fixed Income Analyst, Credit Analyst, Rates Analyst, Bond Analyst]}
+     keywords: [Fixed Income Analyst, Credit Analyst, Credit Research Analyst, Credit Risk Analyst, Rates Analyst, Rates Trading Analyst, Bond Analyst]}
   - {id: T1-16, tier: 1, category: Derivatives & Fixed Income, title: Rates Risk Analyst,
      keywords: [Rates Risk Analyst, Interest Rate Risk Analyst]}
   - {id: T1-17, tier: 1, category: Derivatives & Fixed Income, title: Structured Products Analyst,
@@ -43,7 +43,7 @@ roles:
   - {id: T1-18, tier: 1, category: Derivatives & Fixed Income, title: Middle Office / Trade Support Analyst,
      keywords: [Middle Office Analyst, Trade Support Analyst]}
   - {id: T1-19, tier: 1, category: Derivatives & Fixed Income, title: Collateral & Margin Analyst,
-     keywords: [Collateral Analyst, Margin Analyst, Collateral Management Analyst]}
+     keywords: [Collateral Analyst, Margin Analyst, Collateral Management Analyst, Collateral Operations Analyst, Margin Operations Analyst]}
   - {id: T1-20, tier: 1, category: Buy Side, title: Investment Risk Analyst,
      keywords: [Investment Risk Analyst, Portfolio Risk Analyst, Investment Risk Associate]}
   - {id: T1-21, tier: 1, category: Buy Side, title: Performance & Risk Analyst,

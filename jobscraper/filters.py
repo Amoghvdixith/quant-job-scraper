@@ -22,6 +22,11 @@ SYNONYMS = {
 }
 
 
+# One-word keywords that only count when the full keyword phrase is in the title.
+LOOSE_WORDS = {"credit", "options", "rates", "bond", "margin", "collateral", "exposure", "desk",
+               "pricing", "valuation", "trading", "volatility"}
+
+
 def tokens(text: str) -> list[str]:
     text = (text or "").lower().replace("p&l", " pnl ").replace("p & l", " pnl ")
     words = re.findall(r"[a-z0-9]+", text)
@@ -43,10 +48,17 @@ class RoleMatcher:
         self._rules.sort(key=lambda r: (-len(r[0]), r[1]["tier"]))
 
     def match(self, title: str) -> tuple[dict, str] | None:
-        title_tokens = set(tokens(title))
+        title_list = tokens(title)
+        title_tokens = set(title_list)
+        title_text = " " + " ".join(title_list) + " "
         for core, role, kw in self._rules:
-            if core <= title_tokens:
-                return role, kw
+            if not core <= title_tokens:
+                continue
+            # A few one-word keywords ("Credit Analyst", "Options Analyst") are too loose on
+            # their own, so for those the whole phrase has to appear in the title.
+            if len(core) == 1 and core <= LOOSE_WORDS and f" {' '.join(tokens(kw))} " not in title_text:
+                continue
+            return role, kw
         return None
 
 
