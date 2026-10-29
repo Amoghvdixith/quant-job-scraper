@@ -333,7 +333,7 @@ def main() -> None:
 
     if not args.no_email:
         sender = os.environ["GMAIL_USER"]
-        to = os.environ.get("MAIL_TO", sender)
+        to = os.environ.get("MAIL_TO") or sender
         send(build_email(current, new_keys, stats, path, sender, to))
         log.info("Emailed %s", to)
         for key in new_keys:
