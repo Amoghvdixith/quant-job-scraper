@@ -347,6 +347,7 @@ def main() -> None:
         to = os.environ.get("MAIL_TO") or sender
         send(build_email(current, new_keys, stats, path, sender, to))
         log.info("Emailed %s", to)
+        (ROOT / "data" / "last_email_utc").write_text(datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ") + "\n")
         for key in new_keys:
             store[key]["emailed"] = True
     save_store(store)

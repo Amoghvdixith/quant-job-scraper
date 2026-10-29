@@ -2,7 +2,9 @@ name: Quant job digest
 
 on:
   schedule:
-    - cron: "0 */4 * * *"   # every 4 hours, every day (UTC)
+    # GitHub often drops or delays scheduled runs at the top of the hour, so this checks
+    # every hour (at :17) and only runs once 3h40m have passed since the last email.
+    - cron: "17 * * * *"
   workflow_dispatch:
     inputs:
       send_email:
@@ -24,14 +26,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Is an email due?
+        id: due
+        run: |
+          due=true
+          if [ "${{ github.event_name }}" = "schedule" ] && [ -f data/last_email_utc ]; then
+            age=$(( $(date -u +%s) - $(date -u -d "$(cat data/last_email_utc)" +%s) ))
+            [ "$age" -lt 13200 ] && due=false
+          fi
+          echo "due=$due" >> "$GITHUB_OUTPUT"
+          echo "Email due: $due"
+
       - uses: actions/setup-python@v5
+        if: steps.due.outputs.due == 'true'
         with:
           python-version: "3.12"
           cache: pip
 
       - run: pip install -r requirements.txt
+        if: steps.due.outputs.due == 'true'
 
       - name: Scrape, build Excel, email
+        if: steps.due.outputs.due == 'true'
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
@@ -44,7 +60,7 @@ jobs:
           fi
 
       - name: Keep the Excel file for 7 days
-        if: always()
+        if: always() && steps.due.outputs.due == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: quant-jobs-excel
@@ -53,11 +69,12 @@ jobs:
           if-no-files-found: ignore
 
       - name: Save which jobs were already emailed
-        if: success()
+        if: success() && steps.due.outputs.due == 'true'
         run: |
           git config user.name "job-digest-bot"
           git config user.email "job-digest-bot@users.noreply.github.com"
           git add data/jobs.json data/last_run.json data/sponsor_registers.json
+          [ -f data/last_email_utc ] && git add data/last_email_utc
           git diff --cached --quiet || git commit -m "Update seen jobs [skip ci]"
           git pull --rebase --autostash || true
           git push
