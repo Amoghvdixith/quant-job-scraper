@@ -202,3 +202,24 @@ def test_sponsorship_filter():
     assert check("Tiny Fintech Ltd", "London, UK", sponsorship="Yes") is None     # posting offers it
     assert check("Barclays", "London, UK", mode="posting_only") == "posting doesn't offer sponsorship"
     assert check("Tiny Fintech Ltd", "London, UK", mode="lenient") is None
+
+
+def test_apply_links(tmp_path):
+    from jobscraper.main import needs_apply_link
+    page = ('<code id="applyUrl" style="display: none"><!--"https://www.linkedin.com/jobs/view/externalApply/4012345678'
+            '?url=https%3A%2F%2Fbarclays%2Ewd3%2Emyworkdayjobs%2Ecom%2FExternal%2Fjob%2F123%3Fsource%3DLinkedIn'
+            '&amp;urlHash=abcd"--></code>')
+    assert linkedin.external_apply_url(page) == "https://barclays.wd3.myworkdayjobs.com/External/job/123?source=LinkedIn"
+    assert linkedin.external_apply_url("<p>Easy Apply</p>") == ""
+    job = Job("LinkedIn", "Market Risk Analyst", "Barclays", "London", "https://www.linkedin.com/jobs/view/1",
+              apply_url="https://barclays.example/apply", sources=["LinkedIn"])
+    easy = Job("LinkedIn", "Quant Analyst", "Acme", "London", "https://www.linkedin.com/jobs/view/2", sources=["LinkedIn"])
+    assert job.apply_on == "Employer website" and easy.apply_on == "LinkedIn"
+    path = write_workbook([job, easy], set(), {}, tmp_path / "a.xlsx")
+    ws = load_workbook(path)["Jobs"]
+    assert ws["O2"].hyperlink.target == "https://barclays.example/apply" and ws["O2"].value == "https://barclays.example/apply"
+    assert ws["O3"].hyperlink.target == easy.url
+    assert ws["Q2"].hyperlink.target == job.url
+    assert needs_apply_link({"url": "https://www.linkedin.com/jobs/view/1"})
+    assert not needs_apply_link({"url": "https://www.linkedin.com/jobs/view/1", "apply_url": ""})
+    assert not needs_apply_link({"url": "https://boards.greenhouse.io/x/jobs/1"})

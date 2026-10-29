@@ -37,6 +37,7 @@ def search(role: dict, cfg: dict, stats: dict, country: str) -> list[Job]:
             company=_s(row.get("company")),
             location=_s(row.get("location")) or country.title(),
             url=_s(row.get("job_url")),
+            apply_url=_s(row.get("job_url_direct")),
             posted=posted if isinstance(posted, date) else None,
             description=_s(row.get("description")),
             search_term=role["title"],

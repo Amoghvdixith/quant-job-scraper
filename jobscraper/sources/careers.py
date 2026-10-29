@@ -54,7 +54,7 @@ def fetch_site(site: dict, cfg: dict) -> list[Job]:
 def _job(site, title, location, url, posted, description="") -> Job:
     return Job(source=f"Careers site ({site['platform'].title()})", title=title or "", company=site["institution"],
                location=location or "", url=url or "", posted=posted, description=description,
-               search_term="careers site")
+               search_term="careers site", apply_url=url or "")
 
 
 def _date(value) -> date | None:

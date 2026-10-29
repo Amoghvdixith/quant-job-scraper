@@ -134,6 +134,8 @@ def apply_filters(jobs: list[Job], cfg: dict, matcher: filters.RoleMatcher) -> d
             existing = kept[job.key]
             if job.source not in existing.sources:
                 existing.sources.append(job.source)
+            if not existing.apply_url:
+                existing.apply_url = job.apply_url
             if not existing.description and job.description:
                 existing.description = job.description
             existing.posted = existing.posted or job.posted
@@ -178,6 +180,11 @@ def fetch_full_description(job: Job) -> str:
     elif "myworkdayjobs.com" in job.url:
         fetched = careers.fetch_description(job)
     return fetched if len(fetched) > len(text) else text
+
+
+def needs_apply_link(rec: dict) -> bool:
+    """LinkedIn jobs saved before apply links were collected: read their page once more."""
+    return "apply_url" not in rec and "linkedin.com" in rec.get("url", "")
 
 
 def enrich(job: Job, text: str) -> None:
@@ -287,15 +294,18 @@ def main() -> None:
     to_read = []
     for key, job in candidates.items():
         prev = store.get(key)
-        if prev and prev.get("sponsorship") != "Not checked" and "description_checked" in prev:
+        if prev and prev.get("sponsorship") != "Not checked" and "description_checked" in prev \
+                and not needs_apply_link(prev):
             # Seen before and already read: keep what we learned, but record any new source.
             prev["sources"] = sorted(set(prev.get("sources", [])) | set(job.sources))
+            prev["apply_url"] = prev.get("apply_url") or job.apply_url
             continue
         job.first_seen = prev["first_seen"] if prev else now
         to_read.append((key, job, bool(prev and prev.get("emailed"))))
     # Jobs saved by older versions that never had their description read.
     for key, rec in store.items():
-        if "description_checked" not in rec and key not in candidates and not rec.get("excluded"):
+        if ("description_checked" not in rec or needs_apply_link(rec)) and key not in candidates \
+                and not rec.get("excluded"):
             to_read.append((key, Job.from_dict(rec), bool(rec.get("emailed"))))
     log.info("Reading %d job descriptions", len(to_read))
     enrich_all([job for _, job, _ in to_read])

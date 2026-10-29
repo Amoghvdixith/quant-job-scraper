@@ -27,19 +27,20 @@ def build_email(jobs: list[Job], new_keys: set[str], stats: dict, attachment: Pa
         f"Found this run: {source_line}.",
         "",
     ]
-    text += [f"- {j.title} | {j.company} | {j.location} | sponsorship: {j.sponsorship} | {j.url}" for j in top]
+    text += [f"- {j.title} | {j.company} | {j.location} | sponsorship: {j.sponsorship} | apply: {j.apply_link}" for j in top]
     msg.set_content("\n".join(text))
 
     rows = "".join(
         f"<tr><td><a href='{html.escape(j.url)}'>{html.escape(j.title)}</a></td>"
         f"<td>{html.escape(j.company)}</td><td>{html.escape(j.location)}</td>"
-        f"<td>{html.escape(j.sponsorship)}</td><td>{j.posted or ''}</td></tr>"
+        f"<td>{html.escape(j.sponsorship)}</td><td>{j.posted or ''}</td>"
+        f"<td><a href='{html.escape(j.apply_link)}'>Apply</a> ({html.escape(j.apply_on)})</td></tr>"
         for j in top
     )
     table = (
         "<table border='1' cellpadding='5' cellspacing='0' style='border-collapse:collapse;font-size:13px'>"
         "<tr style='background:#1F3864;color:#fff'><th>Role</th><th>Company</th><th>Location</th>"
-        f"<th>Visa sponsorship</th><th>Posted</th></tr>{rows}</table>"
+        f"<th>Visa sponsorship</th><th>Posted</th><th>Apply</th></tr>{rows}</table>"
         if top else "<p>No new jobs this time.</p>"
     )
     msg.add_alternative(

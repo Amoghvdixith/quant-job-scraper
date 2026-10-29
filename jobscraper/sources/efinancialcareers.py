@@ -126,6 +126,7 @@ def _to_job(raw: dict, role: dict) -> Job | None:
     if _get(raw, "workArrangementType") in ("REMOTE", "Remote") and "remote" not in str(location or "").lower():
         location = f"{location or ''} (Remote)".strip()
     description = _get(raw, "description", "summary", "jobSummary") or ""
+    apply_url = _get(raw, "externalApplyUrl", "applyUrl", "applicationUrl")
     description = BeautifulSoup(str(description), "html.parser").get_text(" ", strip=True)
     return Job(
         source="eFinancialCareers",
@@ -136,6 +137,7 @@ def _to_job(raw: dict, role: dict) -> Job | None:
         posted=_parse_date(_get(raw, "postedDate", "datePosted", "postedAt", "createdDate")),
         description=description,
         search_term=role["title"],
+        apply_url=apply_url if isinstance(apply_url, str) and apply_url.startswith("http") else "",
     )
 
 

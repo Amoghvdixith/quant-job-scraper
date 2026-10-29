@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import logging
 from datetime import date
+import re
+from urllib.parse import unquote
 
 from bs4 import BeautifulSoup
 
@@ -101,6 +103,7 @@ def fetch_description(job: Job) -> str:
     r = polite_get(session(), POSTING.format(id=job_id), delay=(1.0, 2.5))
     if r is None:
         return ""
+    job.apply_url = job.apply_url or external_apply_url(r.text)
     soup = BeautifulSoup(r.text, "html.parser")
     body = soup.select_one(".show-more-less-html__markup, .description__text")
     criteria = " ".join(li.get_text(" ", strip=True) for li in soup.select(".description__job-criteria-item"))
@@ -108,6 +111,16 @@ def fetch_description(job: Job) -> str:
     if "no longer accepting applications" in r.text.lower():
         text = f"{CLOSED_MARKER} {text}"
     return text
+
+
+def external_apply_url(page: str) -> str:
+    """The employer's application page behind LinkedIn's "Apply on company website" button.
+    Empty for Easy Apply jobs, which are applied for on LinkedIn itself."""
+    m = re.search(r"externalApply/\d+\?url=([^&\"'\s]+)", page)
+    if not m:
+        return ""
+    url = unquote(m.group(1))
+    return url if url.startswith("http") else ""
 
 
 # Put at the start of a description when the posting has closed.

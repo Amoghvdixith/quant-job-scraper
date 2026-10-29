@@ -15,6 +15,8 @@ class Job:
     posted: date | None = None
     description: str = ""
     search_term: str = ""
+    # Employer's own application page, when the listing points elsewhere (e.g. LinkedIn "Apply on company website").
+    apply_url: str = ""
     # Filled in by the pipeline
     role_id: str = ""
     role_title: str = ""
@@ -33,6 +35,19 @@ class Job:
     @property
     def key(self) -> str:
         return f"{_norm(self.title)}|{_company_key(self.company)}"
+
+    @property
+    def apply_link(self) -> str:
+        """Where to apply: the employer's own page when we found one, otherwise the listing."""
+        return self.apply_url or self.url
+
+    @property
+    def apply_on(self) -> str:
+        if self.apply_url and self.apply_url != self.url:
+            return "Employer website"
+        if self.source.startswith("Careers site"):
+            return "Employer website"
+        return self.source
 
     def to_dict(self) -> dict:
         d = asdict(self)

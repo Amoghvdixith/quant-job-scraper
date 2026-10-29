@@ -23,6 +23,9 @@ GitHub Actions and the email is the only output.
   counts. Postings that say "no sponsorship" are always dropped. Change this with
   `sponsorship_filter` in `config.yaml`.
 
+Each job has an **Apply Link**: the employer's own application page when one is found
+(careers sites, LinkedIn "Apply on company website" jobs, Indeed), otherwise the listing itself.
+
 Each email holds every matching job from the last 5 days. Jobs that weren't in
 any earlier email are marked **NEW** and listed first. `data/jobs.json` remembers
 what was already sent; the workflow commits it back after each run.
