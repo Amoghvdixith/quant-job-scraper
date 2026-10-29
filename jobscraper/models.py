@@ -50,6 +50,8 @@ class Job:
             return "Employer website"
         if self.easy_apply:
             return "LinkedIn Easy Apply"
+        if self.easy_apply is False:
+            return "Employer website (via LinkedIn)"
         return self.source
 
     def to_dict(self) -> dict:

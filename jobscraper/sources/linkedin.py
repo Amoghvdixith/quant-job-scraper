@@ -114,21 +114,17 @@ def fetch_description(job: Job) -> str:
     return text
 
 
-VIEW = "https://www.linkedin.com/jobs/view/{id}"
-APPLY_STATS = {"employer link": 0, "easy apply": 0, "offsite, link not found": 0}
+APPLY_STATS = {"employer link": 0, "easy apply": 0, "employer site, link hidden": 0}
 
 
 def find_apply_url(job: Job, fragment: str) -> None:
-    """Sets job.apply_url for "Apply on company website" jobs. The description fragment only
-    says the apply is offsite; the link itself is on the public job page."""
+    """Sets job.apply_url for "Apply on company website" jobs. LinkedIn only shows that link
+    to signed-in visitors, so usually we can only tell which kind of apply it is."""
     url = external_apply_url(fragment)
     offsite = bool(url) or "offsite" in fragment
     job.easy_apply = not offsite
-    if offsite and not url:
-        page = polite_get(session(), VIEW.format(id=job.url.rstrip("/").rsplit("/", 1)[-1]), delay=(1.0, 2.5), retries=1)
-        url = external_apply_url(page.text) if page is not None else ""
     job.apply_url = url
-    APPLY_STATS["employer link" if url else "offsite, link not found" if offsite else "easy apply"] += 1
+    APPLY_STATS["employer link" if url else "employer site, link hidden" if offsite else "easy apply"] += 1
 
 
 def external_apply_url(page: str) -> str:
