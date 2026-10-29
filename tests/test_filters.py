@@ -221,5 +221,8 @@ def test_apply_links(tmp_path):
     assert ws["O3"].hyperlink.target == easy.url
     assert ws["Q2"].hyperlink.target == job.url
     assert needs_apply_link({"url": "https://www.linkedin.com/jobs/view/1"})
-    assert not needs_apply_link({"url": "https://www.linkedin.com/jobs/view/1", "apply_url": ""})
+    assert needs_apply_link({"url": "https://www.linkedin.com/jobs/view/1", "apply_url": ""})
+    assert not needs_apply_link({"url": "https://www.linkedin.com/jobs/view/1", "apply_url": "", "easy_apply": True})
+    easy.easy_apply = True
+    assert easy.apply_on == "LinkedIn Easy Apply"
     assert not needs_apply_link({"url": "https://boards.greenhouse.io/x/jobs/1"})

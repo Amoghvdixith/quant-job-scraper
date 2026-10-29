@@ -103,7 +103,8 @@ def fetch_description(job: Job) -> str:
     r = polite_get(session(), POSTING.format(id=job_id), delay=(1.0, 2.5))
     if r is None:
         return ""
-    job.apply_url = job.apply_url or external_apply_url(r.text)
+    if not job.apply_url:
+        find_apply_url(job, r.text)
     soup = BeautifulSoup(r.text, "html.parser")
     body = soup.select_one(".show-more-less-html__markup, .description__text")
     criteria = " ".join(li.get_text(" ", strip=True) for li in soup.select(".description__job-criteria-item"))
@@ -111,6 +112,23 @@ def fetch_description(job: Job) -> str:
     if "no longer accepting applications" in r.text.lower():
         text = f"{CLOSED_MARKER} {text}"
     return text
+
+
+VIEW = "https://www.linkedin.com/jobs/view/{id}"
+APPLY_STATS = {"employer link": 0, "easy apply": 0, "offsite, link not found": 0}
+
+
+def find_apply_url(job: Job, fragment: str) -> None:
+    """Sets job.apply_url for "Apply on company website" jobs. The description fragment only
+    says the apply is offsite; the link itself is on the public job page."""
+    url = external_apply_url(fragment)
+    offsite = bool(url) or "offsite" in fragment
+    job.easy_apply = not offsite
+    if offsite and not url:
+        page = polite_get(session(), VIEW.format(id=job.url.rstrip("/").rsplit("/", 1)[-1]), delay=(1.0, 2.5), retries=1)
+        url = external_apply_url(page.text) if page is not None else ""
+    job.apply_url = url
+    APPLY_STATS["employer link" if url else "offsite, link not found" if offsite else "easy apply"] += 1
 
 
 def external_apply_url(page: str) -> str:

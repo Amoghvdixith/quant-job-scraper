@@ -184,7 +184,7 @@ def fetch_full_description(job: Job) -> str:
 
 def needs_apply_link(rec: dict) -> bool:
     """LinkedIn jobs saved before apply links were collected: read their page once more."""
-    return "apply_url" not in rec and "linkedin.com" in rec.get("url", "")
+    return "linkedin.com" in rec.get("url", "") and not rec.get("apply_url") and rec.get("easy_apply") is None
 
 
 def enrich(job: Job, text: str) -> None:
@@ -309,6 +309,7 @@ def main() -> None:
             to_read.append((key, Job.from_dict(rec), bool(rec.get("emailed"))))
     log.info("Reading %d job descriptions", len(to_read))
     enrich_all([job for _, job, _ in to_read])
+    log.info("LinkedIn apply links: %s", linkedin.APPLY_STATS)
     for key, job, emailed in to_read:
         store[key] = {**job.to_dict(), "excluded": None, "emailed": emailed}
 

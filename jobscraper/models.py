@@ -17,6 +17,7 @@ class Job:
     search_term: str = ""
     # Employer's own application page, when the listing points elsewhere (e.g. LinkedIn "Apply on company website").
     apply_url: str = ""
+    easy_apply: bool | None = None  # LinkedIn only: applied for on LinkedIn itself
     # Filled in by the pipeline
     role_id: str = ""
     role_title: str = ""
@@ -47,6 +48,8 @@ class Job:
             return "Employer website"
         if self.source.startswith("Careers site"):
             return "Employer website"
+        if self.easy_apply:
+            return "LinkedIn Easy Apply"
         return self.source
 
     def to_dict(self) -> dict:
