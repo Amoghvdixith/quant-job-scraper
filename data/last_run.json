@@ -1,0 +1,67 @@
+{
+ "finished_utc": "2026-10-29T00:10:13+00:00",
+ "rotation_slot": 4439507,
+ "sources": {
+  "LinkedIn": {
+   "found": 4668,
+   "errors": 0
+  },
+  "Google Jobs": {
+   "found": 0,
+   "errors": 0
+  },
+  "eFinancialCareers": {
+   "found": 3213,
+   "errors": 0
+  },
+  "Indeed": {
+   "found": 43,
+   "errors": 0
+  },
+  "Careers sites": {
+   "found": 7100,
+   "errors": 0
+  }
+ },
+ "raw_results": 15024,
+ "after_filters": 801,
+ "jobs_in_email": 632,
+ "new_jobs": 632,
+ "warnings": [
+  "2026-10-28 23:42:08,840 jobspy.google: no job data returned",
+  "2026-10-28 23:42:09,131 jobspy.google: no job data returned",
+  "2026-10-28 23:42:09,263 jobspy.google: no job data returned",
+  "2026-10-28 23:42:09,385 jobspy.google: no job data returned",
+  "2026-10-28 23:42:09,513 jobspy.google: no job data returned",
+  "2026-10-28 23:42:09,632 jobspy.google: no job data returned",
+  "2026-10-28 23:42:09,774 jobspy.google: no job data returned",
+  "2026-10-28 23:42:09,887 jobspy.google: no job data returned",
+  "2026-10-28 23:42:10,012 jobspy.google: no job data returned",
+  "2026-10-28 23:42:10,137 jobspy.google: no job data returned",
+  "2026-10-28 23:42:10,303 jobspy.google: no job data returned",
+  "2026-10-28 23:42:10,425 jobspy.google: no job data returned",
+  "2026-10-28 23:42:10,549 jobspy.google: no job data returned",
+  "2026-10-28 23:42:10,678 jobspy.google: no job data returned",
+  "2026-10-28 23:42:10,796 jobspy.google: no job data returned",
+  "2026-10-28 23:42:10,914 jobspy.google: no job data returned",
+  "2026-10-28 23:42:11,041 jobspy.google: no job data returned",
+  "2026-10-28 23:42:11,219 jobspy.google: no job data returned",
+  "2026-10-28 23:42:11,346 jobspy.google: no job data returned",
+  "2026-10-28 23:42:11,473 jobspy.google: no job data returned",
+  "2026-10-28 23:42:11,600 jobspy.google: no job data returned",
+  "2026-10-28 23:42:11,734 jobspy.google: no job data returned",
+  "2026-10-28 23:42:11,870 jobspy.google: no job data returned",
+  "2026-10-28 23:42:11,985 jobspy.google: no job data returned",
+  "2026-10-28 23:42:12,107 jobspy.google: no job data returned",
+  "2026-10-28 23:42:12,221 jobspy.google: no job data returned",
+  "2026-10-28 23:42:12,345 jobspy.google: no job data returned",
+  "2026-10-28 23:42:12,470 jobspy.google: no job data returned",
+  "2026-10-28 23:42:12,587 jobspy.google: no job data returned",
+  "2026-10-28 23:42:12,697 jobspy.google: no job data returned",
+  "2026-10-28 23:42:12,816 jobspy.google: no job data returned",
+  "2026-10-28 23:42:12,939 jobspy.google: no job data returned",
+  "2026-10-28 23:42:13,086 jobspy.google: no job data returned",
+  "2026-10-28 23:42:13,234 jobspy.google: no job data returned",
+  "2026-10-28 23:42:13,354 jobspy.google: no job data returned"
+ ]
+}
