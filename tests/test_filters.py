@@ -150,9 +150,11 @@ def test_one_word_keywords_need_the_phrase():
 
 def test_rules_rechecked_on_saved_jobs():
     from jobscraper.main import rule_broken
+    regs = fake_registers()
     ok = Job("LinkedIn", "Graduate Market Risk Analyst", "Barclays", "London, UK", "u",
              posted=date.today(), first_seen=date.today().isoformat())
-    assert rule_broken(ok, CFG, matcher) is None
+    ok.employer_sponsor = regs.status(ok.company, ok.location)
+    assert rule_broken(ok, CFG, matcher, regs) is None
     for change, reason in [
         (dict(title="Senior Market Risk Analyst"), "too senior"),
         (dict(title="Market Risk Analyst II"), "too senior"),
@@ -163,7 +165,7 @@ def test_rules_rechecked_on_saved_jobs():
         (dict(title="Software Engineer"), "title doesn't match a target role"),
     ]:
         job = Job(**{**ok.__dict__, **change})
-        assert rule_broken(job, CFG, matcher) == reason, change
+        assert rule_broken(job, CFG, matcher, regs) == reason, change
 
 
 def test_recruiters_and_duplicates():
@@ -172,3 +174,31 @@ def test_recruiters_and_duplicates():
     a = Job("LinkedIn", "Market Risk Analyst", "JPMorgan Chase", "", "u")
     b = Job("Careers", "Market Risk Analyst", "JPMorganChase", "", "v")
     assert a.key == b.key
+
+
+def fake_registers():
+    from jobscraper.sponsor_registers import SponsorRegisters, clean
+    regs = SponsorRegisters.__new__(SponsorRegisters)
+    regs.lists = {"UK": {clean("Barclays Bank PLC")}, "US": {clean("JPMORGAN CHASE BANK, N.A."), clean("Goldman Sachs & Co. LLC")}, "NL": set()}
+    regs.loaded = {"UK": True, "US": True, "NL": False}
+    return regs
+
+
+def test_sponsorship_filter():
+    from jobscraper.main import sponsorship_rule
+    regs = fake_registers()
+
+    def check(company, location, sponsorship="Not stated", mode="posting_or_employer"):
+        job = Job("LinkedIn", "Market Risk Analyst", company, location, "u", sponsorship=sponsorship)
+        job.employer_sponsor = regs.status(company, location)
+        return sponsorship_rule(job, mode, regs)
+
+    assert check("Barclays", "London, England, United Kingdom") is None          # UK list, UK job
+    assert check("JPMorganChase", "New York, NY") is None                        # US list, US job
+    assert check("Goldman Sachs", "Jersey City, NJ") is None                     # "Goldman Sachs & Co. LLC"
+    assert check("Barclays", "New York, NY") == "employer not on a sponsor list"  # on UK list only, US job
+    assert check("Barclays", "Singapore") is None                                # no list for Singapore
+    assert check("Tiny Fintech Ltd", "London, UK") == "employer not on a sponsor list"
+    assert check("Tiny Fintech Ltd", "London, UK", sponsorship="Yes") is None     # posting offers it
+    assert check("Barclays", "London, UK", mode="posting_only") == "posting doesn't offer sponsorship"
+    assert check("Tiny Fintech Ltd", "London, UK", mode="lenient") is None

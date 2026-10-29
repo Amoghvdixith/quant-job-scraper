@@ -16,7 +16,8 @@ from .excel import write_workbook
 from .mailer import build_email, send
 from .models import Job
 from .sources import careers, efinancialcareers, google, indeed, linkedin
-from .uk_sponsors import UKSponsorRegister
+from .sponsor_registers import SponsorRegisters, country_of
+from . import sponsor_registers
 
 log = logging.getLogger("jobscraper")
 ROOT = Path(__file__).resolve().parent.parent
@@ -179,17 +180,16 @@ def fetch_full_description(job: Job) -> str:
     return fetched if len(fetched) > len(text) else text
 
 
-def enrich(job: Job, text: str, register: UKSponsorRegister) -> None:
+def enrich(job: Job, text: str) -> None:
     """Fills in what we learn from the description."""
     job.description_checked = len(text) >= 200
     job.years_required = filters.years_required(text)
     job.sponsorship, job.sponsorship_evidence = filters.sponsorship(text) if text else ("Not checked", "")
-    job.uk_licensed_sponsor = register.check(job.company, job.location)
     if text.startswith(linkedin.CLOSED_MARKER):
         job.sponsorship_evidence = "posting closed"
 
 
-def rule_broken(job: Job, cfg: dict, matcher: filters.RoleMatcher) -> str | None:
+def rule_broken(job: Job, cfg: dict, matcher: filters.RoleMatcher, registers: SponsorRegisters) -> str | None:
     """Every rule a job must pass to be emailed. Checked again on each run, so
     changes to config.yaml or roles.yaml also apply to jobs found earlier."""
     if not matcher.match(job.title):
@@ -200,8 +200,11 @@ def rule_broken(job: Job, cfg: dict, matcher: filters.RoleMatcher) -> str | None
         return "excluded country"
     if job.years_required is not None and job.years_required > cfg["max_years_experience"]:
         return f"asks for {job.years_required}+ years"
-    if cfg.get("drop_no_sponsorship", True) and job.sponsorship == "No":
+    if job.sponsorship == "No":
         return "no sponsorship"
+    sponsorship_problem = sponsorship_rule(job, cfg.get("sponsorship_filter", "posting_or_employer"), registers)
+    if sponsorship_problem:
+        return sponsorship_problem
     if job.sponsorship_evidence == "posting closed":
         return "posting closed"
     cutoff = date.today() - timedelta(days=cfg["max_age_days"])
@@ -210,23 +213,45 @@ def rule_broken(job: Job, cfg: dict, matcher: filters.RoleMatcher) -> str | None
     return None
 
 
-def enrich_all(jobs: list[Job], register: UKSponsorRegister) -> None:
+def sponsorship_rule(job: Job, mode: str, registers: SponsorRegisters) -> str | None:
+    """posting_or_employer: the posting offers sponsorship, or the employer is on the sponsor
+    list of the job's country (UK / US / Netherlands). In countries without a public list,
+    an employer on any of the three lists counts.
+    posting_only: the posting itself must offer sponsorship.
+    lenient: only postings that rule sponsorship out are dropped (handled before this)."""
+    if mode == "lenient" or job.sponsorship == "Yes":
+        return None
+    if mode == "posting_only":
+        return "posting doesn't offer sponsorship"
+    if not any(registers.loaded.values()):
+        return None  # lists unavailable: don't drop everything
+    here = country_of(job.location)
+    if job.employer_sponsor.startswith("Yes"):
+        return None
+    if here and not registers.loaded.get(here):
+        return None  # that country's list failed to download this week: don't drop its jobs
+    if job.employer_sponsor and not here:
+        return None  # e.g. Singapore: employer sponsors in the UK/US/NL
+    return "employer not on a sponsor list"
+
+
+def enrich_all(jobs: list[Job]) -> None:
     """Reads descriptions: LinkedIn one at a time (it blocks fast readers), other sites in parallel."""
     slow = [j for j in jobs if "linkedin.com" in j.url and len(j.description or "") < 600]
     fast = [j for j in jobs if j not in slow]
 
     def one(job: Job) -> None:
         try:
-            enrich(job, fetch_full_description(job), register)
+            enrich(job, fetch_full_description(job))
         except Exception as e:
             log.info("description for %s failed: %s", job.url, e)
-            enrich(job, job.description or "", register)
+            enrich(job, job.description or "")
 
     def run_slow() -> None:
         for job in slow[:MAX_DESCRIPTION_FETCHES]:
             one(job)
         for job in slow[MAX_DESCRIPTION_FETCHES:]:  # the rest are read on the next run
-            enrich(job, job.description or "", register)
+            enrich(job, job.description or "")
             job.sponsorship = "Not checked"
 
     with ThreadPoolExecutor(max_workers=6) as pool:
@@ -258,7 +283,6 @@ def main() -> None:
     log.info("%d raw results, %d after title/seniority/location/date filters", len(raw), len(candidates))
 
     store = load_store()
-    register = UKSponsorRegister()
     now = datetime.now(timezone.utc).replace(tzinfo=None).isoformat(timespec="seconds")
     to_read = []
     for key, job in candidates.items():
@@ -274,17 +298,23 @@ def main() -> None:
         if "description_checked" not in rec and key not in candidates and not rec.get("excluded"):
             to_read.append((key, Job.from_dict(rec), bool(rec.get("emailed"))))
     log.info("Reading %d job descriptions", len(to_read))
-    enrich_all([job for _, job, _ in to_read], register)
+    enrich_all([job for _, job, _ in to_read])
     for key, job, emailed in to_read:
         store[key] = {**job.to_dict(), "excluded": None, "emailed": emailed}
 
+    registers = SponsorRegisters()
+    if not all(registers.loaded.values()):  # first run, or a list failed to download last time
+        sponsor_registers.update()
+        registers = SponsorRegisters()
+    log.info("Sponsor lists loaded: %s", {c: len(v) for c, v in registers.lists.items()})
     current = []
     dropped: dict[str, int] = {}
     for key, rec in store.items():
         job = Job.from_dict(rec)
         job.target_firm = institutions.match(job.company)
         job.recruiter = filters.is_recruiter(job.company)
-        reason = rule_broken(job, cfg, matcher)
+        job.employer_sponsor = registers.status(job.company, job.location)
+        reason = rule_broken(job, cfg, matcher, registers)
         rec["excluded"] = reason
         if reason:
             dropped[reason] = dropped.get(reason, 0) + 1
@@ -293,7 +323,7 @@ def main() -> None:
     log.info("Dropped from the saved list: %s", dropped)
     new_keys = {j.key for j in current if not store[j.key].get("emailed")}
     current.sort(key=lambda j: (
-        j.key not in new_keys, j.recruiter, j.sponsorship != "Yes", j.uk_licensed_sponsor != "Yes",
+        j.key not in new_keys, j.recruiter, j.sponsorship != "Yes", not j.employer_sponsor.startswith("Yes"),
         j.tier, -(j.posted or date.min).toordinal(),
     ))
 
@@ -309,6 +339,7 @@ def main() -> None:
         for key in new_keys:
             store[key]["emailed"] = True
     save_store(store)
+    dropped["sponsor lists loaded"] = {c: len(v) for c, v in registers.lists.items()}
     write_report(stats, len(raw), len(candidates), current, new_keys, slot, dropped)
 
 

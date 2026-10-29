@@ -23,7 +23,7 @@ class Job:
     sponsorship: str = "Not stated"
     sponsorship_evidence: str = ""
     years_required: int | None = None
-    uk_licensed_sponsor: str = ""
+    employer_sponsor: str = ""
     target_firm: str = ""
     recruiter: bool = False
     description_checked: bool = False

@@ -12,7 +12,7 @@ from .models import Job
 COLUMNS = [
     ("New", 7), ("Tier", 6), ("Category", 22), ("Matched Role", 30), ("Job Title", 45),
     ("Company", 28), ("On Your Target List", 22), ("Location", 30), ("Posted", 11), ("Days Old", 9), ("Source", 18),
-    ("Visa Sponsorship", 16), ("UK Licensed Sponsor", 18), ("Years Exp. Asked", 15),
+    ("Visa Sponsorship", 16), ("Employer On Sponsor List", 22), ("Years Exp. Asked", 15),
     ("Apply Link", 14), ("Posted By", 18), ("Description Checked", 12), ("Sponsorship Evidence", 60),
 ]
 HEADER_FILL = PatternFill("solid", fgColor="1F3864")
@@ -47,7 +47,7 @@ def write_workbook(jobs: list[Job], new_keys: set[str], stats: dict, path: Path)
             (today - job.posted).days if job.posted else None,
             ", ".join(job.sources or [job.source]),
             job.sponsorship,
-            job.uk_licensed_sponsor,
+            job.employer_sponsor or "Not found",
             job.years_required,
             "Open",
             "Recruitment agency" if job.recruiter else "Employer",
@@ -63,7 +63,7 @@ def write_workbook(jobs: list[Job], new_keys: set[str], stats: dict, path: Path)
             ws.cell(row=row, column=1).fill = NEW_FILL
         if job.sponsorship == "Yes":
             ws.cell(row=row, column=12).fill = YES_FILL
-        if job.uk_licensed_sponsor == "Yes":
+        if job.employer_sponsor:
             ws.cell(row=row, column=13).fill = YES_FILL
         if job.target_firm:
             ws.cell(row=row, column=7).fill = YES_FILL

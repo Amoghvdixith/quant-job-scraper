@@ -20,7 +20,7 @@ def build_email(jobs: list[Job], new_keys: set[str], stats: dict, attachment: Pa
         f"{name} {s['found']}" + (f" ({s['errors']} failed requests)" if s["errors"] else "")
         for name, s in stats.items()
     )
-    top = sorted(new_jobs, key=lambda j: (j.sponsorship != "Yes", j.uk_licensed_sponsor != "Yes", j.tier))[:15]
+    top = sorted(new_jobs, key=lambda j: (j.sponsorship != "Yes", not j.employer_sponsor.startswith("Yes"), j.tier))[:15]
     text = [
         f"{len(new_jobs)} new jobs since the last email, {len(jobs)} matching jobs posted in the last 5 days.",
         "The full list is in the attached Excel file (new ones are marked NEW).",

@@ -16,10 +16,12 @@ GitHub Actions and the email is the only output.
   `max_years_experience` (2) years. LinkedIn searches are limited to Internship,
   Entry level and Associate.
 - **Anywhere except India and the UAE**, remote jobs included.
-- **Visa sponsorship:** postings that say they can't sponsor (or need an existing
-  right to work) are dropped. Postings that offer sponsorship are listed first.
-  For UK jobs, the "UK Licensed Sponsor" column checks the company against the
-  Home Office register of licensed sponsors.
+- **Visa sponsorship:** a job is kept only if the posting offers sponsorship, or the
+  employer is on the government sponsor list for the job's country: the UK Home Office
+  register of licensed sponsors, the US H-1B employer data, or the Dutch IND register.
+  For countries without a public list (e.g. Singapore), an employer on any of those lists
+  counts. Postings that say "no sponsorship" are always dropped. Change this with
+  `sponsorship_filter` in `config.yaml`.
 
 Each email holds every matching job from the last 5 days. Jobs that weren't in
 any earlier email are marked **NEW** and listed first. `data/jobs.json` remembers

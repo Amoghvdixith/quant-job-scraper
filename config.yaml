@@ -113,6 +113,10 @@ senior_title_words:
 # Drop postings whose description asks for more than this many years of experience.
 max_years_experience: 2
 
-# Visa sponsorship: postings that explicitly say "no sponsorship" are dropped.
-# Postings that say they sponsor are listed first; "Not stated" ones are kept.
-drop_no_sponsorship: true
+# Visa sponsorship. Postings that say "no sponsorship" are always dropped. Then:
+#   posting_or_employer: keep if the posting offers sponsorship, or the employer is on the
+#                        government sponsor list for the job's country (UK, US H-1B, Netherlands);
+#                        in other countries, an employer on any of those lists counts
+#   posting_only:        keep only postings that explicitly offer sponsorship
+#   lenient:             keep everything else too
+sponsorship_filter: posting_or_employer
