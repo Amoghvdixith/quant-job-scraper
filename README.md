@@ -15,7 +15,7 @@ GitHub Actions and the email is the only output.
   words are dropped, and so are postings asking for more than
   `max_years_experience` (2) years. LinkedIn searches are limited to Internship,
   Entry level and Associate.
-- **Anywhere except India and the UAE**, remote jobs included.
+- **Anywhere except India and the Middle East**, remote jobs included.
 - **Visa sponsorship:** a job is kept only if the posting offers sponsorship, or the
   employer is on the government sponsor list for the job's country: the UK Home Office
   register of licensed sponsors, the US H-1B employer data, or the Dutch IND register.
@@ -40,7 +40,7 @@ what was already sent; the workflow commits it back after each run.
    Untick "Send the email" for a dry run; the Excel file is then downloadable from the run page.
 
 After that it runs by itself. The email arrives at the times in `email_times` in
-`config.yaml` (00:00, 05:00, 11:00, 17:00 and 23:00 UK time); each run starts 40 minutes
+`config.yaml` (00:00, 05:00, 11:00, 17:00 and 23:00 UK time); each run starts 55 minutes
 earlier. GitHub's own schedule skips many runs, so each run starts the next one itself
 (the `timer` job), and an hourly check catches any slot that was still missed.
 
@@ -57,7 +57,7 @@ earlier. GitHub's own schedule skips many runs, so each run starts the next one 
   80 firms per run in rotation, so the whole list is covered roughly once a day.
 - The **"On Your Target List"** column marks any job, from any source, at one of these firms.
 
-LinkedIn also searches a couple of extra countries per run and Indeed three
+LinkedIn also searches six extra countries per run and Indeed five
 countries per run, in rotation (see `config.yaml`). After each run,
 `data/last_run.json` shows how many jobs each source returned and any errors.
 

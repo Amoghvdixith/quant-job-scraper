@@ -68,8 +68,17 @@ def is_senior(title: str, senior_words: list[str]) -> bool:
 
 
 def is_excluded_location(location: str, excluded: list[str]) -> bool:
+    """A place ending in "$" only counts as the last part of the location (the country),
+    so "Amman, Jordan" is excluded but "Jordan, MN" is not."""
     loc = (location or "").lower()
-    return any(re.search(rf"\b{re.escape(place.lower())}\b", loc) for place in excluded)
+    last = loc.split(",")[-1].strip()
+    for place in excluded:
+        if place.endswith("$"):
+            if last == place[:-1].lower():
+                return True
+        elif re.search(rf"\b{re.escape(place.lower())}\b", loc):
+            return True
+    return False
 
 
 _YEARS = re.compile(r"(\d{1,2})\s*\+?\s*(?:(?:-|to|–)\s*\d{1,2}\s*\+?\s*)?(?:years?|yrs?)\b", re.I)

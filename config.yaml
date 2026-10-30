@@ -28,7 +28,25 @@ linkedin_rotating_locations:
   - Poland
   - Belgium
   - Spain
-linkedin_locations_per_run: 2
+  - Italy
+  - Austria
+  - Sweden
+  - Denmark
+  - Norway
+  - Finland
+  - Portugal
+  - Czechia
+  - Hungary
+  - Romania
+  - China
+  - Taiwan
+  - South Korea
+  - Malaysia
+  - New Zealand
+  - South Africa
+  - Brazil
+  - Mexico
+linkedin_locations_per_run: 6
 # Firms from institutions.csv searched by name on LinkedIn each run (those without
 # a careers site we can read directly). 80 per run covers the list about every day.
 linkedin_target_firms_per_run: 80
@@ -43,18 +61,55 @@ google_results_per_search: 20
 
 # Indeed: countries searched, a few per run in rotation (names as Indeed uses them).
 indeed_countries: [uk, usa, singapore, hong kong, ireland, germany, netherlands, switzerland,
-                   france, luxembourg, canada, australia, japan, poland, belgium, spain]
-indeed_countries_per_run: 3
+                   france, luxembourg, canada, australia, japan, poland, belgium, spain,
+                   italy, austria, sweden, denmark, norway, finland, portugal, czech republic,
+                   new zealand, south africa, malaysia, brazil, mexico]
+indeed_countries_per_run: 5
 indeed_results_per_search: 30
 
 # eFinancialCareers: result pages per keyword.
 efc_max_pages: 2
 
-# Postings in these countries are dropped. Matched against the location text.
+# Postings in these countries are dropped (India and the Middle East). Matched against the location
+# text; a name ending in "$" only counts as the country, the last part of the location.
 excluded_locations:
   - India
   - United Arab Emirates
   - UAE
+  - Saudi Arabia
+  - KSA
+  - Riyadh
+  - Jeddah
+  - Dammam
+  - Khobar
+  - Qatar
+  - Doha
+  - Kuwait
+  - Bahrain
+  - Manama
+  - "Oman$"   # only as the country ("Oman Road" etc.)
+  - Muscat
+  - Israel
+  - Tel Aviv
+  - Tel Aviv-Yafo
+  - Jerusalem
+  - Haifa
+  - Herzliya
+  - "Jordan$"   # only as the country (there are US towns called Jordan)
+  - Amman
+  - "Lebanon$"   # only as the country (there are US towns called Lebanon)
+  - Beirut
+  - Iraq
+  - Baghdad
+  - Erbil
+  - Iran
+  - Tehran
+  - Syria
+  - Yemen
+  - Palestine
+  - Middle East
+  - MENA
+  - GCC
   - Dubai
   - Abu Dhabi
   - Sharjah
@@ -122,7 +177,7 @@ max_years_experience: 2
 sponsorship_filter: posting_or_employer
 
 # When the email should arrive (UK time, so it follows the clock change). Each run starts
-# run_lead_minutes earlier, because scraping takes about half an hour.
+# run_lead_minutes earlier, because scraping takes 35-50 minutes.
 email_times: ["00:00", "05:00", "11:00", "17:00", "23:00"]
 email_timezone: Europe/London
-run_lead_minutes: 40
+run_lead_minutes: 55

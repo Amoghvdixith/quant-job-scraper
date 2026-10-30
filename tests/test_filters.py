@@ -51,6 +51,12 @@ def test_location_exclusions():
     assert not filters.is_excluded_location("London, England, United Kingdom", ex)
     assert not filters.is_excluded_location("Indianapolis, IN", ex)
     assert not filters.is_excluded_location("Remote", ex)
+    assert filters.is_excluded_location("Riyadh, Saudi Arabia", ex)
+    assert filters.is_excluded_location("Doha, Qatar", ex)
+    assert filters.is_excluded_location("Tel Aviv-Yafo, Israel", ex)
+    assert filters.is_excluded_location("Amman, Jordan", ex)
+    assert not filters.is_excluded_location("Lebanon, PA", ex)
+    assert not filters.is_excluded_location("Jordan, MN", ex)
 
 
 def test_years_required():
@@ -233,10 +239,10 @@ def test_email_schedule():
     from jobscraper.schedule import is_due, latest_start, next_start
     utc = timezone.utc
     now = datetime(2026, 10, 30, 6, 10, tzinfo=utc)  # UK is on GMT
-    assert latest_start(CFG, now) == datetime(2026, 10, 30, 4, 20, tzinfo=utc)
-    assert next_start(CFG, now) == datetime(2026, 10, 30, 10, 20, tzinfo=utc)
+    assert latest_start(CFG, now) == datetime(2026, 10, 30, 4, 5, tzinfo=utc)
+    assert next_start(CFG, now) == datetime(2026, 10, 30, 10, 5, tzinfo=utc)
     assert is_due(CFG, now, datetime(2026, 10, 30, 1, 33, tzinfo=utc))
     assert not is_due(CFG, now, datetime(2026, 10, 30, 6, 0, tzinfo=utc))
-    assert next_start(CFG, datetime(2026, 10, 30, 22, 30, tzinfo=utc)) == datetime(2026, 10, 30, 23, 20, tzinfo=utc)
+    assert next_start(CFG, datetime(2026, 10, 30, 22, 30, tzinfo=utc)) == datetime(2026, 10, 30, 23, 5, tzinfo=utc)
     summer = datetime(2026, 7, 1, 9, 0, tzinfo=utc)  # BST: 11:00 UK = 10:00 UTC
-    assert next_start(CFG, summer) == datetime(2026, 7, 1, 9, 20, tzinfo=utc)
+    assert next_start(CFG, summer) == datetime(2026, 7, 1, 9, 5, tzinfo=utc)
