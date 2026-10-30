@@ -510,6 +510,35 @@
   "url": "https://td.wd3.myworkdayjobs.com/TD_Bank_Careers/job/New-York-New-York/US-Graduate-Leadership-Program--Treasury---Finance_R_1508609",
   "years_required": 5
  },
+ "abl collateral analyst|valley": {
+  "apply_url": "https://recruiting.adp.com/srccsh/public/RTI.home?r=5001234327200&c=2169307&d=ExternalCareerSite&rb=INDEED&idUnique=5001234327200",
+  "category": "Derivatives & Fixed Income",
+  "company": "Valley Bank",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "New York, NY, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T1-19",
+  "role_title": "Collateral & Margin Analyst",
+  "search_term": "Collateral & Margin Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "ABL Collateral Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=36bfb97f81eeeded",
+  "years_required": null
+ },
  "account executive money management issuing and treasury|stripe": {
   "apply_url": "https://stripe.com/jobs/search?gh_jid=8323732",
   "category": "Treasury & ALM",
@@ -594,6 +623,35 @@
   "url": "https://bmo.wd3.myworkdayjobs.com/External/job/REMOTETELETRAVAIL-ON-CAN/Account-specialist---Medium-Value-at-Risk--MVAR-_R260030225",
   "years_required": 2
  },
+ "accounts payable and treasury analyst|metronfarnier": {
+  "apply_url": "https://ht-jobs.net/e8bhifp?s=in",
+  "category": "Treasury & ALM",
+  "company": "Metron Farnier",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Louisville, CO, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-9",
+  "role_title": "Treasury / ALM Analyst",
+  "search_term": "Treasury / ALM Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Accounts Payable and Treasury Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=0bdd92616fb3e1e2",
+  "years_required": null
+ },
  "actuarial associate excess casualty pricing and modeling remote|nationwidemutualinsurance": {
   "category": "Quant",
   "company": "Nationwide Mutual Insurance Company",
@@ -649,7 +707,7 @@
   "years_required": null
  },
  "actuary model validation|resolutionlife": {
-  "apply_url": "",
+  "apply_url": "https://resolutionlife.wd5.myworkdayjobs.com/en-US/resolutionlife_jobs/job/PA-West-Chester---Dunwoody-Dr/Actuary--Model-Validation_JR749700-1",
   "category": "Model Risk & Validation",
   "company": "Resolution Life",
   "description": "",
@@ -667,6 +725,7 @@
   "search_term": "Quantitative Model Reviewer",
   "source": "LinkedIn",
   "sources": [
+   "Indeed",
    "LinkedIn"
   ],
   "sponsorship": "Not stated",
@@ -734,6 +793,35 @@
   "title": "Adaptation & Resilience Pricing Analyst",
   "url": "https://www.linkedin.com/jobs/view/4470893008",
   "years_required": 20
+ },
+ "advisor compliance risk|onelanebusinessconsultancyservices": {
+  "apply_url": "",
+  "category": "Consulting & Vendors",
+  "company": "OneLane Business Consultancy & Services",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Utrecht Area",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "Financial Risk Management Consultant",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Advisor Compliance & Risk",
+  "url": "https://www.linkedin.com/jobs/view/4483019275",
+  "years_required": null
  },
  "advisor ii product control|phillips": {
   "category": "Product Control & Valuation",
@@ -817,11 +905,42 @@
   "url": "https://www.linkedin.com/jobs/view/4474488491",
   "years_required": null
  },
+ "ag credit analyst|firstnationalsiouxfalls": {
+  "apply_url": "https://fnbsf.hrmdirect.com/employment/view.php?req=3849668&jbsrc=1014&location=39ffc526-b72f-f070-d22e-712c3595c6de",
+  "category": "Derivatives & Fixed Income",
+  "company": "The First National Bank in Sioux Falls",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Sioux Falls, SD, USA",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Fixed Income Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Ag Credit Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=9738dd1f8623a8c0",
+  "years_required": null
+ },
  "agricultural commodity trader netherland|jktfoodseurope": {
+  "apply_url": "",
   "category": "Trading",
   "company": "JKT FOODS EUROPE LIMITED",
   "description": "",
   "description_checked": true,
+  "easy_apply": true,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -957,6 +1076,64 @@
   "title": "AIM Analyst- ALM | Hybrid",
   "url": "https://www.linkedin.com/jobs/view/4430146708",
   "years_required": 1
+ },
+ "ait associate it service desk analyst|adventhealthcorporate": {
+  "apply_url": "https://AdventHealth.contacthr.com/154028149",
+  "category": "Trading",
+  "company": "AdventHealth Corporate",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 3+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Altamonte Springs, FL, USA",
+  "posted": "2026-10-26",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "AIT Associate IT Service Desk Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=88ad5ce0abec0390",
+  "years_required": 3
+ },
+ "algorithmic trader internship|coinmart": {
+  "apply_url": "",
+  "category": "Trading",
+  "company": "CoinMart",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": true,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Amsterdam Area",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-7",
+  "role_title": "Trading Assistant / Junior Trader",
+  "search_term": "Market Risk Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Algorithmic Trader Internship",
+  "url": "https://www.linkedin.com/jobs/view/4484938470",
+  "years_required": null
  },
  "alm and financial forecasting analyst ii|federalhomeloanindianapolisfhlbi": {
   "category": "Treasury & ALM",
@@ -1242,6 +1419,35 @@
   "url": "https://www.linkedin.com/jobs/view/4479636334",
   "years_required": null
  },
+ "analyst apac markets middle office singapore|wellsfargo": {
+  "apply_url": "https://wf.wd1.myworkdayjobs.com/WellsFargoJobs/job/CENTRAL-SINGAPORE/APAC-Markets-Middle-Office-Analyst---Singapore_R-567285",
+  "category": "Derivatives & Fixed Income",
+  "company": "Wells Fargo",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "CENTRAL SINGAPORE,",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T1-18",
+  "role_title": "Middle Office / Trade Support Analyst",
+  "search_term": "careers site",
+  "source": "Careers site (Workday)",
+  "sources": [
+   "Careers site (Workday)"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "Wells Fargo",
+  "tier": 1,
+  "title": "Analyst, APAC Markets Middle Office (Singapore)",
+  "url": "https://wf.wd1.myworkdayjobs.com/WellsFargoJobs/job/CENTRAL-SINGAPORE/APAC-Markets-Middle-Office-Analyst---Singapore_R-567285",
+  "years_required": 2
+ },
  "analyst associate collateral analyst|rbc": {
   "apply_url": "https://rbc.wd3.myworkdayjobs.com/RBCGLOBAL1/job/New-York-New-York-United-States-of-America/Analyst--Associate---Collateral-Analyst_R-0000189662",
   "category": "Derivatives & Fixed Income",
@@ -1261,6 +1467,7 @@
   "source": "LinkedIn",
   "sources": [
    "Careers site (Workday)",
+   "Indeed",
    "LinkedIn"
   ],
   "sponsorship": "Not stated",
@@ -1455,7 +1662,8 @@
   "search_term": "careers site",
   "source": "Careers site (Workday)",
   "sources": [
-   "Careers site (Workday)"
+   "Careers site (Workday)",
+   "eFinancialCareers"
   ],
   "sponsorship": "No",
   "sponsorship_evidence": "duration of employment. please note that northern trust is unable to provide employment permit sponsorship for this role. this includes critical skills employment",
@@ -1803,6 +2011,35 @@
   "url": "https://www.efinancialcareers.com/jobs-United_Kingdom-London-Analyst_Solutions_Middle_Office.id24889052",
   "years_required": null
  },
+ "analyst treasury deposit operations|cardworksfinancial": {
+  "apply_url": "https://cardworks.wd12.myworkdayjobs.com/Merrick_Bank_External/job/South-Jordan/Analyst--Treasury---Deposit-Operations_JR101206",
+  "category": "Treasury & ALM",
+  "company": "CardWorks Financial Group",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "South Jordan, UT, USA",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-9",
+  "role_title": "Treasury / ALM Analyst",
+  "search_term": "Treasury / ALM Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Analyst, Treasury & Deposit Operations",
+  "url": "https://www.indeed.com/viewjob?jk=36eb61bad4f7d152",
+  "years_required": null
+ },
  "analyst treasury deposit operations|merrick": {
   "apply_url": "",
   "category": "Treasury & ALM",
@@ -1888,7 +2125,7 @@
   "years_required": 2
  },
  "analyst valuation services|kroll": {
-  "apply_url": "",
+  "apply_url": "https://hcxs.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/21015292",
   "category": "Product Control & Valuation",
   "company": "Kroll",
   "description": "",
@@ -1905,6 +2142,7 @@
   "search_term": "IPV / Valuation Control Analyst",
   "source": "eFinancialCareers",
   "sources": [
+   "Indeed",
    "eFinancialCareers"
   ],
   "sponsorship": "Not stated",
@@ -2057,6 +2295,35 @@
   "url": "https://www.linkedin.com/jobs/view/4480723213",
   "years_required": null
  },
+ "analyste risk management f h|bpifrance": {
+  "apply_url": "",
+  "category": "Consulting & Vendors",
+  "company": "Bpifrance",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Maisons-Alfort, \u00cele-de-France, France",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "firm: BP Pension Fund",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Analyste risk management F/H",
+  "url": "https://www.linkedin.com/jobs/view/4455733901",
+  "years_required": null
+ },
  "analyste tr sorerie analyst treasury|groupetouchette": {
   "category": "Treasury & ALM",
   "company": "Groupe Touchette",
@@ -2196,7 +2463,7 @@
   "years_required": null
  },
  "asia currency emerging markets non linear middle office analyst|jpmorganchase": {
-  "apply_url": "",
+  "apply_url": "https://JPMorganChase.contacthr.com/154023334",
   "category": "Derivatives & Fixed Income",
   "company": "JPMorganChase",
   "description": "",
@@ -2214,6 +2481,7 @@
   "search_term": "Middle Office / Trade Support Analyst",
   "source": "LinkedIn",
   "sources": [
+   "Indeed",
    "LinkedIn"
   ],
   "sponsorship": "Not stated",
@@ -2252,6 +2520,35 @@
   "title": "Asset Management - JP Morgan Natural Capital - Valuations Associate",
   "url": "https://www.linkedin.com/jobs/view/4466045801",
   "years_required": null
+ },
+ "assets trader power gas europe|totalenergies": {
+  "apply_url": "",
+  "category": "Trading",
+  "company": "TotalEnergies",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 7+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Geneva, Geneva, Switzerland",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-7",
+  "role_title": "Trading Assistant / Junior Trader",
+  "search_term": "Market Risk Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Assets Trader \u2013 Power & Gas (Europe)",
+  "url": "https://www.linkedin.com/jobs/view/4484957040",
+  "years_required": 7
  },
  "assistant compliance and risk data analyst hong kong branch|chinahongkong": {
   "apply_url": "",
@@ -2954,6 +3251,35 @@
   "url": "https://brookfield.wd5.myworkdayjobs.com/brookfield/job/Los-Angeles-California/Associate--Fundraise-Management--Liquid-Credit-Strategies_R2049651",
   "years_required": 2
  },
+ "associate help desk analyst|cccintelligentsolutions": {
+  "apply_url": "https://cccis.wd1.myworkdayjobs.com/broadbean_external/job/Sioux-Falls-SD/Associate-Help-Desk-Analyst_0014993",
+  "category": "Trading",
+  "company": "CCC Intelligent Solutions",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Sioux Falls, SD, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Associate Help Desk Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=7fe3e14790dc6219",
+  "years_required": 2
+ },
  "associate i cru risk|williamblair": {
   "apply_url": "",
   "category": "Consulting & Vendors",
@@ -3374,7 +3700,7 @@
   "years_required": 5
  },
  "associate quant developer equity derivatives|citic": {
-  "apply_url": "",
+  "apply_url": "https://www.efinancialcareers.hk/jobs-Hong_Kong-Hong_Kong-Associate_Quant_Developer_Equity_Derivatives.id24942106",
   "category": "Quant",
   "company": "CITIC Securities International Company Limited",
   "description": "",
@@ -3391,6 +3717,7 @@
   "search_term": "Junior Quant Developer",
   "source": "eFinancialCareers",
   "sources": [
+   "Indeed",
    "eFinancialCareers"
   ],
   "sponsorship": "Not stated",
@@ -3825,6 +4152,35 @@
   "url": "https://www.efinancialcareers.com/jobs-Bahrain-Manama-Auditor_-_Treasury__Financial_Markets_and_Risk_Management.id24888696",
   "years_required": 4
  },
+ "banking fp a financial planning analysis treasury analyst|resourcespte": {
+  "apply_url": "https://www.mycareersfuture.gov.sg/job/027bdab5b5982d67562d77282c36e33c",
+  "category": "Treasury & ALM",
+  "company": "D L Resources Pte Ltd",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 3+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Singapore, S00, Singapore",
+  "posted": "2026-10-26",
+  "recruiter": false,
+  "role_id": "T2-9",
+  "role_title": "Treasury / ALM Analyst",
+  "search_term": "Treasury / ALM Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Banking FP&A Financial Planning & Analysis Treasury Analyst",
+  "url": "https://sg.indeed.com/viewjob?jk=4942fd8ab14ba221",
+  "years_required": 3
+ },
  "banking risk consultant|turn2partners": {
   "apply_url": "",
   "category": "Consulting & Vendors",
@@ -3940,7 +4296,7 @@
   "years_required": null
  },
  "basketball pricing analyst|fanduel": {
-  "apply_url": "",
+  "apply_url": "https://grnh.se/o9myem7s1us",
   "category": "Quant",
   "company": "FanDuel",
   "description": "",
@@ -3958,6 +4314,7 @@
   "search_term": "Desk Strategist / Desk Analyst",
   "source": "LinkedIn",
   "sources": [
+   "Indeed",
    "LinkedIn"
   ],
   "sponsorship": "Not stated",
@@ -4426,14 +4783,19 @@
   "years_required": 1
  },
  "bunker fuel oil junior trader|jacrecruitment": {
+  "apply_url": "",
   "category": "Trading",
   "company": "JAC Recruitment",
   "description": "",
+  "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
+  "employer_sponsor": "",
   "excluded": "asks for 3+ years",
   "first_seen": "2026-10-29T00:04:48",
   "location": "Amsterdam, North Holland, Netherlands",
   "posted": "2026-10-26",
+  "recruiter": false,
   "role_id": "T2-7",
   "role_title": "Trading Assistant / Junior Trader",
   "search_term": "Trading Assistant / Junior Trader",
@@ -4446,7 +4808,6 @@
   "target_firm": "",
   "tier": 2,
   "title": "Bunker / Fuel Oil Junior Trader",
-  "uk_licensed_sponsor": "",
   "url": "https://www.linkedin.com/jobs/view/4453894728",
   "years_required": 3
  },
@@ -4537,10 +4898,12 @@
   "years_required": null
  },
  "business analyst banque risk compliance grc h f|redsen": {
+  "apply_url": "",
   "category": "Consulting & Vendors",
   "company": "Redsen",
   "description": "",
   "description_checked": true,
+  "easy_apply": true,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -4550,7 +4913,7 @@
   "recruiter": false,
   "role_id": "T2-13",
   "role_title": "Risk Analytics Analyst",
-  "search_term": "Risk Reporting Analyst",
+  "search_term": "Model Risk Analyst",
   "source": "LinkedIn",
   "sources": [
    "LinkedIn"
@@ -4593,14 +4956,19 @@
   "years_required": null
  },
  "business analyst etd exchange traded derivatives|sgi": {
+  "apply_url": "",
   "category": "Derivatives & Fixed Income",
   "company": "SGI",
   "description": "",
+  "description_checked": true,
+  "easy_apply": true,
   "emailed": false,
+  "employer_sponsor": "",
   "excluded": "asks for 6+ years",
   "first_seen": "2026-10-29T00:04:48",
   "location": "Zurich, Zurich, Switzerland",
   "posted": "2026-10-28",
+  "recruiter": false,
   "role_id": "T1-14",
   "role_title": "Derivatives Analyst",
   "search_term": "Product Control Analyst",
@@ -4613,7 +4981,6 @@
   "target_firm": "",
   "tier": 1,
   "title": "Business Analyst - ETD (Exchange Traded Derivatives)",
-  "uk_licensed_sponsor": "",
   "url": "https://www.linkedin.com/jobs/view/4484425757",
   "years_required": 6
  },
@@ -4833,6 +5200,7 @@
   "search_term": "Treasury / ALM Analyst",
   "source": "eFinancialCareers",
   "sources": [
+   "LinkedIn",
    "eFinancialCareers"
   ],
   "sponsorship": "Not stated",
@@ -4980,6 +5348,64 @@
   "tier": 1,
   "title": "Business Risk Analyst Trading Processes Bank",
   "url": "https://www.linkedin.com/jobs/view/4481022789",
+  "years_required": null
+ },
+ "business risk analyst|tokiomarinemanagementaustralasia": {
+  "apply_url": "",
+  "category": "Consulting & Vendors",
+  "company": "Tokio Marine Management Australasia",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Sydney, New South Wales, Australia",
+  "posted": "2026-10-26",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "firm: Tokio Marine",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "Tokio Marine",
+  "tier": 2,
+  "title": "Business Risk Analyst",
+  "url": "https://www.linkedin.com/jobs/view/4482912498",
+  "years_required": 2
+ },
+ "business risk consultant|univestfinancial": {
+  "apply_url": "https://careers.univest.net/jobs/7092/job?utm_source=indeed_integration&iis=Job%20Board&iisn=Indeed&indeed-apply-token=73a2d2b2a8d6d5c0a62696875eaebd669103652d3f0c2cd5445d3e66b1592b0f",
+  "category": "Consulting & Vendors",
+  "company": "Univest Financial Corporation",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Lansdale, PA, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-12",
+  "role_title": "Financial Risk Management Consultant",
+  "search_term": "Financial Risk Management Consultant",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Business Risk Consultant",
+  "url": "https://www.indeed.com/viewjob?jk=fd53a90725ffb4bc",
   "years_required": null
  },
  "business risk specialist data protection|ubs": {
@@ -5856,6 +6282,35 @@
   "url": "https://www.efinancialcareers.com/jobs-Ireland-Dublin-Client__Trade_Support_Executive.id24940599",
   "years_required": 1
  },
+ "collateral analyst i|lithiadriveway": {
+  "apply_url": "https://lithia.wd504.myworkdayjobs.com/LithiaCareers/job/Driveway-Finance-Corporation-Tigard-OR-97223/Collateral-Analyst-I_R120107",
+  "category": "Derivatives & Fixed Income",
+  "company": "Lithia & Driveway",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Medford, OR, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T1-19",
+  "role_title": "Collateral & Margin Analyst",
+  "search_term": "Collateral & Margin Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Collateral Analyst I",
+  "url": "https://www.indeed.com/viewjob?jk=1f25ad7776cf0beb",
+  "years_required": null
+ },
  "collateral management associate|jefferies": {
   "apply_url": "",
   "category": "Derivatives & Fixed Income",
@@ -5971,7 +6426,7 @@
   "years_required": 2
  },
  "commercial credit analyst|ballstonspanational": {
-  "apply_url": "",
+  "apply_url": "https://www.applicantpro.com/openings/bsnb/jobs/4255350-49566",
   "category": "Derivatives & Fixed Income",
   "company": "Ballston Spa National Bank",
   "description": "",
@@ -5989,6 +6444,7 @@
   "search_term": "firm: OakNorth Bank",
   "source": "LinkedIn",
   "sources": [
+   "Indeed",
    "LinkedIn"
   ],
   "sponsorship": "Not stated",
@@ -6372,6 +6828,64 @@
   "url": "https://www.linkedin.com/jobs/view/4484429744",
   "years_required": 3
  },
+ "compliance audit risk analyst|apartmentmanagementconsultants": {
+  "apply_url": "https://jobs.ourcareerpages.com/job/1014246?source=Indeed",
+  "category": "Consulting & Vendors",
+  "company": "Apartment Management Consultants",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 5+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Reno, NV, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "Risk Analytics Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Compliance Audit & Risk Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=f22429636127fad1",
+  "years_required": 5
+ },
+ "compliance audit risk specialist|apartmentmanagementconsultants": {
+  "apply_url": "https://jobs.ourcareerpages.com/job/1014245?source=Indeed",
+  "category": "Consulting & Vendors",
+  "company": "Apartment Management Consultants",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 5+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Denver, CO, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "Risk Analytics Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Compliance Audit & Risk Specialist",
+  "url": "https://www.indeed.com/viewjob?jk=1d80a24da32c4872",
+  "years_required": 5
+ },
  "compliance risk analyst|hannover": {
   "apply_url": "",
   "category": "Consulting & Vendors",
@@ -6399,6 +6913,35 @@
   "title": "Compliance & Risk Analyst",
   "url": "https://www.efinancialcareers.com/jobs-United_States-New_York-Compliance__Risk_Analyst.id24943169",
   "years_required": 5
+ },
+ "construction project risk consultant full time|mcdonoughbolyardpeck": {
+  "apply_url": "https://careers-mbpce.icims.com/jobs/2733/job?utm_source=indeed_integration&iis=Job%20Board&iisn=Indeed&indeed-apply-token=73a2d2b2a8d6d5c0a62696875eaebd669103652d3f0c2cd5445d3e66b1592b0f",
+  "category": "Consulting & Vendors",
+  "company": "McDonough Bolyard Peck",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "no sponsorship",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Remote, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-12",
+  "role_title": "Financial Risk Management Consultant",
+  "search_term": "Financial Risk Management Consultant",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "No",
+  "sponsorship_evidence": "training. applicants must be authorized to work in the u.s. without sponsorship mbp is an equal opportunity employer and does not discrimin",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Construction Project Risk Consultant (Full-Time)",
+  "url": "https://www.indeed.com/viewjob?jk=65ccd77558aac19d",
+  "years_required": null
  },
  "construction surety underwriter account executive credit analyst|travelers": {
   "apply_url": "https://travelers.wd5.myworkdayjobs.com/External/job/TX---Richardson/Construction-Surety-Underwriter--Account-Executive----Credit-Analyst_R-52408",
@@ -6801,10 +7344,12 @@
   "years_required": 1
  },
  "consultant risk control|aon": {
+  "apply_url": "",
   "category": "Consulting & Vendors",
   "company": "Aon",
   "description": "",
   "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -7642,6 +8187,35 @@
   "url": "https://ca.indeed.com/viewjob?jk=ac6aa630cee67abc",
   "years_required": 3
  },
+ "credit analyst corporate banking hong kong|malayanberhadmaybank": {
+  "apply_url": "https://www.ctgoodjobs.hk/jbt/10309754/indeed/9880/?utm_content=10309754&utm_source=jobfeed&utm_medium=organic&utm_campaign=indeed_feed",
+  "category": "Derivatives & Fixed Income",
+  "company": "Malayan Banking Berhad ('Maybank')",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 5+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Hong Kong",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Fixed Income Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Credit Analyst, Corporate Banking, Hong Kong",
+  "url": "https://hk.indeed.com/viewjob?jk=3291fa7a19cb2304",
+  "years_required": 5
+ },
  "credit analyst european financials|man": {
   "apply_url": "",
   "category": "Derivatives & Fixed Income",
@@ -7812,6 +8386,35 @@
   "title": "Credit Analyst - Investment Research & Portfolio Strategy",
   "url": "https://jp.indeed.com/viewjob?jk=39aa86b3b7d24778",
   "years_required": 4
+ },
+ "credit analyst i|orrstown": {
+  "apply_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=8b9bf0bb-65c0-4afa-bfe7-86a113592b54&ccId=19000101_000001&jobId=942459&source=IN&lang=en_US",
+  "category": "Derivatives & Fixed Income",
+  "company": "Orrstown Bank",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "York, PA, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Fixed Income Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Credit Analyst I",
+  "url": "https://www.indeed.com/viewjob?jk=6bcecc32c14e4b9d",
+  "years_required": null
  },
  "credit analyst i|td": {
   "apply_url": "https://td.wd3.myworkdayjobs.com/en-US/TD_Bank_Careers/job/Vancouver-British-Columbia/Credit-Analyst-I_R_1499490-1",
@@ -8072,6 +8675,35 @@
   "url": "https://travelers.wd5.myworkdayjobs.com/External/job/NS---Dartmouth/Financial-Analyst---Surety_R-52620",
   "years_required": null
  },
+ "credit analyst|austin": {
+  "apply_url": "",
+  "category": "Derivatives & Fixed Income",
+  "company": "AUSTIN BANK",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Longview, TX, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Fixed Income Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Credit Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=9143ce99f3995ed4",
+  "years_required": null
+ },
  "credit analyst|centalion": {
   "apply_url": "",
   "category": "Derivatives & Fixed Income",
@@ -8099,6 +8731,93 @@
   "tier": 1,
   "title": "Credit Analyst",
   "url": "https://www.linkedin.com/jobs/view/4484018952",
+  "years_required": 5
+ },
+ "credit analyst|communitynationalcnbtx": {
+  "apply_url": "https://www.paycomonline.net/v4/ats/web.php/portal/2B2C998E7859AF7587552B6A53540E44/jobs/548540?source=Indeed",
+  "category": "Derivatives & Fixed Income",
+  "company": "Community National Bank - CNBTX",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Fort Worth, TX, USA",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Fixed Income Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Credit Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=5e46de43a81de715",
+  "years_required": null
+ },
+ "credit analyst|conardpyle": {
+  "apply_url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4626939/Star-Roses-Plants/Credit-Analyst?source=Indeed_Feed",
+  "category": "Derivatives & Fixed Income",
+  "company": "CONARD PYLE COMPANY",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 3+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "West Grove, PA, USA",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Fixed Income Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Credit Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=967754046e2bc307",
+  "years_required": 3
+ },
+ "credit analyst|covetedfinancialservices": {
+  "apply_url": "",
+  "category": "Derivatives & Fixed Income",
+  "company": "Coveted Financial Services",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 5+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Chicago, IL, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Fixed Income Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Credit Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=bc4f99c1e5f781ab",
   "years_required": 5
  },
  "credit analyst|eastwest": {
@@ -8130,6 +8849,64 @@
   "url": "https://www.efinancialcareers.com/jobs-United_States-New_York-Credit_Analyst.id24931917",
   "years_required": 4
  },
+ "credit analyst|firsthorizon": {
+  "apply_url": "https://ibpwjb.fa.ocs.oraclecloud.com:443/hcmUI/CandidateExperience/en/job/1635",
+  "category": "Derivatives & Fixed Income",
+  "company": "First Horizon Bank",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Knoxville, TN, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Fixed Income Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "First Horizon",
+  "tier": 1,
+  "title": "Credit Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=d5b90696b8d35916",
+  "years_required": null
+ },
+ "credit analyst|herbeinconsulting": {
+  "apply_url": "",
+  "category": "Derivatives & Fixed Income",
+  "company": "Herbein HR Consulting",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Jim Thorpe, PA, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Fixed Income Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Credit Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=606c4ffd801ec6ee",
+  "years_required": null
+ },
  "credit analyst|icredit": {
   "category": "Derivatives & Fixed Income",
   "company": "iCredit BV",
@@ -8156,6 +8933,64 @@
   "title": "Credit analyst",
   "url": "https://www.efinancialcareers.com/jobs-Belgium-Brussels-Credit_analyst.id24942443",
   "years_required": null
+ },
+ "credit analyst|mhckenworth": {
+  "apply_url": "https://mhcta.avature.net/careers/JobDetail/Credit-Analyst/14045",
+  "category": "Derivatives & Fixed Income",
+  "company": "MHC Kenworth",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Leawood, KS, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Fixed Income Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Credit Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=1dd425154833d8da",
+  "years_required": null
+ },
+ "credit analyst|navitascredit": {
+  "apply_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=5a6c556f-1c4f-4e39-a24e-0a14f755dc41&ccId=19000101_000001&jobId=594440&source=IN&lang=en_US",
+  "category": "Derivatives & Fixed Income",
+  "company": "Navitas Credit LLC",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 5+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Ponte Vedra, FL, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Fixed Income Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Credit Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=ef65878f68b61d5e",
+  "years_required": 5
  },
  "credit analyst|nexusunderwriting": {
   "apply_url": "",
@@ -8186,6 +9021,35 @@
   "url": "https://www.linkedin.com/jobs/view/4484030085",
   "years_required": null
  },
+ "credit analyst|nucor": {
+  "apply_url": "https://jobs.nucor.com/job/Norfolk-Credit-Analyst-NE-68701/1444489100/?feedId=408100&utm_source=Indeed&utm_campaign=Nucor_Indeed",
+  "category": "Derivatives & Fixed Income",
+  "company": "Nucor Corporation",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Norfolk, NE, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Fixed Income Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Credit Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=d33ed000f9f7bc29",
+  "years_required": 1
+ },
  "credit analyst|octus": {
   "apply_url": "",
   "category": "Derivatives & Fixed Income",
@@ -8213,6 +9077,35 @@
   "tier": 1,
   "title": "Credit Analyst",
   "url": "https://www.linkedin.com/jobs/view/4474602560",
+  "years_required": null
+ },
+ "credit analyst|ohiovalley": {
+  "apply_url": "https://www.paycomonline.net/v4/ats/web.php/portal/3D8278E756B8A4DE6DFAD0299CD7DA43/jobs/224721?source=Indeed",
+  "category": "Derivatives & Fixed Income",
+  "company": "Ohio Valley Bank",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Gallipolis, OH, USA",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Fixed Income Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "CREDIT ANALYST",
+  "url": "https://www.indeed.com/viewjob?jk=f56291d9382c0935",
   "years_required": null
  },
  "credit analyst|pasonasingaporepte": {
@@ -8243,6 +9136,64 @@
   "title": "Credit Analyst",
   "url": "https://www.linkedin.com/jobs/view/4483831495",
   "years_required": 3
+ },
+ "credit analyst|shamrocktrading": {
+  "apply_url": "https://jobs.dayforcehcm.com/en-US/shamrocktc/CANDIDATEPORTAL/jobs/4189",
+  "category": "Derivatives & Fixed Income",
+  "company": "Shamrock Trading Corporation",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Overland Park, KS, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Fixed Income Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Credit Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=3683c0498162f8fc",
+  "years_required": null
+ },
+ "credit analyst|texastrust": {
+  "apply_url": "https://us01-foc.sabatalentlink.com/tlk/pages/fo/advert/details.jsp?nPostingTargetId=1257&id=PFMFK026203F3VBQBLO798MBL&LG=EN&languageSelect=EN&source=Indeed&sType=Indeed+Organic",
+  "category": "Derivatives & Fixed Income",
+  "company": "Texas Bank and Trust",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Longview, TX, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Fixed Income Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Credit Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=87c9aba9b19a084d",
+  "years_required": null
  },
  "credit card support specialist iv|jpmorganchase": {
   "category": "Derivatives & Fixed Income",
@@ -8757,8 +9708,8 @@
   "search_term": "Counterparty Credit Risk Analyst",
   "source": "LinkedIn",
   "sources": [
-   "LinkedIn",
-   "Indeed"
+   "Indeed",
+   "LinkedIn"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -8767,6 +9718,35 @@
   "title": "Credit Risk Analyst \u2013 FX Forwards",
   "url": "https://www.linkedin.com/jobs/view/4483036287",
   "years_required": null
+ },
+ "credit risk analyst international corporate bank|revupconsulting": {
+  "apply_url": "https://www.mycareersfuture.gov.sg/job/faec2bc0cd3f8ce53d53814bf76b3639",
+  "category": "Derivatives & Fixed Income",
+  "company": "RevUp Consulting",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 8+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Bugis, S00, Singapore",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Fixed Income Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Credit Risk Analyst \u2013 International Corporate Bank",
+  "url": "https://sg.indeed.com/viewjob?jk=c0040d860f40e950",
+  "years_required": 8
  },
  "credit risk analyst monee 2027 graduate|monee": {
   "apply_url": "",
@@ -9366,6 +10346,35 @@
   "url": "https://www.efinancialcareers.com/jobs-United_States-New_York-Credit_Risk_Strategy_Data_Scientist.id24949449",
   "years_required": 3
  },
+ "credit strategy pricing analyst|happen": {
+  "apply_url": "https://lendingclub.wd1.myworkdayjobs.com/External/job/San-Francisco-CA/Credit-Strategy---Pricing-Analyst_R0007469",
+  "category": "Quant",
+  "company": "Happen Bank",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "San Francisco, CA, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Credit Strategy & Pricing Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=c5c00ed27b9d89cb",
+  "years_required": null
+ },
  "cricket trader|mustardsystems": {
   "apply_url": "",
   "category": "Trading",
@@ -9540,6 +10549,35 @@
   "url": "https://www.linkedin.com/jobs/view/4465570195",
   "years_required": null
  },
+ "customer pricing analyst|stanleyblackdecker": {
+  "apply_url": "https://sbdinc.wd1.myworkdayjobs.com/en-US/Stanley_Black_Decker_Career_Site/job/Towson-MD-United-States/Customer-Pricing-Analyst_REQ-1000052976-1",
+  "category": "Quant",
+  "company": "Stanley Black & Decker",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 3+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Towson, MD, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Customer Pricing Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=ddfa5cb2ba47063c",
+  "years_required": 3
+ },
  "customer service desk analyst|itqmetis": {
   "apply_url": "",
   "category": "Trading",
@@ -9570,10 +10608,12 @@
   "years_required": null
  },
  "cyber risk specialist|promovendum": {
+  "apply_url": "",
   "category": "Consulting & Vendors",
   "company": "Promovendum",
   "description": "",
   "description_checked": true,
+  "easy_apply": true,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -10109,6 +11149,35 @@
   "url": "https://www.linkedin.com/jobs/view/4473185568",
   "years_required": 2
  },
+ "deal desk analyst|digicert": {
+  "apply_url": "https://grnh.se/b0e5bw7b2us",
+  "category": "Trading",
+  "company": "DigiCert",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Lehi, UT, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Deal Desk Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=ba99ae5eb3175a24",
+  "years_required": 2
+ },
  "deal desk analyst|lovable": {
   "apply_url": "",
   "category": "Trading",
@@ -10249,6 +11318,35 @@
   "title": "Defence Practice Leader, Risk Consulting Europe",
   "url": "https://mmc.wd1.myworkdayjobs.com/MMC/job/Frankfurt---Einheit-1/Defence-Practice-Leader--Risk-Consulting-Europe_R_358088",
   "years_required": 7
+ },
+ "defi quant developer|fidelityinvestments": {
+  "apply_url": "https://jobs.fidelity.com/en/jobs/2132276/defi-quant-developer/",
+  "category": "Quant",
+  "company": "Fidelity Investments",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 3+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Boston, MA, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-5",
+  "role_title": "Junior Quant Developer",
+  "search_term": "Junior Quant Developer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "No",
+  "sponsorship_evidence": "**fidelity will not provide immigration sponsorship for this position.** ### **job description:** **the rol",
+  "target_firm": "Fidelity International",
+  "tier": 2,
+  "title": "DeFi Quant Developer",
+  "url": "https://www.indeed.com/viewjob?jk=dda20e475c75b226",
+  "years_required": 3
  },
  "defi quant research intern digital assets market making|keyrock": {
   "apply_url": "https://jobs.ashbyhq.com/Keyrock/4cae20e0-f315-4ccb-aa8e-df0e87969313?utm_source=LKAMkqoYVE",
@@ -10393,6 +11491,35 @@
   "url": "https://www.efinancialcareers.com/jobs-Singapore-Singapore-Derivative_Operations_-_6-Month_Estimated_Contract.id24942079",
   "years_required": null
  },
+ "derivative operations analyst|stonex": {
+  "apply_url": "",
+  "category": "Derivatives & Fixed Income",
+  "company": "StoneX Group Inc.",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Singapore, Singapore",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T1-14",
+  "role_title": "Derivatives Analyst",
+  "search_term": "Derivatives Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "StoneX",
+  "tier": 1,
+  "title": "Derivative Operations Analyst",
+  "url": "https://www.linkedin.com/jobs/view/4483410783",
+  "years_required": 2
+ },
  "derivatives clearing operations analyst|missionstaffing": {
   "apply_url": "",
   "category": "Derivatives & Fixed Income",
@@ -10449,6 +11576,35 @@
   "tier": 1,
   "title": "Derivatives Documentation and Integration Analyst",
   "url": "https://www.linkedin.com/jobs/view/4473678293",
+  "years_required": null
+ },
+ "derivatives market risk analyst intern|totalenergies": {
+  "apply_url": "",
+  "category": "Market Risk",
+  "company": "TotalEnergies",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Geneva, Geneva, Switzerland",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T1-1",
+  "role_title": "Market Risk Analyst",
+  "search_term": "VaR / Risk Methodology Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Derivatives & Market Risk Analyst Intern",
+  "url": "https://www.linkedin.com/jobs/view/4477424238",
   "years_required": null
  },
  "designated person operational risk management manco|panel": {
@@ -11186,10 +12342,12 @@
   "years_required": null
  },
  "enterprise risk management specialist|abnamro": {
+  "apply_url": "",
   "category": "Consulting & Vendors",
   "company": "ABN AMRO Bank N.V.",
   "description": "",
   "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -11350,6 +12508,35 @@
   "tier": 1,
   "title": "Entry-Level ESG Risk & Data Analyst",
   "url": "https://www.linkedin.com/jobs/view/4484467178",
+  "years_required": null
+ },
+ "entry level pricing analyst|forevercollectibles": {
+  "apply_url": "",
+  "category": "Quant",
+  "company": "Forever Collectibles",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Piscataway, NJ, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Entry Level Pricing Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=752e5f3ae628fb4f",
   "years_required": null
  },
  "equites trade support analyst|selbyjennings": {
@@ -11520,6 +12707,35 @@
   "tier": 2,
   "title": "Equity Derivatives",
   "url": "https://www.linkedin.com/jobs/view/4484947236",
+  "years_required": null
+ },
+ "equity research associate fixed income research associate credit research analyst|opustrafficmanagementsolutions": {
+  "apply_url": "",
+  "category": "Derivatives & Fixed Income",
+  "company": "Opus Traffic Management Solutions",
+  "description": "",
+  "description_checked": false,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Singapore",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Fixed Income Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not checked",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Equity Research Associate / Fixed Income Research Associate / Credit Research Analyst",
+  "url": "https://www.linkedin.com/jobs/view/4483405726",
   "years_required": null
  },
  "equity risk analyst|paragonalphahedgefundtalentbusiness": {
@@ -11867,6 +13083,35 @@
   "url": "https://www.efinancialcareers.com/jobs-United_States-Chicago-Execution_Trader_Asset_Management.id24931696",
   "years_required": null
  },
+ "execution trader equities etd lateshift 60|ubpunionbancairepriv": {
+  "apply_url": "",
+  "category": "Trading",
+  "company": "UBP - Union Bancaire Priv\u00e9e",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 5+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Geneva, Geneva, Switzerland",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-7",
+  "role_title": "Trading Assistant / Junior Trader",
+  "search_term": "Trading Assistant / Junior Trader",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Execution Trader Equities & ETD Lateshift (60%)",
+  "url": "https://www.linkedin.com/jobs/view/4479561093",
+  "years_required": 5
+ },
  "execution trader private bank|perennialhr": {
   "apply_url": "",
   "category": "Trading",
@@ -12152,10 +13397,12 @@
   "years_required": 4
  },
  "fachspezlialist in business risk first line firmenkunden a 80 100 aarau|aargauischekantonalbank": {
+  "apply_url": "",
   "category": "Consulting & Vendors",
   "company": "Aargauische Kantonalbank",
   "description": "",
   "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -12292,6 +13539,35 @@
   "title": "Finance Capital, Liquidity and Product Legal Entity Controller - Associate",
   "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210804883",
   "years_required": null
+ },
+ "finance risk internal control|smbcindonesiatbk": {
+  "apply_url": "",
+  "category": "Consulting & Vendors",
+  "company": "PT Bank SMBC Indonesia Tbk",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": true,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 5+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Jakarta, Indonesia",
+  "posted": "2026-10-26",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "firm: Mitsui Sumitomo",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "SMBC",
+  "tier": 2,
+  "title": "Finance Risk & Internal Control",
+  "url": "https://www.linkedin.com/jobs/view/4482935947",
+  "years_required": 5
  },
  "financial analyst iv finance risk data governance|mt": {
   "category": "Market Risk",
@@ -12514,6 +13790,35 @@
   "url": "https://www.efinancialcareers.com/jobs-United_Kingdom-London-Financial_Market_Data_Software_Engineer_PythonPostgreSQL.id24941373",
   "years_required": 5
  },
+ "financial pricing analyst hybrid|hollowayconsulting": {
+  "apply_url": "",
+  "category": "Quant",
+  "company": "Holloway Consulting Group, LLC",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Atlanta, GA, USA",
+  "posted": "2026-10-26",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Financial Pricing Analyst: Hybrid",
+  "url": "https://www.indeed.com/viewjob?jk=916d5fa924d7d869",
+  "years_required": 1
+ },
  "financial risk advisory consultant|cfgi": {
   "apply_url": "",
   "category": "Consulting & Vendors",
@@ -12628,10 +13933,12 @@
   "years_required": 1
  },
  "first line operational risk officer|nationalenederlanden": {
+  "apply_url": "",
   "category": "Consulting & Vendors",
   "company": "Nationale-Nederlanden",
   "description": "",
   "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -12641,7 +13948,7 @@
   "recruiter": false,
   "role_id": "T2-13",
   "role_title": "Risk Analytics Analyst",
-  "search_term": "Risk Reporting Analyst",
+  "search_term": "Model Risk Analyst",
   "source": "LinkedIn",
   "sources": [
    "LinkedIn"
@@ -13255,7 +14562,7 @@
   "years_required": 2
  },
  "fraud risk analyst i|blackhawknetwork": {
-  "apply_url": "",
+  "apply_url": "https://careers-blackhawknetwork.icims.com/jobs/27231/job?utm_source=indeed_integration&iis=Job%20Board&iisn=Indeed&indeed-apply-token=73a2d2b2a8d6d5c0a62696875eaebd669103652d3f0c2cd5445d3e66b1592b0f",
   "category": "Consulting & Vendors",
   "company": "Blackhawk Network",
   "description": "",
@@ -13272,6 +14579,7 @@
   "search_term": "Market Risk Analyst",
   "source": "eFinancialCareers",
   "sources": [
+   "Indeed",
    "eFinancialCareers"
   ],
   "sponsorship": "Not stated",
@@ -13370,14 +14678,19 @@
   "years_required": null
  },
  "front arena trading systems specialist equities derivatives|hays": {
+  "apply_url": "",
   "category": "Derivatives & Fixed Income",
   "company": "Hays",
   "description": "",
+  "description_checked": true,
+  "easy_apply": true,
   "emailed": false,
+  "employer_sponsor": "",
   "excluded": "asks for 5+ years",
   "first_seen": "2026-10-29T00:04:48",
   "location": "Zurich, Switzerland",
   "posted": "2026-10-28",
+  "recruiter": false,
   "role_id": "T1-14",
   "role_title": "Derivatives Analyst",
   "search_term": "Product Control Analyst",
@@ -13390,9 +14703,37 @@
   "target_firm": "",
   "tier": 1,
   "title": "Front Arena Trading Systems Specialist (Equities & Derivatives)",
-  "uk_licensed_sponsor": "",
   "url": "https://www.linkedin.com/jobs/view/4484424880",
   "years_required": 5
+ },
+ "front office credit risk analyst officer onsite|statestreet": {
+  "apply_url": "https://statestreet.wd1.myworkdayjobs.com/Global/job/Boston-Massachusetts/Front-Office-Credit-Risk-Analyst--Officer--Onsite-_R-795291",
+  "category": "Derivatives & Fixed Income",
+  "company": "State Street",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Boston, Massachusetts",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "careers site",
+  "source": "Careers site (Workday)",
+  "sources": [
+   "Careers site (Workday)"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "State Street",
+  "tier": 1,
+  "title": "Front Office Credit Risk Analyst, Officer (Onsite)",
+  "url": "https://statestreet.wd1.myworkdayjobs.com/Global/job/Boston-Massachusetts/Front-Office-Credit-Risk-Analyst--Officer--Onsite-_R-795291",
+  "years_required": 2
  },
  "front office operations analyst ii etf index fixed income emea na|invesco": {
   "category": "Derivatives & Fixed Income",
@@ -13649,6 +14990,35 @@
   "url": "https://www.linkedin.com/jobs/view/4429471032",
   "years_required": null
  },
+ "fuel pricing analyst|circle": {
+  "apply_url": "https://workwithus.circlek.com/global/en/job/CIKCGLOBALR631081EXTERNALENGLOBAL/Fuel-Pricing-Analyst?utm_source=indeed&utm_medium=phenom-feeds",
+  "category": "Quant",
+  "company": "Circle K",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 3+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Corona, CA, USA",
+  "posted": "2026-10-26",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Fuel Pricing Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=ff8cee8b0ad645ef",
+  "years_required": 3
+ },
  "full stack quant developer chicago il prop derivatives trading|oxfordknight": {
   "apply_url": "",
   "category": "Quant",
@@ -13705,6 +15075,35 @@
   "url": "https://www.efinancialcareers.com/jobs-Belgium-Brussels-Functional_Analyst_Credit_Risk_Modelling.id24860344",
   "years_required": null
  },
+ "functioneel analist credit risk modelling|kbc": {
+  "apply_url": "",
+  "category": "Derivatives & Fixed Income",
+  "company": "KBC Group",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Brussels, Belgium",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Model Validation Analyst",
+  "source": "eFinancialCareers",
+  "sources": [
+   "eFinancialCareers"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Functioneel Analist Credit Risk Modelling",
+  "url": "https://www.efinancialcareers.com/jobs-Belgium-Brussels-Functioneel_Analist_Credit_Risk_Modelling.id24860344",
+  "years_required": null
+ },
  "fundamental credit research analyst|barclays": {
   "apply_url": "https://barclays.wd3.myworkdayjobs.com/External_Career_Site_Barclays/job/New-York-745-7th-Avenue/Fundamental-Credit-Research-Analyst_JR-0000133937",
   "category": "Derivatives & Fixed Income",
@@ -13753,6 +15152,7 @@
   "source": "Careers site (Oracle)",
   "sources": [
    "Careers site (Oracle)",
+   "Indeed",
    "LinkedIn"
   ],
   "sponsorship": "Not stated",
@@ -13761,6 +15161,35 @@
   "tier": 1,
   "title": "FX Cash Operations Trade Support Analyst",
   "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210803728",
+  "years_required": null
+ },
+ "fx execution trader|swissquote": {
+  "apply_url": "",
+  "category": "Trading",
+  "company": "Swissquote",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Gland, Vaud, Switzerland",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-7",
+  "role_title": "Trading Assistant / Junior Trader",
+  "search_term": "Trading Assistant / Junior Trader",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "FX/Execution Trader",
+  "url": "https://www.linkedin.com/jobs/view/4468669631",
   "years_required": null
  },
  "fx options correlation trader|citi": {
@@ -14014,6 +15443,35 @@
   "url": "https://www.efinancialcareers.com/jobs-United_Kingdom-London-General_Insurance_Actuary_-_Risk_Consulting__Analytics_Solutions.id24602512",
   "years_required": null
  },
+ "gestionnaire middle office f h otoktone 3i|groupebpce": {
+  "apply_url": "",
+  "category": "Derivatives & Fixed Income",
+  "company": "Groupe BPCE",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Saint-Gr\u00e9goire, France",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T1-18",
+  "role_title": "Middle Office / Trade Support Analyst",
+  "search_term": "Middle Office / Trade Support Analyst",
+  "source": "eFinancialCareers",
+  "sources": [
+   "eFinancialCareers"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Gestionnaire Middle Office (F/H) - Otoktone 3i",
+  "url": "https://www.efinancialcareers.com/jobs-France-Saint-Gr%C3%A9goire-Gestionnaire_Middle_Office_FH_-_Otoktone_3i.id24952296",
+  "years_required": null
+ },
  "gestionnaire middle office support sales analyst h f|ditagricole": {
   "category": "Derivatives & Fixed Income",
   "company": "Cr\u00e9dit Agricole S.A.",
@@ -14170,7 +15628,8 @@
   "search_term": "careers site",
   "source": "Careers site (Oracle)",
   "sources": [
-   "Careers site (Oracle)"
+   "Careers site (Oracle)",
+   "LinkedIn"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -14858,7 +16317,8 @@
   "search_term": "careers site",
   "source": "Careers site (Oracle)",
   "sources": [
-   "Careers site (Oracle)"
+   "Careers site (Oracle)",
+   "Indeed"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -15004,6 +16464,35 @@
   "url": "https://www.efinancialcareers.com/jobs-Hong_Kong-Hong_Kong-Hedge_Fund_Trader_-_G10_FX__Rates.id24379610",
   "years_required": null
  },
+ "help desk analyst support|warrantyprocessing": {
+  "apply_url": "https://www.paycomonline.net/v4/ats/web.php/portal/D8842694E5A12B1342AB930FC624CFE5/jobs/228965?source=Indeed",
+  "category": "Trading",
+  "company": "Warranty Processing Inc.",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Beloit, WI, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "HELP DESK ANALYST SUPPORT",
+  "url": "https://www.indeed.com/viewjob?jk=e5595ba64178bd7f",
+  "years_required": 2
+ },
  "help desk analyst|agnicoeagle": {
   "apply_url": "https://agnicoeagle.taleo.net/careersection/jobdetail.ftl?lang=en&job=ONT00110",
   "category": "Trading",
@@ -15030,6 +16519,122 @@
   "tier": 2,
   "title": "Help Desk Analyst",
   "url": "https://ca.indeed.com/viewjob?jk=2d1b6e67d29146c8",
+  "years_required": null
+ },
+ "help desk analyst|brooklyncentercommunityschools": {
+  "apply_url": "https://jobs.redroverk12.com/org/bccs286/opening/211710?sourceName=Indeed",
+  "category": "Trading",
+  "company": "Brooklyn Center Community Schools",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Brooklyn Center, MN, USA",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Help Desk Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=22f98bb2d9babbf7",
+  "years_required": null
+ },
+ "help desk analyst|centuryaluminum": {
+  "apply_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=7db78c90-cb30-4b9b-b815-99dcb1c6a852&ccId=19000101_000001&jobId=589459&source=IN&lang=en_US",
+  "category": "Trading",
+  "company": "CENTURY ALUMINUM",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Robards, KY, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Help Desk Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=7439ada90d3fd04f",
+  "years_required": 1
+ },
+ "help desk analyst|miamijewishhealth": {
+  "apply_url": "https://prd01-hcm01.prd.mykronos.com/ta/6013011.careers?ShowJob=2185052134",
+  "category": "Trading",
+  "company": "Miami Jewish Health",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Miami, FL, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Help Desk Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=cd235c2458ac1758",
+  "years_required": null
+ },
+ "help desk analyst|orangecountyemployeesassociation": {
+  "apply_url": "",
+  "category": "Trading",
+  "company": "Orange County Employees Association",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Santa Ana, CA, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Help Desk Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=735651481c4b80a3",
   "years_required": null
  },
  "hft futures quant researcher|durlstonpartners": {
@@ -15118,6 +16723,35 @@
   "title": "Hybrid Operations / Trader Assistant \u2013 Major Hedge Fund \u2013 up to $2m HKD total comp + world class benefits",
   "url": "https://www.linkedin.com/jobs/view/4482285660",
   "years_required": null
+ },
+ "information security risk analyst 4|lamresearch": {
+  "apply_url": "https://careers.lamresearch.com/careers/job/1099556506257",
+  "category": "Consulting & Vendors",
+  "company": "Lam Research",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 3+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Singapore, S00, Singapore",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "Risk Analytics Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Information Security Risk Analyst 4",
+  "url": "https://sg.indeed.com/viewjob?jk=41386e809d8ca596",
+  "years_required": 3
  },
  "information security risk officer|china": {
   "apply_url": "",
@@ -15288,10 +16922,12 @@
   "years_required": 2
  },
  "institutional trader|alloptions": {
+  "apply_url": "",
   "category": "Trading",
   "company": "All Options",
   "description": "",
-  "description_checked": false,
+  "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -15306,13 +16942,13 @@
   "sources": [
    "LinkedIn"
   ],
-  "sponsorship": "Not checked",
+  "sponsorship": "Not stated",
   "sponsorship_evidence": "",
   "target_firm": "",
   "tier": 2,
   "title": "Institutional Trader",
   "url": "https://www.linkedin.com/jobs/view/4481895592",
-  "years_required": null
+  "years_required": 1
  },
  "integrated middle office specialist|ubs": {
   "apply_url": "",
@@ -15401,6 +17037,64 @@
   "url": "https://www.linkedin.com/jobs/view/4480503991",
   "years_required": 3
  },
+ "intermodal pricing analyst|robinson": {
+  "apply_url": "https://chrobinson.wd5.myworkdayjobs.com/CHRobinson/job/Oakbrook-Terrace-IL-United-States-of-America/Intermodal-Pricing-Analyst_R49954",
+  "category": "Quant",
+  "company": "C.H. Robinson",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Oakbrook Terrace, IL, USA",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Intermodal Pricing Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=6ff5b77d1743cd06",
+  "years_required": 2
+ },
+ "intern client data management middle office|deutscherse": {
+  "apply_url": "",
+  "category": "Derivatives & Fixed Income",
+  "company": "Deutsche B\u00f6rse",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Luxembourg",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T1-18",
+  "role_title": "Middle Office / Trade Support Analyst",
+  "search_term": "Middle Office / Trade Support Analyst",
+  "source": "eFinancialCareers",
+  "sources": [
+   "eFinancialCareers"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "Deutsche Bank",
+  "tier": 1,
+  "title": "Intern - Client Data Management - Middle Office",
+  "url": "https://www.efinancialcareers.com/jobs-Luxembourg-Luxembourg-Intern_-_Client_Data_Management_-_Middle_Office.id24952393",
+  "years_required": null
+ },
  "intern investment alm|ctflife": {
   "apply_url": "",
   "category": "Treasury & ALM",
@@ -15428,6 +17122,35 @@
   "tier": 2,
   "title": "Intern, Investment & ALM",
   "url": "https://www.linkedin.com/jobs/view/4458720188",
+  "years_required": null
+ },
+ "intern model risk management|abnamro": {
+  "apply_url": "",
+  "category": "Model Risk & Validation",
+  "company": "ABN AMRO Bank N.V.",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Amsterdam, North Holland, Netherlands",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T1-7",
+  "role_title": "Model Risk Analyst",
+  "search_term": "Quant Graduate Programme",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "ABN AMRO",
+  "tier": 1,
+  "title": "Intern Model Risk Management",
+  "url": "https://www.linkedin.com/jobs/view/4484980938",
   "years_required": null
  },
  "intern quantitative research commodities 12 months|groupebpce": {
@@ -16132,6 +17855,35 @@
   "url": "https://www.efinancialcareers.com/jobs-France-Paris-Internship_-_Market_Risk_Analyst_HF_-_January_2027.id24656193",
   "years_required": null
  },
+ "internship risk control|heineken": {
+  "apply_url": "",
+  "category": "Consulting & Vendors",
+  "company": "The HEINEKEN Company",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Leiden, South Holland, Netherlands",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "Market Risk Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Internship - Risk & Control",
+  "url": "https://www.linkedin.com/jobs/view/4484967924",
+  "years_required": null
+ },
  "investigator pricing analyst|iconstrategicsolutions": {
   "apply_url": "",
   "category": "Quant",
@@ -16300,6 +18052,35 @@
   "tier": 1,
   "title": "Investment Product Strategy - Fixed Income (Analyst)",
   "url": "https://blackrock.wd1.myworkdayjobs.com/BlackRock_Professional/job/BU3-Budapest-GTC-White-House-Vaci-ut-47-District-XIII-Budapest/Investment-Product-Strategy---Fixed-Income--Analyst-_R266964",
+  "years_required": null
+ },
+ "investment risk analyst|newedgewealth": {
+  "apply_url": "",
+  "category": "Buy Side",
+  "company": "NewEdge Wealth",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Remote, USA",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T1-20",
+  "role_title": "Investment Risk Analyst",
+  "search_term": "Investment Risk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Investment Risk Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=b20ece18db013687",
   "years_required": null
  },
  "investment risk associate|jcw": {
@@ -16560,6 +18341,35 @@
   "url": "https://ca.indeed.com/viewjob?jk=a417ca81daca5883",
   "years_required": 2
  },
+ "it help desk analyst|dbrengineeringconsultants": {
+  "apply_url": "https://dbrinc.hrmdirect.com/employment/view.php?req=3850277&jbsrc=1014&location=56144d9b-2cd4-3b78-32a5-60013ca25ddf",
+  "category": "Trading",
+  "company": "DBR Engineering Consultants, Inc.",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Dallas, TX, USA",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "IT Help Desk Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=8307f79145cb85b3",
+  "years_required": null
+ },
  "it quant pretrade and xva f h|natixiscorporateinvestment": {
   "apply_url": "",
   "category": "Quant",
@@ -16587,6 +18397,35 @@
   "tier": 2,
   "title": "IT Quant Pretrade and XVA (F/H)",
   "url": "https://www.linkedin.com/jobs/view/4355420629",
+  "years_required": null
+ },
+ "it risk analyst onsite role|reillyautoparts": {
+  "apply_url": "https://click.appcast.io/t/hdRgmpi9mZog3tWY8yWeyvxTzeqom-3aUrVeiZlHiyQ=",
+  "category": "Consulting & Vendors",
+  "company": "O'Reilly Auto Parts",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Springfield, MO, USA",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "Risk Analytics Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "IT Risk Analyst (Onsite Role)",
+  "url": "https://www.indeed.com/viewjob?jk=08aef2bccf90e658",
   "years_required": null
  },
  "it risk compliance specialist|alpha": {
@@ -16674,6 +18513,35 @@
   "url": "https://ing.wd3.myworkdayjobs.com/ICSGBLCOR/job/Manila-One-Ayala-Tower-2/IT-Risk-Officer_REQ-10123263-1",
   "years_required": null
  },
+ "it risk officer|kpmg": {
+  "apply_url": "",
+  "category": "Consulting & Vendors",
+  "company": "KPMG",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Amstelveen, Netherlands",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "Fund Risk Analyst",
+  "source": "eFinancialCareers",
+  "sources": [
+   "eFinancialCareers"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "KPMG",
+  "tier": 2,
+  "title": "IT Risk Officer",
+  "url": "https://www.efinancialcareers.com/jobs-Netherlands-Amstelveen-IT_Risk_Officer.id24948718",
+  "years_required": null
+ },
  "it service desk analyst 2nd line|anchor": {
   "apply_url": "http://apply.anchorhanover.org.uk/vacancies/45549.20261026/IND/",
   "category": "Trading",
@@ -16701,6 +18569,64 @@
   "tier": 2,
   "title": "IT Service Desk Analyst 2nd Line",
   "url": "https://uk.indeed.com/viewjob?jk=44cda35cd0d8581d",
+  "years_required": null
+ },
+ "it service desk analyst i|moffittcancercenter": {
+  "apply_url": "https://moffitt.betterteam.com/it-service-desk-analyst-i?utm_source=indeed&utm_medium=web_xmlfeed&utm_campaign=indeed_organic",
+  "category": "Trading",
+  "company": "Moffitt Cancer Center",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Tampa, FL, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "IT Service Desk Analyst I",
+  "url": "https://www.indeed.com/viewjob?jk=6003115c21e1ed21",
+  "years_required": null
+ },
+ "it service desk analyst l1 l2 clets certified|liftedupwork": {
+  "apply_url": "https://jobs.smartrecruiters.com/LiftedanUpworkCompany/3743990016457395-it-service-desk-analyst-l1-l2-clets-certified",
+  "category": "Trading",
+  "company": "Lifted, an Upwork Company\u2122",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "California City, CA, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "IT Service Desk Analyst (L1/L2) \u2013 CLETS Certified",
+  "url": "https://www.indeed.com/viewjob?jk=ae6712a5e0d25c23",
   "years_required": null
  },
  "it service desk analyst|alliance": {
@@ -17035,6 +18961,7 @@
   "search_term": "Trading Assistant / Junior Trader",
   "source": "eFinancialCareers",
   "sources": [
+   "LinkedIn",
    "eFinancialCareers"
   ],
   "sponsorship": "Not stated",
@@ -17100,6 +19027,35 @@
   "title": "Junior Electronic Trader",
   "url": "https://www.linkedin.com/jobs/view/4483574380",
   "years_required": 1
+ },
+ "junior equity trader|dymonasiacapital": {
+  "apply_url": "",
+  "category": "Trading",
+  "company": "Dymon Asia Capital",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Central & Western District, Hong Kong SAR",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T2-7",
+  "role_title": "Trading Assistant / Junior Trader",
+  "search_term": "Trading Assistant / Junior Trader",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Junior Equity Trader",
+  "url": "https://www.linkedin.com/jobs/view/4485275933",
+  "years_required": null
  },
  "junior execution trader quantitative hedge fund|amethystpartners": {
   "apply_url": "",
@@ -17216,10 +19172,12 @@
   "years_required": null
  },
  "junior money market sales trader dutch|sfimarkets": {
+  "apply_url": "",
   "category": "Trading",
   "company": "SFI Markets",
   "description": "",
-  "description_checked": false,
+  "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -17234,7 +19192,7 @@
   "sources": [
    "LinkedIn"
   ],
-  "sponsorship": "Not checked",
+  "sponsorship": "Not stated",
   "sponsorship_evidence": "",
   "target_firm": "",
   "tier": 2,
@@ -17616,6 +19574,35 @@
   "url": "https://www.linkedin.com/jobs/view/4484534407",
   "years_required": null
  },
+ "junior sales trader|vividresourcing": {
+  "apply_url": "",
+  "category": "Trading",
+  "company": "Vivid Resourcing",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": true,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Amsterdam, North Holland, Netherlands",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-7",
+  "role_title": "Trading Assistant / Junior Trader",
+  "search_term": "Trading Assistant / Junior Trader",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Junior Sales Trader",
+  "url": "https://www.linkedin.com/jobs/view/4484940419",
+  "years_required": null
+ },
  "junior service desk analyst|system": {
   "apply_url": "https://careers.systemc.com/jobs/18284874-junior-service-desk-analyst?tm_job=REQ1012&tm_event=view&tm_company=90633",
   "category": "Trading",
@@ -17704,10 +19691,12 @@
   "years_required": null
  },
  "junior trader canada usa|hneheitzholland": {
+  "apply_url": "",
   "category": "Trading",
   "company": "K\u00fchne + Heitz Holland BV",
   "description": "",
-  "description_checked": false,
+  "description_checked": true,
+  "easy_apply": true,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -17722,13 +19711,13 @@
   "sources": [
    "LinkedIn"
   ],
-  "sponsorship": "Not checked",
+  "sponsorship": "Not stated",
   "sponsorship_evidence": "",
   "target_firm": "",
   "tier": 2,
   "title": "(Junior) Trader Canada / USA",
   "url": "https://www.linkedin.com/jobs/view/4481876358",
-  "years_required": null
+  "years_required": 1
  },
  "junior trader equity derivatives|citic": {
   "apply_url": "",
@@ -17787,11 +19776,42 @@
   "url": "https://www.linkedin.com/jobs/view/4482667574",
   "years_required": 3
  },
+ "junior trader operations executive|denarepte": {
+  "apply_url": "https://www.mycareersfuture.gov.sg/job/f199767e17c4d0761d0700e2e946ed69",
+  "category": "Trading",
+  "company": "DENARE PTE. LTD.",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Outram, S00, Singapore",
+  "posted": "2026-10-26",
+  "recruiter": false,
+  "role_id": "T2-7",
+  "role_title": "Trading Assistant / Junior Trader",
+  "search_term": "Trading Assistant / Junior Trader",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Junior Trader & Operations Executive",
+  "url": "https://sg.indeed.com/viewjob?jk=532501b0254ff7f8",
+  "years_required": null
+ },
  "junior trader physical commodities nederlandstalig|europarecruitment": {
+  "apply_url": "",
   "category": "Trading",
   "company": "Europa Recruitment",
   "description": "",
-  "description_checked": false,
+  "description_checked": true,
+  "easy_apply": true,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -17806,7 +19826,7 @@
   "sources": [
    "LinkedIn"
   ],
-  "sponsorship": "Not checked",
+  "sponsorship": "Not stated",
   "sponsorship_evidence": "",
   "target_firm": "",
   "tier": 2,
@@ -17928,11 +19948,42 @@
   "url": "https://www.efinancialcareers.com/jobs-Hong_Kong-Hong_Kong-Junior_Trading_Analyst_-_Volatility_Trading.id24548271",
   "years_required": 1
  },
+ "junior trading assistant service desk french|flatexdegiro": {
+  "apply_url": "",
+  "category": "Trading",
+  "company": "flatexDEGIRO",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Amsterdam, North Holland, Netherlands",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Product Control Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Junior Trading Assistant - Service Desk (French)",
+  "url": "https://www.linkedin.com/jobs/view/4484519185",
+  "years_required": null
+ },
  "junior transaction valuation analyst real estate|solidrecruitment": {
+  "apply_url": "",
   "category": "Product Control & Valuation",
   "company": "Solid Recruitment b.v.",
   "description": "",
-  "description_checked": false,
+  "description_checked": true,
+  "easy_apply": true,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -17947,7 +19998,7 @@
   "sources": [
    "LinkedIn"
   ],
-  "sponsorship": "Not checked",
+  "sponsorship": "Not stated",
   "sponsorship_evidence": "",
   "target_firm": "",
   "tier": 1,
@@ -18060,6 +20111,35 @@
   "uk_licensed_sponsor": "",
   "url": "https://www.efinancialcareers.com/jobs-Hong_Kong-Hong_Kong-Large_Macro_Hedge_Fund_-_Ops__Middle_Office_Specialist.id24790350",
   "years_required": 5
+ },
+ "leaves and risk analyst|americancommercialbargeline": {
+  "apply_url": "https://recruiting.ultipro.com/AME1101AMRI/JobBoard/f0aaafcc-5031-43d3-b658-e19a8bac98ee/OpportunityDetail?opportunityId=71719f6e-3c36-46dc-8ba7-d4cf9d5aebc1&postingId=a3c45c93-706f-4018-beb8-305760dba1e2",
+  "category": "Consulting & Vendors",
+  "company": "American Commercial Barge Line",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Paducah, KY, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "Risk Analytics Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Leaves and Risk Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=f157ada43aeb83ba",
+  "years_required": null
  },
  "leiter m w d pricing analytics vorsorge schweiz teilzeit vollzeit|helvetiaschweiz": {
   "category": "Quant",
@@ -18416,6 +20496,35 @@
   "tier": 2,
   "title": "Managing Consultant- EIA Flood Risk Specialist",
   "url": "https://www.efinancialcareers.com/jobs-United_Kingdom-Manchester-Managing_Consultant-_EIA_Flood_Risk_Specialist.id24949812",
+  "years_required": null
+ },
+ "margin analyst|parkcapitalsearch": {
+  "apply_url": "",
+  "category": "Derivatives & Fixed Income",
+  "company": "Park Capital Search",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": true,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Salt Lake County, UT",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T1-19",
+  "role_title": "Collateral & Margin Analyst",
+  "search_term": "Collateral & Margin Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Margin Analyst",
+  "url": "https://www.linkedin.com/jobs/view/4484565384",
   "years_required": null
  },
  "margin collateral analyst|jpmorganchase": {
@@ -19155,6 +21264,35 @@
   "url": "https://www.linkedin.com/jobs/view/4474791005",
   "years_required": null
  },
+ "merchant risk data analyst|upgrade": {
+  "apply_url": "https://grnh.se/9df5cbfz5us",
+  "category": "Market Risk",
+  "company": "Upgrade",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 3+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Atlanta, GA, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T1-4",
+  "role_title": "Risk Reporting Analyst",
+  "search_term": "Risk Reporting Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Merchant Risk Data Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=7f0b22a8931a0ec8",
+  "years_required": 3
+ },
  "middle office analyst multi strategy hedge fund|selbyjennings": {
   "apply_url": "",
   "category": "Derivatives & Fixed Income",
@@ -19301,7 +21439,7 @@
   "years_required": null
  },
  "middle office associate 1|statestreet": {
-  "apply_url": "",
+  "apply_url": "https://statestreet.wd1.myworkdayjobs.com/Global/job/Drogheda-Ireland/Middle-Office--Associate-2_R-799916",
   "category": "Derivatives & Fixed Income",
   "company": "State Street Corporation",
   "description": "",
@@ -19318,6 +21456,7 @@
   "search_term": "Middle Office / Trade Support Analyst",
   "source": "eFinancialCareers",
   "sources": [
+   "Careers site (Workday)",
    "eFinancialCareers"
   ],
   "sponsorship": "Not stated",
@@ -19329,14 +21468,19 @@
   "years_required": null
  },
  "middle office associate crypto|invenire": {
+  "apply_url": "",
   "category": "Derivatives & Fixed Income",
   "company": "Invenire Group",
   "description": "",
+  "description_checked": true,
+  "easy_apply": true,
   "emailed": false,
+  "employer_sponsor": "",
   "excluded": "asks for 3+ years",
   "first_seen": "2026-10-29T00:04:48",
   "location": "Zug, Switzerland",
   "posted": "2026-10-27",
+  "recruiter": false,
   "role_id": "T1-18",
   "role_title": "Middle Office / Trade Support Analyst",
   "search_term": "Market Risk Analyst",
@@ -19349,7 +21493,6 @@
   "target_firm": "",
   "tier": 1,
   "title": "Middle Office Associate Crypto",
-  "uk_licensed_sponsor": "",
   "url": "https://www.linkedin.com/jobs/view/4484025904",
   "years_required": 3
  },
@@ -19466,6 +21609,35 @@
   "title": "Middle Office Opportunities \u2013 Equity Sales Support & Global Commodities",
   "url": "https://www.efinancialcareers.com/jobs-Hong_Kong-Hong_Kong-Middle_Office_Opportunities_%E2%80%93_Equity_Sales_Support__Global_Commodities.id24900670",
   "years_required": 7
+ },
+ "middle office quant analyst|prestolabspte": {
+  "apply_url": "https://www.mycareersfuture.gov.sg/job/583fd62838778e51c6af9d1db3570432",
+  "category": "Derivatives & Fixed Income",
+  "company": "PRESTO LABS PTE. LTD.",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Outram, S00, Singapore",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T1-18",
+  "role_title": "Middle Office / Trade Support Analyst",
+  "search_term": "Quantitative Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Middle Office Quant Analyst",
+  "url": "https://sg.indeed.com/viewjob?jk=acadccf8836a9b40",
+  "years_required": 2
  },
  "middle office specialist|juliusbaer": {
   "apply_url": "",
@@ -19609,7 +21781,7 @@
   "years_required": null
  },
  "model frontier risk analyst|bytedance": {
-  "apply_url": "",
+  "apply_url": "https://joinbytedance.com/search/7699311691624991029",
   "category": "Model Risk & Validation",
   "company": "ByteDance",
   "description": "",
@@ -19627,6 +21799,7 @@
   "search_term": "Stress Testing Analyst",
   "source": "LinkedIn",
   "sources": [
+   "Indeed",
    "LinkedIn"
   ],
   "sponsorship": "Not stated",
@@ -20634,6 +22807,35 @@
   "url": "https://www.efinancialcareers.com/jobs-Ireland-Limerick_city-Operational_Risk_Analytics_and_Insights_Specialist.id24900945",
   "years_required": null
  },
+ "operational risk resilience analytics incident bcm|scbsiamcommercial": {
+  "apply_url": "",
+  "category": "Consulting & Vendors",
+  "company": "SCB \u2013 Siam Commercial Bank",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 5+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Bangkok, Bangkok City, Thailand",
+  "posted": "2026-10-26",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "firm: SCOR",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Operational Risk Resilience Analytics, Incident & BCM",
+  "url": "https://www.linkedin.com/jobs/view/4452901034",
+  "years_required": 5
+ },
  "operational risk specialist designated person pcf39b dublin or limerick|northerntrust": {
   "apply_url": "",
   "category": "Consulting & Vendors",
@@ -20948,6 +23150,35 @@
   "url": "https://www.linkedin.com/jobs/view/4483008524",
   "years_required": 2
  },
+ "ops analyst bo fx derivatives 6 months s 6k|morganmckinley": {
+  "apply_url": "",
+  "category": "Derivatives & Fixed Income",
+  "company": "Morgan McKinley",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 3+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Singapore",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T1-14",
+  "role_title": "Derivatives Analyst",
+  "search_term": "Derivatives Valuation Analyst",
+  "source": "eFinancialCareers",
+  "sources": [
+   "eFinancialCareers"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Ops Analyst (BO - FX - Derivatives) - 6 Months - S$6k",
+  "url": "https://www.efinancialcareers.com/jobs-Singapore-Singapore-Ops_Analyst_BO_-_FX_-_Derivatives_-_6_Months_-_S6k.id24951832",
+  "years_required": 3
+ },
  "ops risk specialist analyst tied distribution|aiasingaporeprivate": {
   "apply_url": "",
   "category": "Consulting & Vendors",
@@ -21035,14 +23266,19 @@
   "years_required": 5
  },
  "options trader researcher quant|aaaglobal": {
+  "apply_url": "",
   "category": "Quant",
   "company": "AAA Global",
   "description": "",
+  "description_checked": true,
+  "easy_apply": true,
   "emailed": false,
+  "employer_sponsor": "",
   "excluded": "asks for 3+ years",
   "first_seen": "2026-10-29T00:04:48",
   "location": "Amsterdam Area",
   "posted": "2026-10-27",
+  "recruiter": false,
   "role_id": "T2-1",
   "role_title": "Quantitative Analyst",
   "search_term": "Market Risk Analyst",
@@ -21055,7 +23291,6 @@
   "target_firm": "",
   "tier": 2,
   "title": "Options Trader / Researcher (Quant)",
-  "uk_licensed_sponsor": "",
   "url": "https://www.linkedin.com/jobs/view/4484078822",
   "years_required": 3
  },
@@ -21117,6 +23352,35 @@
   "url": "https://www.linkedin.com/jobs/view/4484020544",
   "years_required": 5
  },
+ "otc quant developer|selbyjennings": {
+  "apply_url": "",
+  "category": "Quant",
+  "company": "Selby Jennings",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Singapore",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T2-5",
+  "role_title": "Junior Quant Developer",
+  "search_term": "Junior Quant Developer",
+  "source": "eFinancialCareers",
+  "sources": [
+   "eFinancialCareers"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "OTC Quant Developer",
+  "url": "https://www.efinancialcareers.com/jobs-Singapore-Singapore-OTC_Quant_Developer.id24951865",
+  "years_required": null
+ },
  "otc quantitative developer|albertbow": {
   "apply_url": "",
   "category": "Quant",
@@ -21174,15 +23438,78 @@
   "url": "https://www.efinancialcareers.com/jobs-United_States-Las_Vegas-Part-Time_Trader.id24949273",
   "years_required": null
  },
+ "parts pricing analyst|zeekr": {
+  "apply_url": "",
+  "category": "Quant",
+  "company": "ZEEKR\u6781\u6c2a",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 3+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Amsterdam, North Holland, Netherlands",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "IPV / Valuation Control Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Parts Pricing Analyst",
+  "url": "https://www.linkedin.com/jobs/view/4484523469",
+  "years_required": 3
+ },
+ "parts pricing analyst|zeekreurope": {
+  "apply_url": "",
+  "category": "Quant",
+  "company": "Zeekr Europe",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 3+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Amsterdam Area",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "IPV / Valuation Control Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Parts Pricing Analyst",
+  "url": "https://www.linkedin.com/jobs/view/4484997720",
+  "years_required": 3
+ },
  "parttime treasury and insurance specialist cho keizersgracht amsterdam 24h|rituals": {
+  "apply_url": "",
   "category": "Treasury & ALM",
   "company": "Rituals (B Corp\u2122)",
   "description": "",
+  "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
+  "employer_sponsor": "",
   "excluded": "no sponsorship",
   "first_seen": "2026-10-29T00:04:48",
   "location": "Amsterdam, North Holland, Netherlands",
   "posted": "2026-10-26",
+  "recruiter": false,
   "role_id": "T2-9",
   "role_title": "Treasury / ALM Analyst",
   "search_term": "Derivatives Analyst",
@@ -21195,7 +23522,6 @@
   "target_firm": "",
   "tier": 2,
   "title": "Parttime Treasury and Insurance Specialist \u2013 CHO Keizersgracht Amsterdam | 24h",
-  "uk_licensed_sponsor": "",
   "url": "https://www.linkedin.com/jobs/view/4483720658",
   "years_required": 2
  },
@@ -21504,6 +23830,35 @@
   "url": "https://www.linkedin.com/jobs/view/4475580243",
   "years_required": 2
  },
+ "power gas trader|alpiq": {
+  "apply_url": "",
+  "category": "Trading",
+  "company": "Alpiq",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 5+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Lausanne, Vaud, Switzerland",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-7",
+  "role_title": "Trading Assistant / Junior Trader",
+  "search_term": "Market Risk Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Power & Gas Trader",
+  "url": "https://www.linkedin.com/jobs/view/4484998990",
+  "years_required": 5
+ },
  "praktikant in quantitative investments m w d|marsh": {
   "apply_url": "https://mmc.wd1.myworkdayjobs.com/MMC/job/Munich---Mllerstrasse/Praktikant-in-Quantitative-Investments--m-w-d-_R_370852",
   "category": "Quant",
@@ -21561,6 +23916,35 @@
   "url": "https://santander.wd3.myworkdayjobs.com/SantanderCareers/job/Boston/Pre---Post-Trade-Middle-Office-Operations-Associate_Req1630268",
   "years_required": 2
  },
+ "pricing analyst associate m f x|allianzdirect": {
+  "apply_url": "",
+  "category": "Quant",
+  "company": "Allianz Direct",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Rotterdam, South Holland, Netherlands",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "VaR / Risk Methodology Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "Allianz",
+  "tier": 2,
+  "title": "Pricing Analyst Associate(m/f/x)",
+  "url": "https://www.linkedin.com/jobs/view/4485226300",
+  "years_required": null
+ },
  "pricing analyst group pricing|euroclear": {
   "apply_url": "",
   "category": "Quant",
@@ -21591,10 +23975,12 @@
   "years_required": 3
  },
  "pricing analyst m f d|dsvglobaltransportlogistics": {
+  "apply_url": "",
   "category": "Quant",
   "company": "DSV - Global Transport and Logistics",
   "description": "",
-  "description_checked": false,
+  "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -21609,7 +23995,7 @@
   "sources": [
    "LinkedIn"
   ],
-  "sponsorship": "Not checked",
+  "sponsorship": "Not stated",
   "sponsorship_evidence": "",
   "target_firm": "",
   "tier": 2,
@@ -21645,6 +24031,93 @@
   "url": "https://ca.indeed.com/viewjob?jk=1a530fbee75c792e",
   "years_required": 2
  },
+ "pricing analyst remote|siemenshealthineers": {
+  "apply_url": "https://onehealthineers.wd3.myworkdayjobs.com/SHSJB/job/WAP-C/Pricing-Analyst---Remote_R-31582-2",
+  "category": "Quant",
+  "company": "Siemens Healthineers",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 8+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Remote, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Pricing Analyst - Remote",
+  "url": "https://www.indeed.com/viewjob?jk=281e1bf02ae61a24",
+  "years_required": 8
+ },
+ "pricing analyst remote|unfi": {
+  "apply_url": "https://jobs.unfi.com/job/16085/pricing-analyst-remote-merchandising-us-ri-providence/",
+  "category": "Quant",
+  "company": "UNFI",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Providence, RI, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Pricing Analyst - Remote",
+  "url": "https://www.indeed.com/viewjob?jk=c8c2fbf90e728f29",
+  "years_required": 1
+ },
+ "pricing analyst sourcing|sazerac": {
+  "apply_url": "https://careers-sazerac.icims.com/jobs/16408/job",
+  "category": "Quant",
+  "company": "Sazerac",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Louisville, KY, USA",
+  "posted": "2026-10-26",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Pricing Analyst, Sourcing",
+  "url": "https://www.indeed.com/viewjob?jk=cc5e43f913eb57b2",
+  "years_required": null
+ },
  "pricing analyst specialty pricing|geico": {
   "apply_url": "",
   "category": "Quant",
@@ -21673,6 +24146,35 @@
   "title": "Pricing Analyst - Specialty Pricing",
   "url": "https://www.linkedin.com/jobs/view/4465792841",
   "years_required": null
+ },
+ "pricing analyst strategic accounts pharma remote|mckesson": {
+  "apply_url": "https://careers.mckesson.com/en/job/irving/pricing-analyst-strategic-accounts-pharma-remote/733/102516594272",
+  "category": "Quant",
+  "company": "McKesson",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 4+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Irving, TX, USA",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Pricing Analyst, Strategic Accounts (Pharma/Remote)",
+  "url": "https://www.indeed.com/viewjob?jk=94b352a140539079",
+  "years_required": 4
  },
  "pricing analyst|bia": {
   "apply_url": "",
@@ -21760,6 +24262,122 @@
   "url": "https://ca.indeed.com/viewjob?jk=564c8a75adbe5fcb",
   "years_required": null
  },
+ "pricing analyst|celerocommerce": {
+  "apply_url": "https://celerocommerce.recruiterbox.com/jobs/fk0zldz?fjb_hash=ezLpq610",
+  "category": "Quant",
+  "company": "Celero Commerce",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Brentwood, TN, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Pricing Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=c519ee8d597fb8d9",
+  "years_required": 2
+ },
+ "pricing analyst|cummins": {
+  "apply_url": "https://cummins.jobs/B33651CB20094D7393C237C8A54C7CB1/job/",
+  "category": "Quant",
+  "company": "Cummins",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Troy, MI, USA",
+  "posted": "2026-10-26",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Pricing Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=932f75671863e127",
+  "years_required": null
+ },
+ "pricing analyst|delmar": {
+  "apply_url": "https://apply.workable.com/j/F3FB54567D",
+  "category": "Quant",
+  "company": "Delmar International Inc.",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 3+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Chicago, IL, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Pricing Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=78bc07216e805d8d",
+  "years_required": 3
+ },
+ "pricing analyst|hercrentals": {
+  "apply_url": "https://career4.successfactors.com/career?company=hercrental&career_ns=job_listing&career_job_req_id=72258&lang=en_US&source=Indeed",
+  "category": "Quant",
+  "company": "Herc Rentals",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Bonita Springs, FL, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Pricing Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=cc387707929d212b",
+  "years_required": null
+ },
  "pricing analyst|hyve": {
   "apply_url": "https://hyvegroup.careers.hibob.com/jobs/0d05cbeb-3d07-4abc-8448-8b933b164e44",
   "category": "Quant",
@@ -21789,11 +24407,100 @@
   "url": "https://uk.indeed.com/viewjob?jk=6b5dba7e9423f2c5",
   "years_required": 1
  },
+ "pricing analyst|jonathan": {
+  "apply_url": "",
+  "category": "Quant",
+  "company": "JONATHAN Y",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "New York, NY, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Pricing Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=9da8810958882232",
+  "years_required": null
+ },
+ "pricing analyst|loral": {
+  "apply_url": "",
+  "category": "Quant",
+  "company": "L'Or\u00e9al",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Hoofddorp, North Holland, Netherlands",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Product Control Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Pricing Analyst",
+  "url": "https://www.linkedin.com/jobs/view/4475776972",
+  "years_required": 2
+ },
+ "pricing analyst|paychex": {
+  "apply_url": "https://careers.paychex.com/careers/jobs/47152/job?utm_source=indeed_integration&iis=Job%20Board&iisn=Indeed&indeed-apply-token=73a2d2b2a8d6d5c0a62696875eaebd669103652d3f0c2cd5445d3e66b1592b0f",
+  "category": "Quant",
+  "company": "Paychex, Inc.",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Rochester, NY, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Pricing Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=ed40c0fabd0ae691",
+  "years_required": 2
+ },
  "pricing analyst|q8": {
+  "apply_url": "",
   "category": "Quant",
   "company": "Q8",
   "description": "",
-  "description_checked": false,
+  "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -21808,13 +24515,42 @@
   "sources": [
    "LinkedIn"
   ],
-  "sponsorship": "Not checked",
+  "sponsorship": "Not stated",
   "sponsorship_evidence": "",
   "target_firm": "",
   "tier": 2,
   "title": "Pricing Analyst",
   "url": "https://www.linkedin.com/jobs/view/4483882846",
-  "years_required": null
+  "years_required": 2
+ },
+ "pricing analyst|runbuggyomi": {
+  "apply_url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4622511/RunBuggy-OMI-Inc/Pricing-Analyst?source=Indeed_Feed",
+  "category": "Quant",
+  "company": "RunBuggy OMI Inc.",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 5+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Tempe, AZ, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Pricing Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=0a242cb3ff2e03fc",
+  "years_required": 5
  },
  "pricing analyst|staplescanada": {
   "apply_url": "https://fa-exhh-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/requisitions/preview/76583",
@@ -21873,6 +24609,35 @@
   "url": "https://www.linkedin.com/jobs/view/4468370679",
   "years_required": null
  },
+ "pricing analyst|tcp": {
+  "apply_url": "https://www.paycomonline.net/v4/ats/web.php/portal/918F732CE276B1C76EB6CDA860ECBC6F/jobs/471978?source=Indeed",
+  "category": "Quant",
+  "company": "TCP",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Aurora, OH, USA",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Pricing Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=16c0aab0e4284f9f",
+  "years_required": 1
+ },
  "pricing analyst|travisperkins": {
   "apply_url": "https://www.tpplccareers.co.uk/job/pricing-analyst-in-northampton-jid-44663",
   "category": "Quant",
@@ -21901,6 +24666,35 @@
   "title": "Pricing Analyst",
   "url": "https://uk.indeed.com/viewjob?jk=79e954e40461d653",
   "years_required": null
+ },
+ "pricing analyst|vibrantingredients": {
+  "apply_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=d1004b07-ee76-4853-a652-b1ad4f7d00b3&ccId=19000101_000001&jobId=575546&source=IN&lang=en_US",
+  "category": "Quant",
+  "company": "Vibrant Ingredients",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 3+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Lake Mary, FL, USA",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Pricing Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=fb564cb4fcd5c13c",
+  "years_required": 3
  },
  "pricing analyst|zurichinsurance": {
   "apply_url": "",
@@ -22167,7 +24961,8 @@
   "search_term": "careers site",
   "source": "Careers site (Oracle)",
   "sources": [
-   "Careers site (Oracle)"
+   "Careers site (Oracle)",
+   "LinkedIn"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -22882,6 +25677,35 @@
   "url": "https://www.efinancialcareers.com/jobs-Hong_Kong-Hong_Kong-Product_Pricing_Analyst.id24939723",
   "years_required": null
  },
+ "product pricing analyst|aiaaustralia": {
+  "apply_url": "https://aia.wd3.myworkdayjobs.com/en-US/External/job/Hong-Kong-HK-AIA-Hong-Kong--Macau/Product-Pricing--Analyst_JR-71599",
+  "category": "Quant",
+  "company": "AIA Australia",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Hong Kong",
+  "posted": "2026-10-26",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Product Pricing, Analyst",
+  "url": "https://hk.indeed.com/viewjob?jk=364f1ff536dec3cf",
+  "years_required": null
+ },
  "product pricing analyst|aiahongkongmacau": {
   "apply_url": "",
   "category": "Quant",
@@ -22969,6 +25793,35 @@
   "url": "https://www.linkedin.com/jobs/view/4465414595",
   "years_required": null
  },
+ "professional process automation ai engineer financial services|vermgenszentrum": {
+  "apply_url": "",
+  "category": "Quant",
+  "company": "VZ Verm\u00f6gensZentrum",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Zurich, Zurich, Switzerland",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Junior Quant Developer",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Professional Process Automation & AI Engineer (Financial Services)",
+  "url": "https://www.linkedin.com/jobs/view/4484800433",
+  "years_required": null
+ },
  "project qa support analyst in trade finance operations contract to end by 30 dec 26|ocbc": {
   "apply_url": "",
   "category": "Derivatives & Fixed Income",
@@ -22998,10 +25851,12 @@
   "years_required": 1
  },
  "property risk consultant|dupi": {
+  "apply_url": "",
   "category": "Consulting & Vendors",
   "company": "DUPI Group",
   "description": "",
-  "description_checked": false,
+  "description_checked": true,
+  "easy_apply": true,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -23016,12 +25871,41 @@
   "sources": [
    "LinkedIn"
   ],
-  "sponsorship": "Not checked",
+  "sponsorship": "Not stated",
   "sponsorship_evidence": "",
   "target_firm": "",
   "tier": 2,
   "title": "Property Risk Consultant",
   "url": "https://www.linkedin.com/jobs/view/4481449876",
+  "years_required": null
+ },
+ "pt fraud risk analyst i|rcb": {
+  "apply_url": "https://jobs.dayforcehcm.com/en-US/rcb/CANDIDATEPORTAL/jobs/18550",
+  "category": "Consulting & Vendors",
+  "company": "RCB Bank",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Claremore, OK, USA",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "Risk Analytics Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "PT- Fraud Risk Analyst I",
+  "url": "https://www.indeed.com/viewjob?jk=156f8714fbf02455",
   "years_required": null
  },
  "public finance investor marketing and credit analysis analyst|jpmorganchase": {
@@ -23334,13 +26218,42 @@
   "url": "https://www.efinancialcareers.com/jobs-United_Kingdom-London-Python_Quant_Developer_-_Trading_Team-_Global_Quant_Firm.id24920417",
   "years_required": null
  },
+ "python quant developer|ashfordbenjamin": {
+  "apply_url": "https://ashford-benjamin.com/vacancies/",
+  "category": "Quant",
+  "company": "Ashford Benjamin Limited",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Hong Kong",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-5",
+  "role_title": "Junior Quant Developer",
+  "search_term": "Junior Quant Developer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Python Quant Developer",
+  "url": "https://hk.indeed.com/viewjob?jk=3f4107949c0e6a33",
+  "years_required": 2
+ },
  "python quant developer|selbyjennings": {
   "apply_url": "",
   "category": "Quant",
   "company": "Selby Jennings",
   "description": "",
   "description_checked": true,
-  "easy_apply": null,
+  "easy_apply": true,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -23353,8 +26266,7 @@
   "search_term": "Junior Quant Developer",
   "source": "LinkedIn",
   "sources": [
-   "LinkedIn",
-   "eFinancialCareers"
+   "LinkedIn"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -24673,6 +27585,35 @@
   "url": "https://www.linkedin.com/jobs/view/4449629060",
   "years_required": 2
  },
+ "quantitative analyst quantitative research|intercontinentalexchange": {
+  "apply_url": "https://careers-ice.icims.com/jobs/14040/job?utm_source=indeed_integration&iis=Job%20Board&iisn=Indeed&indeed-apply-token=73a2d2b2a8d6d5c0a62696875eaebd669103652d3f0c2cd5445d3e66b1592b0f",
+  "category": "Quant",
+  "company": "Intercontinental Exchange",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Atlanta, GA, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T2-1",
+  "role_title": "Quantitative Analyst",
+  "search_term": "Quantitative Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "Intercontinental Exchange",
+  "tier": 2,
+  "title": "Quantitative Analyst, Quantitative Research",
+  "url": "https://www.indeed.com/viewjob?jk=b7e2296fa978a464",
+  "years_required": null
+ },
  "quantitative analyst quantitative strategies|millennium": {
   "apply_url": "",
   "category": "Quant",
@@ -24961,7 +27902,7 @@
   "years_required": 1
  },
  "quantitative analytics professional|freddiemac": {
-  "apply_url": "",
+  "apply_url": "https://careers.freddiemac.com/us/en/job/FRMAUSJR17762EXTERNAL/Quantitative-Analytics-Professional?utm_source=Indeed&utm_medium=phenom-feeds",
   "category": "Quant",
   "company": "Freddie Mac",
   "description": "",
@@ -24978,6 +27919,7 @@
   "search_term": "Quantitative Model Reviewer",
   "source": "eFinancialCareers",
   "sources": [
+   "Indeed",
    "eFinancialCareers"
   ],
   "sponsorship": "Not stated",
@@ -25722,7 +28664,7 @@
   "years_required": 3
  },
  "quantitative developer singapore hong kong|standardchartered": {
-  "apply_url": "",
+  "apply_url": "https://jobs.standardchartered.com/job/Quantitative-Developer-%28Singapore%2C-Hong-Kong%29/64619-en_GB",
   "category": "Quant",
   "company": "Standard Chartered",
   "description": "",
@@ -25740,6 +28682,7 @@
   "search_term": "Junior Quant Developer",
   "source": "LinkedIn",
   "sources": [
+   "Indeed",
    "LinkedIn"
   ],
   "sponsorship": "Not stated",
@@ -26464,6 +29407,35 @@
   "url": "https://troweprice.wd5.myworkdayjobs.com/TRowePrice/job/Baltimore-MD/Quantitative-Investment-Analyst_84187",
   "years_required": null
  },
+ "quantitative lng analyst|totalenergies": {
+  "apply_url": "",
+  "category": "Quant",
+  "company": "TotalEnergies",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Geneva, Geneva, Switzerland",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-1",
+  "role_title": "Quantitative Analyst",
+  "search_term": "Market Risk Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Quantitative LNG Analyst",
+  "url": "https://www.linkedin.com/jobs/view/4485203504",
+  "years_required": 2
+ },
  "quantitative machine learning engineer|totalenergies": {
   "apply_url": "",
   "category": "Quant",
@@ -26893,14 +29865,19 @@
   "years_required": 3
  },
  "quantitative researcher data scientist|selbyjennings": {
+  "apply_url": "",
   "category": "Quant",
   "company": "Selby Jennings",
   "description": "",
+  "description_checked": true,
+  "easy_apply": true,
   "emailed": false,
+  "employer_sponsor": "",
   "excluded": "asks for 3+ years",
   "first_seen": "2026-10-29T00:04:48",
   "location": "Rotterdam, South Holland, Netherlands",
   "posted": "2026-10-28",
+  "recruiter": false,
   "role_id": "T2-1",
   "role_title": "Quantitative Analyst",
   "search_term": "Market Risk Analyst",
@@ -26913,7 +29890,6 @@
   "target_firm": "",
   "tier": 2,
   "title": "Quantitative Researcher/Data Scientist",
-  "uk_licensed_sponsor": "",
   "url": "https://www.linkedin.com/jobs/view/4484477594",
   "years_required": 3
  },
@@ -27881,7 +30857,8 @@
   "search_term": "careers site",
   "source": "Careers site (Workday)",
   "sources": [
-   "Careers site (Workday)"
+   "Careers site (Workday)",
+   "Indeed"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -28066,13 +31043,15 @@
   "years_required": null
  },
  "quantitative trader crypto options|blocktech": {
+  "apply_url": "",
   "category": "Quant",
   "company": "BlockTech",
   "description": "",
-  "description_checked": false,
+  "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
   "employer_sponsor": "",
-  "excluded": "employer not on a sponsor list",
+  "excluded": "asks for 3+ years",
   "first_seen": "2026-10-29T00:04:48",
   "location": "Amsterdam, North Holland, Netherlands",
   "posted": "2026-10-28",
@@ -28084,13 +31063,13 @@
   "sources": [
    "LinkedIn"
   ],
-  "sponsorship": "Not checked",
+  "sponsorship": "Not stated",
   "sponsorship_evidence": "",
   "target_firm": "",
   "tier": 2,
   "title": "Quantitative Trader | Crypto Options",
   "url": "https://www.linkedin.com/jobs/view/4484465293",
-  "years_required": null
+  "years_required": 3
  },
  "quantitative trader electronic options market making global investment bank hong kong|bahpartners": {
   "apply_url": "",
@@ -28122,10 +31101,12 @@
   "years_required": 3
  },
  "quantitative trader intern|imctrading": {
+  "apply_url": "",
   "category": "Quant",
   "company": "IMC Trading",
   "description": "",
-  "description_checked": false,
+  "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -28140,7 +31121,7 @@
   "sources": [
    "LinkedIn"
   ],
-  "sponsorship": "Not checked",
+  "sponsorship": "Not stated",
   "sponsorship_evidence": "",
   "target_firm": "IMC Trading",
   "tier": 2,
@@ -28458,6 +31439,64 @@
   "uk_licensed_sponsor": "",
   "url": "https://www.linkedin.com/jobs/view/4377983653",
   "years_required": 3
+ },
+ "raley s pricing analyst|bashassupermarkets": {
+  "apply_url": "https://fa-epss-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/16771",
+  "category": "Quant",
+  "company": "Bashas' Supermarkets",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "West Sacramento, CA, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Raley's Pricing Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=bd6d4183cc2a2717",
+  "years_required": null
+ },
+ "raley s pricing analyst|raleybelairnobhill": {
+  "apply_url": "https://fa-epss-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/16771",
+  "category": "Quant",
+  "company": "Raley's / Bel Air / Nob Hill",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "West Sacramento, CA, USA",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-4",
+  "role_title": "Financial Engineer",
+  "search_term": "Financial Engineer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Raley's Pricing Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=f6fed8973ae01ac5",
+  "years_required": null
  },
  "rates options trader london|etonclarke": {
   "apply_url": "",
@@ -29041,6 +32080,35 @@
   "url": "https://www.linkedin.com/jobs/view/4484066210",
   "years_required": null
  },
+ "risk analyst b2b m f d|riverty": {
+  "apply_url": "",
+  "category": "Consulting & Vendors",
+  "company": "Riverty",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Amsterdam, North Holland, Netherlands",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "Market Risk Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Risk Analyst B2B (m/f/d)",
+  "url": "https://www.linkedin.com/jobs/view/4484049170",
+  "years_required": null
+ },
  "risk analyst client underwriting m f d|riverty": {
   "category": "Consulting & Vendors",
   "company": "Riverty",
@@ -29115,6 +32183,7 @@
   "search_term": "Counterparty Credit Risk Analyst",
   "source": "eFinancialCareers",
   "sources": [
+   "LinkedIn",
    "eFinancialCareers"
   ],
   "sponsorship": "Not stated",
@@ -29181,6 +32250,64 @@
   "title": "Risk Analyst - Leading Global Financial Institution",
   "url": "https://www.efinancialcareers.com/jobs-Hong_Kong-Hong_Kong-Risk_Analyst_-_Leading_Global_Financial_Institution.id24951132",
   "years_required": null
+ },
+ "risk analyst market risk and earnings analysis|federalhomeloanchicago": {
+  "apply_url": "",
+  "category": "Market Risk",
+  "company": "Federal Home Loan Bank of Chicago",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Chicago, IL",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T1-1",
+  "role_title": "Market Risk Analyst",
+  "search_term": "Rates Risk Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Risk Analyst - Market Risk and Earnings Analysis",
+  "url": "https://www.linkedin.com/jobs/view/4484580303",
+  "years_required": 1
+ },
+ "risk analyst market risk and earnings analysis|fhlbankchicago": {
+  "apply_url": "https://fhlbc.wd1.myworkdayjobs.com/Search/job/Chicago/Risk-Analyst---Market-Risk-and-Earnings-Analysis_R2600508",
+  "category": "Market Risk",
+  "company": "FHLBank Chicago",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Chicago, IL, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T1-1",
+  "role_title": "Market Risk Analyst",
+  "search_term": "Quantitative Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Risk Analyst - Market Risk and Earnings Analysis",
+  "url": "https://www.indeed.com/viewjob?jk=ff1eae3ad56a0550",
+  "years_required": 1
  },
  "risk analyst market risk|cicc": {
   "apply_url": "",
@@ -29270,6 +32397,64 @@
   "url": "https://www.linkedin.com/jobs/view/4462998738",
   "years_required": 5
  },
+ "risk analyst|cfs": {
+  "apply_url": "",
+  "category": "Consulting & Vendors",
+  "company": "CFS",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Seminole, FL",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "Commodities Risk Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Risk Analyst",
+  "url": "https://www.linkedin.com/jobs/view/4483404165",
+  "years_required": 2
+ },
+ "risk analyst|gemtechnologies": {
+  "apply_url": "https://jobs.ashbyhq.com/gem-technologies/66bbbbdf-9583-404c-a7b8-200c97e5b3d8?utm_source=Wgvrm2a1B6",
+  "category": "Consulting & Vendors",
+  "company": "GEM Technologies, Inc.",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Los Alamos, NM, USA",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "Risk Analytics Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Risk Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=6a5c752c73ee9939",
+  "years_required": 2
+ },
  "risk analyst|intercontinentalexchange": {
   "apply_url": "",
   "category": "Consulting & Vendors",
@@ -29346,8 +32531,9 @@
   "search_term": "Quantitative Risk Analyst",
   "source": "LinkedIn",
   "sources": [
+   "Indeed",
    "LinkedIn",
-   "Indeed"
+   "eFinancialCareers"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -29587,14 +32773,19 @@
   "years_required": null
  },
  "risk and research analyst keurig trading|keurigpepper": {
+  "apply_url": "",
   "category": "Market Risk",
   "company": "Keurig Dr Pepper Inc.",
   "description": "",
+  "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
+  "employer_sponsor": "",
   "excluded": "asks for 3+ years",
   "first_seen": "2026-10-29T00:04:48",
   "location": "Lausanne, Vaud, Switzerland",
   "posted": "2026-10-27",
+  "recruiter": false,
   "role_id": "T1-1",
   "role_title": "Market Risk Analyst",
   "search_term": "Market Risk Analyst",
@@ -29607,7 +32798,6 @@
   "target_firm": "",
   "tier": 1,
   "title": "Risk and Research Analyst, Keurig Trading",
-  "uk_licensed_sponsor": "",
   "url": "https://www.linkedin.com/jobs/view/4484272251",
   "years_required": 3
  },
@@ -29843,10 +33033,12 @@
   "years_required": null
  },
  "risk consultant strategy consulting|accenturenetherlands": {
+  "apply_url": "",
   "category": "Consulting & Vendors",
   "company": "Accenture the Netherlands",
   "description": "",
-  "description_checked": false,
+  "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -29861,7 +33053,7 @@
   "sources": [
    "LinkedIn"
   ],
-  "sponsorship": "Not checked",
+  "sponsorship": "Not stated",
   "sponsorship_evidence": "",
   "target_firm": "Accenture",
   "tier": 2,
@@ -29887,6 +33079,7 @@
   "search_term": "Financial Risk Management Consultant",
   "source": "eFinancialCareers",
   "sources": [
+   "LinkedIn",
    "eFinancialCareers"
   ],
   "sponsorship": "Not stated",
@@ -30237,6 +33430,35 @@
   "url": "https://www.linkedin.com/jobs/view/4483849742",
   "years_required": null
  },
+ "risk investigator|payroc": {
+  "apply_url": "https://recruiterflow.com/payroc/jobs/751?source=indeed&utm_channel=recruiterflow-posting&location=1",
+  "category": "Consulting & Vendors",
+  "company": "Payroc",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Remote, USA",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "Risk Analytics Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Risk Investigator",
+  "url": "https://www.indeed.com/viewjob?jk=5d5337e6f2033476",
+  "years_required": null
+ },
  "risk it audit associate milano ots|pwc": {
   "apply_url": "https://pwc.wd3.myworkdayjobs.com/Global_Experienced_Careers/job/Milan/Risk-IT-Audit---Associate---Milano--OTS-_770239WD",
   "category": "Consulting & Vendors",
@@ -30521,14 +33743,19 @@
   "years_required": null
  },
  "risk model strategy monitoring specialist jobbird com|jobster": {
+  "apply_url": "",
   "category": "Model Risk & Validation",
   "company": "Jobster",
   "description": "",
+  "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
+  "employer_sponsor": "",
   "excluded": "asks for 5+ years",
   "first_seen": "2026-10-29T00:04:48",
   "location": "Amsterdam, North Holland, Netherlands",
-  "posted": "2026-10-26",
+  "posted": "2026-10-29",
+  "recruiter": false,
   "role_id": "T1-7",
   "role_title": "Model Risk Analyst",
   "search_term": "Market Risk Analyst",
@@ -30541,15 +33768,16 @@
   "target_firm": "",
   "tier": 1,
   "title": "Risk Model Strategy & Monitoring Specialist - Jobbird.com",
-  "uk_licensed_sponsor": "",
-  "url": "https://www.linkedin.com/jobs/view/4483236635",
+  "url": "https://www.linkedin.com/jobs/view/4484193410",
   "years_required": 5
  },
  "risk officer base metals|centalion": {
+  "apply_url": "",
   "category": "Consulting & Vendors",
   "company": "Centalion",
   "description": "",
-  "description_checked": false,
+  "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -30564,7 +33792,7 @@
   "sources": [
    "LinkedIn"
   ],
-  "sponsorship": "Not checked",
+  "sponsorship": "Not stated",
   "sponsorship_evidence": "",
   "target_firm": "",
   "tier": 2,
@@ -30774,6 +34002,35 @@
   "url": "https://www.linkedin.com/jobs/view/4481863543",
   "years_required": null
  },
+ "risk operations associate bridge upo|stripe": {
+  "apply_url": "https://stripe.com/jobs/search?gh_jid=8315962",
+  "category": "Consulting & Vendors",
+  "company": "Stripe",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Mexico City",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "careers site",
+  "source": "Careers site (Greenhouse)",
+  "sources": [
+   "Careers site (Greenhouse)"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "Stripe",
+  "tier": 2,
+  "title": "Risk Operations Associate, Bridge UPO",
+  "url": "https://stripe.com/jobs/search?gh_jid=8315962",
+  "years_required": null
+ },
  "risk operations associate upo|stripe": {
   "apply_url": "https://stripe.com/jobs/search?gh_jid=8315962",
   "category": "Consulting & Vendors",
@@ -30889,10 +34146,12 @@
   "years_required": null
  },
  "risk services specialist 80 100|viseca": {
+  "apply_url": "",
   "category": "Consulting & Vendors",
   "company": "Viseca",
   "description": "",
-  "description_checked": false,
+  "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -30907,7 +34166,7 @@
   "sources": [
    "LinkedIn"
   ],
-  "sponsorship": "Not checked",
+  "sponsorship": "Not stated",
   "sponsorship_evidence": "",
   "target_firm": "",
   "tier": 2,
@@ -31274,7 +34533,8 @@
   "search_term": "careers site",
   "source": "Careers site (Workday)",
   "sources": [
-   "Careers site (Workday)"
+   "Careers site (Workday)",
+   "LinkedIn"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -31283,6 +34543,35 @@
   "title": "Sales Executive, Treasury Solutions (Buy Side) - DACH",
   "url": "https://fis.wd5.myworkdayjobs.com/SearchJobs/job/CHE-ZURI-2/Sales-Executive-Lead--Treasury-Solutions--Buy-Side----DACH_JR0305936",
   "years_required": null
+ },
+ "sales practice risk consultant|massmutual": {
+  "apply_url": "https://careers.massmutual.com/job/boston/sales-practice-risk-consultant/724/102595759904",
+  "category": "Consulting & Vendors",
+  "company": "MassMutual",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 3+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Boston, MA, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-12",
+  "role_title": "Financial Risk Management Consultant",
+  "search_term": "Financial Risk Management Consultant",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Sales Practice Risk Consultant",
+  "url": "https://www.indeed.com/viewjob?jk=1a5c71e8f6b81510",
+  "years_required": 3
  },
  "sales trader assessor de renda vari vel s o paulo|santander": {
   "apply_url": "https://santander.wd3.myworkdayjobs.com/SantanderCareers/job/SAO-PAULO/Sales-Trader---Assessor-de-Renda-Varivel---So-Paulo_Req1627374",
@@ -31371,10 +34660,12 @@
   "years_required": null
  },
  "sales trader nordic market|otcflow": {
+  "apply_url": "",
   "category": "Trading",
   "company": "OTC FLOW",
   "description": "",
-  "description_checked": false,
+  "description_checked": true,
+  "easy_apply": true,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -31389,13 +34680,42 @@
   "sources": [
    "LinkedIn"
   ],
-  "sponsorship": "Not checked",
+  "sponsorship": "Not stated",
   "sponsorship_evidence": "",
   "target_firm": "",
   "tier": 2,
   "title": "Sales Trader (Nordic Market)",
   "url": "https://www.linkedin.com/jobs/view/4484475757",
-  "years_required": null
+  "years_required": 1
+ },
+ "sales trader polish|otcflow": {
+  "apply_url": "",
+  "category": "Trading",
+  "company": "OTC FLOW",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": true,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Amsterdam, North Holland, Netherlands",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-7",
+  "role_title": "Trading Assistant / Junior Trader",
+  "search_term": "Trading Assistant / Junior Trader",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Sales Trader - Polish",
+  "url": "https://www.linkedin.com/jobs/view/4484930708",
+  "years_required": 1
  },
  "sba credit analyst|us": {
   "apply_url": "https://usbank.wd1.myworkdayjobs.com/US_Bank_Careers/job/Los-Angeles-CA/SBA-Credit-Analyst_2026-0021763-1",
@@ -31587,6 +34907,93 @@
   "url": "https://www.linkedin.com/jobs/view/4482814637",
   "years_required": null
  },
+ "service desk analyst cleared delivery|summitsystems": {
+  "apply_url": "https://summit7.isolvedhire.com/jobs/1894683-272986.html",
+  "category": "Trading",
+  "company": "Summit 7 Systems",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Herndon, VA, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Service Desk Analyst - Cleared Delivery",
+  "url": "https://www.indeed.com/viewjob?jk=4eb822797bc8f10e",
+  "years_required": null
+ },
+ "service desk analyst hybrid|parasolalliance": {
+  "apply_url": "https://ats.rippling.com/parasol-alliance/jobs/bbd6ce3b-3802-44d8-8859-50b8b29f3bf5?jobSite=Indeed",
+  "category": "Trading",
+  "company": "Parasol Alliance",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Lititz, PA, USA",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Service Desk Analyst (Hybrid)",
+  "url": "https://www.indeed.com/viewjob?jk=cd41b5bc663857e7",
+  "years_required": null
+ },
+ "service desk analyst i m f 9 30am to 6pm est|tusker": {
+  "apply_url": "https://jobs.lever.co/tusker/68a773a9-11c4-4068-bf1d-54de459f6e81?lever-source=Indeed",
+  "category": "Trading",
+  "company": "Tusker",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Cleveland, OH, USA",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Service Desk Analyst I (M - F 9:30am to 6pm EST)",
+  "url": "https://www.indeed.com/viewjob?jk=b3fa647999202454",
+  "years_required": 1
+ },
  "service desk analyst it2 aeses|universitymanitoba": {
   "apply_url": "https://viprecprod.ad.umanitoba.ca/default.aspx?REQ_ID=51070&Language=1",
   "category": "Trading",
@@ -31613,6 +35020,35 @@
   "tier": 2,
   "title": "Service Desk Analyst - IT2 (AESES)",
   "url": "https://ca.indeed.com/viewjob?jk=2e96a856a0a15184",
+  "years_required": null
+ },
+ "service desk analyst l1 contract|wipro": {
+  "apply_url": "https://careers.wipro.com/job/SERVICE-DESK-ANALYST-L1%28CONTRACT%29/213006-en_US",
+  "category": "Trading",
+  "company": "Wipro",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Plano, TX, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "SERVICE DESK ANALYST L1(CONTRACT)",
+  "url": "https://www.indeed.com/viewjob?jk=f13a02c0d3674143",
   "years_required": null
  },
  "service desk analyst level 1|dxctechnology": {
@@ -31702,6 +35138,64 @@
   "url": "https://uk.indeed.com/viewjob?jk=033a13fbb1404b4e",
   "years_required": null
  },
+ "service desk analyst|boxxe": {
+  "apply_url": "",
+  "category": "Trading",
+  "company": "boxxe",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Hemel Hempstead, England, United Kingdom",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "firm: Hiscox",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Service Desk Analyst",
+  "url": "https://www.linkedin.com/jobs/view/4483413089",
+  "years_required": null
+ },
+ "service desk analyst|brownuniversityhealth": {
+  "apply_url": "https://jobs.brownhealth.org/search/jobdetails/70fa1857-caec-4848-b6f0-d017d8f60e94/70fa1857-caec-4848-b6f0-d017d8f60e94",
+  "category": "Trading",
+  "company": "Brown University Health",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Providence, RI, USA",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Service Desk Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=ce6423dcdafde467",
+  "years_required": null
+ },
  "service desk analyst|bt": {
   "apply_url": "https://jobs.bt.com/job/Service-Desk-Analyst/63972-en_GB",
   "category": "Trading",
@@ -31758,6 +35252,64 @@
   "title": "Service Desk Analyst",
   "url": "https://www.efinancialcareers.com/jobs-United_Kingdom-London-Service_Desk_Analyst.id24935830",
   "years_required": null
+ },
+ "service desk analyst|koniaggovernmentservices": {
+  "apply_url": "https://jobs.dayforcehcm.com/en-US/kgs/CANDIDATEPORTAL/jobs/15531",
+  "category": "Trading",
+  "company": "Koniag Government Services",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Vienna, VA, USA",
+  "posted": "2026-10-26",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Service Desk Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=289a37720b88eb83",
+  "years_required": null
+ },
+ "service desk analyst|platinumdermatologypartners": {
+  "apply_url": "https://www.paycomonline.net/v4/ats/web.php/portal/0F65B2C71586D708B73B9D008A2A6084/jobs/534103?source=Indeed",
+  "category": "Trading",
+  "company": "Platinum Dermatology Partners",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Anaheim, CA, USA",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Service Desk Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=29d4acd5fc6002e7",
+  "years_required": 2
  },
  "service desk analyst|pricingpeople": {
   "apply_url": "",
@@ -31862,6 +35414,7 @@
   "search_term": "Fixed Income Analyst",
   "source": "eFinancialCareers",
   "sources": [
+   "LinkedIn",
    "eFinancialCareers"
   ],
   "sponsorship": "Not stated",
@@ -32494,6 +36047,64 @@
   "url": "https://www.efinancialcareers.com/jobs-France-Paris-Stage_-_Assistant_Securities_Lending_Trading_HF.id24940047",
   "years_required": null
  },
+ "stage assistant trading agreement facilitation h f|amundi": {
+  "apply_url": "",
+  "category": "Trading",
+  "company": "Amundi",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Paris, France",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T2-7",
+  "role_title": "Trading Assistant / Junior Trader",
+  "search_term": "Trading Assistant / Junior Trader",
+  "source": "eFinancialCareers",
+  "sources": [
+   "eFinancialCareers"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "Amundi",
+  "tier": 2,
+  "title": "Stage - Assistant Trading Agreement Facilitation H/F",
+  "url": "https://www.efinancialcareers.com/jobs-France-Paris-Stage_-_Assistant_Trading_Agreement_Facilitation_HF.id24952616",
+  "years_required": null
+ },
+ "stage assistant trading agreement facilitation h f|ditagricole": {
+  "apply_url": "",
+  "category": "Trading",
+  "company": "Cr\u00e9dit Agricole S.A.",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Paris, France",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T2-7",
+  "role_title": "Trading Assistant / Junior Trader",
+  "search_term": "Trading Assistant / Junior Trader",
+  "source": "eFinancialCareers",
+  "sources": [
+   "eFinancialCareers"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Stage - Assistant Trading Agreement Facilitation H/F",
+  "url": "https://www.efinancialcareers.com/jobs-France-Paris-Stage_-_Assistant_Trading_Agreement_Facilitation_HF.id24952630",
+  "years_required": null
+ },
  "stage consultant transactional risk m a hf|marshmclennan": {
   "category": "Consulting & Vendors",
   "company": "Marsh McLennan",
@@ -32632,6 +36243,35 @@
   "tier": 2,
   "title": "Stagiair Actuaris - Risk Analyst",
   "url": "https://be.indeed.com/viewjob?jk=75d5d382b4ca97c4",
+  "years_required": null
+ },
+ "stagiair e financial markets model risk management|abnamro": {
+  "apply_url": "",
+  "category": "Model Risk & Validation",
+  "company": "ABN AMRO Bank N.V.",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Amsterdam, North Holland, Netherlands",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T1-7",
+  "role_title": "Model Risk Analyst",
+  "search_term": "Market Risk Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "ABN AMRO",
+  "tier": 1,
+  "title": "Stagiair(e) Financial Markets Model Risk Management",
+  "url": "https://www.linkedin.com/jobs/view/4484995139",
   "years_required": null
  },
  "stat arb equities quantitative researcher|selbyjennings": {
@@ -33189,6 +36829,35 @@
   "url": "https://www.efinancialcareers.com/jobs-United_States-Miami-Summer_2028_Business_Valuation_Associate_-_BPB_Conversion.id24948961",
   "years_required": null
  },
+ "summer 2028 business valuation associate bpb conversion|bakertillycanada": {
+  "apply_url": "https://bakertilly.wd5.myworkdayjobs.com/BTCareers/job/USA-FL-Miami/Summer-2028-Business-Valuation-Associate---BPB-Conversion_JR108690",
+  "category": "Product Control & Valuation",
+  "company": "Baker Tilly Canada",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Boca Raton, FL, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T1-13",
+  "role_title": "Derivatives Valuation Analyst",
+  "search_term": "Derivatives Valuation Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Summer 2028 Business Valuation Associate - BPB Conversion",
+  "url": "https://www.indeed.com/viewjob?jk=d56501d72697e715",
+  "years_required": null
+ },
  "summer intern credit analysis|global": {
   "category": "Derivatives & Fixed Income",
   "company": "S&P Global",
@@ -33439,6 +37108,35 @@
   "url": "https://www.linkedin.com/jobs/view/4482223639",
   "years_required": 10
  },
+ "tax treasury analyst|diasorin": {
+  "apply_url": "https://career2.successfactors.eu/career?career%5fns=job%5flisting&company=diasorinsp&navBarLevel=JOB%5fSEARCH&rcm%5fsite%5flocale=en%5fUS&career_job_req_id=8044&selected_lang=en_US",
+  "category": "Treasury & ALM",
+  "company": "Diasorin",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Stillwater, MN, USA",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-9",
+  "role_title": "Treasury / ALM Analyst",
+  "search_term": "Treasury / ALM Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Tax & Treasury Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=03e076e892897e70",
+  "years_required": null
+ },
  "technical business analyst market data risk management commodities trading|eaglecliffrecruitment": {
   "apply_url": "",
   "category": "Market Risk",
@@ -33467,6 +37165,35 @@
   "title": "Technical Business Analyst : Market Data & Risk Management : Commodities Trading",
   "url": "https://www.linkedin.com/jobs/view/4481889629",
   "years_required": 8
+ },
+ "technical coordinator treasury budgeting|northerntrust": {
+  "apply_url": "",
+  "category": "Treasury & ALM",
+  "company": "Northern Trust",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 5+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Chicago, United States",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T2-9",
+  "role_title": "Treasury / ALM Analyst",
+  "search_term": "Quantitative Model Reviewer",
+  "source": "eFinancialCareers",
+  "sources": [
+   "eFinancialCareers"
+  ],
+  "sponsorship": "No",
+  "sponsorship_evidence": "applicants for u.s. work visa status for this opportunity (no sponsorship is available for h-1b, l-1, tn, o-1, e-3, h-1b1, f-1, j-1,",
+  "target_firm": "Northern Trust",
+  "tier": 2,
+  "title": "Technical Coordinator, Treasury & Budgeting",
+  "url": "https://www.efinancialcareers.com/jobs-United_States-Chicago-Technical_Coordinator_Treasury__Budgeting.id24952101",
+  "years_required": 5
  },
  "technical it treasury business analyst|jefferies": {
   "apply_url": "",
@@ -33525,6 +37252,35 @@
   "title": "Technical Product Owner \u2013 Fixed Income Data",
   "url": "https://www.linkedin.com/jobs/view/4483659940",
   "years_required": 7
+ },
+ "technical service desk analyst i|bannerhealth": {
+  "apply_url": "https://bannerhealth.wd108.myworkdayjobs.com/Careers/job/Banner-Staffing-Svcs-Mesa-525-W-Brown-Rd/Technical-Service-Desk-Analyst-I_R4459083",
+  "category": "Trading",
+  "company": "Banner Health",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Mesa, AZ, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-6",
+  "role_title": "Desk Strategist / Desk Analyst",
+  "search_term": "Desk Strategist / Desk Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Technical Service Desk Analyst I",
+  "url": "https://www.indeed.com/viewjob?jk=e5714ebceb83d753",
+  "years_required": null
  },
  "technical service desk analyst|bt": {
   "apply_url": "https://jobs.bt.com/job/Technical-Service-Desk-Analyst/63626-en_GB",
@@ -33636,6 +37392,35 @@
   "tier": 1,
   "title": "Testing Associate II - Investment Middle Office Services",
   "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210804183",
+  "years_required": null
+ },
+ "third party cyber risk management specialist m f d|allianzservices": {
+  "apply_url": "",
+  "category": "Consulting & Vendors",
+  "company": "Allianz Services",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Barcelona, Catalonia, Spain",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "firm: Lloyd's of London",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "Allianz",
+  "tier": 2,
+  "title": "Third-Party Cyber Risk Management Specialist (m/f/d)",
+  "url": "https://www.linkedin.com/jobs/view/4483071526",
   "years_required": null
  },
  "third party risk analyst|adamappointments": {
@@ -34386,10 +38171,12 @@
   "years_required": 5
  },
  "trader intern|imctrading": {
+  "apply_url": "",
   "category": "Trading",
   "company": "IMC Trading",
   "description": "",
-  "description_checked": false,
+  "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -34404,7 +38191,7 @@
   "sources": [
    "LinkedIn"
   ],
-  "sponsorship": "Not checked",
+  "sponsorship": "Not stated",
   "sponsorship_evidence": "",
   "target_firm": "IMC Trading",
   "tier": 2,
@@ -34664,6 +38451,35 @@
   "title": "Trading Assistant - Cross-Asset Derivatives",
   "url": "https://www.linkedin.com/jobs/view/4483540403",
   "years_required": 5
+ },
+ "trading assistant|ameriprisefinancial": {
+  "apply_url": "https://ameriprise.wd5.myworkdayjobs.com/Ameriprise/job/Minneapolis-Minnesota/Trading-Assistant_R26_4276-1",
+  "category": "Trading",
+  "company": "Ameriprise Financial",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Minneapolis, MN, USA",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-7",
+  "role_title": "Trading Assistant / Junior Trader",
+  "search_term": "Trading Assistant / Junior Trader",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Trading Assistant",
+  "url": "https://www.indeed.com/viewjob?jk=8c89009c741a0970",
+  "years_required": 1
  },
  "trading assistant|ameriprisefinancialservices": {
   "apply_url": "",
@@ -35202,6 +39018,35 @@
   "url": "https://www.linkedin.com/jobs/view/4477336536",
   "years_required": 1
  },
+ "treasury analyst|americantiredistributors": {
+  "apply_url": "https://atd.wd1.myworkdayjobs.com/American_Tire_Distributors/job/Huntersville-NC/Treasury-Analyst_R36609-1",
+  "category": "Treasury & ALM",
+  "company": "American Tire Distributors",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Huntersville, NC, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-9",
+  "role_title": "Treasury / ALM Analyst",
+  "search_term": "Treasury / ALM Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Treasury Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=19a2a29223505660",
+  "years_required": 2
+ },
  "treasury analyst|arm": {
   "apply_url": "",
   "category": "Treasury & ALM",
@@ -35290,7 +39135,7 @@
   "years_required": 2
  },
  "treasury analyst|brownbrothersharriman": {
-  "apply_url": "",
+  "apply_url": "https://bbh.wd5.myworkdayjobs.com/en-US/BBH/job/New-York/Treasury-Analyst_73270",
   "category": "Treasury & ALM",
   "company": "Brown Brothers Harriman",
   "description": "",
@@ -35308,6 +39153,7 @@
   "search_term": "Treasury / ALM Analyst",
   "source": "LinkedIn",
   "sources": [
+   "Indeed",
    "LinkedIn"
   ],
   "sponsorship": "Not stated",
@@ -35317,6 +39163,35 @@
   "title": "Treasury Analyst",
   "url": "https://www.linkedin.com/jobs/view/4483814856",
   "years_required": 2
+ },
+ "treasury analyst|gomesrenovation": {
+  "apply_url": "",
+  "category": "Treasury & ALM",
+  "company": "Gomes Renovation",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Remote, USA",
+  "posted": "2026-10-30",
+  "recruiter": false,
+  "role_id": "T2-9",
+  "role_title": "Treasury / ALM Analyst",
+  "search_term": "Treasury / ALM Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Treasury Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=8f394fad9409ef28",
+  "years_required": null
  },
  "treasury analyst|hixensearch": {
   "apply_url": "",
@@ -35492,6 +39367,35 @@
   "url": "https://www.linkedin.com/jobs/view/4474494345",
   "years_required": 1
  },
+ "treasury analyst|newgenadministrativeservices": {
+  "apply_url": "https://recruiting2.ultipro.com/BOL1000BLQ/JobBoard/918d7914-c0d2-4c24-a160-61a6682e27c2/OpportunityDetail?opportunityId=f45a7d41-e9cd-4b35-a56b-c5ce5af828f9&postingId=9c98de1c-40a4-4ef8-b567-1d8041c0bb2b",
+  "category": "Treasury & ALM",
+  "company": "NewGen Administrative Services",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Montebello, CA, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T2-9",
+  "role_title": "Treasury / ALM Analyst",
+  "search_term": "Treasury / ALM Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Treasury Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=6cadeef814c6beef",
+  "years_required": 2
+ },
  "treasury analyst|novolex": {
   "apply_url": "",
   "category": "Treasury & ALM",
@@ -35580,8 +39484,37 @@
   "url": "https://www.linkedin.com/jobs/view/4483803763",
   "years_required": 2
  },
+ "treasury analyst|peoplessecuritytrust": {
+  "apply_url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4613915/Peoples-Security-Bank-Trust-Company/Treasury-Analyst?source=Indeed_Feed",
+  "category": "Treasury & ALM",
+  "company": "Peoples Security Bank & Trust Company",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Moosic, PA, USA",
+  "posted": "2026-10-26",
+  "recruiter": false,
+  "role_id": "T2-9",
+  "role_title": "Treasury / ALM Analyst",
+  "search_term": "Treasury / ALM Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Treasury Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=6a1a904d2b7a70b6",
+  "years_required": null
+ },
  "treasury analyst|seacoast": {
-  "apply_url": "",
+  "apply_url": "https://recruiting.ultipro.com/SEA1007SEACO/JobBoard/7851737e-66c7-908f-77e9-6d69f4eb0ead/OpportunityDetail?opportunityId=63eb1535-a3e8-43bd-9a11-d05d2c01335f&postingId=71c20fa6-cc95-4c94-afc9-9901c0a91881",
   "category": "Treasury & ALM",
   "company": "Seacoast Bank",
   "description": "",
@@ -35599,6 +39532,7 @@
   "search_term": "Rates Risk Analyst",
   "source": "LinkedIn",
   "sources": [
+   "Indeed",
    "LinkedIn"
   ],
   "sponsorship": "Not stated",
@@ -35637,6 +39571,35 @@
   "url": "https://www.efinancialcareers.com/jobs-Philippines-Taguig-Treasury_Analyst.id24941592",
   "years_required": 1
  },
+ "treasury analyst|tarynnewton": {
+  "apply_url": "",
+  "category": "Treasury & ALM",
+  "company": "Taryn Newton & Co",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Remote, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T2-9",
+  "role_title": "Treasury / ALM Analyst",
+  "search_term": "Treasury / ALM Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Treasury Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=0f213fcfc7b6524b",
+  "years_required": null
+ },
  "treasury analyst|vacohighspring": {
   "apply_url": "",
   "category": "Treasury & ALM",
@@ -35667,7 +39630,7 @@
   "years_required": 2
  },
  "treasury analyst|vetavirtual": {
-  "apply_url": "",
+  "apply_url": "https://veta-virtual-inc.breezy.hr/p/ac2d684ef4e3-treasury-analyst?source=indeed",
   "category": "Treasury & ALM",
   "company": "Veta Virtual",
   "description": "",
@@ -35685,6 +39648,7 @@
   "search_term": "firm: Virtu Financial",
   "source": "LinkedIn",
   "sources": [
+   "Indeed",
    "LinkedIn"
   ],
   "sponsorship": "Not stated",
@@ -36064,10 +40028,12 @@
   "years_required": null
  },
  "treasury intern|karllagerfeld": {
+  "apply_url": "",
   "category": "Treasury & ALM",
   "company": "KARL LAGERFELD",
   "description": "",
-  "description_checked": false,
+  "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
   "employer_sponsor": "",
   "excluded": "employer not on a sponsor list",
@@ -36082,7 +40048,7 @@
   "sources": [
    "LinkedIn"
   ],
-  "sponsorship": "Not checked",
+  "sponsorship": "Not stated",
   "sponsorship_evidence": "",
   "target_firm": "",
   "tier": 2,
@@ -36317,14 +40283,19 @@
   "years_required": 5
  },
  "treasury officer|stichd": {
+  "apply_url": "",
   "category": "Treasury & ALM",
   "company": "stichd",
   "description": "",
+  "description_checked": true,
+  "easy_apply": false,
   "emailed": false,
+  "employer_sponsor": "",
   "excluded": "asks for 3+ years",
   "first_seen": "2026-10-29T00:04:48",
   "location": "'s-Hertogenbosch, North Brabant, Netherlands",
   "posted": "2026-10-28",
+  "recruiter": false,
   "role_id": "T2-9",
   "role_title": "Treasury / ALM Analyst",
   "search_term": "Middle Office / Trade Support Analyst",
@@ -36337,7 +40308,6 @@
   "target_firm": "",
   "tier": 2,
   "title": "Treasury Officer",
-  "uk_licensed_sponsor": "",
   "url": "https://www.linkedin.com/jobs/view/4474768304",
   "years_required": 3
  },
@@ -36398,6 +40368,35 @@
   "title": "Treasury Operations Analyst",
   "url": "https://www.efinancialcareers.com/jobs-United_Kingdom-London-Treasury_Operations_Analyst.id24937547",
   "years_required": 1
+ },
+ "treasury quantitative analyst|google": {
+  "apply_url": "https://careers.google.com/jobs/results/99261900033794758-treasury-quantitative-analyst/",
+  "category": "Quant",
+  "company": "Google",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 7+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "New York, NY, USA",
+  "posted": "2026-10-27",
+  "recruiter": false,
+  "role_id": "T2-1",
+  "role_title": "Quantitative Analyst",
+  "search_term": "Quantitative Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Treasury Quantitative Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=6def4c1d52a0d59d",
+  "years_required": 7
  },
  "treasury referent m w d|shwautomotivegmbh": {
   "apply_url": "",
@@ -36485,6 +40484,35 @@
   "title": "Treasury Sales Associate -Emerging Middle Market",
   "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210804925",
   "years_required": null
+ },
+ "treasury sales officer i global payment solutions business banking|america": {
+  "apply_url": "https://careers.bankofamerica.com/en-us/job-detail/26039323/treasury-sales-officer-i-global-payment-solutions-business-banking-multiple-locations",
+  "category": "Treasury & ALM",
+  "company": "Bank of America",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 3+ years",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Austin, TX, USA",
+  "posted": "2026-10-28",
+  "recruiter": false,
+  "role_id": "T2-9",
+  "role_title": "Treasury / ALM Analyst",
+  "search_term": "Treasury / ALM Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "Bank of America",
+  "tier": 2,
+  "title": "Treasury Sales Officer I - Global Payment Solutions - Business Banking",
+  "url": "https://www.indeed.com/viewjob?jk=61ed7ea506509cc4",
+  "years_required": 3
  },
  "treasury settlements|ipoeconsulting": {
   "apply_url": "",
@@ -36832,7 +40860,7 @@
   "years_required": null
  },
  "tsib risk data analyst|turnerconstruction": {
-  "apply_url": "",
+  "apply_url": "https://turnerconstruction.csod.com/ux/ats/careersite/1/home?c=turnerconstruction#/requisition/22147",
   "category": "Market Risk",
   "company": "Turner Construction Company",
   "description": "",
@@ -36850,6 +40878,7 @@
   "search_term": "Risk Reporting Analyst",
   "source": "LinkedIn",
   "sources": [
+   "Indeed",
    "LinkedIn"
   ],
   "sponsorship": "Not stated",
@@ -37141,6 +41170,35 @@
   "tier": 1,
   "title": "Valuation Analyst",
   "url": "https://www.linkedin.com/jobs/view/4484023783",
+  "years_required": null
+ },
+ "valuation analyst|obriventadvisorypartners": {
+  "apply_url": "",
+  "category": "Product Control & Valuation",
+  "company": "Obrivent Advisory Partners",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Minneapolis, MN, USA",
+  "posted": "2026-10-29",
+  "recruiter": false,
+  "role_id": "T1-13",
+  "role_title": "Derivatives Valuation Analyst",
+  "search_term": "Derivatives Valuation Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Valuation Analyst",
+  "url": "https://www.indeed.com/viewjob?jk=a28e1748eb52104b",
   "years_required": null
  },
  "valuation analyst|robertwalters": {
@@ -37456,6 +41514,35 @@
   "tier": 1,
   "title": "[VO2 Finance] - Analyste Financier & Quant / P&L",
   "url": "https://www.efinancialcareers.com/jobs-France-Paris-VO2_Finance_-_Analyste_Financier__Quant__PL.id24931549",
+  "years_required": null
+ },
+ "wa state leader workplace risk|wtw": {
+  "apply_url": "",
+  "category": "Consulting & Vendors",
+  "company": "WTW",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T06:28:05",
+  "location": "Perth, Western Australia, Australia",
+  "posted": "2026-10-26",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "firm: Willis Towers Watson",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "WA State Leader, Workplace Risk",
+  "url": "https://www.linkedin.com/jobs/view/4483530269",
   "years_required": null
  },
  "wealth management fixed income desk analyst|jefferies": {
