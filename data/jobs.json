@@ -1431,8 +1431,8 @@
   "search_term": "Derivatives Analyst",
   "source": "eFinancialCareers",
   "sources": [
-   "eFinancialCareers",
-   "Careers site (Workday)"
+   "Careers site (Workday)",
+   "eFinancialCareers"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -1874,6 +1874,36 @@
   "title": "Analyst, Credit Risk Management  - Strategy",
   "url": "https://www.linkedin.com/jobs/view/4484002939",
   "years_required": 2
+ },
+ "analyst credit risk|santander": {
+  "apply_url": "https://santander.wd3.myworkdayjobs.com/SantanderCareers/job/Madison-Ave-Corp/Analyst---Credit-Risk_Req1631880",
+  "category": "Derivatives & Fixed Income",
+  "company": "Santander UK",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "no sponsorship",
+  "first_seen": "2026-10-30T23:45:54",
+  "location": "Madison Ave Corp",
+  "posted": "2026-10-30",
+  "qualification": "",
+  "recruiter": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "careers site",
+  "source": "Careers site (Workday)",
+  "sources": [
+   "Careers site (Workday)"
+  ],
+  "sponsorship": "No",
+  "sponsorship_evidence": "uthorized to work in the united states on a full-time basis without requiring employer sponsorship to commence employment. what else you need to know: the bas",
+  "target_firm": "Santander UK",
+  "tier": 1,
+  "title": "Analyst \u2013 Credit Risk",
+  "url": "https://santander.wd3.myworkdayjobs.com/SantanderCareers/job/Madison-Ave-Corp/Analyst---Credit-Risk_Req1631880",
+  "years_required": 1
  },
  "analyst derivative operations|omers": {
   "apply_url": "",
@@ -2356,8 +2386,8 @@
   "search_term": "Middle Office / Trade Support Analyst",
   "source": "LinkedIn",
   "sources": [
-   "LinkedIn",
-   "Careers site (Workday)"
+   "Careers site (Workday)",
+   "LinkedIn"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -6925,8 +6955,8 @@
   "search_term": "Quantitative Risk Analyst",
   "source": "LinkedIn",
   "sources": [
-   "LinkedIn",
-   "Careers site (Workday)"
+   "Careers site (Workday)",
+   "LinkedIn"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -8650,6 +8680,36 @@
   "tier": 2,
   "title": "Consultant Governance, Risk & Compliance (w/m/d)",
   "url": "https://www.linkedin.com/jobs/view/4483855691",
+  "years_required": null
+ },
+ "consultant junior risk consulting industries et services 26 27 h f|forvismazarsfrance": {
+  "apply_url": "",
+  "category": "Consulting & Vendors",
+  "company": "Forvis Mazars en France",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T23:45:54",
+  "location": "Levallois-Perret, \u00cele-de-France, France",
+  "posted": "2026-10-30",
+  "qualification": "",
+  "recruiter": false,
+  "role_id": "T2-12",
+  "role_title": "Financial Risk Management Consultant",
+  "search_term": "Financial Risk Management Consultant",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Consultant Junior Risk Consulting Industries et Services 26-27 H/F",
+  "url": "https://www.linkedin.com/jobs/view/4485118363",
   "years_required": null
  },
  "consultant market risk alm financial services hcmc office|ey": {
@@ -13137,8 +13197,8 @@
   "search_term": "Model Risk Analyst",
   "source": "eFinancialCareers",
   "sources": [
-   "eFinancialCareers",
-   "Indeed"
+   "Indeed",
+   "eFinancialCareers"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -15074,8 +15134,8 @@
   "search_term": "Middle Office / Trade Support Analyst",
   "source": "LinkedIn",
   "sources": [
-   "LinkedIn",
-   "Careers site (Workday)"
+   "Careers site (Workday)",
+   "LinkedIn"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -16700,7 +16760,8 @@
   "search_term": "careers site",
   "source": "Careers site (Workday)",
   "sources": [
-   "Careers site (Workday)"
+   "Careers site (Workday)",
+   "LinkedIn"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -17111,8 +17172,8 @@
   "search_term": "Fixed Income Analyst",
   "source": "eFinancialCareers",
   "sources": [
-   "eFinancialCareers",
-   "Careers site (Workday)"
+   "Careers site (Workday)",
+   "eFinancialCareers"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -18394,8 +18455,8 @@
   "search_term": "Fixed Income Analyst",
   "source": "LinkedIn",
   "sources": [
-   "LinkedIn",
-   "Careers site (Workday)"
+   "Careers site (Workday)",
+   "LinkedIn"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -18425,8 +18486,8 @@
   "search_term": "Middle Office / Trade Support Analyst",
   "source": "LinkedIn",
   "sources": [
-   "LinkedIn",
-   "Careers site (Oracle)"
+   "Careers site (Oracle)",
+   "LinkedIn"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -19496,8 +19557,8 @@
   "search_term": "VaR / Risk Methodology Analyst",
   "source": "LinkedIn",
   "sources": [
-   "LinkedIn",
-   "Careers site (Workday)"
+   "Careers site (Workday)",
+   "LinkedIn"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -20139,8 +20200,8 @@
   "search_term": "Counterparty Credit Risk Analyst",
   "source": "eFinancialCareers",
   "sources": [
-   "eFinancialCareers",
-   "Careers site (Oracle)"
+   "Careers site (Oracle)",
+   "eFinancialCareers"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -22103,6 +22164,36 @@
   "title": "Investment Analyst - Fixed Income and Alternative Assets",
   "url": "https://www.linkedin.com/jobs/view/4446911451",
   "years_required": 1
+ },
+ "investment analyst quantitative research ai|summitglobalinvestments": {
+  "apply_url": "",
+  "category": "Quant",
+  "company": "Summit Global Investments",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": true,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "first_seen": "2026-10-30T23:45:54",
+  "location": "Salt Lake City Metropolitan Area",
+  "posted": "2026-10-30",
+  "qualification": "",
+  "recruiter": false,
+  "role_id": "T2-1",
+  "role_title": "Quantitative Analyst",
+  "search_term": "Quant Graduate Programme",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Investment Analyst \u2013 Quantitative Research & AI",
+  "url": "https://www.linkedin.com/jobs/view/4485105106",
+  "years_required": null
  },
  "investment grade credit analyst|nexpoint": {
   "apply_url": "",
@@ -27014,8 +27105,8 @@
   "search_term": "Middle Office / Trade Support Analyst",
   "source": "eFinancialCareers",
   "sources": [
-   "eFinancialCareers",
-   "Careers site (Workday)"
+   "Careers site (Workday)",
+   "eFinancialCareers"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -29342,8 +29433,8 @@
   "search_term": "IPV / Valuation Control Analyst",
   "source": "LinkedIn",
   "sources": [
-   "LinkedIn",
-   "Careers site (Workday)"
+   "Careers site (Workday)",
+   "LinkedIn"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -31570,8 +31661,8 @@
   "search_term": "Financial Engineer",
   "source": "LinkedIn",
   "sources": [
-   "LinkedIn",
-   "Careers site (Oracle)"
+   "Careers site (Oracle)",
+   "LinkedIn"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -33358,6 +33449,36 @@
   "title": "Quality Assurance Engineer (Financial Sector)",
   "url": "https://www.linkedin.com/jobs/view/4459361491",
   "years_required": null
+ },
+ "quality risk analyst audit assurance|deloitte": {
+  "apply_url": "https://careers.deloitte.ca/job/Toronto%2C-ON-Quality-&-Risk-Analyst%2C-Audit-&-Assurance-ON-M5H-0A9/1446438000/?feedId=140200&utm_source=Indeed&utm_campaign=Deloitte_Indeed",
+  "category": "Consulting & Vendors",
+  "company": "Deloitte",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 3+ years",
+  "first_seen": "2026-10-30T23:45:54",
+  "location": "Toronto, ON, Canada",
+  "posted": "2026-10-30",
+  "qualification": "",
+  "recruiter": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "Risk Analytics Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "Deloitte",
+  "tier": 2,
+  "title": "Quality & Risk Analyst, Audit & Assurance",
+  "url": "https://ca.indeed.com/viewjob?jk=f82fc40ca991524c",
+  "years_required": 3
  },
  "quant analyst commodities|exalt": {
   "apply_url": "",
@@ -52133,6 +52254,36 @@
   "url": "https://cz.indeed.com/viewjob?jk=921bb142cbaa7835",
   "years_required": null
  },
+ "validateur de mod les ia model risk management h f|freework": {
+  "apply_url": "",
+  "category": "Model Risk & Validation",
+  "company": "Free-Work",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "first_seen": "2026-10-30T23:45:54",
+  "location": "Paris, \u00cele-de-France, France",
+  "posted": "2026-10-30",
+  "qualification": "",
+  "recruiter": false,
+  "role_id": "T1-7",
+  "role_title": "Model Risk Analyst",
+  "search_term": "Model Validation Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Validateur de Mod\u00e8les IA / Model Risk Management \u2013 H/F",
+  "url": "https://www.linkedin.com/jobs/view/4483493985",
+  "years_required": null
+ },
  "valuation analyst associate|atlassearch": {
   "apply_url": "",
   "category": "Product Control & Valuation",
@@ -52478,8 +52629,8 @@
   "search_term": "IPV / Valuation Control Analyst",
   "source": "LinkedIn",
   "sources": [
-   "LinkedIn",
-   "Careers site (Oracle)"
+   "Careers site (Oracle)",
+   "LinkedIn"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
