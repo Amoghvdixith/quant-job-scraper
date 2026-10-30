@@ -226,3 +226,17 @@ def test_apply_links(tmp_path):
     easy.easy_apply = True
     assert easy.apply_on == "LinkedIn Easy Apply"
     assert not needs_apply_link({"url": "https://boards.greenhouse.io/x/jobs/1"})
+
+
+def test_email_schedule():
+    from datetime import datetime, timezone
+    from jobscraper.schedule import is_due, latest_start, next_start
+    utc = timezone.utc
+    now = datetime(2026, 10, 30, 6, 10, tzinfo=utc)  # UK is on GMT
+    assert latest_start(CFG, now) == datetime(2026, 10, 30, 4, 20, tzinfo=utc)
+    assert next_start(CFG, now) == datetime(2026, 10, 30, 10, 20, tzinfo=utc)
+    assert is_due(CFG, now, datetime(2026, 10, 30, 1, 33, tzinfo=utc))
+    assert not is_due(CFG, now, datetime(2026, 10, 30, 6, 0, tzinfo=utc))
+    assert next_start(CFG, datetime(2026, 10, 30, 22, 30, tzinfo=utc)) == datetime(2026, 10, 30, 23, 20, tzinfo=utc)
+    summer = datetime(2026, 7, 1, 9, 0, tzinfo=utc)  # BST: 11:00 UK = 10:00 UTC
+    assert next_start(CFG, summer) == datetime(2026, 7, 1, 9, 20, tzinfo=utc)

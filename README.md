@@ -39,8 +39,10 @@ what was already sent; the workflow commits it back after each run.
 2. **Actions** tab → enable workflows if asked → **Quant job digest** → **Run workflow** to test it straight away.
    Untick "Send the email" for a dry run; the Excel file is then downloadable from the run page.
 
-After that it runs by itself at 00:00, 04:00, 08:00, 12:00, 16:00 and 20:00 UTC.
-GitHub can start scheduled runs a few minutes late.
+After that it runs by itself. The email arrives at the times in `email_times` in
+`config.yaml` (00:00, 05:00, 11:00, 17:00 and 23:00 UK time); each run starts 40 minutes
+earlier. GitHub's own schedule skips many runs, so each run starts the next one itself
+(the `timer` job), and an hourly check catches any slot that was still missed.
 
 ## Target institutions
 
