@@ -1,6 +1,6 @@
 # Quant job digest
 
-Every 4 hours this searches LinkedIn, Indeed, Google Jobs, eFinancialCareers and
+Five times a day this searches LinkedIn, Indeed, Google Jobs, eFinancialCareers and
 the careers sites of the 500 institutions in `institutions.csv` for the
 entry-level quant / risk / valuation roles in `roles.yaml`, and emails an Excel
 file of matching jobs posted in the last 5 days. There is no website: it runs on
