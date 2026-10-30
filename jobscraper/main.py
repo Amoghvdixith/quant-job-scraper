@@ -182,15 +182,20 @@ def fetch_full_description(job: Job) -> str:
     return fetched if len(fetched) > len(text) else text
 
 
-def needs_apply_link(rec: dict) -> bool:
-    """LinkedIn jobs saved before apply links were collected: read their page once more."""
-    return "linkedin.com" in rec.get("url", "") and not rec.get("apply_url") and rec.get("easy_apply") is None
+def needs_reread(rec: dict) -> bool:
+    """Saved jobs whose page has to be read once more: LinkedIn jobs saved before apply links
+    were collected, and jobs saved before the qualification check."""
+    if "linkedin.com" in rec.get("url", "") and not rec.get("apply_url") and rec.get("easy_apply") is None:
+        return True
+    return rec.get("qualification") is None and not rec.get("excluded")
 
 
 def enrich(job: Job, text: str) -> None:
     """Fills in what we learn from the description."""
     job.description_checked = len(text) >= 200
     job.years_required = filters.years_required(text)
+    job.qualification = filters.qualification_asked(text, job.title) if job.description_checked \
+        else filters.qualification_asked("", job.title) or None
     job.sponsorship, job.sponsorship_evidence = filters.sponsorship(text) if text else ("Not checked", "")
     if text.startswith(linkedin.CLOSED_MARKER):
         job.sponsorship_evidence = "posting closed"
@@ -207,6 +212,8 @@ def rule_broken(job: Job, cfg: dict, matcher: filters.RoleMatcher, registers: Sp
         return "excluded country"
     if job.years_required is not None and job.years_required > cfg["max_years_experience"]:
         return f"asks for {job.years_required}+ years"
+    if job.qualification and cfg.get("exclude_professional_qualifications", True):
+        return "asks for a professional qualification"
     if job.sponsorship == "No":
         return "no sponsorship"
     sponsorship_problem = sponsorship_rule(job, cfg.get("sponsorship_filter", "posting_or_employer"), registers)
@@ -295,7 +302,7 @@ def main() -> None:
     for key, job in candidates.items():
         prev = store.get(key)
         if prev and prev.get("sponsorship") != "Not checked" and "description_checked" in prev \
-                and not needs_apply_link(prev):
+                and not needs_reread(prev):
             # Seen before and already read: keep what we learned, but record any new source.
             prev["sources"] = sorted(set(prev.get("sources", [])) | set(job.sources))
             prev["apply_url"] = prev.get("apply_url") or job.apply_url
@@ -304,11 +311,20 @@ def main() -> None:
         to_read.append((key, job, bool(prev and prev.get("emailed"))))
     # Jobs saved by older versions that never had their description read.
     for key, rec in store.items():
-        if ("description_checked" not in rec or needs_apply_link(rec)) and key not in candidates \
+        if ("description_checked" not in rec or needs_reread(rec)) and key not in candidates \
                 and not rec.get("excluded"):
             to_read.append((key, Job.from_dict(rec), bool(rec.get("emailed"))))
     log.info("Reading %d job descriptions", len(to_read))
     enrich_all([job for _, job, _ in to_read])
+    for i, (key, job, emailed) in enumerate(to_read):
+        # A saved job re-read only for a newer check, whose page couldn't be read again this
+        # time: keep what was learned before rather than losing it.
+        prev = store.get(key)
+        if prev and prev.get("description_checked") and not job.description_checked:
+            kept = Job.from_dict(prev)
+            kept.qualification = prev.get("qualification")  # still unchecked: tried again next run
+            kept.apply_url, kept.easy_apply = kept.apply_url or job.apply_url, job.easy_apply
+            to_read[i] = (key, kept, emailed)
     log.info("LinkedIn apply links: %s", linkedin.APPLY_STATS)
     for key, job, emailed in to_read:
         store[key] = {**job.to_dict(), "excluded": None, "emailed": emailed}

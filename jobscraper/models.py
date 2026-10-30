@@ -26,6 +26,7 @@ class Job:
     sponsorship: str = "Not stated"
     sponsorship_evidence: str = ""
     years_required: int | None = None
+    qualification: str | None = None  # qualification the posting asks for, e.g. "CFA"; None = not checked yet
     employer_sponsor: str = ""
     target_firm: str = ""
     recruiter: bool = False

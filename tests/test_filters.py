@@ -122,7 +122,7 @@ def test_excel_and_email(tmp_path):
     path = write_workbook(jobs, {jobs[0].key}, stats, tmp_path / "t.xlsx")
     ws = load_workbook(path)["Jobs"]
     assert ws["A2"].value == "NEW" and ws["E2"].value == "Market Risk Analyst"
-    assert ws["O2"].hyperlink.target == "https://x/1"
+    assert ws["P2"].hyperlink.target == "https://x/1"
     msg = build_email(jobs, {jobs[0].key}, stats, path, "a@gmail.com", "b@gmail.com")
     assert msg["To"] == "b@gmail.com"
     assert "1 new" in msg["Subject"]
@@ -167,6 +167,7 @@ def test_rules_rechecked_on_saved_jobs():
         (dict(location="Mumbai, India"), "excluded country"),
         (dict(years_required=5), "asks for 5+ years"),
         (dict(sponsorship="No"), "no sponsorship"),
+        (dict(qualification="CFA"), "asks for a professional qualification"),
         (dict(posted=date.today() - timedelta(days=9)), "older than the age limit"),
         (dict(title="Software Engineer"), "title doesn't match a target role"),
     ]:
@@ -211,7 +212,7 @@ def test_sponsorship_filter():
 
 
 def test_apply_links(tmp_path):
-    from jobscraper.main import needs_apply_link
+    from jobscraper.main import needs_reread
     page = ('<code id="applyUrl" style="display: none"><!--"https://www.linkedin.com/jobs/view/externalApply/4012345678'
             '?url=https%3A%2F%2Fbarclays%2Ewd3%2Emyworkdayjobs%2Ecom%2FExternal%2Fjob%2F123%3Fsource%3DLinkedIn'
             '&amp;urlHash=abcd"--></code>')
@@ -223,15 +224,17 @@ def test_apply_links(tmp_path):
     assert job.apply_on == "Employer website" and easy.apply_on == "LinkedIn"
     path = write_workbook([job, easy], set(), {}, tmp_path / "a.xlsx")
     ws = load_workbook(path)["Jobs"]
-    assert ws["O2"].hyperlink.target == "https://barclays.example/apply" and ws["O2"].value == "https://barclays.example/apply"
-    assert ws["O3"].hyperlink.target == easy.url
-    assert ws["Q2"].hyperlink.target == job.url
-    assert needs_apply_link({"url": "https://www.linkedin.com/jobs/view/1"})
-    assert needs_apply_link({"url": "https://www.linkedin.com/jobs/view/1", "apply_url": ""})
-    assert not needs_apply_link({"url": "https://www.linkedin.com/jobs/view/1", "apply_url": "", "easy_apply": True})
+    assert ws["P2"].hyperlink.target == "https://barclays.example/apply" and ws["P2"].value == "https://barclays.example/apply"
+    assert ws["P3"].hyperlink.target == easy.url
+    assert ws["R2"].hyperlink.target == job.url
+    assert needs_reread({"url": "https://www.linkedin.com/jobs/view/1"})
+    assert needs_reread({"url": "https://www.linkedin.com/jobs/view/1", "apply_url": ""})
+    assert not needs_reread({"url": "https://www.linkedin.com/jobs/view/1", "apply_url": "", "easy_apply": True,
+                             "qualification": ""})
     easy.easy_apply = True
     assert easy.apply_on == "LinkedIn Easy Apply"
-    assert not needs_apply_link({"url": "https://boards.greenhouse.io/x/jobs/1"})
+    assert not needs_reread({"url": "https://boards.greenhouse.io/x/jobs/1", "qualification": ""})
+    assert needs_reread({"url": "https://boards.greenhouse.io/x/jobs/1"})  # saved before the qualification check
 
 
 def test_email_schedule():
@@ -246,3 +249,17 @@ def test_email_schedule():
     assert next_start(CFG, datetime(2026, 10, 30, 22, 30, tzinfo=utc)) == datetime(2026, 10, 30, 23, 5, tzinfo=utc)
     summer = datetime(2026, 7, 1, 9, 0, tzinfo=utc)  # BST: 11:00 UK = 10:00 UTC
     assert next_start(CFG, summer) == datetime(2026, 7, 1, 9, 5, tzinfo=utc)
+
+
+def test_qualifications():
+    q = filters.qualification_asked
+    assert q("Candidates must hold the CFA or be a qualified accountant (ACA/ACCA).") == "CFA"
+    assert q("CFA Level I candidates preferred.") == "CFA"
+    assert q("Progress towards FRM is a plus.") == "FRM"
+    assert q("You are a Chartered Accountant.") == "Chartered Accountant"
+    assert q("Newly qualified CA or ACA with audit background") == "qualified CA"
+    assert q("", "Part Qualified ACCA Accountant") == "ACCA"
+    assert q("We will support you to study for the ACA qualification.") == ""
+    assert q("Our graduate scheme offers a training contract and exam support towards ACCA.") == ""
+    assert q("Based in San Francisco, CA. Hybrid working.") == ""
+    assert q("Strong Python and SQL skills. Degree in maths.") == ""

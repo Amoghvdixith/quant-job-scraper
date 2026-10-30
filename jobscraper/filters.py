@@ -162,3 +162,39 @@ def sponsorship(description: str) -> tuple[str, str]:
 
 def _snippet(text: str, m: re.Match) -> str:
     return text[max(0, m.start() - 60): m.end() + 60].strip()
+
+
+# Professional qualifications. Acronyms are matched case-sensitively ("CA" is also a US state,
+# so it only counts next to words like "qualified" or another qualification).
+_QUAL_ACRONYMS = r"ACA|ACCA|CIMA|CPA|CFA|FRM|PRM|CQF|CAIA|ICAEW|ICAS|CISA|CERA|CIPFA"
+_QUALIFICATION = re.compile(
+    rf"\b(?:{_QUAL_ACRONYMS})\b"
+    r"|\bCA\s*(?:[-/,&]|and|or)\s*(?:ACA|ACCA|CIMA|CPA|CFA)\b|\b(?:ACA|ACCA|CIMA|CPA|CFA)\s*(?:[/,&]|or|and)\s*CA\b"
+    r"|\b(?:qualified|newly[- ]qualified|part[- ]qualified)\s+CA\b|\bCA\s+(?:qualified|qualification|certified)\b"
+    r"|(?i:\bchartered\s+(?:accountant|accountancy|financial\s+analyst|certified\s+accountant|management\s+accountant)"
+    r"|\bcertified\s+public\s+accountant|\bfinancial\s+risk\s+manager|\bcertificate\s+in\s+quantitative\s+finance"
+    r"|\bfellow(?:ship)?\s+of\s+the\s+(?:institute|society)\s+of\s+actuaries|\bqualified\s+actuary|\bIFoA\b"
+    r"|\bprofessional\s+(?:accounting\s+)?qualification|\baccountancy\s+qualification|\bcharterholder)"
+)
+# Graduate schemes often pay for the exams: "we will support you to study for the ACA".
+_QUAL_TRAINING = re.compile(
+    r"support(?:s|ed)?\s+(?:you|your|for)|sponsor(?:s|ed)?\s+(?:you|your)|study(?:ing)?\s+(?:for|towards)|"
+    r"fund(?:s|ed|ing)?\s+(?:your|the)|pay(?:s)?\s+for|opportunity\s+to\s+(?:gain|obtain|achieve|pursue|study|complete)|"
+    r"(?:will|you'll|you\s+will)\s+(?:gain|obtain|achieve|complete|work\s+towards|study)|work\s+towards|"
+    r"training\s+(?:contract|programme|program)|exam\s+support|study\s+leave|tuition",
+    re.I,
+)
+
+
+def qualification_asked(description: str, title: str = "") -> str:
+    """The professional qualification the posting asks for (e.g. "CFA"), or "" if none.
+    Mentions where the employer offers to train you for it don't count."""
+    m = _QUALIFICATION.search(title or "")
+    if m:
+        return m.group(0)
+    text = description or ""
+    for sentence in re.split(r"(?<=[.;!?•·▪●])\s+|\s[-*]\s|\n", text):
+        m = _QUALIFICATION.search(sentence)
+        if m and not _QUAL_TRAINING.search(sentence):
+            return re.sub(r"\s+", " ", m.group(0))
+    return ""

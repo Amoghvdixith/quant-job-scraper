@@ -168,6 +168,11 @@ senior_title_words:
 # Drop postings whose description asks for more than this many years of experience.
 max_years_experience: 2
 
+# Drop postings that ask for a professional qualification (CA, ACA, ACCA, CIMA, CPA, CFA, FRM,
+# PRM, CQF, CAIA, actuarial and similar), whether required or "preferred". Postings where the
+# employer offers to train you for one (e.g. a graduate scheme that pays for the ACA) are kept.
+exclude_professional_qualifications: true
+
 # Visa sponsorship. Postings that say "no sponsorship" are always dropped. Then:
 #   posting_or_employer: keep if the posting offers sponsorship, or the employer is on the
 #                        government sponsor list for the job's country (UK, US H-1B, Netherlands);

@@ -12,7 +12,7 @@ from .models import Job
 COLUMNS = [
     ("New", 7), ("Tier", 6), ("Category", 22), ("Matched Role", 30), ("Job Title", 45),
     ("Company", 28), ("On Your Target List", 22), ("Location", 30), ("Posted", 11), ("Days Old", 9), ("Source", 18),
-    ("Visa Sponsorship", 16), ("Employer On Sponsor List", 22), ("Years Exp. Asked", 15),
+    ("Visa Sponsorship", 16), ("Employer On Sponsor List", 22), ("Years Exp. Asked", 15), ("Qualification Asked", 16),
     ("Apply Link", 60), ("Apply On", 18), ("Job Listing", 12), ("Posted By", 18), ("Description Checked", 12), ("Sponsorship Evidence", 60),
 ]
 HEADER_FILL = PatternFill("solid", fgColor="1F3864")
@@ -49,6 +49,7 @@ def write_workbook(jobs: list[Job], new_keys: set[str], stats: dict, path: Path)
             job.sponsorship,
             job.employer_sponsor or "Not found",
             job.years_required,
+            job.qualification or "",
             job.apply_link,
             job.apply_on,
             "View",
@@ -57,10 +58,10 @@ def write_workbook(jobs: list[Job], new_keys: set[str], stats: dict, path: Path)
             job.sponsorship_evidence,
         ])
         row = ws.max_row
-        link = ws.cell(row=row, column=15)
+        link = ws.cell(row=row, column=16)
         link.hyperlink = job.apply_link
         link.font = Font(color="0563C1", underline="single")
-        listing = ws.cell(row=row, column=17)
+        listing = ws.cell(row=row, column=18)
         listing.hyperlink = job.url
         listing.font = Font(color="0563C1", underline="single")
         ws.cell(row=row, column=9).number_format = "yyyy-mm-dd"
