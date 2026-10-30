@@ -11,18 +11,22 @@ on:
         description: "Send the email (untick for a test run that only uploads the Excel file)"
         type: boolean
         default: true
+      chained:
+        description: "Started by the previous run's timer (only emails if one is due)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
-
-concurrency:
-  group: job-digest
-  cancel-in-progress: false
+  actions: write
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
     timeout-minutes: 120
+    concurrency:
+      group: job-digest
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
 
@@ -30,7 +34,7 @@ jobs:
         id: due
         run: |
           due=true
-          if [ "${{ github.event_name }}" = "schedule" ] && [ -f data/last_email_utc ]; then
+          if { [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.chained }}" = "true" ]; } && [ -f data/last_email_utc ]; then
             age=$(( $(date -u +%s) - $(date -u -d "$(cat data/last_email_utc)" +%s) ))
             [ "$age" -lt 13200 ] && due=false
           fi
@@ -78,3 +82,32 @@ jobs:
           git diff --cached --quiet || git commit -m "Update seen jobs [skip ci]"
           git pull --rebase --autostash || true
           git push
+
+  # GitHub's own schedule skips many runs for this repo, so each run also starts the next
+  # one itself: this job waits until 4 hours after the last email, then triggers the
+  # workflow again. Only one timer runs at a time (a newer one replaces an older one);
+  # the hourly schedule above restarts the chain if it ever breaks.
+  timer:
+    needs: scrape
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    concurrency:
+      group: chain-timer
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Wait until the next email is due
+        run: |
+          git pull -q origin main || true
+          last=$(date -u -d "$(cat data/last_email_utc 2>/dev/null || date -u +%FT%TZ)" +%s)
+          wait=$(( last + 14400 - $(date -u +%s) ))
+          [ "$wait" -lt 600 ] && wait=600
+          echo "Next run in $((wait / 60)) minutes"
+          sleep "$wait"
+      - name: Start the next run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run scrape.yml --ref main -f send_email=true -f chained=true
