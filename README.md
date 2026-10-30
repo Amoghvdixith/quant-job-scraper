@@ -67,6 +67,8 @@ countries per run, in rotation (see `config.yaml`). After each run,
 - Age limit, excluded countries, seniority words, countries, pages per search: `config.yaml`
 - Target institutions: `institutions.csv`
 
+How it all works, with a diagram: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+
 ## Run locally
 
 ```bash

@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1010" width="960" height="1010" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#44546A"/>
+    </marker>
+    <style>
+      .box{fill:#fff;stroke:#44546A;stroke-width:1.4;rx:8}
+      .trig{fill:#EAF1FB;stroke:#2F5597}
+      .src{fill:#FFF4E5;stroke:#C55A11}
+      .step{fill:#F2F2F2;stroke:#44546A}
+      .store{fill:#E2EFDA;stroke:#548235}
+      .out{fill:#1F3864;stroke:#1F3864}
+      .weekly{fill:#F3E8F8;stroke:#7030A0}
+      .h{font-weight:bold;font-size:14px;fill:#1F1F1F}
+      .s{font-size:11.5px;fill:#404040}
+      .w{fill:#fff}
+      .lane{font-size:12px;font-weight:bold;fill:#7F7F7F;letter-spacing:1px}
+      line,path.l{stroke:#44546A;stroke-width:1.5;fill:none}
+      .dash{stroke-dasharray:5 4}
+    </style>
+  </defs>
+  <rect width="960" height="1010" fill="#fff"/>
+
+  <!-- Lane 1: triggers -->
+  <text x="20" y="24" class="lane">1 · WHEN IT RUNS (GitHub Actions: scrape.yml)</text>
+  <rect class="box trig" x="20" y="36" width="270" height="62"/>
+  <text x="155" y="60" text-anchor="middle" class="h">Hourly cron at :17</text>
+  <text x="155" y="80" text-anchor="middle" class="s">backup: catches any missed slot</text>
+
+  <rect class="box trig" x="345" y="36" width="270" height="62"/>
+  <text x="480" y="60" text-anchor="middle" class="h">Timer job (self-chaining)</text>
+  <text x="480" y="80" text-anchor="middle" class="s">sleeps to next slot, then starts next run</text>
+
+  <rect class="box trig" x="670" y="36" width="270" height="62"/>
+  <text x="805" y="60" text-anchor="middle" class="h">Manual “Run workflow”</text>
+  <text x="805" y="80" text-anchor="middle" class="s">always runs; can skip the email</text>
+
+  <rect class="box trig" x="250" y="126" width="460" height="62"/>
+  <text x="480" y="150" text-anchor="middle" class="h">Is an email due?  (schedule.py due)</text>
+  <text x="480" y="170" text-anchor="middle" class="s">slots 00:00 · 05:00 · 11:00 · 17:00 · 23:00 UK, run starts 55 min early</text>
+  <path class="l" d="M155,98 V112 H400 V126" marker-end="url(#a)"/>
+  <line x1="480" y1="98" x2="480" y2="126" marker-end="url(#a)"/>
+  <path class="l" d="M805,98 V112 H560 V126" marker-end="url(#a)"/>
+  <text x="725" y="160" class="s">no → stop</text>
+
+  <!-- Lane 2: sources -->
+  <text x="20" y="222" class="lane">2 · SCRAPE (5 sources in parallel)</text>
+  <line x1="480" y1="188" x2="480" y2="232" marker-end="url(#a)"/>
+  <text x="488" y="214" class="s">yes</text>
+  <g>
+    <rect class="box src" x="20" y="236" width="172" height="76"/>
+    <text x="106" y="260" text-anchor="middle" class="h">LinkedIn</text>
+    <text x="106" y="279" text-anchor="middle" class="s">guest API, Worldwide +</text>
+    <text x="106" y="295" text-anchor="middle" class="s">6 rotating countries + firms</text>
+
+    <rect class="box src" x="207" y="236" width="172" height="76"/>
+    <text x="293" y="260" text-anchor="middle" class="h">Indeed</text>
+    <text x="293" y="279" text-anchor="middle" class="s">python-jobspy,</text>
+    <text x="293" y="295" text-anchor="middle" class="s">5 rotating countries</text>
+
+    <rect class="box src" x="394" y="236" width="172" height="76"/>
+    <text x="480" y="260" text-anchor="middle" class="h">Google Jobs</text>
+    <text x="480" y="279" text-anchor="middle" class="s">python-jobspy,</text>
+    <text x="480" y="295" text-anchor="middle" class="s">one search per role</text>
+
+    <rect class="box src" x="581" y="236" width="172" height="76"/>
+    <text x="667" y="260" text-anchor="middle" class="h">eFinancialCareers</text>
+    <text x="667" y="279" text-anchor="middle" class="s">site's own search API</text>
+    <text x="667" y="295" text-anchor="middle" class="s">(HTML fallback)</text>
+
+    <rect class="box src" x="768" y="236" width="172" height="76"/>
+    <text x="854" y="260" text-anchor="middle" class="h">Careers sites</text>
+    <text x="854" y="279" text-anchor="middle" class="s">Workday, Greenhouse, Lever,</text>
+    <text x="854" y="295" text-anchor="middle" class="s">Ashby, SmartRecruiters, Oracle</text>
+  </g>
+  <path class="l" d="M106,312 V320 H854 M293,312 V320 M667,312 V320 M854,312 V320"/>
+  <rect class="box store" x="20" y="332" width="420" height="34"/>
+  <text x="230" y="354" text-anchor="middle" class="s"><tspan font-weight="bold">Inputs:</tspan> config.yaml · roles.yaml (35 roles) · institutions.csv (500 firms)</text>
+
+  <!-- Lane 3: pipeline -->
+  <text x="20" y="392" class="lane">3 · FILTER, DEDUPE, ENRICH (jobscraper/main.py)</text>
+  <line x1="480" y1="312" x2="480" y2="404" marker-end="url(#a)"/>
+  <text x="488" y="378" class="s">~19,000 raw results</text>
+
+  <rect class="box step" x="250" y="406" width="460" height="66"/>
+  <text x="480" y="428" text-anchor="middle" class="h">① Quick filters + merge duplicates</text>
+  <text x="480" y="447" text-anchor="middle" class="s">title matches a role · not senior · not India / Middle East · ≤ 5 days old</text>
+  <text x="480" y="463" text-anchor="middle" class="s">same job on several sites → one row (key = normalised title | company)</text>
+
+  <line x1="480" y1="472" x2="480" y2="500" marker-end="url(#a)"/>
+  <text x="488" y="491" class="s">~850 candidates</text>
+
+  <rect class="box step" x="250" y="502" width="460" height="56"/>
+  <text x="480" y="524" text-anchor="middle" class="h">② Compare with what's already saved</text>
+  <text x="480" y="543" text-anchor="middle" class="s">seen &amp; read before → keep; new or unread → read its description</text>
+
+  <rect class="box store" x="760" y="502" width="180" height="56"/>
+  <text x="850" y="525" text-anchor="middle" class="h">data/jobs.json</text>
+  <text x="850" y="543" text-anchor="middle" class="s">every job seen, 30 days</text>
+  <line x1="710" y1="530" x2="758" y2="530" marker-start="url(#a)" marker-end="url(#a)"/>
+
+  <line x1="480" y1="558" x2="480" y2="586" marker-end="url(#a)"/>
+  <rect class="box step" x="250" y="588" width="460" height="66"/>
+  <text x="480" y="610" text-anchor="middle" class="h">③ Read job descriptions</text>
+  <text x="480" y="629" text-anchor="middle" class="s">years of experience asked · sponsorship Yes / No / Not stated</text>
+  <text x="480" y="645" text-anchor="middle" class="s">employer's own apply link · closed postings (LinkedIn ≤ 400 per run)</text>
+
+  <line x1="480" y1="654" x2="480" y2="682" marker-end="url(#a)"/>
+  <rect class="box step" x="250" y="684" width="460" height="66"/>
+  <text x="480" y="706" text-anchor="middle" class="h">④ Re-check every saved job against all rules</text>
+  <text x="480" y="725" text-anchor="middle" class="s">≤ 2 yrs experience · sponsorship (posting or employer register)</text>
+  <text x="480" y="741" text-anchor="middle" class="s">not closed · still within 5 days → NEW if never emailed</text>
+
+  <rect class="box store" x="760" y="684" width="180" height="66"/>
+  <text x="850" y="706" text-anchor="middle" class="h">sponsor_registers</text>
+  <text x="850" y="724" text-anchor="middle" class="s">UK Home Office · US H-1B</text>
+  <text x="850" y="740" text-anchor="middle" class="s">NL IND (~194k employers)</text>
+  <line x1="758" y1="717" x2="712" y2="717" marker-end="url(#a)"/>
+
+  <!-- Lane 4: output -->
+  <text x="20" y="784" class="lane">4 · DELIVER</text>
+  <line x1="480" y1="750" x2="480" y2="796" marker-end="url(#a)"/>
+  <text x="488" y="776" class="s">~470 jobs, NEW first</text>
+
+  <rect class="box out" x="120" y="798" width="240" height="62"/>
+  <text x="240" y="823" text-anchor="middle" class="h w">Excel workbook</text>
+  <text x="240" y="842" text-anchor="middle" class="s w">20 columns, NEW jobs marked</text>
+
+  <rect class="box out" x="400" y="798" width="240" height="62"/>
+  <text x="520" y="823" text-anchor="middle" class="h w">Email via Gmail SMTP</text>
+  <text x="520" y="842" text-anchor="middle" class="s w">top 15 new jobs + Excel attached</text>
+
+  <rect class="box out" x="680" y="798" width="260" height="62"/>
+  <text x="810" y="823" text-anchor="middle" class="h w">Commit data/ back to repo</text>
+  <text x="810" y="842" text-anchor="middle" class="s w">jobs.json · last_run.json · last_email_utc</text>
+  <line x1="360" y1="829" x2="398" y2="829" marker-end="url(#a)"/>
+  <line x1="640" y1="829" x2="678" y2="829" marker-end="url(#a)"/>
+
+  <!-- Weekly -->
+  <text x="20" y="896" class="lane">WEEKLY (discover.yml, Sunday 02:30 UTC)</text>
+  <rect class="box weekly" x="20" y="908" width="440" height="80"/>
+  <text x="240" y="931" text-anchor="middle" class="h">Find careers sites · download sponsor registers</text>
+  <text x="240" y="951" text-anchor="middle" class="s">works out which hiring platform each of the 500 firms uses</text>
+  <text x="240" y="968" text-anchor="middle" class="s">→ data/careers_sites.json (97 found) · data/sponsor_registers.json</text>
+  <path class="l dash" d="M460,948 H951 V286 H942" marker-end="url(#a)"/>
+  <path class="l dash" d="M951,733 H942" marker-end="url(#a)"/>
+  <text x="500" y="940" class="s">feeds the careers-site list and the sponsor check</text>
+</svg>
