@@ -198,3 +198,37 @@ def qualification_asked(description: str, title: str = "") -> str:
         if m and not _QUAL_TRAINING.search(sentence):
             return re.sub(r"\s+", " ", m.group(0))
     return ""
+
+
+# Postings that ask for work experience in words rather than years ("proven experience in...").
+_EXPERIENCE_ASKED = re.compile(
+    r"\b(?:proven|prior|previous|demonstrable|demonstrated|significant|extensive|solid|substantial|"
+    r"considerable|professional|industry|commercial|practical|hands[- ]on|relevant|post[- ]qualification|"
+    r"work(?:ing)?|front[- ]office|buy[- ]side|sell[- ]side|trading|banking|audit)\s+(?:work\s+)?experience\b"
+    r"|\b(?:experience|experienced)\s+(?:working\s+)?(?:in|within|as)\s+an?\s+(?:similar|comparable|equivalent)\s+role"
+    r"|\b(?:you|candidates?|applicants?)\s+(?:will\s+|should\s+|must\s+)?(?:have|has|bring|possess)\s+"
+    r"(?:\w+\s+){0,3}experience\s+(?:in|with|of|as|working)\b"
+    r"|\bexperience\s+(?:is\s+)?(?:required|essential|a\s+must|mandatory|necessary)\b",
+    re.I,
+)
+# Not a request for experience: what the job offers, or experience a fresher already has.
+_EXPERIENCE_FINE = re.compile(
+    r"\b(?:intern(?:ship)?s?|placements?|summer|academic|coursework|university|degree|studies|projects?|"
+    r"no\s+(?:prior\s+|previous\s+)?experience|not\s+(?:required|necessary|essential)|don'?t\s+need|do\s+not\s+need|"
+    r"gain|gaining|get|build|develop|offer|offers|provide|give|you'?ll|you\s+will|opportunit(?:y|ies)|"
+    r"learn|exposure|candidate\s+experience|customer\s+experience|user\s+experience|client\s+experience)\b",
+    re.I,
+)
+
+
+def experience_asked(description: str) -> str:
+    """The phrase where the posting asks for work experience (e.g. "proven experience"), or ""."""
+    for sentence in re.split(r"(?<=[.;!?•·▪●])\s+|\s[-*]\s|\n", description or ""):
+        m = _EXPERIENCE_ASKED.search(sentence)
+        if m and not _EXPERIENCE_FINE.search(sentence):
+            return re.sub(r"\s+", " ", m.group(0))
+    return ""
+
+
+def is_remote(location: str, title: str = "") -> bool:
+    return bool(re.search(r"\b(?:remote|work from home|wfh|anywhere)\b", f"{location} {title}", re.I))

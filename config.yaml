@@ -47,6 +47,8 @@ linkedin_rotating_locations:
   - Brazil
   - Mexico
 linkedin_locations_per_run: 6
+# Also search LinkedIn for remote jobs anywhere in the world, every run.
+linkedin_remote_search: true
 # Firms from institutions.csv searched by name on LinkedIn each run (those without
 # a careers site we can read directly). 80 per run covers the list about every day.
 linkedin_target_firms_per_run: 80
@@ -165,8 +167,13 @@ senior_title_words:
   - iii
   - iv
 
-# Drop postings whose description asks for more than this many years of experience.
-max_years_experience: 2
+# Drop postings whose description asks for more than this many years of experience
+# (0: any "N years of experience" figure drops the job; "0-1 years" is kept).
+max_years_experience: 0
+# any:        also drop postings that ask for experience in words ("proven experience in...",
+#             "you have experience with..."). Internship or university experience is fine.
+# years_only: only the years figure above counts.
+experience_filter: any
 
 # Drop postings that ask for a professional qualification (CA, ACA, ACCA, CIMA, CPA, CFA, FRM,
 # PRM, CQF, CAIA, actuarial and similar), whether required or "preferred". Postings where the

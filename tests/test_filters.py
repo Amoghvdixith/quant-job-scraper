@@ -122,7 +122,7 @@ def test_excel_and_email(tmp_path):
     path = write_workbook(jobs, {jobs[0].key}, stats, tmp_path / "t.xlsx")
     ws = load_workbook(path)["Jobs"]
     assert ws["A2"].value == "NEW" and ws["E2"].value == "Market Risk Analyst"
-    assert ws["P2"].hyperlink.target == "https://x/1"
+    assert ws["Q2"].hyperlink.target == "https://x/1"
     msg = build_email(jobs, {jobs[0].key}, stats, path, "a@gmail.com", "b@gmail.com")
     assert msg["To"] == "b@gmail.com"
     assert "1 new" in msg["Subject"]
@@ -168,6 +168,8 @@ def test_rules_rechecked_on_saved_jobs():
         (dict(years_required=5), "asks for 5+ years"),
         (dict(sponsorship="No"), "no sponsorship"),
         (dict(qualification="CFA"), "asks for a professional qualification"),
+        (dict(experience="proven experience"), "asks for work experience"),
+        (dict(years_required=1), "asks for 1+ years"),
         (dict(posted=date.today() - timedelta(days=9)), "older than the age limit"),
         (dict(title="Software Engineer"), "title doesn't match a target role"),
     ]:
@@ -224,16 +226,16 @@ def test_apply_links(tmp_path):
     assert job.apply_on == "Employer website" and easy.apply_on == "LinkedIn"
     path = write_workbook([job, easy], set(), {}, tmp_path / "a.xlsx")
     ws = load_workbook(path)["Jobs"]
-    assert ws["P2"].hyperlink.target == "https://barclays.example/apply" and ws["P2"].value == "https://barclays.example/apply"
-    assert ws["P3"].hyperlink.target == easy.url
-    assert ws["R2"].hyperlink.target == job.url
+    assert ws["Q2"].hyperlink.target == "https://barclays.example/apply" and ws["Q2"].value == "https://barclays.example/apply"
+    assert ws["Q3"].hyperlink.target == easy.url
+    assert ws["S2"].hyperlink.target == job.url
     assert needs_reread({"url": "https://www.linkedin.com/jobs/view/1"})
     assert needs_reread({"url": "https://www.linkedin.com/jobs/view/1", "apply_url": ""})
-    assert not needs_reread({"url": "https://www.linkedin.com/jobs/view/1", "apply_url": "", "easy_apply": True,
-                             "qualification": ""})
+    assert not needs_reread({"url": "https://www.linkedin.com/jobs/view/1", "apply_url": "", "easy_apply": True, "experience": "",
+                             "qualification": "", "experience": ""})
     easy.easy_apply = True
     assert easy.apply_on == "LinkedIn Easy Apply"
-    assert not needs_reread({"url": "https://boards.greenhouse.io/x/jobs/1", "qualification": ""})
+    assert not needs_reread({"url": "https://boards.greenhouse.io/x/jobs/1", "qualification": "", "experience": ""})
     assert needs_reread({"url": "https://boards.greenhouse.io/x/jobs/1"})  # saved before the qualification check
 
 
@@ -263,3 +265,24 @@ def test_qualifications():
     assert q("Our graduate scheme offers a training contract and exam support towards ACCA.") == ""
     assert q("Based in San Francisco, CA. Hybrid working.") == ""
     assert q("Strong Python and SQL skills. Degree in maths.") == ""
+
+
+def test_experience_and_remote(tmp_path):
+    e = filters.experience_asked
+    assert e("Proven experience in market risk management.")
+    assert e("Previous experience in a similar role is essential.")
+    assert e("Candidates should have some experience working in financial services.")
+    assert not e("Relevant experience through internships or university projects is welcome.")
+    assert not e("You will gain hands-on experience across trading desks.")
+    assert not e("No prior experience required.")
+    assert not e("We offer an inclusive candidate experience.")
+    assert filters.is_remote("Remote, United Kingdom") and filters.is_remote("London", "Quant Analyst (Remote)")
+    assert not filters.is_remote("London, England, United Kingdom")
+    job = Job("LinkedIn", "Quant Analyst", "Acme", "Remote", "https://x/1", posted=date.today(), remote=True,
+              sources=["LinkedIn"])
+    other = Job("LinkedIn", "Risk Analyst", "Beta", "London", "https://x/2", posted=date.today(), sources=["LinkedIn"])
+    path = write_workbook([job, other], {job.key}, {}, tmp_path / "r.xlsx")
+    wb = load_workbook(path)
+    assert wb["Remote Jobs"].max_row == 2 and wb["Jobs"]["I2"].value == "Remote"
+    msg = build_email([job, other], {job.key}, {}, path, "a@x", "b@x")
+    assert "1 remote jobs" in msg.get_body(("plain",)).get_content()

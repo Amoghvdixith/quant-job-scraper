@@ -12,13 +12,16 @@ GitHub Actions and the email is the only output.
   (taken from the Tier 1 and Tier 2 sheets of `Quant_Finance_Job_Roles.xlsx`).
 - **Fresh:** posted within `max_age_days` (5).
 - **Entry level:** titles with Senior, Lead, VP, Director, Manager and similar
-  words are dropped, and so are postings asking for more than
-  `max_years_experience` (2) years. LinkedIn searches are limited to Internship,
+  words are dropped, and so are postings that ask for any work experience: a years figure
+  ("1+ years of experience") or wording like "proven experience in" or "you have experience
+  with". Internship or university experience doesn't count. See `experience_filter`. LinkedIn searches are limited to Internship,
   Entry level and Associate.
 - **No professional qualifications asked:** postings that ask for CA, ACA, ACCA, CIMA, CPA,
   CFA, FRM, CQF, CAIA, actuarial or similar (required or preferred) are dropped, unless the
   employer is offering to train you for it.
-- **Anywhere except India and the Middle East**, remote jobs included.
+- **Anywhere except India and the Middle East**, remote jobs included. Every run also
+  searches LinkedIn for remote jobs worldwide; remote jobs are marked in the "Work Type"
+  column, listed in their own "Remote Jobs" sheet and in a section of the email.
 - **Visa sponsorship:** a job is kept only if the posting offers sponsorship, or the
   employer is on the government sponsor list for the job's country: the UK Home Office
   register of licensed sponsors, the US H-1B employer data, or the Dutch IND register.

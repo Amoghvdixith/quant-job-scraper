@@ -28,13 +28,23 @@ def search(role: dict, cfg: dict, stats: dict, location: str = "Worldwide") -> l
                    cfg.get("linkedin_max_pages", 3))
 
 
+def search_remote(role: dict, cfg: dict, stats: dict) -> list[Job]:
+    """Remote jobs anywhere in the world (LinkedIn's "Remote" workplace filter)."""
+    jobs = _search(build_keywords(role["keywords"]), f"{role['title']} (remote)", cfg, stats, "Worldwide",
+                   cfg.get("linkedin_max_pages", 3), extra={"f_WT": "2"})
+    for job in jobs:
+        job.remote = True
+    return jobs
+
+
 def search_company(company: str, cfg: dict, stats: dict) -> list[Job]:
     """Entry-level postings at one target institution, any title (the title filter runs later)."""
     return _search(f'"{company}"', f"firm: {company}", cfg, stats, "Worldwide",
                    cfg.get("linkedin_target_firm_pages", 2))
 
 
-def _search(keywords: str, label: str, cfg: dict, stats: dict, location: str, max_pages: int) -> list[Job]:
+def _search(keywords: str, label: str, cfg: dict, stats: dict, location: str, max_pages: int,
+            extra: dict | None = None) -> list[Job]:
     s = session()
     jobs: list[Job] = []
     seen: set[str] = set()
@@ -43,6 +53,7 @@ def _search(keywords: str, label: str, cfg: dict, stats: dict, location: str, ma
         "f_TPR": f"r{cfg['max_age_days'] * 86400}",
         "f_E": ",".join(str(x) for x in cfg.get("linkedin_experience_levels", [1, 2, 3])),
         "sortBy": "DD",
+        **(extra or {}),
     }
     if location.lower() == "worldwide":
         params["geoId"] = WORLDWIDE_GEO_ID

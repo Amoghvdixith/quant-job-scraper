@@ -47,6 +47,11 @@ def plan(cfg: dict, roles: list[dict], slot: int) -> dict[str, list]:
             (f"{role['title']} @ {loc}", lambda st, role=role, loc=loc: linkedin.search(role, cfg, st, loc))
             for loc in locations for role in roles
         ]
+        if cfg.get("linkedin_remote_search", True):
+            tasks["LinkedIn"] += [
+                (f"{role['title']} @ remote", lambda st, role=role: linkedin.search_remote(role, cfg, st))
+                for role in roles
+            ]
         if "careers" in sources or cfg.get("linkedin_target_firms_per_run"):
             have_site = {institutions.norm(x["institution"]) for x in careers.load_sites()}
             firms = [i for i in institutions.load() if i["key"] not in have_site]
@@ -128,12 +133,14 @@ def apply_filters(jobs: list[Job], cfg: dict, matcher: filters.RoleMatcher) -> d
         if filters.is_excluded_location(job.location, cfg["excluded_locations"]):
             continue
         role, _ = match
+        job.remote = job.remote or filters.is_remote(job.location, job.title)
         job.target_firm = institutions.match(job.company)
         job.role_id, job.role_title, job.category, job.tier = role["id"], role["title"], role["category"], role["tier"]
         if job.key in kept:
             existing = kept[job.key]
             if job.source not in existing.sources:
                 existing.sources.append(job.source)
+            existing.remote = existing.remote or job.remote
             if not existing.apply_url:
                 existing.apply_url = job.apply_url
             if not existing.description and job.description:
@@ -184,16 +191,17 @@ def fetch_full_description(job: Job) -> str:
 
 def needs_reread(rec: dict) -> bool:
     """Saved jobs whose page has to be read once more: LinkedIn jobs saved before apply links
-    were collected, and jobs saved before the qualification check."""
+    were collected, and jobs saved before the qualification and experience checks."""
     if "linkedin.com" in rec.get("url", "") and not rec.get("apply_url") and rec.get("easy_apply") is None:
         return True
-    return rec.get("qualification") is None and not rec.get("excluded")
+    return (rec.get("qualification") is None or rec.get("experience") is None) and not rec.get("excluded")
 
 
 def enrich(job: Job, text: str) -> None:
     """Fills in what we learn from the description."""
     job.description_checked = len(text) >= 200
     job.years_required = filters.years_required(text)
+    job.experience = filters.experience_asked(text) if job.description_checked else None
     job.qualification = filters.qualification_asked(text, job.title) if job.description_checked \
         else filters.qualification_asked("", job.title) or None
     job.sponsorship, job.sponsorship_evidence = filters.sponsorship(text) if text else ("Not checked", "")
@@ -212,6 +220,8 @@ def rule_broken(job: Job, cfg: dict, matcher: filters.RoleMatcher, registers: Sp
         return "excluded country"
     if job.years_required is not None and job.years_required > cfg["max_years_experience"]:
         return f"asks for {job.years_required}+ years"
+    if job.experience and cfg.get("experience_filter", "any") == "any":
+        return "asks for work experience"
     if job.qualification and cfg.get("exclude_professional_qualifications", True):
         return "asks for a professional qualification"
     if job.sponsorship == "No":
@@ -306,6 +316,7 @@ def main() -> None:
             # Seen before and already read: keep what we learned, but record any new source.
             prev["sources"] = sorted(set(prev.get("sources", [])) | set(job.sources))
             prev["apply_url"] = prev.get("apply_url") or job.apply_url
+            prev["remote"] = bool(prev.get("remote")) or job.remote
             continue
         job.first_seen = prev["first_seen"] if prev else now
         to_read.append((key, job, bool(prev and prev.get("emailed"))))
@@ -323,6 +334,8 @@ def main() -> None:
         if prev and prev.get("description_checked") and not job.description_checked:
             kept = Job.from_dict(prev)
             kept.qualification = prev.get("qualification")  # still unchecked: tried again next run
+            kept.experience = prev.get("experience")
+            kept.remote = kept.remote or job.remote
             kept.apply_url, kept.easy_apply = kept.apply_url or job.apply_url, job.easy_apply
             to_read[i] = (key, kept, emailed)
     log.info("LinkedIn apply links: %s", linkedin.APPLY_STATS)
