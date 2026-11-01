@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: job-digest
+  group: find-careers-sites   # separate from the digest, so a late discovery run never delays an email
   cancel-in-progress: false
 
 jobs:
