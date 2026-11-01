@@ -46,13 +46,16 @@ linkedin_rotating_locations:
   - South Africa
   - Brazil
   - Mexico
-linkedin_locations_per_run: 6
+linkedin_locations_per_run: 4
+# Each site gets at most this long per run. LinkedIn rate-limits heavy use, and without a
+# cap a run can overrun its email slot; the least important searches are the ones cut.
+source_time_budget_minutes: 40
 # Also search LinkedIn for remote jobs anywhere in the world, every run.
 linkedin_remote_search: true
 # Firms from institutions.csv searched by name on LinkedIn each run (those without
-# a careers site we can read directly). 80 per run covers the list about every day.
-linkedin_target_firms_per_run: 80
-linkedin_target_firm_pages: 2
+# a careers site we can read directly), searched last in each run.
+linkedin_target_firms_per_run: 50
+linkedin_target_firm_pages: 1
 # LinkedIn experience levels: 1 = Internship, 2 = Entry level, 3 = Associate.
 linkedin_experience_levels: [1, 2, 3]
 # Result pages fetched per search (LinkedIn returns ~10 jobs per page).

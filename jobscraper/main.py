@@ -5,6 +5,7 @@ import argparse
 import json
 import logging
 import os
+import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
@@ -41,17 +42,18 @@ def plan(cfg: dict, roles: list[dict], slot: int) -> dict[str, list]:
     tasks: dict[str, list] = {}
     sources = cfg["sources"]
     if "linkedin" in sources:
-        locations = cfg.get("linkedin_locations", ["Worldwide"]) + rotate(
-            cfg.get("linkedin_rotating_locations", []), cfg.get("linkedin_locations_per_run", 2), slot)
-        tasks["LinkedIn"] = [
-            (f"{role['title']} @ {loc}", lambda st, role=role, loc=loc: linkedin.search(role, cfg, st, loc))
-            for loc in locations for role in roles
-        ]
+        # Most important first: if LinkedIn rate-limits, the time budget cuts the end of the list.
+        def by_location(locs):
+            return [(f"{role['title']} @ {loc}", lambda st, role=role, loc=loc: linkedin.search(role, cfg, st, loc))
+                    for loc in locs for role in roles]
+        tasks["LinkedIn"] = by_location(cfg.get("linkedin_locations", ["Worldwide"]))
         if cfg.get("linkedin_remote_search", True):
             tasks["LinkedIn"] += [
                 (f"{role['title']} @ remote", lambda st, role=role: linkedin.search_remote(role, cfg, st))
                 for role in roles
             ]
+        tasks["LinkedIn"] += by_location(rotate(
+            cfg.get("linkedin_rotating_locations", []), cfg.get("linkedin_locations_per_run", 2), slot))
         if "careers" in sources or cfg.get("linkedin_target_firms_per_run"):
             have_site = {institutions.norm(x["institution"]) for x in careers.load_sites()}
             firms = [i for i in institutions.load() if i["key"] not in have_site]
@@ -80,9 +82,16 @@ def scrape(cfg: dict, roles: list[dict], slot: int) -> tuple[list[Job], dict]:
     tasks = plan(cfg, roles, slot)
     stats = {label: {"found": 0, "errors": 0} for label in tasks}
 
+    budget = cfg.get("source_time_budget_minutes", 40) * 60
+    started = time.monotonic()
+
     def run(label: str) -> list[Job]:
         out: list[Job] = []
-        for name, fn in tasks[label]:
+        for i, (name, fn) in enumerate(tasks[label]):
+            # LinkedIn slows right down when it rate-limits; stop in time for the email.
+            if time.monotonic() - started > budget:
+                log.warning("%s | time budget used up, skipped the last %d searches", label, len(tasks[label]) - i)
+                break
             try:
                 found = fn(stats[label])
             except Exception as e:
