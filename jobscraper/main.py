@@ -125,7 +125,7 @@ def apply_filters(jobs: list[Job], cfg: dict, matcher: filters.RoleMatcher) -> d
             continue
         if job.posted and job.posted < cutoff:
             continue
-        match = matcher.match(job.title)
+        match = matcher.match(job.title, institutions.match(job.company))
         if not match:
             continue
         if filters.is_senior(job.title, cfg["senior_title_words"]):
@@ -212,7 +212,7 @@ def enrich(job: Job, text: str) -> None:
 def rule_broken(job: Job, cfg: dict, matcher: filters.RoleMatcher, registers: SponsorRegisters) -> str | None:
     """Every rule a job must pass to be emailed. Checked again on each run, so
     changes to config.yaml or roles.yaml also apply to jobs found earlier."""
-    if not matcher.match(job.title):
+    if not matcher.match(job.title, job.target_firm):
         return "title doesn't match a target role"
     if filters.is_senior(job.title, cfg["senior_title_words"]):
         return "too senior"

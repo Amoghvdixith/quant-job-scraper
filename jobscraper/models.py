@@ -41,6 +41,11 @@ class Job:
         return f"{_norm(self.title)}|{_company_key(self.company)}"
 
     @property
+    def graduate_scheme(self) -> bool:
+        from .filters import is_graduate_scheme
+        return self.role_id == "GS" or is_graduate_scheme(self.title)
+
+    @property
     def apply_link(self) -> str:
         """Where to apply: the employer's own page when we found one, otherwise the listing."""
         return self.apply_url or self.url

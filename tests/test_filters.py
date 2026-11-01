@@ -286,3 +286,17 @@ def test_experience_and_remote(tmp_path):
     assert wb["Remote Jobs"].max_row == 2 and wb["Jobs"]["I2"].value == "Remote"
     msg = build_email([job, other], {job.key}, {}, path, "a@x", "b@x")
     assert "1 remote jobs" in msg.get_body(("plain",)).get_content()
+
+
+def test_graduate_schemes(tmp_path):
+    assert matcher.match("Graduate Programme 2027 - Global Markets")[0]["id"] == "GS"
+    assert matcher.match("Investment Banking Analyst Program")[0]["id"] == "GS"
+    assert matcher.match("Graduate Scheme - HR") is None
+    assert matcher.match("Graduate Scheme - HR", "HSBC")[0]["id"] == "GS"     # target firm
+    assert matcher.match("Software Engineering Graduate Programme") is None
+    assert matcher.match("Graduate Market Risk Analyst")[0]["id"] == "T1-1"
+    job = Job("LinkedIn", "Graduate Programme - Markets", "Acme", "London", "https://x/1", posted=date.today(),
+              role_id="GS", sources=["LinkedIn"])
+    path = write_workbook([job], {job.key}, {}, tmp_path / "g.xlsx")
+    assert load_workbook(path)["Graduate Schemes"].max_row == 2
+    assert "1 graduate schemes" in build_email([job], {job.key}, {}, path, "a@x", "b@x").get_body(("plain",)).get_content()

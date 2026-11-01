@@ -25,13 +25,13 @@ def build_keywords(keywords: list[str]) -> str:
 
 def search(role: dict, cfg: dict, stats: dict, location: str = "Worldwide") -> list[Job]:
     return _search(build_keywords(role["keywords"]), role["title"], cfg, stats, location,
-                   cfg.get("linkedin_max_pages", 3))
+                   role.get("max_pages", cfg.get("linkedin_max_pages", 3)))
 
 
 def search_remote(role: dict, cfg: dict, stats: dict) -> list[Job]:
     """Remote jobs anywhere in the world (LinkedIn's "Remote" workplace filter)."""
     jobs = _search(build_keywords(role["keywords"]), f"{role['title']} (remote)", cfg, stats, "Worldwide",
-                   cfg.get("linkedin_max_pages", 3), extra={"f_WT": "2"})
+                   role.get("max_pages", cfg.get("linkedin_max_pages", 3)), extra={"f_WT": "2"})
     for job in jobs:
         job.remote = True
     return jobs

@@ -24,6 +24,7 @@ def write_workbook(jobs: list[Job], new_keys: set[str], stats: dict, path: Path)
     wb = Workbook()
     _jobs_sheet(wb.active, "Jobs", jobs, new_keys)
     _jobs_sheet(wb.create_sheet("Remote Jobs"), "Remote Jobs", [j for j in jobs if j.remote], new_keys)
+    _jobs_sheet(wb.create_sheet("Graduate Schemes"), "Graduate Schemes", [j for j in jobs if j.graduate_scheme], new_keys)
     _summary_sheet(wb, jobs, new_keys, stats)
     path.parent.mkdir(parents=True, exist_ok=True)
     wb.save(path)
@@ -97,6 +98,7 @@ def _summary_sheet(wb, jobs: list[Job], new_keys: set[str], stats: dict) -> None
         ("Offer visa sponsorship", sum(j.sponsorship == "Yes" for j in jobs)),
         ("At your target institutions", sum(bool(j.target_firm) for j in jobs)),
         ("Remote", sum(j.remote for j in jobs)),
+        ("Graduate schemes", sum(j.graduate_scheme for j in jobs)),
         ("Posted by recruitment agencies", sum(j.recruiter for j in jobs)),
         ("", ""),
         ("Source", "Jobs found this run"),

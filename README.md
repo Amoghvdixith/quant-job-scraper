@@ -10,6 +10,10 @@ GitHub Actions and the email is the only output.
 
 - **Role match:** the job title has to match one of the keywords in `roles.yaml`
   (taken from the Tier 1 and Tier 2 sheets of `Quant_Finance_Job_Roles.xlsx`).
+- **Graduate schemes** anywhere in the world, remote or on-site: titles like "Graduate
+  Programme", "Analyst Program" or "Graduate Scheme 2027" in a finance area (markets, risk,
+  banking, investment...), or any graduate scheme at a firm in `institutions.csv`. They have
+  their own "Graduate Schemes" sheet and email section; the other rules still apply.
 - **Fresh:** posted within `max_age_days` (5).
 - **Entry level:** titles with Senior, Lead, VP, Director, Manager and similar
   words are dropped, and so are postings that ask for any work experience: a years figure

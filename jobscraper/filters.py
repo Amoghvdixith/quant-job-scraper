@@ -33,13 +33,34 @@ def tokens(text: str) -> list[str]:
     return [SYNONYMS.get(w, w) for w in words]
 
 
+_GRAD_SCHEME = re.compile(
+    r"\bgrad(?:uate)?\s+(?:programmes?|programs?|schemes?|analysts?|trainees?|rotational|development|leadership|"
+    r"associates?|intake|opportunit(?:y|ies))\b|\b(?:analyst|associate)\s+(?:programmes?|programs?)\b"
+    r"|\b(?:graduate|grad)\b.*\b20\d\d\b|\bnew\s+grad(?:uate)?s?\b|\bfuture\s+talent\b",
+    re.I,
+)
+_GRAD_FINANCE = re.compile(
+    r"\b(?:financ\w*|markets?|banking|bank|investment\w*|invest|trading|trader|risk|quant\w*|treasury|credit|"
+    r"capital|asset|wealth|securities|fixed\s+income|equit(?:y|ies)|derivatives|economics?|valuation|"
+    r"corporate\s+finance|m&a|research|fund|private\s+equity|insurance|analytics)\b",
+    re.I,
+)
+
+
+def is_graduate_scheme(title: str) -> bool:
+    return bool(_GRAD_SCHEME.search(title or ""))
+
+
 @dataclass
 class RoleMatcher:
     roles: list[dict]
 
     def __post_init__(self) -> None:
         self._rules: list[tuple[frozenset[str], dict, str]] = []
+        self._grad_role = next((r for r in self.roles if r.get("graduate_scheme")), None)
         for role in self.roles:
+            if role.get("graduate_scheme"):
+                continue
             for kw in role["keywords"]:
                 core = frozenset(t for t in tokens(kw) if t not in GENERIC)
                 if core:
@@ -47,7 +68,16 @@ class RoleMatcher:
         # Most specific keywords first, so "Market Risk Analyst" wins over "Risk Analyst".
         self._rules.sort(key=lambda r: (-len(r[0]), r[1]["tier"]))
 
-    def match(self, title: str) -> tuple[dict, str] | None:
+    def match(self, title: str, target_firm: str = "") -> tuple[dict, str] | None:
+        found = self._match_role(title)
+        if found:
+            return found
+        # Graduate schemes: in a finance area, or at one of the target institutions.
+        if self._grad_role and is_graduate_scheme(title) and (target_firm or _GRAD_FINANCE.search(title)):
+            return self._grad_role, "graduate scheme"
+        return None
+
+    def _match_role(self, title: str) -> tuple[dict, str] | None:
         title_list = tokens(title)
         title_tokens = set(title_list)
         title_text = " " + " ".join(title_list) + " "

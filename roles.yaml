@@ -76,3 +76,11 @@ roles:
      keywords: [Financial Risk Management Consultant, FRM Consultant, Risk Advisory Analyst, Risk Consultant]}
   - {id: T2-13, tier: 2, category: Consulting & Vendors, title: Risk Analytics Analyst,
      keywords: [Risk Analytics Analyst, Quant Analytics Analyst, Risk Analyst]}
+
+  # Graduate schemes anywhere in the world, remote or on-site. A scheme is kept when its
+  # title names a finance area (markets, risk, banking, investment...) or it is at one of
+  # the firms in institutions.csv. The usual rules (sponsorship, no experience asked,
+  # excluded countries) still apply.
+  - {id: GS, tier: 1, category: Graduate Scheme, title: Graduate Scheme, graduate_scheme: true, max_pages: 8,
+     keywords: [Graduate Programme, Graduate Program, Graduate Scheme, Graduate Analyst, Graduate Trainee,
+                Analyst Programme, Analyst Program, Graduate Rotational Programme, Graduate Development Programme]}
