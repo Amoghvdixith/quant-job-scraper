@@ -38,7 +38,9 @@ class Job:
 
     @property
     def key(self) -> str:
-        return f"{_norm(self.title)}|{_company_key(self.company)}"
+        # Country included so the same title at the same firm in London and New York stays two jobs.
+        from .sponsor_registers import country_of
+        return f"{_norm(self.title)}|{_company_key(self.company)}|{country_of(self.location)}"
 
     @property
     def graduate_scheme(self) -> bool:

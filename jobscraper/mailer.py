@@ -10,10 +10,11 @@ from pathlib import Path
 from .models import Job
 
 
-def build_email(jobs: list[Job], new_keys: set[str], stats: dict, attachment: Path, sender: str, to: str) -> EmailMessage:
+def build_email(jobs: list[Job], new_keys: set[str], stats: dict, attachment: Path, sender: str, to: str,
+                max_age_days: int = 5) -> EmailMessage:
     new_jobs = [j for j in jobs if j.key in new_keys]
     msg = EmailMessage()
-    msg["Subject"] = f"Quant jobs: {len(new_jobs)} new, {len(jobs)} in the last 5 days"
+    msg["Subject"] = f"Quant jobs: {len(new_jobs)} new, {len(jobs)} in the last {max_age_days} days"
     msg["From"] = sender
     msg["To"] = to
 
@@ -27,7 +28,7 @@ def build_email(jobs: list[Job], new_keys: set[str], stats: dict, attachment: Pa
     grads_top = sorted(grads, key=lambda j: (j.key not in new_keys, -(j.posted or date.min).toordinal()))[:10]
     top = sorted(new_jobs, key=lambda j: (j.sponsorship != "Yes", not j.employer_sponsor.startswith("Yes"), j.tier))[:15]
     text = [
-        f"{len(new_jobs)} new jobs since the last email, {len(jobs)} matching jobs posted in the last 5 days.",
+        f"{len(new_jobs)} new jobs since the last email, {len(jobs)} matching jobs posted in the last {max_age_days} days.",
         "The full list is in the attached Excel file (new ones are marked NEW).",
         f"Found this run: {source_line}.",
         "",
@@ -49,7 +50,7 @@ def build_email(jobs: list[Job], new_keys: set[str], stats: dict, attachment: Pa
         if grads else "<p>No graduate schemes this time.</p>"
     )
     msg.add_alternative(
-        f"<p><b>{len(new_jobs)}</b> new jobs since the last email, <b>{len(jobs)}</b> matching jobs posted in the last 5 days.</p>"
+        f"<p><b>{len(new_jobs)}</b> new jobs since the last email, <b>{len(jobs)}</b> matching jobs posted in the last {max_age_days} days.</p>"
         f"<p>The full list is in the attached Excel file (new ones are marked NEW).</p>"
         f"{'<p>Top new jobs:</p>' if top else ''}{table}{remote_table}{grads_table}"
         f"<p style='color:#666;font-size:12px'>Found this run: {html.escape(source_line)}.</p>",

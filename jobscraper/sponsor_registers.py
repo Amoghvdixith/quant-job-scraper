@@ -14,6 +14,7 @@ import io
 import json
 import logging
 import re
+from bisect import bisect_left
 from pathlib import Path
 
 import requests
@@ -105,18 +106,33 @@ class SponsorRegisters:
         self.loaded = {c: bool(self.lists[c]) for c in COUNTRIES}
 
     def _on(self, country: str, key: str) -> bool:
-        names = self.lists[country]
-        if key in names:
+        if key in self.lists[country]:
             return True
         # "goldmansachs" should match "goldmansachsandco" etc.
-        return len(key) >= 6 and any(n.startswith(key) for n in names if len(n) - len(key) <= 12)
+        if len(key) < 6:
+            return False
+        # A sorted copy, made on first use, so a prefix lookup is a binary search
+        # instead of a scan of ~200k names.
+        sorted_lists = self.__dict__.setdefault("_sorted", {})
+        if country not in sorted_lists:
+            sorted_lists[country] = sorted(self.lists[country])
+        names = sorted_lists[country]
+        i = bisect_left(names, key)
+        while i < len(names) and names[i].startswith(key):
+            if len(names[i]) - len(key) <= 12:
+                return True
+            i += 1
+        return False
 
     def status(self, company: str, location: str) -> str:
         """Which registers list this employer, relative to where the job is."""
         key = clean(company)
         if len(key) < 3:
             return ""
-        on = [c for c in COUNTRIES if self.lists[c] and self._on(c, key)]
+        cache = self.__dict__.setdefault("_cache", {})  # same answer for every job at this employer
+        if key not in cache:
+            cache[key] = [c for c in COUNTRIES if self.lists[c] and self._on(c, key)]
+        on = cache[key]
         if not on:
             return ""
         here = country_of(location)

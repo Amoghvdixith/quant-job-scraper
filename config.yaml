@@ -4,7 +4,9 @@
 max_age_days: 5
 
 # Sources to search. Remove one to switch it off.
-sources: [linkedin, google, efinancialcareers, indeed, careers]
+# google is off: python-jobspy 1.4.1 gets no data from Google Jobs (0 results every run since
+# at least Nov 2026). Add it back after upgrading python-jobspy and checking a dry run.
+sources: [linkedin, efinancialcareers, indeed, careers]
 
 # LinkedIn location filter. "Worldwide" covers every country; add specific
 # countries (e.g. "United Kingdom", "Singapore") to get more results there.
@@ -50,6 +52,8 @@ linkedin_locations_per_run: 4
 # Each site gets at most this long per run. LinkedIn rate-limits heavy use, and without a
 # cap a run can overrun its email slot; the least important searches are the ones cut.
 source_time_budget_minutes: 40
+# Reading LinkedIn job pages after the searches gets at most this long; unread ones are read next run.
+description_time_budget_minutes: 10
 # Also search LinkedIn for remote jobs anywhere in the world, every run.
 linkedin_remote_search: true
 # Firms from institutions.csv searched by name on LinkedIn each run (those without
