@@ -27,6 +27,10 @@ def search(role: dict, cfg: dict, stats: dict) -> list[Job]:
         log.warning("Google search for %r failed: %s", role["title"], e)
         stats["errors"] += 1
         return []
+    if df is None or df.empty:  # Google's layout changed or it blocked us: count it, don't hide it
+        log.warning("Google search for %r returned no jobs", role["title"])
+        stats["errors"] += 1
+        return []
     jobs = []
     for row in df.to_dict("records"):
         posted = row.get("date_posted")

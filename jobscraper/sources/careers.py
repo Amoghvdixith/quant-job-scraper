@@ -148,10 +148,13 @@ def _workday(s, site, cfg):
             for p in postings:
                 posted = _workday_posted(p.get("postedOn", ""))
                 if posted and (date.today() - posted).days > cfg["max_age_days"]:
-                    stop = True  # results are newest first only sometimes; keep scanning this page
+                    stop = True  # an old posting: finish this page, then move on to the next term
                     continue
+                if posted is None and p.get("postedOn"):
+                    log.info("%s: unreadable Workday date %r", site["institution"], p.get("postedOn"))
                 url = f"{base}/{path}{p.get('externalPath', '')}"
-                jobs.setdefault(url, _job(site, p.get("title"), p.get("locationsText"), url, posted or date.today()))
+                # No date if it couldn't be read: undated postings are dropped rather than shown as fresh.
+                jobs.setdefault(url, _job(site, p.get("title"), p.get("locationsText"), url, posted))
             if len(postings) < 20 or stop:
                 break
     return list(jobs.values())

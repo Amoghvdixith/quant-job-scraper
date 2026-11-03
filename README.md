@@ -1,6 +1,6 @@
 # Quant job digest
 
-Five times a day this searches LinkedIn, Indeed, Google Jobs, eFinancialCareers and
+Five times a day this searches LinkedIn, Indeed, eFinancialCareers and
 the careers sites of the 500 institutions in `institutions.csv` for the
 entry-level quant / risk / valuation roles in `roles.yaml`, and emails an Excel
 file of matching jobs posted in the last 5 days. There is no website: it runs on
@@ -45,7 +45,7 @@ what was already sent; the workflow commits it back after each run.
 1. In the repo, go to **Settings → Secrets and variables → Actions → New repository secret** and add:
    - `GMAIL_USER`: the Gmail address that sends the email
    - `GMAIL_APP_PASSWORD`: a Gmail App Password for that account (https://myaccount.google.com/apppasswords; needs 2-step verification)
-   - `MAIL_TO`: where the digest goes (e.g. `avdixith@gmail.com`)
+   - `MAIL_TO`: where the digest goes (e.g. `you@example.com`)
 2. **Actions** tab → enable workflows if asked → **Quant job digest** → **Run workflow** to test it straight away.
    Untick "Send the email" for a dry run; the Excel file is then downloadable from the run page.
 
@@ -64,10 +64,11 @@ earlier. GitHub's own schedule skips many runs, so each run starts the next one 
   those sites directly. If a firm is missing or wrong, add it to
   `careers_sites_manual.yaml`.
 - **LinkedIn by company name** for firms without a readable careers site,
-  80 firms per run in rotation, so the whole list is covered roughly once a day.
+  50 firms per run in rotation (`linkedin_target_firms_per_run`), so the whole list is covered
+  about every day and a half.
 - The **"On Your Target List"** column marks any job, from any source, at one of these firms.
 
-LinkedIn also searches six extra countries per run and Indeed five
+LinkedIn also searches four extra countries per run and Indeed five
 countries per run, in rotation (see `config.yaml`). After each run,
 `data/last_run.json` shows how many jobs each source returned and any errors.
 
@@ -93,4 +94,5 @@ python -m pytest
   official free API, so a source can occasionally block a run or change its
   layout. The "Run Summary" sheet and the email footer show how many jobs each
   source returned and how many requests failed, so a broken source is easy to spot.
-- Google Jobs goes through the MIT-licensed [python-jobspy](https://github.com/speedyapply/JobSpy) library.
+- Google Jobs is switched off in `config.yaml` because python-jobspy 1.4.1 no longer gets any
+  results from it. When it was on, it went through the MIT-licensed [python-jobspy](https://github.com/speedyapply/JobSpy) library.

@@ -38,6 +38,16 @@ def next_start(cfg: dict, now: datetime) -> datetime:
     return min(s for s in run_starts(cfg, now) if s > now)
 
 
+def slot_number(cfg: dict, now: datetime) -> int:
+    """A different number for every email slot (day * slots per day + slot index), so each of
+    the day's runs searches a different part of the rotation."""
+    tz = ZoneInfo(cfg.get("email_timezone", "UTC"))
+    lead = timedelta(minutes=cfg.get("run_lead_minutes", 40))
+    email = (latest_start(cfg, now) + lead).astimezone(tz)
+    times = sorted(cfg["email_times"])
+    return email.date().toordinal() * len(times) + times.index(email.strftime("%H:%M"))
+
+
 def is_due(cfg: dict, now: datetime, last_email: datetime | None) -> bool:
     return last_email is None or last_email < latest_start(cfg, now)
 

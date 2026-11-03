@@ -5,6 +5,7 @@ import argparse
 import json
 import logging
 import os
+import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
@@ -16,6 +17,7 @@ from . import filters, institutions
 from .excel import write_workbook
 from .mailer import build_email, send
 from .models import Job
+from .schedule import slot_number
 from .sources import careers, efinancialcareers, google, indeed, linkedin
 from .sponsor_registers import SponsorRegisters, country_of
 from . import sponsor_registers
@@ -105,13 +107,16 @@ def scrape(cfg: dict, roles: list[dict], slot: int) -> tuple[list[Job], dict]:
 
     def run_careers(label: str) -> list[Job]:
         # Careers sites are all different hosts, so they can run side by side.
+        lock = threading.Lock()
+
         def one(item):
             name, fn = item
             try:
                 return fn(stats[label])
             except Exception as e:
                 log.warning("%s | %s failed: %s", label, name, e)
-                stats[label]["errors"] += 1
+                with lock:
+                    stats[label]["errors"] += 1
                 return []
         with ThreadPoolExecutor(max_workers=8) as pool:
             out = [j for batch in pool.map(one, tasks[label]) for j in batch]
@@ -268,8 +273,10 @@ def sponsorship_rule(job: Job, mode: str, registers: SponsorRegisters) -> str | 
     return "employer not on a sponsor list"
 
 
-def enrich_all(jobs: list[Job]) -> None:
-    """Reads descriptions: LinkedIn one at a time (it blocks fast readers), other sites in parallel."""
+def enrich_all(jobs: list[Job], budget_minutes: float = 10) -> None:
+    """Reads descriptions: LinkedIn one at a time (it blocks fast readers), other sites in parallel.
+    LinkedIn reading stops after budget_minutes so the email isn't late; the rest are read next run."""
+    deadline = time.monotonic() + budget_minutes * 60
     slow = [j for j in jobs if "linkedin.com" in j.url and len(j.description or "") < 600]
     fast = [j for j in jobs if j not in slow]
 
@@ -281,11 +288,16 @@ def enrich_all(jobs: list[Job]) -> None:
             enrich(job, job.description or "")
 
     def run_slow() -> None:
-        for job in slow[:MAX_DESCRIPTION_FETCHES]:
-            one(job)
-        for job in slow[MAX_DESCRIPTION_FETCHES:]:  # the rest are read on the next run
-            enrich(job, job.description or "")
-            job.sponsorship = "Not checked"
+        skipped = 0
+        for i, job in enumerate(slow):
+            if i >= MAX_DESCRIPTION_FETCHES or time.monotonic() > deadline:
+                enrich(job, job.description or "")  # read on the next run
+                job.sponsorship = "Not checked"
+                skipped += 1
+            else:
+                one(job)
+        if skipped:
+            log.warning("LinkedIn descriptions: %d left for the next run (cap or time budget)", skipped)
 
     with ThreadPoolExecutor(max_workers=6) as pool:
         slow_done = pool.submit(run_slow)
@@ -309,7 +321,7 @@ def main() -> None:
         roles = [r for r in roles if r["id"] in wanted]
 
     now_utc = datetime.now(timezone.utc)
-    slot = now_utc.toordinal() * 6 + now_utc.hour // 4
+    slot = slot_number(cfg, now_utc)
     raw, stats = scrape(cfg, roles, slot)
     matcher = filters.RoleMatcher(roles)
     candidates = apply_filters(raw, cfg, matcher)
@@ -335,7 +347,7 @@ def main() -> None:
                 and not rec.get("excluded"):
             to_read.append((key, Job.from_dict(rec), bool(rec.get("emailed"))))
     log.info("Reading %d job descriptions", len(to_read))
-    enrich_all([job for _, job, _ in to_read])
+    enrich_all([job for _, job, _ in to_read], cfg.get("description_time_budget_minutes", 10))
     for i, (key, job, emailed) in enumerate(to_read):
         # A saved job re-read only for a newer check, whose page couldn't be read again this
         # time: keep what was learned before rather than losing it.
@@ -383,7 +395,7 @@ def main() -> None:
     if not args.no_email:
         sender = os.environ["GMAIL_USER"]
         to = os.environ.get("MAIL_TO") or sender
-        send(build_email(current, new_keys, stats, path, sender, to))
+        send(build_email(current, new_keys, stats, path, sender, to, cfg["max_age_days"]))
         log.info("Emailed %s", to)
         (ROOT / "data" / "last_email_utc").write_text(datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ") + "\n")
         for key in new_keys:
