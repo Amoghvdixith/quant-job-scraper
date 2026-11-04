@@ -1,49 +1,49 @@
 {
- "finished_utc": "2026-11-04T04:38:24+00:00",
- "rotation_slot": 3699621,
+ "finished_utc": "2026-11-04T10:40:32+00:00",
+ "rotation_slot": 3699622,
  "sources": {
   "LinkedIn": {
-   "found": 6281,
+   "found": 6548,
    "errors": 0
   },
   "eFinancialCareers": {
-   "found": 3576,
+   "found": 3559,
    "errors": 0
   },
   "Indeed": {
-   "found": 11,
+   "found": 111,
    "errors": 0
   },
   "Careers sites": {
-   "found": 6711,
+   "found": 6454,
    "errors": 0
   }
  },
- "raw_results": 16579,
- "after_filters": 707,
- "jobs_in_email": 241,
- "new_jobs": 4,
- "descriptions_read": 225,
+ "raw_results": 16672,
+ "after_filters": 789,
+ "jobs_in_email": 261,
+ "new_jobs": 20,
+ "descriptions_read": 245,
  "posted_by_recruiters": 13,
  "saved_jobs_dropped_by_rule": {
-  "employer not on a sponsor list": 918,
+  "employer not on a sponsor list": 951,
   "older than the age limit": 308,
-  "asks for a professional qualification": 67,
-  "no sponsorship": 75,
-  "asks for 1+ years": 200,
-  "asks for work experience": 186,
+  "asks for a professional qualification": 73,
+  "no sponsorship": 78,
+  "asks for 1+ years": 204,
+  "asks for work experience": 206,
   "title doesn't match a target role": 101,
-  "asks for 5+ years": 172,
-  "asks for 3+ years": 318,
-  "asks for 2+ years": 319,
+  "asks for 5+ years": 180,
+  "asks for 3+ years": 327,
+  "asks for 2+ years": 332,
   "asks for 20+ years": 3,
   "too senior": 16,
-  "asks for 4+ years": 54,
-  "asks for 10+ years": 23,
+  "asks for 4+ years": 56,
+  "asks for 10+ years": 24,
   "asks for 7+ years": 26,
-  "asks for 6+ years": 23,
+  "asks for 6+ years": 24,
   "excluded country": 1,
-  "asks for 8+ years": 17,
+  "asks for 8+ years": 18,
   "posting closed": 5,
   "asks for 12+ years": 1,
   "sponsor lists loaded": {
@@ -53,12 +53,7 @@
   }
  },
  "warnings": [
-  "2026-11-04 04:07:18,914 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-04 04:15:11,973 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-04 04:16:26,001 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-04 04:27:55,390 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-04 04:37:28,383 jobscraper.http: GET https://www.efinancialcareers.com/jobs-Luxembourg-Luxembourg-DWS_Risk_Analyst.id24948321 -> 410",
-  "2026-11-04 04:38:00,342 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/4459638212 -> 404",
-  "2026-11-04 04:38:02,169 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/4456546236 -> 404"
+  "2026-11-04 10:09:14,013 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-04 10:40:14,066 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/4456546236 -> 404"
  ]
 }
