@@ -1,46 +1,46 @@
 {
- "finished_utc": "2026-11-04T16:42:23+00:00",
- "rotation_slot": 3699623,
+ "finished_utc": "2026-11-04T23:45:33+00:00",
+ "rotation_slot": 2219775,
  "sources": {
   "LinkedIn": {
-   "found": 6611,
+   "found": 7145,
    "errors": 0
   },
   "eFinancialCareers": {
-   "found": 3581,
+   "found": 3575,
    "errors": 0
   },
   "Indeed": {
-   "found": 293,
+   "found": 48,
    "errors": 0
   },
   "Careers sites": {
-   "found": 6563,
+   "found": 6751,
    "errors": 0
   }
  },
- "raw_results": 17048,
- "after_filters": 902,
- "jobs_in_email": 284,
- "new_jobs": 23,
- "descriptions_read": 267,
- "posted_by_recruiters": 13,
+ "raw_results": 17519,
+ "after_filters": 1010,
+ "jobs_in_email": 319,
+ "new_jobs": 35,
+ "descriptions_read": 301,
+ "posted_by_recruiters": 15,
  "saved_jobs_dropped_by_rule": {
-  "employer not on a sponsor list": 975,
+  "employer not on a sponsor list": 1005,
   "older than the age limit": 308,
-  "asks for a professional qualification": 77,
-  "no sponsorship": 79,
-  "asks for 1+ years": 216,
-  "asks for work experience": 223,
+  "asks for a professional qualification": 88,
+  "no sponsorship": 84,
+  "asks for 1+ years": 232,
+  "asks for work experience": 242,
   "title doesn't match a target role": 101,
-  "asks for 5+ years": 195,
-  "asks for 3+ years": 343,
-  "asks for 2+ years": 347,
-  "asks for 20+ years": 3,
+  "asks for 5+ years": 205,
+  "asks for 3+ years": 372,
+  "asks for 2+ years": 365,
+  "asks for 20+ years": 4,
   "too senior": 16,
-  "asks for 4+ years": 59,
-  "asks for 10+ years": 24,
-  "asks for 7+ years": 26,
+  "asks for 4+ years": 64,
+  "asks for 10+ years": 26,
+  "asks for 7+ years": 29,
   "asks for 6+ years": 24,
   "excluded country": 1,
   "asks for 8+ years": 18,
@@ -53,10 +53,6 @@
   }
  },
  "warnings": [
-  "2026-11-04 16:07:12,998 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-04 16:07:58,935 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-04 16:11:13,007 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-04 16:15:15,022 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-04 16:41:46,820 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/4456546236 -> 404"
+  "2026-11-04 23:45:12,654 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/4456546236 -> 404"
  ]
 }
