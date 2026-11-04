@@ -1,44 +1,44 @@
 {
- "finished_utc": "2026-11-03T23:40:07+00:00",
- "rotation_slot": 3699620,
+ "finished_utc": "2026-11-04T04:38:24+00:00",
+ "rotation_slot": 3699621,
  "sources": {
   "LinkedIn": {
-   "found": 6786,
+   "found": 6281,
    "errors": 0
   },
   "eFinancialCareers": {
-   "found": 3583,
+   "found": 3576,
    "errors": 0
   },
   "Indeed": {
-   "found": 10,
+   "found": 11,
    "errors": 0
   },
   "Careers sites": {
-   "found": 6720,
+   "found": 6711,
    "errors": 0
   }
  },
- "raw_results": 17099,
- "after_filters": 830,
- "jobs_in_email": 326,
- "new_jobs": 11,
- "descriptions_read": 306,
- "posted_by_recruiters": 15,
+ "raw_results": 16579,
+ "after_filters": 707,
+ "jobs_in_email": 241,
+ "new_jobs": 4,
+ "descriptions_read": 225,
+ "posted_by_recruiters": 13,
  "saved_jobs_dropped_by_rule": {
-  "employer not on a sponsor list": 910,
-  "asks for a professional qualification": 66,
+  "employer not on a sponsor list": 918,
+  "older than the age limit": 308,
+  "asks for a professional qualification": 67,
   "no sponsorship": 75,
-  "older than the age limit": 219,
   "asks for 1+ years": 200,
-  "asks for work experience": 182,
+  "asks for work experience": 186,
   "title doesn't match a target role": 101,
   "asks for 5+ years": 172,
-  "asks for 3+ years": 317,
-  "asks for 2+ years": 316,
+  "asks for 3+ years": 318,
+  "asks for 2+ years": 319,
   "asks for 20+ years": 3,
   "too senior": 16,
-  "asks for 4+ years": 53,
+  "asks for 4+ years": 54,
   "asks for 10+ years": 23,
   "asks for 7+ years": 26,
   "asks for 6+ years": 23,
@@ -53,8 +53,12 @@
   }
  },
  "warnings": [
-  "2026-11-03 23:38:25,063 jobscraper.http: GET https://www.efinancialcareers.com/jobs-Luxembourg-Luxembourg-DWS_Risk_Analyst.id24948321 -> 410",
-  "2026-11-03 23:39:46,158 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/4459638212 -> 404",
-  "2026-11-03 23:39:47,443 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/4456546236 -> 404"
+  "2026-11-04 04:07:18,914 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-04 04:15:11,973 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-04 04:16:26,001 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-04 04:27:55,390 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-04 04:37:28,383 jobscraper.http: GET https://www.efinancialcareers.com/jobs-Luxembourg-Luxembourg-DWS_Risk_Analyst.id24948321 -> 410",
+  "2026-11-04 04:38:00,342 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/4459638212 -> 404",
+  "2026-11-04 04:38:02,169 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/4456546236 -> 404"
  ]
 }
