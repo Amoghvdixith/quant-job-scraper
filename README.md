@@ -1,6 +1,6 @@
 # Quant job digest
 
-Five times a day this searches LinkedIn, Indeed, eFinancialCareers and
+Three times a day this searches LinkedIn, Indeed, eFinancialCareers and
 the careers sites of the 500 institutions in `institutions.csv` for the
 entry-level quant / risk / valuation roles in `roles.yaml`, and emails an Excel
 file of matching jobs posted in the last 5 days. There is no website: it runs on
@@ -50,9 +50,11 @@ what was already sent; the workflow commits it back after each run.
    Untick "Send the email" for a dry run; the Excel file is then downloadable from the run page.
 
 After that it runs by itself. The email arrives at the times in `email_times` in
-`config.yaml` (00:00, 05:00, 11:00, 17:00 and 23:00 UK time); each run starts 55 minutes
+`config.yaml` (00:00, 06:00 and 12:00 UK time); each run starts 55 minutes
 earlier. GitHub's own schedule skips many runs, so each run starts the next one itself
-(the `timer` job), and an hourly check catches any slot that was still missed.
+(the `timer` job), and an hourly check catches any slot that was still missed. The
+timer waits at most 5.5 hours (a GitHub job may run for 6), so across the long
+12:00 to 00:00 gap it starts one extra run that finds nothing due and just waits again.
 
 ## Target institutions
 
@@ -64,8 +66,8 @@ earlier. GitHub's own schedule skips many runs, so each run starts the next one 
   those sites directly. If a firm is missing or wrong, add it to
   `careers_sites_manual.yaml`.
 - **LinkedIn by company name** for firms without a readable careers site,
-  50 firms per run in rotation (`linkedin_target_firms_per_run`), so the whole list is covered
-  about every day and a half.
+  50 firms per run in rotation (`linkedin_target_firms_per_run`), so with three runs a day the whole list
+  is covered about every three days.
 - The **"On Your Target List"** column marks any job, from any source, at one of these firms.
 
 LinkedIn also searches four extra countries per run and Indeed five

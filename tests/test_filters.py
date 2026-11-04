@@ -241,16 +241,22 @@ def test_apply_links(tmp_path):
 
 def test_email_schedule():
     from datetime import datetime, timezone
-    from jobscraper.schedule import is_due, latest_start, next_start
+    from jobscraper.schedule import MAX_WAIT_SECONDS, is_due, latest_start, next_start, wait_seconds
     utc = timezone.utc
-    now = datetime(2026, 10, 30, 6, 10, tzinfo=utc)  # UK is on GMT
-    assert latest_start(CFG, now) == datetime(2026, 10, 30, 4, 5, tzinfo=utc)
-    assert next_start(CFG, now) == datetime(2026, 10, 30, 10, 5, tzinfo=utc)
-    assert is_due(CFG, now, datetime(2026, 10, 30, 1, 33, tzinfo=utc))
-    assert not is_due(CFG, now, datetime(2026, 10, 30, 6, 0, tzinfo=utc))
-    assert next_start(CFG, datetime(2026, 10, 30, 22, 30, tzinfo=utc)) == datetime(2026, 10, 30, 23, 5, tzinfo=utc)
-    summer = datetime(2026, 7, 1, 9, 0, tzinfo=utc)  # BST: 11:00 UK = 10:00 UTC
-    assert next_start(CFG, summer) == datetime(2026, 7, 1, 9, 5, tzinfo=utc)
+    now = datetime(2026, 11, 5, 6, 10, tzinfo=utc)  # UK is on GMT
+    assert latest_start(CFG, now) == datetime(2026, 11, 5, 5, 5, tzinfo=utc)
+    assert next_start(CFG, now) == datetime(2026, 11, 5, 11, 5, tzinfo=utc)
+    assert is_due(CFG, now, datetime(2026, 11, 5, 0, 1, tzinfo=utc))
+    assert not is_due(CFG, now, datetime(2026, 11, 5, 5, 50, tzinfo=utc))
+    assert next_start(CFG, datetime(2026, 11, 5, 12, 0, tzinfo=utc)) == datetime(2026, 11, 5, 23, 5, tzinfo=utc)
+    summer = datetime(2026, 7, 1, 9, 0, tzinfo=utc)  # BST: 12:00 UK = 11:00 UTC
+    assert next_start(CFG, summer) == datetime(2026, 7, 1, 10, 5, tzinfo=utc)
+    # 12:00 to 00:00 is 12 hours, longer than a GitHub job may run, so the timer wakes early.
+    assert wait_seconds(CFG, datetime(2026, 11, 5, 11, 55, tzinfo=utc)) == MAX_WAIT_SECONDS
+    assert wait_seconds(CFG, datetime(2026, 11, 5, 22, 0, tzinfo=utc)) == 3905
+    # A run woken early finds no email due, so it only restarts the timer.
+    early = datetime(2026, 11, 5, 17, 25, tzinfo=utc)
+    assert not is_due(CFG, early, datetime(2026, 11, 5, 11, 50, tzinfo=utc))
 
 
 def test_qualifications():

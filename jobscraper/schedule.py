@@ -2,6 +2,7 @@
 
   python -m jobscraper.schedule due    prints "true" if no email has gone out for the latest slot
   python -m jobscraper.schedule wait   prints the seconds until the next run should start
+                                       (at most MAX_WAIT_SECONDS)
 """
 from __future__ import annotations
 
@@ -14,6 +15,10 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 LAST_EMAIL = ROOT / "data" / "last_email_utc"
+# A GitHub job is stopped after 6 hours, and the timer job allows itself 355 minutes. Slots can
+# be up to 12 hours apart, so the timer never waits longer than this: when it wakes early, the
+# run it starts finds no email due, skips the scrape, and its own timer waits the rest.
+MAX_WAIT_SECONDS = 5 * 3600 + 30 * 60
 
 
 def run_starts(cfg: dict, around: datetime) -> list[datetime]:
@@ -48,6 +53,10 @@ def slot_number(cfg: dict, now: datetime) -> int:
     return email.date().toordinal() * len(times) + times.index(email.strftime("%H:%M"))
 
 
+def wait_seconds(cfg: dict, now: datetime) -> int:
+    return min(int((next_start(cfg, now) - now).total_seconds()) + 5, MAX_WAIT_SECONDS)
+
+
 def is_due(cfg: dict, now: datetime, last_email: datetime | None) -> bool:
     return last_email is None or last_email < latest_start(cfg, now)
 
@@ -65,7 +74,7 @@ def main() -> None:
     if sys.argv[1:] == ["due"]:
         print("true" if is_due(cfg, now, _last_email()) else "false")
     elif sys.argv[1:] == ["wait"]:
-        print(int((next_start(cfg, now) - now).total_seconds()) + 5)
+        print(wait_seconds(cfg, now))
     else:
         sys.exit(__doc__)
 
