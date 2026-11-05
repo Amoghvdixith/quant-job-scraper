@@ -200,12 +200,17 @@ def fetch_full_description(job: Job) -> str:
         fetched = efinancialcareers.fetch_description(job)
     elif "myworkdayjobs.com" in job.url:
         fetched = careers.fetch_description(job)
+    if fetched.startswith(linkedin.CLOSED_MARKER) and not text.startswith(linkedin.CLOSED_MARKER):
+        return f"{linkedin.CLOSED_MARKER} {text}".strip()
     return fetched if len(fetched) > len(text) else text
 
 
 def needs_reread(rec: dict) -> bool:
     """Saved jobs whose page has to be read once more: LinkedIn jobs saved before apply links
-    were collected, and jobs saved before the qualification and experience checks."""
+    were collected, and jobs saved before the qualification and experience checks.
+    A closed posting is never read again."""
+    if rec.get("sponsorship_evidence") == "posting closed":
+        return False
     if "linkedin.com" in rec.get("url", "") and not rec.get("apply_url") and rec.get("easy_apply") is None:
         return True
     return (rec.get("qualification") is None or rec.get("experience") is None) and not rec.get("excluded")
@@ -352,7 +357,8 @@ def main() -> None:
         # A saved job re-read only for a newer check, whose page couldn't be read again this
         # time: keep what was learned before rather than losing it.
         prev = store.get(key)
-        if prev and prev.get("description_checked") and not job.description_checked:
+        if prev and prev.get("description_checked") and not job.description_checked \
+                and job.sponsorship_evidence != "posting closed":
             kept = Job.from_dict(prev)
             kept.qualification = prev.get("qualification")  # still unchecked: tried again next run
             kept.experience = prev.get("experience")
