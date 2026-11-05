@@ -55,3 +55,35 @@ def test_fast_sponsor_lookup_gives_the_same_answers():
             assert regs._on(c, key) == _old_on(regs, c, key), (c, key)
     assert regs.status("Goldman Sachs", "London, UK") == "Yes (UK register)"
     assert regs.status("Goldman Sachs", "Singapore") == "Sponsors in UK/US"
+
+
+def test_deleted_linkedin_posting_is_marked_closed(monkeypatch):
+    from jobscraper import main
+    from jobscraper.sources import linkedin
+
+    def gone(s, url, **kwargs):
+        s.last_status = 404
+        return None
+
+    monkeypatch.setattr(linkedin, "polite_get", gone)
+    job = Job("LinkedIn", "Credit Analyst", "Michael Page", "Tokyo, Japan",
+              "https://www.linkedin.com/jobs/view/4456546236")
+    job.description = "Short search summary"
+    text = main.fetch_full_description(job)
+    assert text.startswith(linkedin.CLOSED_MARKER)
+    main.enrich(job, text)
+    assert job.sponsorship_evidence == "posting closed"
+    # Not queued for another read on later runs.
+    assert not main.needs_reread(job.to_dict())
+
+
+def test_other_linkedin_failures_are_not_closed(monkeypatch):
+    from jobscraper.sources import linkedin
+
+    def limited(s, url, **kwargs):
+        s.last_status = 429
+        return None
+
+    monkeypatch.setattr(linkedin, "polite_get", limited)
+    job = Job("LinkedIn", "Credit Analyst", "Barclays", "London", "https://www.linkedin.com/jobs/view/1")
+    assert linkedin.fetch_description(job) == ""

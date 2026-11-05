@@ -111,9 +111,11 @@ def fetch_description(job: Job) -> str:
     job_id = job.url.rstrip("/").rsplit("/", 1)[-1]
     if not job_id.isdigit():
         return ""
-    r = polite_get(session(), POSTING.format(id=job_id), delay=(1.0, 2.5))
+    s = session()
+    r = polite_get(s, POSTING.format(id=job_id), delay=(1.0, 2.5))
     if r is None:
-        return ""
+        # 404/410: LinkedIn has taken the posting down, so treat it as closed.
+        return CLOSED_MARKER if getattr(s, "last_status", None) in (404, 410) else ""
     if not job.apply_url:
         find_apply_url(job, r.text)
     soup = BeautifulSoup(r.text, "html.parser")

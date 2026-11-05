@@ -33,6 +33,7 @@ def polite_get(s: requests.Session, url: str, *, delay=(1.5, 3.5), retries=3, **
         except requests.RequestException as e:
             log.warning("GET %s failed: %s", url, e)
             continue
+        s.last_status = r.status_code
         if r.status_code == 200:
             return r
         if r.status_code in (429, 500, 502, 503, 999):
