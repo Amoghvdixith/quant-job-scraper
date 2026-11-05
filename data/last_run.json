@@ -1,47 +1,47 @@
 {
- "finished_utc": "2026-11-04T23:45:33+00:00",
- "rotation_slot": 2219775,
+ "finished_utc": "2026-11-05T05:43:04+00:00",
+ "rotation_slot": 2219776,
  "sources": {
   "LinkedIn": {
-   "found": 7145,
+   "found": 7186,
    "errors": 0
   },
   "eFinancialCareers": {
-   "found": 3575,
+   "found": 3519,
    "errors": 0
   },
   "Indeed": {
-   "found": 48,
+   "found": 381,
    "errors": 0
   },
   "Careers sites": {
-   "found": 6751,
+   "found": 6788,
    "errors": 0
   }
  },
- "raw_results": 17519,
- "after_filters": 1010,
- "jobs_in_email": 319,
- "new_jobs": 35,
- "descriptions_read": 301,
- "posted_by_recruiters": 15,
+ "raw_results": 17874,
+ "after_filters": 968,
+ "jobs_in_email": 269,
+ "new_jobs": 18,
+ "descriptions_read": 253,
+ "posted_by_recruiters": 11,
  "saved_jobs_dropped_by_rule": {
-  "employer not on a sponsor list": 1005,
-  "older than the age limit": 308,
-  "asks for a professional qualification": 88,
-  "no sponsorship": 84,
-  "asks for 1+ years": 232,
-  "asks for work experience": 242,
+  "employer not on a sponsor list": 1042,
+  "older than the age limit": 376,
+  "asks for a professional qualification": 93,
+  "no sponsorship": 85,
+  "asks for 1+ years": 241,
+  "asks for work experience": 253,
   "title doesn't match a target role": 101,
-  "asks for 5+ years": 205,
-  "asks for 3+ years": 372,
-  "asks for 2+ years": 365,
+  "asks for 5+ years": 208,
+  "asks for 3+ years": 379,
+  "asks for 2+ years": 375,
   "asks for 20+ years": 4,
   "too senior": 16,
-  "asks for 4+ years": 64,
-  "asks for 10+ years": 26,
-  "asks for 7+ years": 29,
-  "asks for 6+ years": 24,
+  "asks for 7+ years": 30,
+  "asks for 4+ years": 66,
+  "asks for 10+ years": 27,
+  "asks for 6+ years": 25,
   "excluded country": 1,
   "asks for 8+ years": 18,
   "posting closed": 5,
@@ -53,6 +53,6 @@
   }
  },
  "warnings": [
-  "2026-11-04 23:45:12,654 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/4456546236 -> 404"
+  "2026-11-05 05:42:26,906 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/4456546236 -> 404"
  ]
 }
