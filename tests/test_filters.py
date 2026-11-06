@@ -248,15 +248,16 @@ def test_email_schedule():
     assert next_start(CFG, now) == datetime(2026, 11, 5, 11, 5, tzinfo=utc)
     assert is_due(CFG, now, datetime(2026, 11, 5, 0, 1, tzinfo=utc))
     assert not is_due(CFG, now, datetime(2026, 11, 5, 5, 50, tzinfo=utc))
-    assert next_start(CFG, datetime(2026, 11, 5, 12, 0, tzinfo=utc)) == datetime(2026, 11, 5, 23, 5, tzinfo=utc)
+    assert next_start(CFG, datetime(2026, 11, 5, 12, 0, tzinfo=utc)) == datetime(2026, 11, 5, 17, 5, tzinfo=utc)
+    assert next_start(CFG, datetime(2026, 11, 5, 18, 0, tzinfo=utc)) == datetime(2026, 11, 5, 23, 5, tzinfo=utc)
     summer = datetime(2026, 7, 1, 9, 0, tzinfo=utc)  # BST: 12:00 UK = 11:00 UTC
     assert next_start(CFG, summer) == datetime(2026, 7, 1, 10, 5, tzinfo=utc)
-    # 12:00 to 00:00 is 12 hours, longer than a GitHub job may run, so the timer wakes early.
-    assert wait_seconds(CFG, datetime(2026, 11, 5, 11, 55, tzinfo=utc)) == MAX_WAIT_SECONDS
     assert wait_seconds(CFG, datetime(2026, 11, 5, 22, 0, tzinfo=utc)) == 3905
+    # A gap longer than a GitHub job may run makes the timer wake early.
+    long_gap = {**CFG, "email_times": ["00:00", "12:00"]}
+    assert wait_seconds(long_gap, datetime(2026, 11, 5, 11, 55, tzinfo=utc)) == MAX_WAIT_SECONDS
     # A run woken early finds no email due, so it only restarts the timer.
-    early = datetime(2026, 11, 5, 17, 25, tzinfo=utc)
-    assert not is_due(CFG, early, datetime(2026, 11, 5, 11, 50, tzinfo=utc))
+    assert not is_due(long_gap, datetime(2026, 11, 5, 17, 25, tzinfo=utc), datetime(2026, 11, 5, 11, 50, tzinfo=utc))
 
 
 def test_qualifications():

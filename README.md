@@ -1,6 +1,6 @@
 # Quant job digest
 
-Three times a day this searches LinkedIn, Indeed, eFinancialCareers and
+Four times a day this searches LinkedIn, Indeed, eFinancialCareers and
 the careers sites of the 500 institutions in `institutions.csv` for the
 entry-level quant / risk / valuation roles in `roles.yaml`, and emails an Excel
 file of matching jobs posted in the last 5 days. There is no website: it runs on
@@ -50,7 +50,7 @@ what was already sent; the workflow commits it back after each run.
    Untick "Send the email" for a dry run; the Excel file is then downloadable from the run page.
 
 After that it runs by itself. The email arrives at the times in `email_times` in
-`config.yaml` (00:00, 06:00 and 12:00 UK time); each run starts 55 minutes
+`config.yaml` (00:00, 06:00, 12:00 and 18:00 UK time); each run starts 55 minutes
 earlier. GitHub's own schedule skips many runs, so each run starts the next one itself
 (the `timer` job), and an hourly check catches any slot that was still missed. The
 timer waits at most 5.5 hours (a GitHub job may run for 6), so across the long
