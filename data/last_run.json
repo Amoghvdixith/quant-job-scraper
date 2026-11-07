@@ -1,49 +1,49 @@
 {
- "finished_utc": "2026-11-07T05:43:31+00:00",
- "rotation_slot": 2959709,
+ "finished_utc": "2026-11-07T11:41:28+00:00",
+ "rotation_slot": 2959710,
  "sources": {
   "LinkedIn": {
-   "found": 7124,
+   "found": 6927,
    "errors": 0
   },
   "eFinancialCareers": {
-   "found": 3513,
+   "found": 3503,
    "errors": 0
   },
   "Indeed": {
-   "found": 14,
+   "found": 73,
    "errors": 0
   },
   "Careers sites": {
-   "found": 7123,
+   "found": 7128,
    "errors": 0
   }
  },
- "raw_results": 17774,
- "after_filters": 933,
- "jobs_in_email": 348,
- "new_jobs": 17,
- "descriptions_read": 324,
+ "raw_results": 17631,
+ "after_filters": 927,
+ "jobs_in_email": 369,
+ "new_jobs": 22,
+ "descriptions_read": 348,
  "posted_by_recruiters": 16,
  "saved_jobs_dropped_by_rule": {
-  "employer not on a sponsor list": 1206,
+  "employer not on a sponsor list": 1233,
   "older than the age limit": 428,
-  "no sponsorship": 97,
-  "asks for a professional qualification": 117,
-  "asks for 1+ years": 280,
-  "asks for 5+ years": 248,
-  "asks for work experience": 333,
+  "no sponsorship": 100,
+  "asks for a professional qualification": 121,
+  "asks for 1+ years": 283,
+  "asks for 5+ years": 252,
+  "asks for work experience": 342,
   "title doesn't match a target role": 101,
-  "asks for 3+ years": 444,
-  "asks for 2+ years": 428,
+  "asks for 3+ years": 452,
+  "asks for 2+ years": 432,
   "asks for 20+ years": 4,
   "too senior": 16,
   "asks for 7+ years": 36,
   "asks for 10+ years": 33,
-  "asks for 4+ years": 79,
+  "asks for 4+ years": 81,
   "asks for 6+ years": 27,
   "excluded country": 1,
-  "asks for 8+ years": 21,
+  "asks for 8+ years": 22,
   "posting closed": 6,
   "asks for 12+ years": 1,
   "sponsor lists loaded": {
@@ -52,8 +52,5 @@
    "NL": 13017
   }
  },
- "warnings": [
-  "2026-11-07 05:16:19,012 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-07 05:18:25,178 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s"
- ]
+ "warnings": []
 }
