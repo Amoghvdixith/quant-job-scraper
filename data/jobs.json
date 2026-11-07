@@ -27736,7 +27736,8 @@
   "search_term": "Fixed Income Analyst",
   "source": "Indeed",
   "sources": [
-   "Indeed"
+   "Indeed",
+   "LinkedIn"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -30955,6 +30956,38 @@
   "url": "https://www.linkedin.com/jobs/view/4480997168",
   "years_required": null
  },
+ "credit research analyst|charlesschwab|US": {
+  "apply_url": "",
+  "category": "Derivatives & Fixed Income",
+  "company": "Charles Schwab",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 3+ years",
+  "experience": "",
+  "first_seen": "2026-11-07T23:45:49",
+  "location": "San Francisco, CA",
+  "posted": "2026-11-07",
+  "qualification": "",
+  "recruiter": false,
+  "remote": true,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Fixed Income Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Credit Research Analyst",
+  "url": "https://www.linkedin.com/jobs/view/4486661565",
+  "years_required": 3
+ },
  "credit research analyst|masonblake|UK": {
   "apply_url": "",
   "category": "Derivatives & Fixed Income",
@@ -33251,6 +33284,38 @@
   "url": "https://usbank.wd1.myworkdayjobs.com/US_Bank_Careers/job/Charlotte-NC/Credit-Risk-Review-Officer_2026-0033170-1",
   "years_required": null
  },
+ "credit risk risk assessment analyst|buywaypersonalfinance|": {
+  "apply_url": "",
+  "category": "Derivatives & Fixed Income",
+  "company": "Buy Way Personal Finance",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "experience": "",
+  "first_seen": "2026-11-07T23:45:49",
+  "location": "Brussels Region, Belgium",
+  "posted": "2026-11-07",
+  "qualification": "",
+  "recruiter": false,
+  "remote": false,
+  "role_id": "T1-15",
+  "role_title": "Fixed Income Analyst",
+  "search_term": "Market Risk Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 1,
+  "title": "Credit Risk / Risk Assessment Analyst",
+  "url": "https://www.linkedin.com/jobs/view/4441098642",
+  "years_required": null
+ },
  "credit risk specialist perioada determinata 6 luni|undelucram|": {
   "apply_url": "",
   "category": "Derivatives & Fixed Income",
@@ -34564,6 +34629,38 @@
   "title": "Cyber Risk Analyst",
   "url": "https://www.linkedin.com/jobs/view/4486844799",
   "years_required": 3
+ },
+ "cyber risk assessment specialist cloud and ai|spektrum|": {
+  "apply_url": "",
+  "category": "Consulting & Vendors",
+  "company": "Spektrum",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "experience": "",
+  "first_seen": "2026-11-07T23:45:49",
+  "location": "Brussels Metropolitan Area",
+  "posted": "2026-11-06",
+  "qualification": "",
+  "recruiter": false,
+  "remote": false,
+  "role_id": "T2-13",
+  "role_title": "Risk Analytics Analyst",
+  "search_term": "Risk Analytics Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Cyber Risk Assessment Specialist (Cloud and AI)",
+  "url": "https://www.linkedin.com/jobs/view/4488444506",
+  "years_required": null
  },
  "cyber risk assurance consultant|ensigninfosecurity|": {
   "apply_url": "",
@@ -38924,7 +39021,7 @@
   "years_required": null
  },
  "early careers internship program investments data engineer or quant developer 80 100|vontobel|": {
-  "apply_url": "",
+  "apply_url": "https://www.vontobel.com/en-us/about-vontobel/careers/open-positions/9579-early-careers-internship-program-investments-data-engineer-or-quant-developer-80-100/",
   "category": "Quant",
   "company": "Vontobel Holding AG",
   "description": "",
@@ -38945,6 +39042,7 @@
   "search_term": "Quant Graduate Programme",
   "source": "eFinancialCareers",
   "sources": [
+   "Indeed",
    "eFinancialCareers"
   ],
   "sponsorship": "Not stated",
@@ -51590,6 +51688,7 @@
   "source": "Careers site (Workday)",
   "sources": [
    "Careers site (Workday)",
+   "Indeed",
    "LinkedIn",
    "eFinancialCareers"
   ],
@@ -53036,7 +53135,7 @@
   "posted": "2026-11-05",
   "qualification": "",
   "recruiter": false,
-  "remote": false,
+  "remote": true,
   "role_id": "T2-5",
   "role_title": "Junior Quant Developer",
   "search_term": "Quant Graduate Programme",
@@ -67782,8 +67881,8 @@
   "search_term": "Collateral & Margin Analyst",
   "source": "Indeed",
   "sources": [
-   "Indeed",
-   "Careers site (Oracle)"
+   "Careers site (Oracle)",
+   "Indeed"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -76836,8 +76935,8 @@
   "search_term": "Product Control Analyst",
   "source": "Indeed",
   "sources": [
-   "Indeed",
-   "Careers site (Oracle)"
+   "Careers site (Oracle)",
+   "Indeed"
   ],
   "sponsorship": "Not stated",
   "sponsorship_evidence": "",
@@ -86805,6 +86904,38 @@
   "url": "https://www.efinancialcareers.com/jobs-Germany-Munich-Quant_Developer_-_Wealth_Management_mfx.id24978689",
   "years_required": null
  },
+ "quant developer wealth management m f x|scalable|": {
+  "apply_url": "https://jobs.smartrecruiters.com/ScalableGmbH/744000159875327-quant-developer-wealth-management-m-f-x-",
+  "category": "Quant",
+  "company": "Scalable",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "experience": "",
+  "first_seen": "2026-11-07T23:45:49",
+  "location": "M\u00fcnchen, BY, Germany",
+  "posted": "2026-11-05",
+  "qualification": "",
+  "recruiter": false,
+  "remote": false,
+  "role_id": "T2-5",
+  "role_title": "Junior Quant Developer",
+  "search_term": "Junior Quant Developer",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Quant Developer - Wealth Management (m/f/x)",
+  "url": "https://de.indeed.com/viewjob?jk=d8d6914f460d95c6",
+  "years_required": null
+ },
  "quant developer|carecone|UK": {
   "apply_url": "",
   "category": "Quant",
@@ -89706,6 +89837,38 @@
   "tier": 2,
   "title": "Quantitative Analyste- Mod\u00e8les \u00e0 corr\u00e9lation locale - Risques - La Defense, Ile de France, France",
   "url": "https://www.efinancialcareers.com/jobs-France-Paris-Quantitative_Analyste-_Mod%C3%A8les_%C3%A0_corr%C3%A9lation_locale_-_Risques_-_La_Defense_Ile_de_France_France.id24972690",
+  "years_required": null
+ },
+ "quantitative analyste mod les corr lation locale risques la defense ile de france france|socirale|": {
+  "apply_url": "https://www.efinancialcareers.fr/jobs-France-Paris-Quantitative_Analyste-_Mod%C3%A8les_%C3%A0_corr%C3%A9lation_locale_-_Risques_-_La_Defense_Ile_de_France_France.id24972690",
+  "category": "Quant",
+  "company": "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": null,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "employer not on a sponsor list",
+  "experience": "",
+  "first_seen": "2026-11-07T23:45:49",
+  "location": "Paris, A8, France",
+  "posted": "2026-11-05",
+  "qualification": "",
+  "recruiter": false,
+  "remote": false,
+  "role_id": "T2-1",
+  "role_title": "Quantitative Analyst",
+  "search_term": "Quantitative Analyst",
+  "source": "Indeed",
+  "sources": [
+   "Indeed"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "",
+  "tier": 2,
+  "title": "Quantitative Analyste- Mod\u00e8les \u00e0 corr\u00e9lation locale - Risques - La Defense, Ile de France, France",
+  "url": "https://fr.indeed.com/viewjob?jk=81186bb78b7dbf11",
   "years_required": null
  },
  "quantitative analyste mod les corr lation locale|societegenerale|": {
@@ -93644,6 +93807,38 @@
   "title": "Quantitative Equity Product Analyst",
   "url": "https://www.linkedin.com/jobs/view/4424785043",
   "years_required": 2
+ },
+ "quantitative equity researcher f m|candriam|": {
+  "apply_url": "",
+  "category": "Quant",
+  "company": "Candriam",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 6+ years",
+  "experience": "professional experience",
+  "first_seen": "2026-11-07T23:45:49",
+  "location": "Brussels, Brussels Region, Belgium",
+  "posted": "2026-11-07",
+  "qualification": "",
+  "recruiter": false,
+  "remote": false,
+  "role_id": "T2-1",
+  "role_title": "Quantitative Analyst",
+  "search_term": "Market Risk Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "Candriam",
+  "tier": 2,
+  "title": "Quantitative Equity Researcher F/M",
+  "url": "https://www.linkedin.com/jobs/view/4462861526",
+  "years_required": 6
  },
  "quantitative equity researcher|sei|UK": {
   "apply_url": "",
@@ -103927,7 +104122,7 @@
   "years_required": null
  },
  "risk analyst factoring m w d|ditagricole|": {
-  "apply_url": "",
+  "apply_url": "https://www.ca-leasingfactoring.de/karriere/stellenangebote/details/risk-analyst-factoring-m-w-d.html",
   "category": "Consulting & Vendors",
   "company": "Cr\u00e9dit Agricole S.A.",
   "description": "",
@@ -103948,6 +104143,7 @@
   "search_term": "Risk Analytics Analyst",
   "source": "eFinancialCareers",
   "sources": [
+   "Indeed",
    "eFinancialCareers"
   ],
   "sponsorship": "Not stated",
@@ -108642,6 +108838,38 @@
   "tier": 1,
   "title": "Risk Developer (C#) \u2013 Tier 1 Systematic Hedge Fund \u2013 Excellent Compensation + Benefits",
   "url": "https://www.linkedin.com/jobs/view/4461172159",
+  "years_required": null
+ },
+ "risk engineer consultant liability construction|zurichinsurance|": {
+  "apply_url": "",
+  "category": "Consulting & Vendors",
+  "company": "Zurich Insurance",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": true,
+  "employer_sponsor": "",
+  "excluded": null,
+  "experience": "",
+  "first_seen": "2026-11-07T23:45:49",
+  "location": "Zaventem, Flemish Region, Belgium",
+  "posted": "2026-11-06",
+  "qualification": "",
+  "recruiter": false,
+  "remote": false,
+  "role_id": "T2-12",
+  "role_title": "Financial Risk Management Consultant",
+  "search_term": "Stress Testing Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "Zurich Insurance",
+  "tier": 2,
+  "title": "Risk Engineer/Consultant - Liability & Construction",
+  "url": "https://www.linkedin.com/jobs/view/4460295686",
   "years_required": null
  },
  "risk engineer consultant liability construction|zurichinsurance|NL": {
@@ -132121,6 +132349,38 @@
   "url": "https://bmo.wd3.myworkdayjobs.com/External/job/Sacramento-CA-USA/Treasury-Consultant---Treasury---Payment-Solutions-Specialty-Groups---Institutional-Markets_R260028722",
   "years_required": 8
  },
+ "treasury consultant specialised in cash and liquidity|pwcbelgium|": {
+  "apply_url": "",
+  "category": "Treasury & ALM",
+  "company": "PwC Belgium",
+  "description": "",
+  "description_checked": true,
+  "easy_apply": false,
+  "emailed": false,
+  "employer_sponsor": "",
+  "excluded": "asks for 3+ years",
+  "experience": "solid experience",
+  "first_seen": "2026-11-07T23:45:49",
+  "location": "Brussels, Brussels Region, Belgium",
+  "posted": "2026-11-07",
+  "qualification": "",
+  "recruiter": false,
+  "remote": false,
+  "role_id": "T2-9",
+  "role_title": "Treasury / ALM Analyst",
+  "search_term": "Market Risk Analyst",
+  "source": "LinkedIn",
+  "sources": [
+   "LinkedIn"
+  ],
+  "sponsorship": "Not stated",
+  "sponsorship_evidence": "",
+  "target_firm": "PwC",
+  "tier": 2,
+  "title": "Treasury Consultant specialised in Cash and Liquidity",
+  "url": "https://www.linkedin.com/jobs/view/4442782152",
+  "years_required": 3
+ },
  "treasury consultant treasury payment solutions specialty groups institutional markets|bmo|": {
   "apply_url": "https://bmo.wd3.myworkdayjobs.com/External/job/Sacramento-CA-USA/Treasury-Consultant---Treasury---Payment-Solutions-Specialty-Groups---Institutional-Markets_R260028722",
   "category": "Treasury & ALM",
@@ -137329,7 +137589,7 @@
   "years_required": null
  },
  "wholesale credit analyst coordinator w m d|hondagmbh|": {
-  "apply_url": "",
+  "apply_url": "https://join.com/companies/hondabank/16788877-wholesale-credit-analyst-coordinator-w-m-d?pid=a13795120131dbe48464",
   "category": "Derivatives & Fixed Income",
   "company": "Honda Bank GmbH",
   "description": "",
@@ -137350,6 +137610,7 @@
   "search_term": "Counterparty Credit Risk Analyst",
   "source": "LinkedIn",
   "sources": [
+   "Indeed",
    "LinkedIn"
   ],
   "sponsorship": "Not stated",
