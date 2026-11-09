@@ -49,6 +49,11 @@ class Job:
         return self.role_id == "GS" or is_graduate_scheme(self.title)
 
     @property
+    def internship(self) -> bool:
+        from .filters import is_internship
+        return self.role_id == "INT" or is_internship(self.title)
+
+    @property
     def apply_link(self) -> str:
         """Where to apply: the employer's own page when we found one, otherwise the listing."""
         return self.apply_url or self.url

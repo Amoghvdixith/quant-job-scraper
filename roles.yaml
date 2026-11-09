@@ -84,3 +84,15 @@ roles:
   - {id: GS, tier: 1, category: Graduate Scheme, title: Graduate Scheme, graduate_scheme: true, max_pages: 8,
      keywords: [Graduate Programme, Graduate Program, Graduate Scheme, Graduate Analyst, Graduate Trainee,
                 Analyst Programme, Analyst Program, Graduate Rotational Programme, Graduate Development Programme]}
+
+  # Internships anywhere in the world, remote or on-site, in risk areas across lending, payments,
+  # wealth-tech, insurtech, market infrastructure, crypto and climate/energy. An internship is kept
+  # when its title names one of those areas or it is at a firm in institutions.csv.
+  # The usual rules still apply. LinkedIn is searched at its "Internship" level only (f_E=1).
+  - {id: INT, tier: 1, category: Internship, title: Internship, internship: true, max_pages: 8, linkedin_levels: "1",
+     keywords: [Risk Intern, Risk Internship, Credit Risk Intern, Market Risk Intern, Quant Intern,
+                Quantitative Internship, Fraud Intern, Financial Crime Intern, AML Intern, Operational Risk Intern,
+                Portfolio Risk Intern, Actuarial Intern, Pricing Intern, Catastrophe Modelling Intern,
+                Underwriting Intern, Clearing Risk Intern, Counterparty Risk Intern, Crypto Risk Intern,
+                Commodities Intern, Energy Analytics Intern, Climate Risk Intern, Finance Intern, Summer Analyst,
+                Off-Cycle Internship, Industrial Placement Risk, Investment Intern, Trading Intern]}

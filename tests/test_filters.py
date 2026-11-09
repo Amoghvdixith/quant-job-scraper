@@ -328,3 +328,20 @@ def test_government_jobs():
     job = government._nhs_job(v, "finance")
     assert job.government == "NHS" and job.location.endswith("United Kingdom")
     assert job.url == "https://www.jobs.nhs.uk/candidate/jobadvert/C1-26-1" == job.apply_link
+
+
+def test_internships():
+    import yaml
+    from jobscraper.models import Job
+    roles = yaml.safe_load(open("roles.yaml"))
+    roles = roles["roles"] if isinstance(roles, dict) else roles
+    m = filters.RoleMatcher(roles)
+    assert m.match("Fraud Analytics Intern")[0]["id"] == "INT"
+    assert m.match("Summer Internship 2027 - Payments Risk")
+    assert m.match("Catastrophe Modelling Placement")
+    assert m.match("Marketing Intern") is None
+    assert m.match("Early Stage Investor Relations") is None or not filters.is_internship("Early Stage Investor Relations")
+    assert m.match("Market Risk Intern")  # also matches the Market Risk role
+    j = Job(source="x", title="Market Risk Intern", company="c", location="London", url="u")
+    assert j.internship
+    assert not Job(source="x", title="Market Risk Analyst", company="c", location="London", url="u").internship

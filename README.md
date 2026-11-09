@@ -113,3 +113,11 @@ NHS Bands 7 and above and Civil Service Grade 6/7, SEO and SCS roles count as to
   Find a Job (DWP) blocks GitHub's servers, so civil service roles come from the departments'
   own LinkedIn postings (list in `config.yaml` under `government`).
 - Civil Service Careers and the Government Recruitment Service are guidance sites with no job listings.
+
+## Internships
+
+An "Internships" sheet and email section list internships, placements, summer and off-cycle
+programmes worldwide (remote and on-site) in risk work across lending and consumer credit,
+payments, wealth-tech, insurtech, market infrastructure, crypto and climate/energy, plus the
+usual finance areas. LinkedIn is searched at its "Internship" level for these. The usual rules
+(last 5 days, no experience or qualification asked, sponsorship, excluded countries) still apply.

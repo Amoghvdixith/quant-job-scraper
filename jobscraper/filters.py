@@ -47,6 +47,30 @@ _GRAD_FINANCE = re.compile(
 )
 
 
+_INTERNSHIP = re.compile(
+    r"\bintern(?:ship)?s?\b|\bplacements?\b|\bsummer\s+(?:analysts?|associates?|programmes?|programs?)\b"
+    r"|\boff[-\s]cycle\b|\bwork\s+experience\b|\binsight\s+(?:programmes?|programs?|weeks?)\b|\bspring\s+week\b"
+    r"|\bstagiaire\b|\bstage\s+(?:en|de|d)\b|\bpraktik\w*|\bwerkstudent\w*",
+    re.I,
+)
+# Risk areas and sectors for internships: lending, payments, wealth-tech, insurtech,
+# market infrastructure, crypto, climate/energy, plus the usual finance areas.
+_INTERN_FIELD = re.compile(
+    r"\b(?:risk|credit|default|scorecards?|portfolio|fraud|transactions?|operational|aml|anti[-\s]money|"
+    r"financial\s+crime|kyc|compliance|suitability|concentration|markets?|pricing|claims|catastrophe|cat\s+model\w*|"
+    r"underwriting|actuar\w*|clearing|counterparty|margin\w*|collateral|exchanges?|crypto\w*|digital\s+assets?|"
+    r"blockchain|liquidity|stress|climate|energy|commodit\w*|scenario|esg|sustainab\w*|quant\w*|"
+    r"modell?\w*|statistic\w*|data\s+scien\w*|analytics|financ\w*|investment\w*|trading|treasury|"
+    r"valuation|derivatives|fixed\s+income|equit(?:y|ies)|asset|wealth|banking|economics?|lending|payments?|"
+    r"insurance|fintech|insurtech|capital)\b",
+    re.I,
+)
+
+
+def is_internship(title: str) -> bool:
+    return bool(_INTERNSHIP.search(title or ""))
+
+
 def is_graduate_scheme(title: str) -> bool:
     return bool(_GRAD_SCHEME.search(title or ""))
 
@@ -58,8 +82,9 @@ class RoleMatcher:
     def __post_init__(self) -> None:
         self._rules: list[tuple[frozenset[str], dict, str]] = []
         self._grad_role = next((r for r in self.roles if r.get("graduate_scheme")), None)
+        self._intern_role = next((r for r in self.roles if r.get("internship")), None)
         for role in self.roles:
-            if role.get("graduate_scheme"):
+            if role.get("graduate_scheme") or role.get("internship"):
                 continue
             for kw in role["keywords"]:
                 core = frozenset(t for t in tokens(kw) if t not in GENERIC)
@@ -78,6 +103,9 @@ class RoleMatcher:
         # Graduate schemes: in a finance area, or at one of the target institutions.
         if self._grad_role and is_graduate_scheme(title) and (target_firm or _GRAD_FINANCE.search(title)):
             return self._grad_role, "graduate scheme"
+        # Internships: in one of the risk areas or sectors, or at one of the target institutions.
+        if self._intern_role and is_internship(title) and (target_firm or _INTERN_FIELD.search(title)):
+            return self._intern_role, "internship"
         return None
 
     def _match_role(self, title: str) -> tuple[dict, str] | None:

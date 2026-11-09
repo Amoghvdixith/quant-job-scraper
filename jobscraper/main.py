@@ -54,13 +54,13 @@ def plan(cfg: dict, roles: list[dict], slot: int) -> dict[str, list]:
                 (f"{role['title']} @ remote", lambda st, role=role: linkedin.search_remote(role, cfg, st))
                 for role in roles
             ]
-        tasks["LinkedIn"] += by_location(rotate(
-            cfg.get("linkedin_rotating_locations", []), cfg.get("linkedin_locations_per_run", 2), slot))
         if "government" in sources:
             tasks["LinkedIn"] += [
                 (f"civil service {d}", lambda st, d=d: government.civil_service_search(d, cfg, st))
                 for d in cfg.get("government", {}).get("civil_service_departments", [])
             ]
+        tasks["LinkedIn"] += by_location(rotate(
+            cfg.get("linkedin_rotating_locations", []), cfg.get("linkedin_locations_per_run", 2), slot))
         if "careers" in sources or cfg.get("linkedin_target_firms_per_run"):
             have_site = {institutions.norm(x["institution"]) for x in careers.load_sites()}
             firms = [i for i in institutions.load() if i["key"] not in have_site]
