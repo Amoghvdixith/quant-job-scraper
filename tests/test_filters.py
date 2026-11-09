@@ -307,3 +307,24 @@ def test_graduate_schemes(tmp_path):
     path = write_workbook([job], {job.key}, {}, tmp_path / "g.xlsx")
     assert load_workbook(path)["Graduate Schemes"].max_row == 2
     assert "1 graduate schemes" in build_email([job], {job.key}, {}, path, "a@x", "b@x").get_body(("plain",)).get_content()
+
+
+def test_government_jobs():
+    import xml.etree.ElementTree as ET
+    from jobscraper.sources import government
+    matcher = filters.RoleMatcher([])
+    assert matcher.match("Finance Officer", government="NHS")[0]["id"] == "GOV"
+    assert matcher.match("Assistant Economist", government="Civil Service")
+    assert matcher.match("Staff Nurse", government="NHS") is None
+    assert matcher.match("Finance Officer") is None  # only for government jobs
+    assert filters.is_senior_government("Information Analyst (Band 7)")
+    assert filters.is_senior_government("Policy Advisor - Grade 7")
+    assert not filters.is_senior_government("Finance Assistant Band 4")
+    assert filters.sponsorship("Applications from job seekers who require current Skilled worker "
+                               "sponsorship to work in the UK are welcome and will be considered")[0] == "Yes"
+    v = ET.fromstring("<vacancyDetails><reference>C1-26-1</reference><title>Finance Officer</title>"
+                      "<employer>Oxford Health NHS Trust</employer><postDate>2026-11-04T10:08:37</postDate>"
+                      "<locations><location>Oxford, OX4 4XN</location></locations></vacancyDetails>")
+    job = government._nhs_job(v, "finance")
+    assert job.government == "NHS" and job.location.endswith("United Kingdom")
+    assert job.url == "https://www.jobs.nhs.uk/candidate/jobadvert/C1-26-1" == job.apply_link

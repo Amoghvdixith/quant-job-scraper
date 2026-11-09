@@ -18,7 +18,7 @@ from .excel import write_workbook
 from .mailer import build_email, send
 from .models import Job
 from .schedule import slot_number
-from .sources import careers, efinancialcareers, google, indeed, linkedin
+from .sources import careers, efinancialcareers, google, government, indeed, linkedin
 from .sponsor_registers import SponsorRegisters, country_of
 from . import sponsor_registers
 
@@ -56,6 +56,11 @@ def plan(cfg: dict, roles: list[dict], slot: int) -> dict[str, list]:
             ]
         tasks["LinkedIn"] += by_location(rotate(
             cfg.get("linkedin_rotating_locations", []), cfg.get("linkedin_locations_per_run", 2), slot))
+        if "government" in sources:
+            tasks["LinkedIn"] += [
+                (f"civil service {d}", lambda st, d=d: government.civil_service_search(d, cfg, st))
+                for d in cfg.get("government", {}).get("civil_service_departments", [])
+            ]
         if "careers" in sources or cfg.get("linkedin_target_firms_per_run"):
             have_site = {institutions.norm(x["institution"]) for x in careers.load_sites()}
             firms = [i for i in institutions.load() if i["key"] not in have_site]
@@ -73,6 +78,11 @@ def plan(cfg: dict, roles: list[dict], slot: int) -> dict[str, list]:
         tasks["Indeed"] = [
             (f"{role['title']} @ {c}", lambda st, role=role, c=c: indeed.search(role, cfg, st, c))
             for c in countries for role in roles
+        ]
+    if "government" in sources:
+        tasks["NHS Jobs"] = [
+            (f"NHS {kw}", lambda st, kw=kw: government.nhs_search(kw, cfg, st))
+            for kw in cfg.get("government", {}).get("nhs_keywords", [])
         ]
     if "careers" in sources:
         tasks["Careers sites"] = [
@@ -139,10 +149,12 @@ def apply_filters(jobs: list[Job], cfg: dict, matcher: filters.RoleMatcher) -> d
             continue
         if job.posted and job.posted < cutoff:
             continue
-        match = matcher.match(job.title, institutions.match(job.company))
+        match = matcher.match(job.title, institutions.match(job.company), job.government)
         if not match:
             continue
         if filters.is_senior(job.title, cfg["senior_title_words"]):
+            continue
+        if job.government and filters.is_senior_government(job.title):
             continue
         if filters.is_excluded_location(job.location, cfg["excluded_locations"]):
             continue
@@ -155,6 +167,7 @@ def apply_filters(jobs: list[Job], cfg: dict, matcher: filters.RoleMatcher) -> d
             if job.source not in existing.sources:
                 existing.sources.append(job.source)
             existing.remote = existing.remote or job.remote
+            existing.government = existing.government or job.government
             if not existing.apply_url:
                 existing.apply_url = job.apply_url
             if not existing.description and job.description:
@@ -198,6 +211,8 @@ def fetch_full_description(job: Job) -> str:
         fetched = linkedin.fetch_description(job)
     elif "efinancialcareers" in job.url:
         fetched = efinancialcareers.fetch_description(job)
+    elif "jobs.nhs.uk" in job.url:
+        fetched = government.fetch_nhs_description(job)
     elif "myworkdayjobs.com" in job.url:
         fetched = careers.fetch_description(job)
     if fetched.startswith(linkedin.CLOSED_MARKER) and not text.startswith(linkedin.CLOSED_MARKER):
@@ -231,9 +246,10 @@ def enrich(job: Job, text: str) -> None:
 def rule_broken(job: Job, cfg: dict, matcher: filters.RoleMatcher, registers: SponsorRegisters) -> str | None:
     """Every rule a job must pass to be emailed. Checked again on each run, so
     changes to config.yaml or roles.yaml also apply to jobs found earlier."""
-    if not matcher.match(job.title, job.target_firm):
+    if not matcher.match(job.title, job.target_firm, job.government):
         return "title doesn't match a target role"
-    if filters.is_senior(job.title, cfg["senior_title_words"]):
+    if filters.is_senior(job.title, cfg["senior_title_words"]) or \
+            (job.government and filters.is_senior_government(job.title)):
         return "too senior"
     if filters.is_excluded_location(job.location, cfg["excluded_locations"]):
         return "excluded country"
@@ -343,6 +359,7 @@ def main() -> None:
             prev["sources"] = sorted(set(prev.get("sources", [])) | set(job.sources))
             prev["apply_url"] = prev.get("apply_url") or job.apply_url
             prev["remote"] = bool(prev.get("remote")) or job.remote
+            prev["government"] = prev.get("government") or job.government
             continue
         job.first_seen = prev["first_seen"] if prev else now
         to_read.append((key, job, bool(prev and prev.get("emailed"))))

@@ -100,3 +100,16 @@ python -m pytest
   source returned and how many requests failed, so a broken source is easy to spot.
 - Google Jobs is switched off in `config.yaml` because python-jobspy 1.4.1 no longer gets any
   results from it. When it was on, it went through the MIT-licensed [python-jobspy](https://github.com/speedyapply/JobSpy) library.
+
+## UK government jobs
+
+A "Government Jobs" sheet and email section list NHS and Civil Service roles in finance, economics,
+data, risk, audit, procurement and similar areas. The same rules apply as for every other job
+(entry level, last 5 days, no experience or professional qualification asked, sponsorship).
+NHS Bands 7 and above and Civil Service Grade 6/7, SEO and SCS roles count as too senior.
+
+- NHS Jobs: read from its public search feed.
+- Civil Service: Civil Service Jobs puts a "prove you're human" check in front of every page, and
+  Find a Job (DWP) blocks GitHub's servers, so civil service roles come from the departments'
+  own LinkedIn postings (list in `config.yaml` under `government`).
+- Civil Service Careers and the Government Recruitment Service are guidance sites with no job listings.
