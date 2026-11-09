@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pip install requests beautifulsoup4 -q && python probe/probe.py
+      - run: pip install -q -r requirements.txt && python probe/probe.py
