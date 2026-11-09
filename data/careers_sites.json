@@ -71,11 +71,6 @@
  },
  {
   "platform": "workday",
-  "id": "blackstone.wd1/Blackstone_Careers",
-  "institution": "Blackstone"
- },
- {
-  "platform": "workday",
   "id": "brookfield.wd5/brookfield",
   "institution": "Brookfield"
  },
