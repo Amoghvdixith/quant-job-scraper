@@ -103,8 +103,8 @@ class RoleMatcher:
         # Graduate schemes: in a finance area, or at one of the target institutions.
         if self._grad_role and is_graduate_scheme(title) and (target_firm or _GRAD_FINANCE.search(title)):
             return self._grad_role, "graduate scheme"
-        # Internships: in one of the risk areas or sectors, or at one of the target institutions.
-        if self._intern_role and is_internship(title) and (target_firm or _INTERN_FIELD.search(title)):
+        # Internships: the title must name one of the risk areas, sectors or finance fields.
+        if self._intern_role and is_internship(title) and _INTERN_FIELD.search(title):
             return self._intern_role, "internship"
         return None
 

@@ -87,7 +87,7 @@ roles:
 
   # Internships anywhere in the world, remote or on-site, in risk areas across lending, payments,
   # wealth-tech, insurtech, market infrastructure, crypto and climate/energy. An internship is kept
-  # when its title names one of those areas or it is at a firm in institutions.csv.
+  # when its title names one of those areas or a finance field.
   # The usual rules still apply. LinkedIn is searched at its "Internship" level only (f_E=1).
   - {id: INT, tier: 1, category: Internship, title: Internship, internship: true, max_pages: 8, linkedin_levels: "1",
      keywords: [Risk Intern, Risk Internship, Credit Risk Intern, Market Risk Intern, Quant Intern,
