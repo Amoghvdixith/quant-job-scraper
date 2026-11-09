@@ -12,3 +12,5 @@ exclude:
   - {platform: ashby, id: pic}
   - {platform: greenhouse, id: iex}
   - {platform: ashby, id: artemis}
+  # Returns 401 Unauthorized since 8 Nov 2026; Blackstone is searched on LinkedIn by name instead.
+  - {platform: workday, id: blackstone.wd1/Blackstone_Careers}
