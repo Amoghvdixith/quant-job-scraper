@@ -26,6 +26,8 @@ def build_email(jobs: list[Job], new_keys: set[str], stats: dict, attachment: Pa
     remote_top = sorted(remote, key=lambda j: (j.key not in new_keys, j.tier))[:10]
     grads = [j for j in jobs if j.graduate_scheme]
     grads_top = sorted(grads, key=lambda j: (j.key not in new_keys, -(j.posted or date.min).toordinal()))[:10]
+    gov = [j for j in jobs if j.government]
+    gov_top = sorted(gov, key=lambda j: (j.key not in new_keys, -(j.posted or date.min).toordinal()))[:15]
     top = sorted(new_jobs, key=lambda j: (j.sponsorship != "Yes", not j.employer_sponsor.startswith("Yes"), j.tier))[:15]
     text = [
         f"{len(new_jobs)} new jobs since the last email, {len(jobs)} matching jobs posted in the last {max_age_days} days.",
@@ -38,6 +40,8 @@ def build_email(jobs: list[Job], new_keys: set[str], stats: dict, attachment: Pa
     text += [f"- {j.title} | {j.company} | {j.location} | apply: {j.apply_link}" for j in remote_top]
     text += ["", f"{len(grads)} graduate schemes (all in the 'Graduate Schemes' sheet):"]
     text += [f"- {j.title} | {j.company} | {j.location} | apply: {j.apply_link}" for j in grads_top]
+    text += ["", f"{len(gov)} UK government jobs, NHS and Civil Service (all in the 'Government Jobs' sheet):"]
+    text += [f"- {j.title} | {j.company} | {j.location} | apply: {j.apply_link}" for j in gov_top]
     msg.set_content("\n".join(text))
 
     table = _table(top) if top else "<p>No new jobs this time.</p>"
@@ -49,10 +53,14 @@ def build_email(jobs: list[Job], new_keys: set[str], stats: dict, attachment: Pa
         f"<p><b>{len(grads)}</b> graduate schemes (all in the 'Graduate Schemes' sheet):</p>{_table(grads_top)}"
         if grads else "<p>No graduate schemes this time.</p>"
     )
+    gov_table = (
+        f"<p><b>{len(gov)}</b> UK government jobs, NHS and Civil Service (all in the 'Government Jobs' sheet):</p>"
+        f"{_table(gov_top)}" if gov else "<p>No UK government jobs passed the rules this time.</p>"
+    )
     msg.add_alternative(
         f"<p><b>{len(new_jobs)}</b> new jobs since the last email, <b>{len(jobs)}</b> matching jobs posted in the last {max_age_days} days.</p>"
         f"<p>The full list is in the attached Excel file (new ones are marked NEW).</p>"
-        f"{'<p>Top new jobs:</p>' if top else ''}{table}{remote_table}{grads_table}"
+        f"{'<p>Top new jobs:</p>' if top else ''}{table}{remote_table}{grads_table}{gov_table}"
         f"<p style='color:#666;font-size:12px'>Found this run: {html.escape(source_line)}.</p>",
         subtype="html",
     )

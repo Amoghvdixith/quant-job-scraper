@@ -28,6 +28,7 @@ class Job:
     years_required: int | None = None
     experience: str | None = None  # wording that asks for work experience; None = not checked yet
     remote: bool = False
+    government: str = ""  # "NHS" or "Civil Service" for UK public-sector jobs
     qualification: str | None = None  # qualification the posting asks for, e.g. "CFA"; None = not checked yet
     employer_sponsor: str = ""
     target_firm: str = ""

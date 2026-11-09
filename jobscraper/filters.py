@@ -68,10 +68,13 @@ class RoleMatcher:
         # Most specific keywords first, so "Market Risk Analyst" wins over "Risk Analyst".
         self._rules.sort(key=lambda r: (-len(r[0]), r[1]["tier"]))
 
-    def match(self, title: str, target_firm: str = "") -> tuple[dict, str] | None:
+    def match(self, title: str, target_firm: str = "", government: str = "") -> tuple[dict, str] | None:
         found = self._match_role(title)
         if found:
             return found
+        # UK government jobs: any finance, economics, data, risk or audit title.
+        if government and _GOV_TITLE.search(title or ""):
+            return GOV_ROLE, "government"
         # Graduate schemes: in a finance area, or at one of the target institutions.
         if self._grad_role and is_graduate_scheme(title) and (target_firm or _GRAD_FINANCE.search(title)):
             return self._grad_role, "graduate scheme"
@@ -90,6 +93,21 @@ class RoleMatcher:
                 continue
             return role, kw
         return None
+
+
+GOV_ROLE = {"id": "GOV", "tier": 2, "category": "Government", "title": "Government Job", "keywords": []}
+_GOV_TITLE = re.compile(
+    r"\b(analy[sz]\w*|financ\w*|economi\w*|statistic\w*|data|risk|audit\w*|actuar\w*|account\w*|"
+    r"treasury|invest\w*|pension\w*|budget\w*|costing|payroll|commercial|procurement|purchas\w*|"
+    r"insight|intelligence|modell?\w*|forecast\w*|policy|graduate|fast ?stream|apprentice\w*|trainee|"
+    r"quantitative|operational research|research officer|business support)\b", re.I)
+# Civil Service grades and NHS bands above entry level.
+_GOV_SENIOR = re.compile(
+    r"\b(band ?(?:7|8 ?[a-d]?|9)|b ?[789]|grade ?[67]|g[67]|scs\d?|seo|deputy director)\b", re.I)
+
+
+def is_senior_government(title: str) -> bool:
+    return bool(_GOV_SENIOR.search(title or ""))
 
 
 def is_senior(title: str, senior_words: list[str]) -> bool:
@@ -173,6 +191,9 @@ _YES_SPONSOR = [
     r"sponsorship (?:for|of) (?:the )?(?:right|visa|work)",
     r"relocation (?:and|&) visa",
     r"visa (?:support|assistance)",
+    # NHS standard wording: "Applications from job seekers who require current Skilled Worker
+    # sponsorship to work in the UK are welcome and will be considered"
+    r"(?:require|need)\w* (?:\w+\s+){0,4}sponsorship (?:\w+\s+){0,6}(?:are |is )?welcome",
 ]
 
 

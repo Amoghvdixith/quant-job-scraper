@@ -6,7 +6,7 @@ max_age_days: 5
 # Sources to search. Remove one to switch it off.
 # google is off: python-jobspy 1.4.1 gets no data from Google Jobs (0 results every run since
 # at least Nov 2026). Add it back after upgrading python-jobspy and checking a dry run.
-sources: [linkedin, efinancialcareers, indeed, careers]
+sources: [linkedin, efinancialcareers, indeed, careers, government]
 
 # LinkedIn location filter. "Worldwide" covers every country; add specific
 # countries (e.g. "United Kingdom", "Singapore") to get more results there.
@@ -200,3 +200,31 @@ sponsorship_filter: posting_or_employer
 email_times: ["00:00", "06:00", "12:00", "18:00"]
 email_timezone: Europe/London
 run_lead_minutes: 55
+
+# UK government jobs ("Government Jobs" sheet). The same rules apply as for every other job.
+# NHS Jobs is read from its public search feed. Civil Service Jobs and Find a Job block automated
+# access, so civil service roles come from the departments' own LinkedIn postings.
+government:
+  nhs_max_pages: 15  # 10 jobs a page, newest first; stops at the age limit
+  nhs_keywords: [analyst, finance, financial, data, economist, statistician, risk, audit, graduate, trainee accountant, information, commercial, procurement, business intelligence]
+  civil_service_departments:
+    - HM Treasury
+    - HM Revenue & Customs
+    - Office for National Statistics
+    - Cabinet Office
+    - Government Actuary's Department
+    - UK Debt Management Office
+    - National Audit Office
+    - Department for Work and Pensions
+    - Department for Business and Trade
+    - Ministry of Defence
+    - Home Office
+    - Ministry of Justice
+    - Department for Education
+    - Department of Health and Social Care
+    - Department for Transport
+    - UK Export Finance
+    - Government Internal Audit Agency
+    - Civil Service Fast Stream
+    - Government Economic Service
+    - Department for Energy Security and Net Zero

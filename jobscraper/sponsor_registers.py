@@ -131,7 +131,9 @@ class SponsorRegisters:
             return ""
         cache = self.__dict__.setdefault("_cache", {})  # same answer for every job at this employer
         if key not in cache:
-            cache[key] = [c for c in COUNTRIES if self.lists[c] and self._on(c, key)]
+            # NHS Jobs often writes "X NHS Trust" for the register's "X NHS Foundation Trust".
+            keys = {key, key.replace("nhsfoundationtrust", "nhstrust"), key.replace("nhstrust", "nhsfoundationtrust")}
+            cache[key] = [c for c in COUNTRIES if self.lists[c] and any(self._on(c, k) for k in keys)]
         on = cache[key]
         if not on:
             return ""
