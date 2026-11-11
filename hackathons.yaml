@@ -1,0 +1,31 @@
+# Quant finance competitions that are always open and that graduates (non-students) can enter.
+# They are listed in the "Hackathons" sheet every time, alongside the ones found on
+# Quant Challenges and Devpost. Add one with the same fields; `eligibility` is the organiser's
+# wording, and an entry whose wording says students only is left out.
+hackathons:
+  - title: Numerai Tournament
+    url: https://numer.ai/tournament
+    organiser: Numerai
+    category: Hedge fund stock market prediction (financial ML)
+    eligibility: Open to anyone; data scientists worldwide
+    dates: Ongoing, weekly rounds
+    format: Online
+    prize: Paid in NMR, based on performance
+
+  - title: Numerai Signals
+    url: https://signals.numer.ai/
+    organiser: Numerai
+    category: Stock market signals from your own data (alpha research)
+    eligibility: Open to anyone; data scientists and quants worldwide
+    dates: Ongoing, weekly rounds
+    format: Online
+    prize: Paid in NMR, based on performance
+
+  - title: CrunchDAO competitions (incl. ADIA Lab challenges)
+    url: https://hub.crunchdao.com/competitions
+    organiser: CrunchDAO
+    category: Financial machine learning and market prediction competitions
+    eligibility: Open to anyone; researchers and data scientists worldwide
+    dates: Ongoing, several competitions a year
+    format: Online
+    prize: Cash prize pools per competition

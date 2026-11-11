@@ -121,3 +121,27 @@ programmes worldwide (remote and on-site) in risk work across lending and consum
 payments, wealth-tech, insurtech, market infrastructure, crypto and climate/energy, plus the
 usual finance areas. LinkedIn is searched at its "Internship" level for these. The usual rules
 (last 5 days, no experience or qualification asked, sponsorship, excluded countries) still apply.
+
+## Quant finance hackathons
+
+A separate "Hackathons" sheet and email section list hackathons, trading competitions and
+financial ML challenges tied to quantitative finance (trading, markets, portfolios, risk,
+derivatives, alpha research...) that **graduates can enter**, so student-only events are left out.
+It isn't a job list: it has its own columns (organiser, focus, who can enter in the organiser's
+words, dates and deadline, days left, format, prize, link). Hackathons not in an earlier email
+are marked NEW.
+
+- **Quant Challenges** (quantchallenges.com), an independent registry of quant trading and
+  financial ML competitions: its "Open now" list and first pages are read, then each listing's
+  "Who can enter", deadline, status, organiser and prize.
+- **Devpost**: hackathons with the Fintech theme or matching words like quant, trading, finance
+  or hedge fund, kept only when the hackathon itself is about quant finance. Eligibility comes
+  from its "Who can participate" box.
+- **`hackathons.yaml`**: always-open competitions added by hand (Numerai, Numerai Signals, Crunch).
+
+A hackathon is dropped when its eligibility says students only (e.g. "must be currently enrolled",
+"undergraduate students"), when it isn't about quant finance, or when its deadline has passed or
+entries are closed. "Open to graduates" means the wording names graduates, professionals or
+anyone; "No student requirement stated" means it doesn't limit entry to students; "Not stated"
+means no eligibility wording was found, so check the rules. Settings are under `hackathons` in
+`config.yaml`.

@@ -228,3 +228,16 @@ government:
     - Civil Service Fast Stream
     - Government Economic Service
     - Department for Energy Security and Net Zero
+
+# Quant finance hackathons and trading competitions ("Hackathons" sheet and email section).
+# Kept only when graduates (non-students) can enter, the event is about quant finance
+# (trading, markets, portfolios, risk, derivatives, financial ML...) and it hasn't closed.
+# Always-open ones are listed by hand in hackathons.yaml.
+hackathons:
+  sources: [quant_challenges, devpost, manual]
+  quant_challenges_pages: 3       # pages of quantchallenges.com/challenges (40 a page), plus its "Open now" list
+  quant_challenges_max_reads: 80  # detail pages read per run; the rest are read next run
+  reread_days: 3                  # re-read a hackathon's page after this many days
+  devpost_themes: [Fintech]
+  devpost_search: [quant, trading, finance, investing, stock market, hedge fund]
+  devpost_pages: 2
