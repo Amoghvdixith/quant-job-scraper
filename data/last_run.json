@@ -1,88 +1,94 @@
 {
- "finished_utc": "2026-11-11T17:35:11+00:00",
- "rotation_slot": 2959727,
+ "finished_utc": "2026-11-11T23:35:50+00:00",
+ "rotation_slot": 2959728,
  "sources": {
   "LinkedIn": {
-   "found": 4111,
+   "found": 4794,
    "errors": 0
   },
   "eFinancialCareers": {
-   "found": 4290,
+   "found": 4288,
    "errors": 0
   },
   "Indeed": {
-   "found": 27,
+   "found": 412,
    "errors": 0
   },
   "NHS Jobs": {
-   "found": 3598,
+   "found": 3597,
    "errors": 0
   },
   "Careers sites": {
-   "found": 6302,
-   "errors": 1
+   "found": 6339,
+   "errors": 0
   }
  },
- "raw_results": 18328,
- "after_filters": 907,
- "jobs_in_email": 366,
- "new_jobs": 13,
- "descriptions_read": 352,
+ "raw_results": 19430,
+ "after_filters": 1099,
+ "jobs_in_email": 394,
+ "new_jobs": 28,
+ "descriptions_read": 380,
  "posted_by_recruiters": 7,
  "saved_jobs_dropped_by_rule": {
-  "employer not on a sponsor list": 1681,
+  "employer not on a sponsor list": 1726,
   "older than the age limit": 792,
-  "no sponsorship": 170,
-  "asks for a professional qualification": 154,
-  "asks for 1+ years": 342,
+  "no sponsorship": 177,
+  "asks for a professional qualification": 159,
+  "asks for 1+ years": 351,
   "title doesn't match a target role": 153,
-  "asks for 5+ years": 300,
-  "asks for work experience": 565,
-  "asks for 3+ years": 551,
-  "asks for 2+ years": 539,
+  "asks for 5+ years": 305,
+  "asks for work experience": 586,
+  "asks for 3+ years": 559,
+  "asks for 2+ years": 554,
   "asks for 20+ years": 5,
   "too senior": 16,
   "asks for 7+ years": 42,
   "asks for 10+ years": 39,
   "asks for 4+ years": 98,
-  "asks for 6+ years": 31,
+  "asks for 6+ years": 32,
   "excluded country": 1,
   "asks for 8+ years": 26,
+  "asks for 15+ years": 1,
   "posting closed": 6,
   "asks for 12+ years": 2,
-  "asks for 15+ years": 1,
   "sponsor lists loaded": {
    "UK": 121113,
    "US": 59725,
    "NL": 13082
   }
  },
+ "hackathons": {
+  "sources": {
+   "quant_challenges": {
+    "found": 80,
+    "errors": 0
+   },
+   "devpost": {
+    "found": 15,
+    "errors": 0
+   },
+   "dropped": {
+    "not quant finance": 15,
+    "deadline passed": 3,
+    "closed": 21,
+    "students only": 20
+   }
+  },
+  "listed": 42,
+  "new": 42
+ },
  "warnings": [
-  "2026-11-11 17:05:34,440 jobscraper.sources.careers: Aviva (workday) failed: 502 Server Error: Bad Gateway for url: https://aviva.wd1.myworkdayjobs.com/wday/cxs/aviva/External/jobs",
-  "2026-11-11 17:05:34,440 jobscraper: Careers sites | Aviva failed: 502 Server Error: Bad Gateway for url: https://aviva.wd1.myworkdayjobs.com/wday/cxs/aviva/External/jobs",
-  "2026-11-11 17:05:37,976 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:08:24,989 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:09:11,038 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:09:23,884 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 20s",
-  "2026-11-11 17:11:12,895 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:13:30,006 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:15:39,031 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:16:36,978 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:17:21,956 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:19:21,968 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:20:51,921 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:21:16,021 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:22:22,990 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:22:48,991 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:23:34,047 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:25:01,006 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:25:14,032 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 20s",
-  "2026-11-11 17:27:08,006 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:29:18,977 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:29:31,963 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 20s",
-  "2026-11-11 17:30:24,994 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:31:06,006 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:31:59,039 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-11 17:34:13,980 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/4444642648 -> 429, waiting 10s"
+  "2026-11-11 23:06:20,896 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-11 23:07:23,908 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-11 23:07:45,023 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-11 23:09:38,966 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-11 23:11:25,032 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-11 23:14:04,951 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-11 23:15:14,026 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-11 23:19:36,010 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-11 23:25:24,016 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-11 23:27:12,014 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-11 23:27:55,993 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-11 23:28:13,000 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s"
  ]
 }
