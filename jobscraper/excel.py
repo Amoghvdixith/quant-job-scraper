@@ -20,14 +20,25 @@ NEW_FILL = PatternFill("solid", fgColor="E2EFDA")
 YES_FILL = PatternFill("solid", fgColor="C6EFCE")
 
 
-def write_workbook(jobs: list[Job], new_keys: set[str], stats: dict, path: Path) -> Path:
+HACKATHON_COLUMNS = [
+    ("New", 7), ("Hackathon", 45), ("Organiser", 26), ("Focus", 34), ("Quant Link", 28),
+    ("Graduates Can Enter", 22), ("Eligibility (organiser's words)", 55), ("Dates / Deadline", 34),
+    ("Deadline", 11), ("Days Left", 9), ("Format", 18), ("Prize", 30), ("Status", 26), ("Found On", 16),
+    ("Link", 12),
+]
+
+
+def write_workbook(jobs: list[Job], new_keys: set[str], stats: dict, path: Path,
+                   hackathons: list | None = None, new_hackathons: set[str] | None = None) -> Path:
     wb = Workbook()
     _jobs_sheet(wb.active, "Jobs", jobs, new_keys)
     _jobs_sheet(wb.create_sheet("Remote Jobs"), "Remote Jobs", [j for j in jobs if j.remote], new_keys)
     _jobs_sheet(wb.create_sheet("Graduate Schemes"), "Graduate Schemes", [j for j in jobs if j.graduate_scheme], new_keys)
     _jobs_sheet(wb.create_sheet("Internships"), "Internships", [j for j in jobs if j.internship], new_keys)
     _jobs_sheet(wb.create_sheet("Government Jobs"), "Government Jobs", [j for j in jobs if j.government], new_keys)
-    _summary_sheet(wb, jobs, new_keys, stats)
+    if hackathons is not None:
+        _hackathons_sheet(wb.create_sheet("Hackathons"), hackathons, new_hackathons or set())
+    _summary_sheet(wb, jobs, new_keys, stats, hackathons)
     path.parent.mkdir(parents=True, exist_ok=True)
     wb.save(path)
     return path
@@ -89,7 +100,39 @@ def _jobs_sheet(ws, title: str, jobs: list[Job], new_keys: set[str]) -> None:
     ws.auto_filter.ref = ws.dimensions
 
 
-def _summary_sheet(wb, jobs: list[Job], new_keys: set[str], stats: dict) -> None:
+def _hackathons_sheet(ws, hackathons: list, new_keys: set[str]) -> None:
+    """Quant finance hackathons graduates can enter: a page of its own, not a job list."""
+    ws.title = "Hackathons"
+    ws.append([c for c, _ in HACKATHON_COLUMNS])
+    for i, (_, width) in enumerate(HACKATHON_COLUMNS, 1):
+        ws.column_dimensions[get_column_letter(i)].width = width
+        cell = ws.cell(row=1, column=i)
+        cell.font = Font(bold=True, color="FFFFFF")
+        cell.fill = HEADER_FILL
+        cell.alignment = Alignment(vertical="center", wrap_text=True)
+    today = date.today()
+    for h in hackathons:
+        is_new = h.key in new_keys
+        ws.append([
+            "NEW" if is_new else "", h.title, h.organiser, h.category, h.quant_link,
+            h.eligibility, h.eligibility_text, h.dates, h.deadline,
+            (h.deadline - today).days if h.deadline else None,
+            h.format, h.prize, h.status, h.source, "Open",
+        ])
+        row = ws.max_row
+        link = ws.cell(row=row, column=15)
+        link.hyperlink = h.url
+        link.font = Font(color="0563C1", underline="single")
+        ws.cell(row=row, column=9).number_format = "yyyy-mm-dd"
+        if is_new:
+            ws.cell(row=row, column=1).fill = NEW_FILL
+        if h.eligibility == "Open to graduates":
+            ws.cell(row=row, column=6).fill = YES_FILL
+    ws.freeze_panes = "A2"
+    ws.auto_filter.ref = ws.dimensions
+
+
+def _summary_sheet(wb, jobs: list[Job], new_keys: set[str], stats: dict, hackathons: list | None = None) -> None:
     summary = wb.create_sheet("Run Summary")
     summary.column_dimensions["A"].width = 34
     summary.column_dimensions["B"].width = 18
@@ -104,6 +147,7 @@ def _summary_sheet(wb, jobs: list[Job], new_keys: set[str], stats: dict) -> None
         ("Internships", sum(j.internship for j in jobs)),
         ("UK government (NHS / Civil Service)", sum(bool(j.government) for j in jobs)),
         ("Posted by recruitment agencies", sum(j.recruiter for j in jobs)),
+        ("Quant hackathons open to graduates", len(hackathons) if hackathons is not None else "not searched"),
         ("", ""),
         ("Source", "Jobs found this run"),
     ]

@@ -1,0 +1,75 @@
+# Quant finance competitions that are always open (or run for months) and that graduates (non-students) can enter.
+# They are listed in the "Hackathons" sheet every time, alongside the ones found on
+# Quant Challenges and Devpost. Add one with the same fields; `eligibility` is the organiser's
+# wording, and an entry whose wording says students only is left out.
+hackathons:
+  - title: Numerai Tournament
+    url: https://numer.ai/tournament
+    organiser: Numerai
+    category: Hedge fund stock market prediction (financial ML)
+    eligibility: Open to anyone; data scientists worldwide
+    dates: Ongoing, weekly rounds
+    format: Online
+    prize: Paid in NMR, based on performance
+
+  - title: Numerai Signals
+    url: https://signals.numer.ai/
+    organiser: Numerai
+    category: Stock market signals from your own data (alpha research)
+    eligibility: Open to anyone; data scientists and quants worldwide
+    dates: Ongoing, weekly rounds
+    format: Online
+    prize: Paid in NMR, based on performance
+
+  - title: CrunchDAO competitions (incl. ADIA Lab challenges)
+    url: https://hub.crunchdao.com/competitions
+    organiser: CrunchDAO
+    category: Financial machine learning and market prediction competitions
+    eligibility: Open to anyone; researchers and data scientists worldwide
+    dates: Ongoing, several competitions a year
+    format: Online
+    prize: Cash prize pools per competition
+
+  - title: Numerai Crypto
+    url: https://crypto.numer.ai/
+    organiser: Numerai
+    category: Crypto return prediction (financial ML)
+    eligibility: Open to anyone; staking is optional
+    dates: Ongoing
+    format: Online
+    prize: Paid in NMR, based on performance
+
+  - title: DataCrunch Equity Market Neutral
+    url: https://hub.crunchdao.com/competitions/datacrunch-2
+    organiser: CrunchDAO / DataCrunch
+    category: Equity market-neutral return prediction (alpha research)
+    eligibility: Open entry on the Crunch Hub
+    dates: Ongoing, weekly
+    format: Online
+    prize: 1,000 USDC a week
+
+  - title: "QRT Data Challenge: Asset Allocation Performance Forecasting"
+    url: https://challengedata.ens.fr/challenges/167
+    organiser: Qube Research & Technologies (ENS Challenge Data)
+    category: Asset allocation and portfolio performance forecasting
+    eligibility: Open to anyone who registers on ENS Challenge Data
+    dates: Ongoing, no end date announced
+    format: Online
+
+  - title: WorldQuant BRAIN alpha research challenges
+    url: https://www.worldquant.com/brain/
+    organiser: WorldQuant
+    category: Alpha research and factor model simulation
+    eligibility: Anyone can sign up; paid consultant roles only in approved countries
+    dates: Ongoing, daily challenges
+    format: Online
+    prize: Consultant pay for strong alphas
+
+  - title: Metaculus Market Pulse 26Q4
+    url: https://www.metaculus.com/tournament/market-pulse-26q4/
+    organiser: Metaculus
+    category: Financial market forecasting
+    eligibility: Open to anyone with a Metaculus account
+    dates: 7 Oct - 31 Dec 2026 (prize entry by 21 Dec 2026)
+    format: Online
+    prize: $7,500 pool

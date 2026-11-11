@@ -29,7 +29,7 @@ database: GitHub Actions is the computer and the git repo is the storage.
 | `.github/workflows/discover.yml` | Weekly workflow: finds careers sites and downloads the sponsor registers |
 | `jobscraper/main.py` | The pipeline: plan searches, scrape, filter, dedupe, read descriptions, apply rules, write Excel, email |
 | `jobscraper/schedule.py` | Works out whether an email is due and how long to wait for the next slot |
-| `jobscraper/sources/*.py` | One module per job source |
+| `jobscraper/sources/*.py` | One module per job source; `hackathons.py` finds quant hackathons for the "Hackathons" sheet |
 | `jobscraper/filters.py` | Role matching, seniority, location, years of experience, recruiter and sponsorship text checks |
 | `jobscraper/sponsor_registers.py` | Downloads and looks up the UK, US and Dutch sponsor registers |
 | `jobscraper/discover_careers.py` | Finds which hiring platform each target firm uses |
@@ -363,3 +363,18 @@ python -m jobscraper.main --no-email --roles T1-1,T2-1  # just a couple of roles
 python -m jobscraper.schedule due                       # is an email due right now?
 python -m pytest
 ```
+
+
+## Quant finance hackathons
+
+`jobscraper/sources/hackathons.py` runs in a background thread alongside the job sources and
+fills the "Hackathons" sheet and email section. It reads Quant Challenges (listing pages, then
+each detail page's labelled fields), Devpost's `/api/hackathons` JSON (Fintech theme plus search
+words, with each hackathon's "Who can participate" box) and the hand-picked `hackathons.yaml`.
+`rule_broken()` drops student-only events (`eligibility()`), events not about quant finance
+(`is_quant()`; Devpost needs a specific word such as trading or portfolio, since "fintech" alone
+is too loose) and closed or past events. The same event from two sources is listed once.
+
+`data/hackathons.json` keeps when each hackathon was first listed (for NEW) and a cache of the
+pages read, so a page is re-read only every `reread_days`. It is saved only after a real email,
+like `jobs.json`. A failure here is logged and the jobs email still goes out without the sheet.
