@@ -1,9 +1,10 @@
-# Quant and fintech startups whose open roles go in the "Startups" sheet. Only roles a recent
-# graduate could get are kept (see `startups` in config.yaml).
+# Quant and fintech startups (`startups`) and boutique firms (`boutiques`) whose open roles go in the
+# "Startups & Boutiques" sheet. Only roles a recent graduate could get are kept (see `startups` in
+# config.yaml). Both lists take the same fields.
 #
-# name:   the startup's name
+# name:   the firm's name
 # focus:  what it does (shown in the sheet)
-# stage:  funding stage, as you want it shown
+# stage:  funding stage (startups) or size / kind of firm (boutiques), as you want it shown
 # hq:     headquarters
 # board:  its job board, when known: {platform: greenhouse | lever | ashby | smartrecruiters, id: <board name>}
 #         (the name in https://boards.greenhouse.io/<id>, https://jobs.lever.co/<id>, https://jobs.ashbyhq.com/<id>).
@@ -86,3 +87,52 @@ startups:
   - {name: Pennylane, focus: Accounting and finance software, stage: Late stage, hq: Paris}
   # The "primer" Ashby board is a school network, not the payments startup.
   - {name: Primer, focus: Payments orchestration, stage: Series B, hq: London, board: none}
+
+# Boutique firms: small proprietary trading firms, boutique quant hedge funds, independent advisory
+# banks and risk/treasury consultancies that run graduate hiring. Boards are looked up by name
+# (or come from data/careers_sites.json for firms also on institutions.csv, e.g. Houlihan Lokey,
+# Qube, Winton, Akuna, Belvedere, Baringa). Firms whose careers site isn't on a platform with a
+# public feed (some advisory banks use their own sites) are skipped until a board is added here.
+boutiques:
+  # Proprietary trading and market making
+  - {name: Maven Securities, focus: Proprietary trading and market making, stage: Prop trading firm, hq: London}
+  - {name: Mako Trading, focus: Options market making, stage: Prop trading firm, hq: London}
+  - {name: Da Vinci Trading, focus: Derivatives market making, stage: Prop trading firm, hq: Amsterdam}
+  - {name: Old Mission, focus: ETF, options and fixed income market making, stage: Prop trading firm, hq: Chicago}
+  - {name: Headlands Technologies, focus: Quantitative trading, stage: Prop trading firm, hq: Chicago}
+  - {name: Five Rings, focus: Quantitative trading, stage: Prop trading firm, hq: New York}
+  - {name: Radix Trading, focus: Systematic trading research, stage: Prop trading firm, hq: Chicago}
+  - {name: Vivienne Court, focus: Quantitative and options trading, stage: Prop trading firm, hq: Sydney}
+  - {name: Tibra Capital, focus: Quantitative trading, stage: Prop trading firm, hq: Sydney}
+  - {name: Chicago Trading Company, focus: Derivatives trading, stage: Prop trading firm, hq: Chicago}
+  - {name: Akuna Capital, focus: Options market making, stage: Prop trading firm, hq: Chicago}
+  - {name: Belvedere Trading, focus: Equity index and commodity options trading, stage: Prop trading firm, hq: Chicago}
+
+  # Boutique quant hedge funds and asset managers
+  - {name: Quadrature Capital, focus: Systematic hedge fund, stage: Quant hedge fund, hq: London}
+  - {name: Qube Research & Technologies, focus: Quantitative investment manager, stage: Quant hedge fund, hq: London}
+  - {name: Winton, focus: Systematic investment manager, stage: Quant hedge fund, hq: London}
+  - {name: Aspect Capital, focus: Systematic trend-following funds, stage: Quant hedge fund, hq: London}
+  - {name: Lynx Asset Management, focus: Systematic futures trading, stage: Quant hedge fund, hq: Stockholm}
+  - {name: Systematica Investments, focus: Systematic investment manager, stage: Quant hedge fund, hq: Geneva}
+  - {name: Eisler Capital, focus: Multi-strategy macro hedge fund, stage: Hedge fund, hq: London}
+  - {name: Fulcrum Asset Management, focus: Macro and multi-asset investing, stage: Asset manager, hq: London}
+  - {name: Ruffer, focus: Multi-asset investment management, stage: Asset manager, hq: London}
+
+  # Independent advisory and investment banks (M&A, restructuring, capital markets)
+  - {name: Houlihan Lokey, focus: M&A, restructuring and valuation advisory, stage: Advisory bank, hq: Los Angeles}
+  - {name: Evercore, focus: M&A and restructuring advisory, stage: Advisory bank, hq: New York}
+  - {name: PJT Partners, focus: Strategic, restructuring and capital markets advisory, stage: Advisory bank, hq: New York}
+  - {name: Moelis, focus: M&A and restructuring advisory, stage: Advisory bank, hq: New York}
+  - {name: Perella Weinberg, focus: M&A and restructuring advisory, stage: Advisory bank, hq: New York}
+  - {name: Centerview Partners, focus: M&A advisory, stage: Advisory bank, hq: New York}
+  - {name: Lazard, focus: Financial advisory and asset management, stage: Advisory bank, hq: New York}
+  - {name: Rothschild & Co, focus: Global advisory and wealth management, stage: Advisory bank, hq: Paris}
+  - {name: Arma Partners, focus: Technology M&A advisory, stage: Advisory bank, hq: London}
+  - {name: DC Advisory, focus: Mid-market M&A and debt advisory, stage: Advisory bank, hq: London}
+
+  # Risk, treasury and quant consultancies
+  - {name: Baringa, focus: Risk, finance and energy consultancy, stage: Consultancy, hq: London}
+  - {name: Zanders, focus: Treasury, risk and finance consultancy, stage: Consultancy, hq: Utrecht}
+  - {name: Avantage Reply, focus: Risk and regulatory consultancy for banks, stage: Consultancy, hq: London}
+  - {name: Quant Foundry, focus: Quant model risk and validation consultancy, stage: Consultancy, hq: London}

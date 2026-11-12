@@ -1,6 +1,8 @@
-"""Open roles at quant and fintech startups that take on recent graduates ("Startups" sheet).
+"""Open roles at quant and fintech startups and boutique firms that take on recent graduates
+("Startups & Boutiques" sheet).
 
-The startups are listed by hand in startups.yaml (name, what they do, stage, HQ). Their open roles
+The firms are listed by hand in startups.yaml: `startups` (name, what they do, stage, HQ) and
+`boutiques` (small trading firms, hedge funds, advisory banks and risk consultancies). Their open roles
 are read from their hiring platform's public job feed (Greenhouse, Lever, Ashby, SmartRecruiters),
 the same feeds the careers-site source uses. A startup's job board is found in this order:
 
@@ -39,7 +41,8 @@ class Opportunity:
     company: str
     location: str
     url: str
-    focus: str = ""                 # what the startup does
+    firm_type: str = "Startup"      # "Startup" or "Boutique"
+    focus: str = ""                 # what the firm does
     stage: str = ""                 # funding stage, as written in startups.yaml
     hq: str = ""
     area: str = ""                  # role area: Quant & Research, Trading, Risk...
@@ -69,7 +72,8 @@ class Opportunity:
 
 _GRAD_TITLE = re.compile(
     r"\b(?:graduate|grad|new\s+grads?|junior|jr|entry[-\s]level|early[-\s]careers?|trainee|apprentice|"
-    r"university\s+(?:hire|graduate|grad)|campus|class\s+of\s+20\d\d|associate)\b"
+    r"university\s+(?:hire|graduate|grad)|campus|class\s+of\s+20\d\d|associate|"
+    r"(?:analyst|associate)\s+program(?:me)?s?|full[-\s]time\s+analysts?|20\d\d\s+analysts?)\b"
     r"|\b(?:engineer|developer|analyst|researcher|scientist|trader)\s+(?:i|1)\b\s*$",
     re.I,
 )
@@ -161,9 +165,10 @@ DEFAULT_AREAS = {
     "Risk": ["risk", "credit", "fraud", "underwriting", "underwriter", "actuarial", "actuary"],
     "Data & ML": ["data", "machine learning", "ml", "ai", "analytics", "statistician", "scientist"],
     "Finance & Investment": ["finance", "financial", "investment", "investments", "portfolio", "valuation",
-                             "treasury", "economist", "fp and a", "capital markets"],
+                             "treasury", "economist", "fp and a", "capital markets", "investment banking",
+                             "m and a", "restructuring", "advisory"],
     "Engineering": ["engineer", "engineering", "developer", "software", "programmer"],
-    "Analyst": ["analyst"],
+    "Analyst": ["analyst", "consultant"],
 }
 DEFAULT_EXCLUDE = ["sales", "marketing", "recruiter", "recruiting", "talent", "legal", "counsel", "designer",
                    "customer", "account executive", "business development", "partnerships",
@@ -179,7 +184,7 @@ def collect(cfg: dict, stats: dict, store: dict, startups: list[dict], today: da
     fetch = fetch or (lambda site: careers.fetch_site(site, cfg))
     boards = store.setdefault("boards", {})
     sites = known_sites()
-    probe_budget = [scfg.get("max_board_lookups_per_run", 15)]
+    probe_budget = [scfg.get("max_board_lookups_per_run", 25)]
     retry_days = scfg.get("board_lookup_retry_days", 14)
 
     resolved = []
@@ -269,6 +274,7 @@ def judge(job: Job, startup: dict, site: dict, max_years: int, areas: dict, excl
         return None, "no sponsorship"
     return Opportunity(
         title=title, company=startup["name"], location=(job.location or "").strip(), url=job.url,
+        firm_type=startup.get("type", "Startup"),
         focus=startup.get("focus", ""), stage=startup.get("stage", ""), hq=startup.get("hq", ""), area=area,
         graduate_fit=fit[0], graduate_evidence=fit[1], years_required=filters.years_required(job.description),
         sponsorship=sponsor, sponsorship_evidence=evidence, remote=filters.is_remote(job.location, title),

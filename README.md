@@ -146,22 +146,29 @@ anyone; "No student requirement stated" means it doesn't limit entry to students
 means no eligibility wording was found, so check the rules. Settings are under `hackathons` in
 `config.yaml`.
 
-## Startups that take graduates
+## Startups and boutique firms that take graduates
 
-A separate "Startups" sheet and email section list open roles at quant and fintech startups
-(trading and market making, market data, prediction markets, DeFi risk, AI for investment
-research, lending and credit risk, financial crime, payments and investing apps) that **a recent
-graduate could get**. The startups are listed in **`startups.yaml`** (name, what they do, stage, HQ
-and, when known, their job board); add or remove startups there. Their open roles are read from
-the startup's public Greenhouse, Lever, Ashby or SmartRecruiters board. A startup without a board
+A separate "Startups & Boutiques" sheet and email section list open roles that **a recent
+graduate could get** at:
+
+- **quant and fintech startups** (trading and market making, market data, prediction markets,
+  DeFi risk, AI for investment research, lending and credit risk, financial crime, payments and
+  investing apps);
+- **boutique firms**: small proprietary trading firms, boutique quant hedge funds, independent
+  advisory banks (M&A, restructuring) and risk/treasury consultancies.
+
+Both are listed in **`startups.yaml`** (`startups` and `boutiques`: name, what they do, stage or
+kind of firm, HQ and, when known, their job board); add or remove firms there. The sheet's
+"Firm Type" column says which list a firm is on. Their open roles are read from
+the startup's public Greenhouse, Lever, Ashby or SmartRecruiters board. A firm without a board
 in the file is looked up by name on each platform, a few per run, and the answer is remembered.
 
 A role is kept when it isn't senior or an internship, is in a quant, trading, risk, data,
-finance or engineering area (not sales, marketing, legal...), isn't in an excluded country, the
+finance, advisory or engineering area (not sales, marketing, legal...), isn't in an excluded country, the
 posting doesn't rule out visa sponsorship, and a graduate could get it:
 
 - **Graduate / junior role**: the title says graduate, new grad, junior, entry level, early
-  career, associate or level I;
+  career, associate, analyst programme or level I;
 - **Welcomes graduates**: the description says new grads, recent graduates, early career,
   entry level, "0-2 years" or "no experience required";
 - **No experience asked**: no years of experience and no "proven experience in..." wording.

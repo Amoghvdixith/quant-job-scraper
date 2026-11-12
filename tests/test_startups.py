@@ -22,6 +22,8 @@ def test_graduate_fit():
     assert fit("Software Engineer, New Grad")[0] == "Graduate / junior role"
     assert fit("Junior Trader")[0] == "Graduate / junior role"
     assert fit("Software Engineer I")[0] == "Graduate / junior role"
+    assert fit("2027 Investment Banking Analyst Programme")[0] == "Graduate / junior role"
+    assert fit("Full-Time Analyst, M&A")[0] == "Graduate / junior role"
     assert fit("Quant Researcher", "We welcome new grads with strong maths." + LONG)[0] == "Welcomes graduates"
     assert fit("Data Analyst", "0-2 years of experience with SQL." + LONG)[0] == "Welcomes graduates"
     assert fit("Risk Analyst")[0] == "No experience asked"
@@ -40,6 +42,8 @@ def test_role_area():
     assert st.role_area("Sales Engineer", areas, excl) == ""
     assert st.role_area("Enterprise Account Executive", areas, excl) == ""
     assert st.role_area("Product Designer", areas, excl) == ""
+    assert st.role_area("M&A Analyst", areas, excl) == "Finance & Investment"
+    assert st.role_area("Graduate Consultant", areas, excl) == "Analyst"
 
 
 def job(title, desc=LONG, loc="London, UK", posted=TODAY):
@@ -52,6 +56,7 @@ def test_collect_keeps_graduate_roles_only():
         {"name": "Wintermute", "focus": "Market making", "stage": "Private", "hq": "London",
          "board": {"platform": "lever", "id": "wintermute-trading"}},
         {"name": "Primer", "board": "none"},
+        {"name": "Maven Securities", "type": "Boutique", "board": {"platform": "greenhouse", "id": "maven"}},
     ]
     boards_read = []
 
@@ -70,12 +75,16 @@ def test_collect_keeps_graduate_roles_only():
 
     stats, store = {}, {}
     opps = st.collect(CFG, stats, store, listed, today=TODAY, fetch=fake_fetch)
-    assert boards_read == ["wintermute-trading"]  # Primer has board: none, so no lookup either
-    assert [o.title for o in opps] == ["Graduate Algorithmic Trader", "Data Scientist"]
+    assert boards_read == ["wintermute-trading", "maven"]  # Primer has board: none, so no lookup either
+    assert [(o.company, o.firm_type, o.title) for o in opps] == [
+        ("Maven Securities", "Boutique", "Graduate Algorithmic Trader"),
+        ("Wintermute", "Startup", "Graduate Algorithmic Trader"),
+        ("Maven Securities", "Boutique", "Data Scientist"), ("Wintermute", "Startup", "Data Scientist")]
+    opps = [o for o in opps if o.company == "Wintermute"]
     assert opps[0].area == "Trading" and opps[0].company == "Wintermute" and opps[0].focus == "Market making"
-    assert stats["dropped"] == {"too senior": 1, "asks for experience": 1, "internship": 1,
-                                "not a quant, finance, data or engineering role": 1, "excluded country": 1,
-                                "no sponsorship": 1}
+    assert stats["dropped"] == {"too senior": 2, "asks for experience": 2, "internship": 2,
+                                "not a quant, finance, data or engineering role": 2, "excluded country": 2,
+                                "no sponsorship": 2}
     new = st.mark_first_seen(opps, store.setdefault("first_seen", {}), "2026-11-12T08:00:00")
     assert new == {o.key for o in opps}
     assert st.mark_first_seen(opps, store["first_seen"], "2026-11-13T08:00:00") == set()
@@ -118,13 +127,13 @@ def test_sheet_and_email(tmp_path):
                          graduate_fit="Graduate / junior role", graduate_evidence="Graduate", posted=TODAY,
                          platform="Lever")
     path = write_workbook([], set(), {}, tmp_path / "x.xlsx", startups=[opp], new_startups={opp.key})
-    ws = load_workbook(path)["Startups"]
-    assert ws["A2"].value == "NEW" and ws["B2"].value == "Graduate Trader"
-    assert ws.cell(row=2, column=18).hyperlink.target == opp.url
+    ws = load_workbook(path)["Startups & Boutiques"]
+    assert ws["A2"].value == "NEW" and ws["B2"].value == "Graduate Trader" and ws["D2"].value == "Startup"
+    assert ws.cell(row=2, column=19).value == "Apply" and ws.cell(row=2, column=19).hyperlink.target == opp.url
     msg = build_email([], set(), {}, path, "a@b.c", "a@b.c", startups=[opp], new_startups={opp.key})
     body = msg.get_body(("plain",)).get_content()
-    assert "1 roles at quant and fintech startups" in body and "NEW Graduate Trader | Wintermute" in body
-    assert "Startups" not in load_workbook(write_workbook([], set(), {}, tmp_path / "y.xlsx")).sheetnames
+    assert "1 graduate roles at quant/fintech startups and boutique firms" in body and "NEW Graduate Trader | Wintermute" in body
+    assert "Startups & Boutiques" not in load_workbook(write_workbook([], set(), {}, tmp_path / "y.xlsx")).sheetnames
 
 
 def test_not_found_forgotten_when_network_down(monkeypatch):

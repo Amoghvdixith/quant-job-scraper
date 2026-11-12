@@ -500,7 +500,9 @@ def find_startup_roles(cfg: dict) -> tuple[list | None, set[str], dict | None, d
     try:
         store = json.loads(STARTUP_STORE.read_text()) if STARTUP_STORE.exists() else {}
         listed_file = ROOT / "startups.yaml"
-        listed = (yaml.safe_load(listed_file.read_text()) or {}).get("startups", []) if listed_file.exists() else []
+        lists = (yaml.safe_load(listed_file.read_text()) or {}) if listed_file.exists() else {}
+        listed = [{**s, "type": "Startup"} for s in lists.get("startups") or []] + \
+                 [{**s, "type": "Boutique"} for s in lists.get("boutiques") or []]
         found = startups.collect(cfg, sstats, store, listed)
         now = datetime.now(timezone.utc).replace(tzinfo=None).isoformat(timespec="seconds")
         new = startups.mark_first_seen(found, store.setdefault("first_seen", {}), now)

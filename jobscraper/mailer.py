@@ -62,7 +62,7 @@ def build_email(jobs: list[Job], new_keys: set[str], stats: dict, attachment: Pa
                                            o.graduate_fit not in ("Graduate / junior role", "Welcomes graduates"),
                                            -(o.posted or date.min).toordinal()))[:15]
     if startups is not None:
-        text += ["", f"{len(opps)} roles at quant and fintech startups that take graduates (all in the 'Startups' sheet):"]
+        text += ["", f"{len(opps)} graduate roles at quant/fintech startups and boutique firms (all in the 'Startups & Boutiques' sheet):"]
         text += [f"- {'NEW ' if o.key in new_startups else ''}{o.title} | {o.company} | {o.location} | "
                  f"{o.graduate_fit} | apply: {o.url}" for o in opps_top]
     msg.set_content("\n".join(text))
@@ -94,8 +94,8 @@ def build_email(jobs: list[Job], new_keys: set[str], stats: dict, attachment: Pa
     startup_table = ""
     if startups is not None:
         startup_table = (
-            f"<p><b>{len(opps)}</b> roles at quant and fintech startups that take graduates "
-            f"(all in the 'Startups' sheet):</p>{_startup_table(opps_top, new_startups)}"
+            f"<p><b>{len(opps)}</b> graduate roles at quant/fintech startups and boutique firms "
+            f"(all in the 'Startups & Boutiques' sheet):</p>{_startup_table(opps_top, new_startups)}"
             if opps else "<p>No startup roles open to graduates this time.</p>"
         )
     msg.add_alternative(
@@ -146,13 +146,13 @@ def _hackathon_table(hacks: list, new_keys: set[str]) -> str:
 def _startup_table(opps: list, new_keys: set[str]) -> str:
     rows = "".join(
         f"<tr><td>{'<b>NEW</b> ' if o.key in new_keys else ''}<a href='{html.escape(o.url)}'>{html.escape(o.title)}</a></td>"
-        f"<td>{html.escape(o.company)}</td><td>{html.escape(o.focus)}</td><td>{html.escape(o.location)}</td>"
+        f"<td>{html.escape(o.company)} ({html.escape(o.firm_type)})</td><td>{html.escape(o.focus)}</td><td>{html.escape(o.location)}</td>"
         f"<td>{html.escape(o.graduate_fit)}</td><td>{html.escape(o.sponsorship)}</td></tr>"
         for o in opps
     )
     return (
         "<table border='1' cellpadding='5' cellspacing='0' style='border-collapse:collapse;font-size:13px'>"
-        "<tr style='background:#1F3864;color:#fff'><th>Role</th><th>Startup</th><th>What they do</th>"
+        "<tr style='background:#1F3864;color:#fff'><th>Role</th><th>Firm</th><th>What they do</th>"
         f"<th>Location</th><th>Graduate fit</th><th>Visa sponsorship</th></tr>{rows}</table>"
     )
 
