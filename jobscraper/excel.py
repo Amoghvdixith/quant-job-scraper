@@ -28,8 +28,17 @@ HACKATHON_COLUMNS = [
 ]
 
 
+STARTUP_COLUMNS = [
+    ("New", 7), ("Role", 45), ("Startup", 24), ("What They Do", 40), ("Stage", 14), ("HQ", 18),
+    ("Area", 20), ("Location", 30), ("Work Type", 11), ("Graduate Fit", 24), ("Why (posting's words)", 50),
+    ("Years Exp. Asked", 15), ("Visa Sponsorship", 16), ("Employer On Sponsor List", 22), ("Posted", 11),
+    ("Days Old", 9), ("Found On", 16), ("Apply", 12),
+]
+
+
 def write_workbook(jobs: list[Job], new_keys: set[str], stats: dict, path: Path,
-                   hackathons: list | None = None, new_hackathons: set[str] | None = None) -> Path:
+                   hackathons: list | None = None, new_hackathons: set[str] | None = None,
+                   startups: list | None = None, new_startups: set[str] | None = None) -> Path:
     wb = Workbook()
     _jobs_sheet(wb.active, "Jobs", jobs, new_keys)
     _jobs_sheet(wb.create_sheet("Remote Jobs"), "Remote Jobs", [j for j in jobs if j.remote], new_keys)
@@ -38,7 +47,9 @@ def write_workbook(jobs: list[Job], new_keys: set[str], stats: dict, path: Path,
     _jobs_sheet(wb.create_sheet("Government Jobs"), "Government Jobs", [j for j in jobs if j.government], new_keys)
     if hackathons is not None:
         _hackathons_sheet(wb.create_sheet("Hackathons"), hackathons, new_hackathons or set())
-    _summary_sheet(wb, jobs, new_keys, stats, hackathons)
+    if startups is not None:
+        _startups_sheet(wb.create_sheet("Startups"), startups, new_startups or set())
+    _summary_sheet(wb, jobs, new_keys, stats, hackathons, startups)
     path.parent.mkdir(parents=True, exist_ok=True)
     wb.save(path)
     return path
@@ -132,7 +143,44 @@ def _hackathons_sheet(ws, hackathons: list, new_keys: set[str]) -> None:
     ws.auto_filter.ref = ws.dimensions
 
 
-def _summary_sheet(wb, jobs: list[Job], new_keys: set[str], stats: dict, hackathons: list | None = None) -> None:
+def _startups_sheet(ws, opps: list, new_keys: set[str]) -> None:
+    """Open roles at quant and fintech startups that a recent graduate could get."""
+    ws.title = "Startups"
+    ws.append([c for c, _ in STARTUP_COLUMNS])
+    for i, (_, width) in enumerate(STARTUP_COLUMNS, 1):
+        ws.column_dimensions[get_column_letter(i)].width = width
+        cell = ws.cell(row=1, column=i)
+        cell.font = Font(bold=True, color="FFFFFF")
+        cell.fill = HEADER_FILL
+        cell.alignment = Alignment(vertical="center", wrap_text=True)
+    today = date.today()
+    for o in opps:
+        is_new = o.key in new_keys
+        ws.append([
+            "NEW" if is_new else "", o.title, o.company, o.focus, o.stage, o.hq, o.area, o.location,
+            "Remote" if o.remote else "On-site/Hybrid", o.graduate_fit, o.graduate_evidence,
+            o.years_required, o.sponsorship, o.employer_sponsor, o.posted,
+            (today - o.posted).days if o.posted else None, o.platform, "Apply",
+        ])
+        row = ws.max_row
+        link = ws.cell(row=row, column=18)
+        link.hyperlink = o.url
+        link.font = Font(color="0563C1", underline="single")
+        ws.cell(row=row, column=15).number_format = "yyyy-mm-dd"
+        if is_new:
+            ws.cell(row=row, column=1).fill = NEW_FILL
+        if o.graduate_fit in ("Graduate / junior role", "Welcomes graduates"):
+            ws.cell(row=row, column=10).fill = YES_FILL
+        if o.sponsorship == "Yes":
+            ws.cell(row=row, column=13).fill = YES_FILL
+        if (o.employer_sponsor or "").startswith("Yes"):
+            ws.cell(row=row, column=14).fill = YES_FILL
+    ws.freeze_panes = "A2"
+    ws.auto_filter.ref = ws.dimensions
+
+
+def _summary_sheet(wb, jobs: list[Job], new_keys: set[str], stats: dict, hackathons: list | None = None,
+                   startups: list | None = None) -> None:
     summary = wb.create_sheet("Run Summary")
     summary.column_dimensions["A"].width = 34
     summary.column_dimensions["B"].width = 18
@@ -148,6 +196,7 @@ def _summary_sheet(wb, jobs: list[Job], new_keys: set[str], stats: dict, hackath
         ("UK government (NHS / Civil Service)", sum(bool(j.government) for j in jobs)),
         ("Posted by recruitment agencies", sum(j.recruiter for j in jobs)),
         ("Quant hackathons open to graduates", len(hackathons) if hackathons is not None else "not searched"),
+        ("Startup roles open to graduates", len(startups) if startups is not None else "not searched"),
         ("", ""),
         ("Source", "Jobs found this run"),
     ]

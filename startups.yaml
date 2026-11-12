@@ -1,0 +1,88 @@
+# Quant and fintech startups whose open roles go in the "Startups" sheet. Only roles a recent
+# graduate could get are kept (see `startups` in config.yaml).
+#
+# name:   the startup's name
+# focus:  what it does (shown in the sheet)
+# stage:  funding stage, as you want it shown
+# hq:     headquarters
+# board:  its job board, when known: {platform: greenhouse | lever | ashby | smartrecruiters, id: <board name>}
+#         (the name in https://boards.greenhouse.io/<id>, https://jobs.lever.co/<id>, https://jobs.ashbyhq.com/<id>).
+#         Leave it out and the board is looked up by name on each platform, a few startups per run.
+#         Use `board: none` for a startup with no public board, or when the lookup finds the wrong company.
+#
+# Boards marked "checked" were confirmed to belong to that startup on 12 Nov 2026.
+startups:
+  # Trading, market making and market data
+  - {name: Wintermute, focus: Algorithmic trading and market making in digital assets, stage: Private (profitable), hq: London,
+     board: {platform: lever, id: wintermute-trading}}   # checked
+  - {name: Keyrock, focus: Digital asset market making and liquidity, stage: Series B, hq: Brussels,
+     board: {platform: ashby, id: keyrock}}              # checked
+  - {name: Flowdesk, focus: Crypto market making and trading infrastructure, stage: Series B, hq: Paris,
+     board: {platform: greenhouse, id: flowdesk}}        # checked
+  - {name: Clear Street, focus: Cloud-native prime brokerage and clearing, stage: Late stage, hq: New York,
+     board: {platform: greenhouse, id: clearstreet}}     # checked
+  - {name: Databento, focus: Market data APIs for trading and research, stage: Series A, hq: Salt Lake City,
+     board: {platform: greenhouse, id: databento}}       # checked
+  - {name: Alpaca, focus: Brokerage and trading APIs, stage: Series C, hq: San Mateo,
+     board: {platform: greenhouse, id: alpaca}}          # checked
+  - {name: OpenGamma, focus: Derivatives margin and risk analytics, stage: Series B, hq: London,
+     board: {platform: greenhouse, id: opengamma}}       # checked
+  - {name: Kaiko, focus: Digital asset market data and indices, stage: Series B, hq: Paris}
+  - {name: Beacon Platform, focus: Quant developer platform for trading and risk, stage: Series C, hq: New York}
+
+  # Prediction markets and on-chain risk
+  - {name: Kalshi, focus: Regulated prediction market exchange, stage: Series D, hq: New York,
+     board: {platform: ashby, id: kalshi}}               # checked
+  - {name: Polymarket, focus: Prediction markets, stage: Late stage, hq: New York,
+     board: {platform: ashby, id: polymarket}}           # checked
+  - {name: Gauntlet, focus: Quantitative risk modelling for DeFi protocols, stage: Series B, hq: New York,
+     board: {platform: lever, id: gauntlet}}             # checked
+  - {name: Chaos Labs, focus: Risk management and simulation for DeFi, stage: Series A, hq: New York,
+     board: {platform: lever, id: chaoslabs}}            # checked
+
+  # AI for investment research
+  - {name: Rogo, focus: AI analyst for investment banks and funds, stage: Series B, hq: New York,
+     board: {platform: ashby, id: rogo}}                 # checked
+  - {name: Hebbia, focus: AI document search for finance, stage: Series B, hq: New York}
+  - {name: Daloopa, focus: Financial data extraction for analysts, stage: Series B, hq: New York}
+  - {name: Finster AI, focus: AI research tools for capital markets, stage: Seed, hq: London}
+  - {name: Clarity AI, focus: Sustainability and ESG analytics for investors, stage: Series C, hq: Madrid}
+  - {name: Numerai, focus: Crowdsourced quant hedge fund, stage: Series C, hq: San Francisco}
+
+  # Lending, credit risk and financial crime
+  - {name: Lendable, focus: Consumer lending with in-house credit risk models, stage: Late stage, hq: London,
+     board: {platform: ashby, id: lendable}}             # checked
+  - {name: Zilch, focus: Buy-now-pay-later and payments, stage: Late stage, hq: London,
+     board: {platform: ashby, id: zilch}}                # checked
+  - {name: Quantexa, focus: Decision intelligence for fraud and financial crime, stage: Series F, hq: London}
+  - {name: ComplyAdvantage, focus: AML and financial crime risk data, stage: Series D, hq: London}
+  - {name: Sardine, focus: Fraud and compliance risk platform, stage: Series C, hq: San Francisco}
+  - {name: Unit21, focus: Fraud and AML monitoring, stage: Series C, hq: San Francisco}
+  - {name: Taktile, focus: Credit and risk decisioning platform, stage: Series B, hq: Berlin}
+
+  # Payments, banking and investing apps
+  - {name: Ramp, focus: Corporate cards and finance automation, stage: Late stage, hq: New York,
+     board: {platform: ashby, id: ramp}}                 # checked
+  - {name: Brex, focus: Corporate cards and spend management, stage: Late stage, hq: San Francisco,
+     board: {platform: greenhouse, id: brex}}            # checked
+  - {name: Mercury, focus: Banking for startups, stage: Series C, hq: San Francisco,
+     board: {platform: ashby, id: mercury}}              # checked
+  - {name: Plaid, focus: Open banking data network, stage: Late stage, hq: San Francisco,
+     board: {platform: ashby, id: plaid}}                # checked
+  - {name: GoCardless, focus: Bank payments, stage: Late stage, hq: London,
+     board: {platform: greenhouse, id: gocardless}}      # checked
+  - {name: Freetrade, focus: Commission-free investing app, stage: Late stage, hq: London,
+     board: {platform: ashby, id: freetrade}}            # checked
+  - {name: Lightyear, focus: Multi-currency investing app, stage: Series A, hq: London}
+  - {name: Tide, focus: Business banking, stage: Late stage, hq: London}
+  - {name: Kroo, focus: Digital bank, stage: Series B, hq: London}
+  - {name: PrimaryBid, focus: Retail access to IPOs and capital raises, stage: Series C, hq: London}
+  - {name: Ebury, focus: FX and cross-border payments for SMEs, stage: Late stage, hq: London}
+  - {name: Bitpanda, focus: Retail investing and crypto platform, stage: Late stage, hq: Vienna}
+  - {name: Scalable Capital, focus: Digital broker and wealth manager, stage: Late stage, hq: Munich}
+  - {name: Trade Republic, focus: Mobile broker and bank, stage: Late stage, hq: Berlin}
+  - {name: Upvest, focus: Investment infrastructure API, stage: Series B, hq: Berlin}
+  - {name: Qonto, focus: Business banking, stage: Late stage, hq: Paris}
+  - {name: Pennylane, focus: Accounting and finance software, stage: Late stage, hq: Paris}
+  # The "primer" Ashby board is a school network, not the payments startup.
+  - {name: Primer, focus: Payments orchestration, stage: Series B, hq: London, board: none}

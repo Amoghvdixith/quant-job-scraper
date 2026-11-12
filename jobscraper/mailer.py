@@ -12,7 +12,8 @@ from .models import Job
 
 def build_email(jobs: list[Job], new_keys: set[str], stats: dict, attachment: Path, sender: str, to: str,
                 max_age_days: int = 5, hackathons: list | None = None,
-                new_hackathons: set[str] | None = None) -> EmailMessage:
+                new_hackathons: set[str] | None = None, startups: list | None = None,
+                new_startups: set[str] | None = None) -> EmailMessage:
     new_jobs = [j for j in jobs if j.key in new_keys]
     msg = EmailMessage()
     msg["Subject"] = f"Quant jobs: {len(new_jobs)} new, {len(jobs)} in the last {max_age_days} days"
@@ -55,6 +56,15 @@ def build_email(jobs: list[Job], new_keys: set[str], stats: dict, attachment: Pa
         text += ["", f"{len(hacks)} quant finance hackathons graduates can enter (all in the 'Hackathons' sheet):"]
         text += [f"- {'NEW ' if h.key in new_hackathons else ''}{h.title} | {h.organiser} | {h.dates} | "
                  f"{h.eligibility} | {h.url}" for h in hacks_top]
+    opps = startups or []
+    new_startups = new_startups or set()
+    opps_top = sorted(opps, key=lambda o: (o.key not in new_startups,
+                                           o.graduate_fit not in ("Graduate / junior role", "Welcomes graduates"),
+                                           -(o.posted or date.min).toordinal()))[:15]
+    if startups is not None:
+        text += ["", f"{len(opps)} roles at quant and fintech startups that take graduates (all in the 'Startups' sheet):"]
+        text += [f"- {'NEW ' if o.key in new_startups else ''}{o.title} | {o.company} | {o.location} | "
+                 f"{o.graduate_fit} | apply: {o.url}" for o in opps_top]
     msg.set_content("\n".join(text))
 
     table = _table(top) if top else "<p>No new jobs this time.</p>"
@@ -81,10 +91,17 @@ def build_email(jobs: list[Job], new_keys: set[str], stats: dict, attachment: Pa
             f"(all in the 'Hackathons' sheet):</p>{_hackathon_table(hacks_top, new_hackathons)}"
             if hacks else "<p>No quant finance hackathons open to graduates this time.</p>"
         )
+    startup_table = ""
+    if startups is not None:
+        startup_table = (
+            f"<p><b>{len(opps)}</b> roles at quant and fintech startups that take graduates "
+            f"(all in the 'Startups' sheet):</p>{_startup_table(opps_top, new_startups)}"
+            if opps else "<p>No startup roles open to graduates this time.</p>"
+        )
     msg.add_alternative(
         f"<p><b>{len(new_jobs)}</b> new jobs since the last email, <b>{len(jobs)}</b> matching jobs posted in the last {max_age_days} days.</p>"
         f"<p>The full list is in the attached Excel file (new ones are marked NEW).</p>"
-        f"{'<p>Top new jobs:</p>' if top else ''}{table}{remote_table}{grads_table}{interns_table}{gov_table}{hack_table}"
+        f"{'<p>Top new jobs:</p>' if top else ''}{table}{remote_table}{grads_table}{interns_table}{gov_table}{hack_table}{startup_table}"
         f"<p style='color:#666;font-size:12px'>Found this run: {html.escape(source_line)}.</p>",
         subtype="html",
     )
@@ -123,6 +140,20 @@ def _hackathon_table(hacks: list, new_keys: set[str]) -> str:
         "<table border='1' cellpadding='5' cellspacing='0' style='border-collapse:collapse;font-size:13px'>"
         "<tr style='background:#1F3864;color:#fff'><th>Hackathon</th><th>Organiser</th><th>Dates / deadline</th>"
         f"<th>Graduates</th><th>Format</th><th>Prize</th></tr>{rows}</table>"
+    )
+
+
+def _startup_table(opps: list, new_keys: set[str]) -> str:
+    rows = "".join(
+        f"<tr><td>{'<b>NEW</b> ' if o.key in new_keys else ''}<a href='{html.escape(o.url)}'>{html.escape(o.title)}</a></td>"
+        f"<td>{html.escape(o.company)}</td><td>{html.escape(o.focus)}</td><td>{html.escape(o.location)}</td>"
+        f"<td>{html.escape(o.graduate_fit)}</td><td>{html.escape(o.sponsorship)}</td></tr>"
+        for o in opps
+    )
+    return (
+        "<table border='1' cellpadding='5' cellspacing='0' style='border-collapse:collapse;font-size:13px'>"
+        "<tr style='background:#1F3864;color:#fff'><th>Role</th><th>Startup</th><th>What they do</th>"
+        f"<th>Location</th><th>Graduate fit</th><th>Visa sponsorship</th></tr>{rows}</table>"
     )
 
 
