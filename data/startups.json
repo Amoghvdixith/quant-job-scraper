@@ -1,5 +1,11 @@
 {
  "boards": {
+  "Arma Partners": {
+   "checked": "2026-11-12"
+  },
+  "Aspect Capital": {
+   "checked": "2026-11-12"
+  },
   "Beacon Platform": {
    "checked": "2026-11-12",
    "id": "beaconplatform",
@@ -10,6 +16,14 @@
    "id": "bitpanda",
    "platform": "greenhouse"
   },
+  "Centerview Partners": {
+   "checked": "2026-11-12"
+  },
+  "Chicago Trading Company": {
+   "checked": "2026-11-12",
+   "id": "chicagotrading",
+   "platform": "greenhouse"
+  },
   "Clarity AI": {
    "checked": "2026-11-12"
   },
@@ -17,6 +31,12 @@
    "checked": "2026-11-12",
    "id": "complyadvantage",
    "platform": "greenhouse"
+  },
+  "DC Advisory": {
+   "checked": "2026-11-12"
+  },
+  "Da Vinci Trading": {
+   "checked": "2026-11-12"
   },
   "Daloopa": {
    "checked": "2026-11-12"
@@ -26,10 +46,25 @@
    "id": "ebury",
    "platform": "greenhouse"
   },
+  "Eisler Capital": {
+   "checked": "2026-11-12"
+  },
+  "Evercore": {
+   "checked": "2026-11-12"
+  },
   "Finster AI": {
    "checked": "2026-11-12",
    "id": "finsterai",
    "platform": "greenhouse"
+  },
+  "Five Rings": {
+   "checked": "2026-11-12"
+  },
+  "Fulcrum Asset Management": {
+   "checked": "2026-11-12"
+  },
+  "Headlands Technologies": {
+   "checked": "2026-11-12"
   },
   "Hebbia": {
    "checked": "2026-11-12"
@@ -40,7 +75,13 @@
   "Kroo": {
    "checked": "2026-11-12"
   },
+  "Lazard": {
+   "checked": "2026-11-12"
+  },
   "Lightyear": {
+   "checked": "2026-11-12"
+  },
+  "Lynx Asset Management": {
    "checked": "2026-11-12"
   },
   "Mako Trading": {
@@ -49,13 +90,25 @@
   "Maven Securities": {
    "checked": "2026-11-12"
   },
+  "Moelis": {
+   "checked": "2026-11-12"
+  },
   "Numerai": {
+   "checked": "2026-11-12"
+  },
+  "Old Mission": {
+   "checked": "2026-11-12"
+  },
+  "PJT Partners": {
    "checked": "2026-11-12"
   },
   "Pennylane": {
    "checked": "2026-11-12",
    "id": "pennylane",
    "platform": "ashby"
+  },
+  "Perella Weinberg": {
+   "checked": "2026-11-12"
   },
   "PrimaryBid": {
    "checked": "2026-11-12"
@@ -65,10 +118,24 @@
    "id": "qonto",
    "platform": "lever"
   },
+  "Quadrature Capital": {
+   "checked": "2026-11-12",
+   "id": "quadraturecapital",
+   "platform": "greenhouse"
+  },
   "Quantexa": {
    "checked": "2026-11-12",
    "id": "quantexa",
    "platform": "ashby"
+  },
+  "Radix Trading": {
+   "checked": "2026-11-12"
+  },
+  "Rothschild & Co": {
+   "checked": "2026-11-12"
+  },
+  "Ruffer": {
+   "checked": "2026-11-12"
   },
   "Sardine": {
    "checked": "2026-11-12",
@@ -78,10 +145,16 @@
   "Scalable Capital": {
    "checked": "2026-11-12"
   },
+  "Systematica Investments": {
+   "checked": "2026-11-12"
+  },
   "Taktile": {
    "checked": "2026-11-12",
    "id": "taktile",
    "platform": "ashby"
+  },
+  "Tibra Capital": {
+   "checked": "2026-11-12"
   },
   "Tide": {
    "checked": "2026-11-12",
@@ -100,11 +173,19 @@
    "checked": "2026-11-12",
    "id": "upvest",
    "platform": "ashby"
+  },
+  "Vivienne Court": {
+   "checked": "2026-11-12"
+  },
+  "Zanders": {
+   "checked": "2026-11-12"
   }
  },
  "first_seen": {
   "2028 summer financial analyst capital solutions class of 2029 los angeles private debt advisory|houlihanlokey|US": "2026-11-12T11:06:04",
   "2028 summer financial analyst capital solutions class of 2029 new york private debt advisory|houlihanlokey|US": "2026-11-12T11:06:04",
+  "2028 summer financial analyst secondaries directs advisory groups class of 2029 new york|houlihanlokey|US": "2026-11-12T17:06:56",
+  "ai engineer|chicagotrading|US": "2026-11-12T17:06:56",
   "algorithmic trader|wintermute|US": "2026-11-12T11:06:04",
   "analyst commodity energy trading advisory|baringa|US": "2026-11-12T11:06:04",
   "analyst deal operations|ramp|US": "2026-11-12T11:06:04",
@@ -138,6 +219,7 @@
   "defi engineer|flowdesk|UK": "2026-11-12T11:06:04",
   "design engineer|ramp|US": "2026-11-12T11:06:04",
   "design engineer|rogo|US": "2026-11-12T11:06:04",
+  "desk developer|chicagotrading|US": "2026-11-12T17:06:56",
   "developer support specialist|brex|": "2026-11-12T11:06:04",
   "devops engineer|quantexa|UK": "2026-11-12T11:06:04",
   "devops engineer|quberesearchtechnologies|": "2026-11-12T11:06:04",
@@ -205,6 +287,7 @@
   "quantitative developer python|quberesearchtechnologies|": "2026-11-12T11:06:04",
   "quantitative developer python|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
   "quantitative developer researcher graduate|winton|UK": "2026-11-12T11:06:04",
+  "quantitative developer|quadraturecapital|UK": "2026-11-12T17:06:56",
   "quantitative production strategist|quberesearchtechnologies|": "2026-11-12T11:06:04",
   "quantitative researcher entry level 2027|belvederetrading|US": "2026-11-12T11:06:04",
   "quantitative researcher phd postdoc opportunities|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
@@ -252,6 +335,7 @@
   "technical consultant enterprise|ramp|US": "2026-11-12T11:06:04",
   "technical consultant mid market|ramp|": "2026-11-12T11:06:04",
   "trading system support analyst|belvederetrading|US": "2026-11-12T11:06:04",
+  "trading systems engineer|quberesearchtechnologies|UK": "2026-11-12T17:06:56",
   "trading systems engineer|quberesearchtechnologies|US": "2026-11-12T11:06:04",
   "trading systems reliability engineer c|quberesearchtechnologies|": "2026-11-12T11:06:04",
   "trading systems reliability engineer|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
