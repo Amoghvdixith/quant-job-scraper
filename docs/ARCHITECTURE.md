@@ -29,7 +29,7 @@ database: GitHub Actions is the computer and the git repo is the storage.
 | `.github/workflows/discover.yml` | Weekly workflow: finds careers sites and downloads the sponsor registers |
 | `jobscraper/main.py` | The pipeline: plan searches, scrape, filter, dedupe, read descriptions, apply rules, write Excel, email |
 | `jobscraper/schedule.py` | Works out whether an email is due and how long to wait for the next slot |
-| `jobscraper/sources/*.py` | One module per job source; `hackathons.py` finds quant hackathons for the "Hackathons" sheet |
+| `jobscraper/sources/*.py` | One module per job source; `hackathons.py` finds quant hackathons for the "Hackathons" sheet and `startups.py` graduate roles at startups and boutique firms for the "Startups & Boutiques" sheet |
 | `jobscraper/filters.py` | Role matching, seniority, location, years of experience, recruiter and sponsorship text checks |
 | `jobscraper/sponsor_registers.py` | Downloads and looks up the UK, US and Dutch sponsor registers |
 | `jobscraper/discover_careers.py` | Finds which hiring platform each target firm uses |
@@ -378,3 +378,21 @@ is too loose) and closed or past events. The same event from two sources is list
 `data/hackathons.json` keeps when each hackathon was first listed (for NEW) and a cache of the
 pages read, so a page is re-read only every `reread_days`. It is saved only after a real email,
 like `jobs.json`. A failure here is logged and the jobs email still goes out without the sheet.
+
+## Startups and boutique firms that take graduates
+
+`jobscraper/sources/startups.py` also runs in a background thread and fills the "Startups & Boutiques"
+sheet and email section. For each firm in `startups.yaml` (`startups` and `boutiques`, tagged with
+the firm type by `main.find_startup_roles()`) it finds a job board (`board` in the file,
+then `data/careers_sites.json`, then a board found on an earlier run, then
+`discover_careers.probe_apis()` by name, `max_board_lookups_per_run` a run) and reads it with the
+careers-site fetchers in `sources/careers.py`. `judge()` drops internships, senior titles, roles
+outside `role_areas`, excluded countries and postings that rule out sponsorship;
+`graduate_fit()` keeps graduate/junior titles, postings that welcome graduates, and postings that
+ask for no experience, and drops anything asking for more than `max_years_experience` years.
+`main.py` adds the sponsor-register status before writing the sheet.
+
+`data/startups.json` keeps when each role was first listed (for NEW) and the boards found by
+lookup; a board that stops working is looked up again, and a startup with no board is retried
+after `board_lookup_retry_days`. It is saved only after a real email. A failure here is logged and
+the jobs email still goes out without the sheet.

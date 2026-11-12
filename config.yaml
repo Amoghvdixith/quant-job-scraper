@@ -241,3 +241,27 @@ hackathons:
   devpost_themes: [Fintech]
   devpost_search: [quant, trading, finance, investing, stock market, hedge fund]
   devpost_pages: 2
+
+# Roles at quant and fintech startups and boutique firms that take on graduates ("Startups & Boutiques"
+# sheet and email section). The firms are listed in startups.yaml; their open roles come from their public job boards.
+# A role is kept when it isn't senior (senior_title_words above) or an internship, is in one of
+# role_areas, isn't in excluded_locations, the posting doesn't rule out visa sponsorship, and a
+# graduate could get it: a graduate/junior title, wording like "new grads" or "0-2 years", or no
+# work experience asked at all.
+startups:
+  max_years_experience: 2          # drop roles asking for more years than this
+  max_posting_age_days: 0          # 0: every open role; otherwise drop roles posted longer ago
+  max_board_lookups_per_run: 25    # firms without a known board looked up by name each run
+  board_lookup_retry_days: 14      # a startup whose board wasn't found is looked up again after this
+  role_areas:                      # title words for each area; a title with none of them is dropped
+    Quant & Research: [quant, quantitative, research, researcher, alpha, strategist, modelling, modeling, pricing]
+    Trading: [trading, trader, execution, market making, market maker]
+    Risk: [risk, credit, fraud, underwriting, underwriter, actuarial, actuary]
+    Data & ML: [data, machine learning, ml, ai, analytics, statistician, scientist]
+    Finance & Investment: [finance, financial, investment, investments, portfolio, valuation, treasury, economist, capital markets,
+                           investment banking, m and a, restructuring, advisory]
+    Engineering: [engineer, engineering, developer, software, programmer]
+    Analyst: [analyst, consultant]
+  exclude_title_words: [sales, marketing, recruiter, recruiting, talent, legal, counsel, designer, customer,
+                        account executive, business development, partnerships, executive assistant,
+                        office manager, community, people, hr, content, copywriter]

@@ -18,7 +18,7 @@ from .excel import write_workbook
 from .mailer import build_email, send
 from .models import Job
 from .schedule import slot_number
-from .sources import careers, efinancialcareers, google, government, hackathons, indeed, linkedin
+from .sources import careers, efinancialcareers, google, government, hackathons, indeed, linkedin, startups
 from .sponsor_registers import SponsorRegisters, country_of
 from . import sponsor_registers
 
@@ -26,6 +26,7 @@ log = logging.getLogger("jobscraper")
 ROOT = Path(__file__).resolve().parent.parent
 STORE = ROOT / "data" / "jobs.json"
 HACKATHON_STORE = ROOT / "data" / "hackathons.json"
+STARTUP_STORE = ROOT / "data" / "startups.json"
 MAX_DESCRIPTION_FETCHES = 400
 KEEP_STORE_DAYS = 30
 
@@ -345,10 +346,13 @@ def main() -> None:
     now_utc = datetime.now(timezone.utc)
     slot = slot_number(cfg, now_utc)
     # Hackathons come from other sites, so they are searched alongside the job sources.
-    with ThreadPoolExecutor(max_workers=1) as pool:
+    # So are startups' job boards.
+    with ThreadPoolExecutor(max_workers=2) as pool:
         hack_future = pool.submit(find_hackathons, cfg)
+        startup_future = pool.submit(find_startup_roles, cfg)
         raw, stats = scrape(cfg, roles, slot)
         hacks, new_hacks, hack_store, hack_stats = hack_future.result()
+        opps, new_opps, startup_store, startup_stats = startup_future.result()
     matcher = filters.RoleMatcher(roles)
     candidates = apply_filters(raw, cfg, matcher)
     log.info("%d raw results, %d after title/seniority/location/date filters", len(raw), len(candidates))
@@ -416,15 +420,19 @@ def main() -> None:
         j.tier, -(j.posted or date.min).toordinal(),
     ))
 
+    for o in opps or []:
+        o.employer_sponsor = registers.status(o.company, o.location)
+
     stamp = datetime.now(timezone.utc).replace(tzinfo=None).strftime("%Y-%m-%d_%H%M")
     path = write_workbook(current, new_keys, stats, ROOT / "out" / f"quant_jobs_{stamp}.xlsx",
-                          hacks, new_hacks)
+                          hacks, new_hacks, opps, new_opps)
     log.info("Wrote %s: %d jobs, %d new", path, len(current), len(new_keys))
 
     if not args.no_email:
         sender = os.environ["GMAIL_USER"]
         to = os.environ.get("MAIL_TO") or sender
-        send(build_email(current, new_keys, stats, path, sender, to, cfg["max_age_days"], hacks, new_hacks))
+        send(build_email(current, new_keys, stats, path, sender, to, cfg["max_age_days"], hacks, new_hacks,
+                         opps, new_opps))
         log.info("Emailed %s", to)
         (ROOT / "data" / "last_email_utc").write_text(datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ") + "\n")
         for key in new_keys:
@@ -433,9 +441,12 @@ def main() -> None:
     if hack_store is not None and not args.no_email:
         # Like jobs, a dry run doesn't use up "NEW": the next email still marks them new.
         HACKATHON_STORE.write_text(json.dumps(hack_store, indent=1, sort_keys=True))
+    if startup_store is not None and not args.no_email:
+        STARTUP_STORE.write_text(json.dumps(startup_store, indent=1, sort_keys=True))
     dropped["sponsor lists loaded"] = {c: len(v) for c, v in registers.lists.items()}
     write_report(stats, len(raw), len(candidates), current, new_keys, slot, dropped,
-                 {"sources": hack_stats, "listed": len(hacks or []), "new": len(new_hacks)})
+                 {"sources": hack_stats, "listed": len(hacks or []), "new": len(new_hacks)},
+                 {**startup_stats, "listed": len(opps or []), "new": len(new_opps)})
 
 
 class _WarningBuffer(logging.Handler):
@@ -480,7 +491,30 @@ def find_hackathons(cfg: dict) -> tuple[list | None, set[str], dict | None, dict
         return None, set(), None, hstats
 
 
-def write_report(stats, raw_count, candidate_count, current, new_keys, slot, dropped, hackathon_report=None) -> None:
+def find_startup_roles(cfg: dict) -> tuple[list | None, set[str], dict | None, dict]:
+    """(startup roles to list, keys new since the last email, store to save, stats). Never raises:
+    a failure here leaves the Startups sheet out but still sends the jobs."""
+    sstats: dict = {}
+    if not cfg.get("startups"):
+        return None, set(), None, sstats
+    try:
+        store = json.loads(STARTUP_STORE.read_text()) if STARTUP_STORE.exists() else {}
+        listed_file = ROOT / "startups.yaml"
+        lists = (yaml.safe_load(listed_file.read_text()) or {}) if listed_file.exists() else {}
+        listed = [{**s, "type": "Startup"} for s in lists.get("startups") or []] + \
+                 [{**s, "type": "Boutique"} for s in lists.get("boutiques") or []]
+        found = startups.collect(cfg, sstats, store, listed)
+        now = datetime.now(timezone.utc).replace(tzinfo=None).isoformat(timespec="seconds")
+        new = startups.mark_first_seen(found, store.setdefault("first_seen", {}), now)
+        startups.forget_old(store, {o.key for o in found}, KEEP_STORE_DAYS * 3)
+        return found, new, store, sstats
+    except Exception as e:
+        log.warning("Startups failed: %s", e)
+        return None, set(), None, sstats
+
+
+def write_report(stats, raw_count, candidate_count, current, new_keys, slot, dropped, hackathon_report=None,
+                 startup_report=None) -> None:
     """data/last_run.json: what the last run found, readable without the Actions logs."""
     report = {
         "finished_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -494,6 +528,7 @@ def write_report(stats, raw_count, candidate_count, current, new_keys, slot, dro
         "posted_by_recruiters": sum(j.recruiter for j in current),
         "saved_jobs_dropped_by_rule": dropped,
         "hackathons": hackathon_report or {},
+        "startups": startup_report or {},
         "warnings": WARNINGS.lines,
     }
     (ROOT / "data" / "last_run.json").write_text(json.dumps(report, indent=1))
