@@ -1,0 +1,261 @@
+{
+ "boards": {
+  "Beacon Platform": {
+   "checked": "2026-11-12",
+   "id": "beaconplatform",
+   "platform": "greenhouse"
+  },
+  "Bitpanda": {
+   "checked": "2026-11-12",
+   "id": "bitpanda",
+   "platform": "greenhouse"
+  },
+  "Clarity AI": {
+   "checked": "2026-11-12"
+  },
+  "ComplyAdvantage": {
+   "checked": "2026-11-12",
+   "id": "complyadvantage",
+   "platform": "greenhouse"
+  },
+  "Daloopa": {
+   "checked": "2026-11-12"
+  },
+  "Ebury": {
+   "checked": "2026-11-12",
+   "id": "ebury",
+   "platform": "greenhouse"
+  },
+  "Finster AI": {
+   "checked": "2026-11-12",
+   "id": "finsterai",
+   "platform": "greenhouse"
+  },
+  "Hebbia": {
+   "checked": "2026-11-12"
+  },
+  "Kaiko": {
+   "checked": "2026-11-12"
+  },
+  "Kroo": {
+   "checked": "2026-11-12"
+  },
+  "Lightyear": {
+   "checked": "2026-11-12"
+  },
+  "Mako Trading": {
+   "checked": "2026-11-12"
+  },
+  "Maven Securities": {
+   "checked": "2026-11-12"
+  },
+  "Numerai": {
+   "checked": "2026-11-12"
+  },
+  "Pennylane": {
+   "checked": "2026-11-12",
+   "id": "pennylane",
+   "platform": "ashby"
+  },
+  "PrimaryBid": {
+   "checked": "2026-11-12"
+  },
+  "Qonto": {
+   "checked": "2026-11-12",
+   "id": "qonto",
+   "platform": "lever"
+  },
+  "Quantexa": {
+   "checked": "2026-11-12",
+   "id": "quantexa",
+   "platform": "ashby"
+  },
+  "Sardine": {
+   "checked": "2026-11-12",
+   "id": "sardine",
+   "platform": "ashby"
+  },
+  "Scalable Capital": {
+   "checked": "2026-11-12"
+  },
+  "Taktile": {
+   "checked": "2026-11-12",
+   "id": "taktile",
+   "platform": "ashby"
+  },
+  "Tide": {
+   "checked": "2026-11-12",
+   "id": "tide",
+   "platform": "greenhouse"
+  },
+  "Trade Republic": {
+   "checked": "2026-11-12",
+   "id": "traderepublic",
+   "platform": "greenhouse"
+  },
+  "Unit21": {
+   "checked": "2026-11-12"
+  },
+  "Upvest": {
+   "checked": "2026-11-12",
+   "id": "upvest",
+   "platform": "ashby"
+  }
+ },
+ "first_seen": {
+  "2028 summer financial analyst capital solutions class of 2029 los angeles private debt advisory|houlihanlokey|US": "2026-11-12T11:06:04",
+  "2028 summer financial analyst capital solutions class of 2029 new york private debt advisory|houlihanlokey|US": "2026-11-12T11:06:04",
+  "algorithmic trader|wintermute|US": "2026-11-12T11:06:04",
+  "analyst commodity energy trading advisory|baringa|US": "2026-11-12T11:06:04",
+  "analyst deal operations|ramp|US": "2026-11-12T11:06:04",
+  "analytics engineer|gocardless|": "2026-11-12T11:06:04",
+  "application support analyst|zilch|": "2026-11-12T11:06:04",
+  "applied ai engineer fullstack|ramp|US": "2026-11-12T11:06:04",
+  "applied ai engineer|ramp|US": "2026-11-12T11:06:04",
+  "associate implementation consultant|complyadvantage|": "2026-11-12T11:06:04",
+  "associate strategic finance|ramp|US": "2026-11-12T11:06:04",
+  "business developer french speaking|ebury|": "2026-11-12T11:06:04",
+  "business developer fx financial solutions|ebury|": "2026-11-12T11:06:04",
+  "business developer|ebury|": "2026-11-12T11:06:04",
+  "business developer|ebury|NL": "2026-11-12T11:06:04",
+  "c quant developer options|wintermute|UK": "2026-11-12T11:06:04",
+  "c quant developer|wintermute|UK": "2026-11-12T11:06:04",
+  "c trading platform developer|wintermute|UK": "2026-11-12T11:06:04",
+  "collections strategy analyst|zilch|UK": "2026-11-12T11:06:04",
+  "commodity researcher|winton|UK": "2026-11-12T11:06:04",
+  "consultant finance and digitalization w m d fintech saas scale up|pennylane|": "2026-11-12T11:06:04",
+  "consultant health|baringa|UK": "2026-11-12T11:06:04",
+  "consultant int grateur reseller services h f|pennylane|": "2026-11-12T11:06:04",
+  "corvil engineer|quberesearchtechnologies|US": "2026-11-12T11:06:04",
+  "credit risk analyst french speaking|ebury|": "2026-11-12T11:06:04",
+  "data engineering consultant|baringa|": "2026-11-12T11:06:04",
+  "data platform engineer inventory observability|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "data support engineer|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "data support engineer|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "data support specialist|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "data support specialist|quberesearchtechnologies|US": "2026-11-12T11:06:04",
+  "defi algorithmic trader|wintermute|UK": "2026-11-12T11:06:04",
+  "defi engineer|flowdesk|UK": "2026-11-12T11:06:04",
+  "design engineer|ramp|US": "2026-11-12T11:06:04",
+  "design engineer|rogo|US": "2026-11-12T11:06:04",
+  "developer support specialist|brex|": "2026-11-12T11:06:04",
+  "devops engineer|quantexa|UK": "2026-11-12T11:06:04",
+  "devops engineer|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "digital assets quantitative trader|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "digital assets quantitative trader|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "enterprise implementation consultant|brex|": "2026-11-12T11:06:04",
+  "enterprise implementation consultant|brex|US": "2026-11-12T11:06:04",
+  "expression of interest 2027 trading sneak peek weeks|akunacapital|US": "2026-11-12T11:06:04",
+  "finance associate|brex|": "2026-11-12T11:06:04",
+  "finance associate|brex|US": "2026-11-12T11:06:04",
+  "finance strategy ops analyst f h|pennylane|": "2026-11-12T11:06:04",
+  "floor trader|belvederetrading|US": "2026-11-12T11:06:04",
+  "founding gtm engineer|complyadvantage|UK": "2026-11-12T11:06:04",
+  "fraud operations associate|brex|": "2026-11-12T11:06:04",
+  "freelance consultant e en formation bordeaux|pennylane|": "2026-11-12T11:06:04",
+  "freelance consultant e en formation bretagne|pennylane|": "2026-11-12T11:06:04",
+  "freelance consultant e en formation hauts de france|pennylane|": "2026-11-12T11:06:04",
+  "freelance consultant e en formation nantes|pennylane|": "2026-11-12T11:06:04",
+  "freelance consultant e en formation nice|pennylane|": "2026-11-12T11:06:04",
+  "freelance consultant en formation embarquement client sur pennylane bordeaux|pennylane|": "2026-11-12T11:06:04",
+  "freelance consultant en formation embarquement client sur pennylane montpellier|pennylane|": "2026-11-12T11:06:04",
+  "freelance consultant en formation embarquement client sur pennylane nice|pennylane|": "2026-11-12T11:06:04",
+  "freelance consultant en formation embarquement client sur pennylane strasbourg|pennylane|": "2026-11-12T11:06:04",
+  "full stack developer network automation|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "full stack engineer|wintermute|UK": "2026-11-12T11:06:04",
+  "graduate analyst 50 000 share options|lendable|UK": "2026-11-12T11:06:04",
+  "grc engineer i|brex|": "2026-11-12T11:06:04",
+  "gtm ai|kalshi|": "2026-11-12T11:06:04",
+  "identity access management data protection specialist|flowdesk|UK": "2026-11-12T11:06:04",
+  "infrastructure engineer|wintermute|UK": "2026-11-12T11:06:04",
+  "integration engineer i|gocardless|": "2026-11-12T11:06:04",
+  "it platforms engineer|tide|": "2026-11-12T11:06:04",
+  "junior data analyst|gocardless|": "2026-11-12T11:06:04",
+  "junior developer c|akunacapital|": "2026-11-12T11:06:04",
+  "junior fx business developer|ebury|": "2026-11-12T11:06:04",
+  "junior operations analyst|ebury|": "2026-11-12T11:06:04",
+  "junior quantitative developer strategist|akunacapital|US": "2026-11-12T11:06:04",
+  "junior quantitative researcher deep learning time series|akunacapital|": "2026-11-12T11:06:04",
+  "junior quantitative researcher|akunacapital|US": "2026-11-12T11:06:04",
+  "junior quantitative trader apac delta one|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "junior trader|akunacapital|US": "2026-11-12T11:06:04",
+  "kyc analyst|tide|": "2026-11-12T11:06:04",
+  "machine learning engineer|sardine|": "2026-11-12T11:06:04",
+  "machine learning researcher|wintermute|UK": "2026-11-12T11:06:04",
+  "management consultant data engineering|baringa|": "2026-11-12T11:06:04",
+  "mobile quality engineer|lendable|UK": "2026-11-12T11:06:04",
+  "network cloud infrastructure security engineer|flowdesk|UK": "2026-11-12T11:06:04",
+  "network engineer service provider wan|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "network engineer|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "network engineer|quberesearchtechnologies|US": "2026-11-12T11:06:04",
+  "network operations engineer|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "network operations engineer|quberesearchtechnologies|US": "2026-11-12T11:06:04",
+  "options trader|wintermute|UK": "2026-11-12T11:06:04",
+  "performance engineer|akunacapital|US": "2026-11-12T11:06:04",
+  "prediction markets trader|wintermute|US": "2026-11-12T11:06:04",
+  "production support engineer llm platform|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "python engineer|lendable|UK": "2026-11-12T11:06:04",
+  "quant developer|gauntlet|US": "2026-11-12T11:06:04",
+  "quant researcher mft focus|wintermute|UK": "2026-11-12T11:06:04",
+  "quantitative developer c|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "quantitative developer c|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "quantitative developer front end react c|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "quantitative developer pre post trade analytics|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "quantitative developer production|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "quantitative developer python|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "quantitative developer python|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "quantitative developer researcher graduate|winton|UK": "2026-11-12T11:06:04",
+  "quantitative production strategist|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "quantitative researcher entry level 2027|belvederetrading|US": "2026-11-12T11:06:04",
+  "quantitative researcher phd postdoc opportunities|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "quantitative researcher trader|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "quantitative researcher|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "quantitative researcher|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "quantitative strategist|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "quantitative strategist|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "quantitative trader entry level 2027|belvederetrading|US": "2026-11-12T11:06:04",
+  "reference data business analyst|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "register your interest investment management|winton|UK": "2026-11-12T11:06:04",
+  "research engineer|gauntlet|US": "2026-11-12T11:06:04",
+  "risk advisory analyst consultant|baringa|": "2026-11-12T11:06:04",
+  "security engineer cloud|rogo|US": "2026-11-12T11:06:04",
+  "security engineer product|rogo|US": "2026-11-12T11:06:04",
+  "service support analyst|ebury|": "2026-11-12T11:06:04",
+  "site reliability engineer|flowdesk|": "2026-11-12T11:06:04",
+  "site reliability engineer|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "software engineer backend accounting|ramp|US": "2026-11-12T11:06:04",
+  "software engineer backend accounts receivable|ramp|US": "2026-11-12T11:06:04",
+  "software engineer backend ai spend management|ramp|US": "2026-11-12T11:06:04",
+  "software engineer backend comms platform|ramp|": "2026-11-12T11:06:04",
+  "software engineer core trading|alpaca|": "2026-11-12T11:06:04",
+  "software engineer data lifecycle equities ca|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "software engineer data lifecycle equities ca|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "software engineer data platforms|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "software engineer data platform|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "software engineer engineering platform|ramp|US": "2026-11-12T11:06:04",
+  "software engineer platform|rogo|US": "2026-11-12T11:06:04",
+  "software engineer research platforms|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "software engineer researcher experience|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "software engineer securities finance|alpaca|": "2026-11-12T11:06:04",
+  "software engineer site reliability engineering|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "software engineer site reliability engineering|quberesearchtechnologies|NL": "2026-11-12T11:06:04",
+  "software engineer site reliability engineering|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "software engineer systems infrastructure|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "software engineer typescript javascript|databento|US": "2026-11-12T11:06:04",
+  "software engineer|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "solution engineer canada|quantexa|": "2026-11-12T11:06:04",
+  "specialist trading asset operations|bitpanda|": "2026-11-12T11:06:04",
+  "sre engineer|ebury|": "2026-11-12T11:06:04",
+  "technical author process analyst network infrastructure|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "technical business analyst|quantexa|": "2026-11-12T11:06:04",
+  "technical consultant commercial|ramp|": "2026-11-12T11:06:04",
+  "technical consultant enterprise|ramp|US": "2026-11-12T11:06:04",
+  "technical consultant mid market|ramp|": "2026-11-12T11:06:04",
+  "trading system support analyst|belvederetrading|US": "2026-11-12T11:06:04",
+  "trading systems engineer|quberesearchtechnologies|US": "2026-11-12T11:06:04",
+  "trading systems reliability engineer c|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "trading systems reliability engineer|quberesearchtechnologies|UK": "2026-11-12T11:06:04",
+  "trading systems software engineer|quberesearchtechnologies|": "2026-11-12T11:06:04",
+  "underwriting analyst|brex|": "2026-11-12T11:06:04"
+ }
+}
