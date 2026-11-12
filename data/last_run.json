@@ -1,50 +1,50 @@
 {
- "finished_utc": "2026-11-12T17:34:15+00:00",
- "rotation_slot": 2959731,
+ "finished_utc": "2026-11-12T23:32:37+00:00",
+ "rotation_slot": 2959732,
  "sources": {
   "LinkedIn": {
-   "found": 4662,
+   "found": 4736,
    "errors": 0
   },
   "eFinancialCareers": {
-   "found": 4255,
+   "found": 4253,
    "errors": 0
   },
   "Indeed": {
-   "found": 21,
+   "found": 3,
    "errors": 0
   },
   "NHS Jobs": {
-   "found": 3590,
+   "found": 3589,
    "errors": 0
   },
   "Careers sites": {
-   "found": 6220,
+   "found": 6297,
    "errors": 0
   }
  },
- "raw_results": 18748,
- "after_filters": 934,
- "jobs_in_email": 342,
- "new_jobs": 32,
- "descriptions_read": 327,
+ "raw_results": 18878,
+ "after_filters": 937,
+ "jobs_in_email": 360,
+ "new_jobs": 18,
+ "descriptions_read": 345,
  "posted_by_recruiters": 3,
  "saved_jobs_dropped_by_rule": {
-  "employer not on a sponsor list": 1783,
+  "employer not on a sponsor list": 1796,
   "older than the age limit": 918,
   "no sponsorship": 180,
-  "asks for a professional qualification": 173,
-  "asks for 1+ years": 369,
+  "asks for a professional qualification": 174,
+  "asks for 1+ years": 372,
   "title doesn't match a target role": 153,
-  "asks for 5+ years": 319,
-  "asks for work experience": 623,
-  "asks for 3+ years": 586,
-  "asks for 2+ years": 574,
+  "asks for 5+ years": 322,
+  "asks for work experience": 629,
+  "asks for 3+ years": 595,
+  "asks for 2+ years": 580,
   "asks for 20+ years": 6,
   "too senior": 16,
   "asks for 7+ years": 42,
   "asks for 10+ years": 41,
-  "asks for 4+ years": 101,
+  "asks for 4+ years": 102,
   "asks for 6+ years": 32,
   "excluded country": 1,
   "asks for 8+ years": 26,
@@ -81,25 +81,22 @@
   "startups_listed": 79,
   "boards_known": 41,
   "errors": 0,
-  "roles_read": 2087,
-  "kept": 159,
+  "roles_read": 2091,
+  "kept": 157,
   "dropped": {
-   "too senior": 1049,
-   "not a quant, finance, data or engineering role": 481,
+   "too senior": 1053,
+   "not a quant, finance, data or engineering role": 484,
    "asks for experience": 310,
-   "internship": 54,
+   "internship": 53,
    "excluded country": 16,
    "no sponsorship": 1
   },
-  "listed": 159,
-  "new": 5
+  "listed": 157,
+  "new": 0
  },
  "warnings": [
-  "2026-11-12 17:08:21,908 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-12 17:15:23,105 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-12 17:18:19,973 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-12 17:22:19,969 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-12 17:24:23,102 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-12 17:26:21,099 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s"
+  "2026-11-12 23:11:22,004 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-12 23:18:20,951 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-12 23:19:21,982 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s"
  ]
 }

@@ -6,6 +6,9 @@
   "Aspect Capital": {
    "checked": "2026-11-12"
   },
+  "Avantage Reply": {
+   "checked": "2026-11-12"
+  },
   "Beacon Platform": {
    "checked": "2026-11-12",
    "id": "beaconplatform",
@@ -122,6 +125,9 @@
    "checked": "2026-11-12",
    "id": "quadraturecapital",
    "platform": "greenhouse"
+  },
+  "Quant Foundry": {
+   "checked": "2026-11-12"
   },
   "Quantexa": {
    "checked": "2026-11-12",
