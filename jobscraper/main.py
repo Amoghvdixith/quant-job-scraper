@@ -27,6 +27,10 @@ log = logging.getLogger("jobscraper")
 ROOT = Path(__file__).resolve().parent.parent
 STORE = ROOT / "data" / "jobs.json"
 HACKATHON_STORE = ROOT / "data" / "hackathons.json"
+# Job ads of the jobs in the email, for the Tailor CV links. Only listed jobs are kept, cut to
+# DESCRIPTION_CHARS (the email link holds about that much), so the file stays small.
+DESCRIPTIONS = ROOT / "data" / "descriptions.json"
+DESCRIPTION_CHARS = 4000
 STARTUP_STORE = ROOT / "data" / "startups.json"
 HEALTH_STORE = ROOT / "data" / "health.json"
 MAX_DESCRIPTION_FETCHES = 400
@@ -203,6 +207,25 @@ def save_store(store: dict[str, dict]) -> None:
     STORE.write_text(json.dumps(store, indent=1, sort_keys=True))
 
 
+def _clean_description(text: str | None) -> str:
+    text = " ".join((text or "").split())
+    if text.startswith(linkedin.CLOSED_MARKER):
+        return ""
+    return text[:DESCRIPTION_CHARS]
+
+
+def load_descriptions() -> dict[str, str]:
+    try:
+        return json.loads(DESCRIPTIONS.read_text())
+    except (FileNotFoundError, ValueError):
+        return {}
+
+
+def save_descriptions(descriptions: dict[str, str]) -> None:
+    DESCRIPTIONS.parent.mkdir(parents=True, exist_ok=True)
+    DESCRIPTIONS.write_text(json.dumps(descriptions, indent=0, sort_keys=True, ensure_ascii=False))
+
+
 def fetch_full_description(job: Job) -> str:
     """The job's full text. Search results often only carry a short summary."""
     text = job.description or ""
@@ -305,7 +328,9 @@ def enrich_all(jobs: list[Job], budget_minutes: float = 10) -> None:
 
     def one(job: Job) -> None:
         try:
-            enrich(job, fetch_full_description(job))
+            text = fetch_full_description(job)
+            job.description = text  # kept for the Tailor CV links (see DESCRIPTIONS)
+            enrich(job, text)
         except Exception as e:
             log.info("description for %s failed: %s", job.url, e)
             enrich(job, job.description or "")
@@ -401,6 +426,11 @@ def main() -> None:
             kept.apply_url, kept.easy_apply = kept.apply_url or job.apply_url, job.easy_apply
             to_read[i] = (key, kept, emailed)
     log.info("LinkedIn apply links: %s", linkedin.APPLY_STATS)
+    descriptions = load_descriptions()
+    for key, job in list(candidates.items()) + [(k, j) for k, j, _ in to_read]:
+        text = _clean_description(job.description)
+        if len(text) > len(descriptions.get(key, "")):
+            descriptions[key] = text
     for key, job, emailed in to_read:
         store[key] = {**job.to_dict(), "excluded": None, "emailed": emailed}
 
@@ -433,6 +463,7 @@ def main() -> None:
         if reason:
             dropped[reason] = dropped.get(reason, 0) + 1
         else:
+            job.description = descriptions.get(key, "")
             current.append(job)
     log.info("Dropped from the saved list: %s", dropped)
     new_keys = {j.key for j in current if not store[j.key].get("emailed")}
@@ -463,6 +494,7 @@ def main() -> None:
             for key in new_keys:
                 store[key]["emailed"] = True
     save_store(store)
+    save_descriptions({j.key: descriptions[j.key] for j in current if descriptions.get(j.key)})
     if hack_store is not None and emailed:
         # Like jobs, a dry run doesn't use up "NEW": the next email still marks them new.
         HACKATHON_STORE.write_text(json.dumps(hack_store, indent=1, sort_keys=True))

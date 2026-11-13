@@ -43,5 +43,7 @@ Nothing is submitted to an employer unless you press their Submit button.
 - **No guessing.** A `<FILL IN>` left in the profile means that field stays empty and Claude asks you.
 - **Multi-page forms** (Workday, Oracle) take a few minutes. Claude goes page by page and never clicks the
   final Submit or "Send application".
-- **Older jobs** carried over from earlier runs have no stored description, so their links only carry the job
-  details and ad link. Claude reads the ad from the link.
+- **Job ad in the link**: each link carries the job ad (up to about 4,000 characters in the email, less in
+  Excel, which ignores long links). Ads are kept in `data/descriptions.json` for the jobs in the email.
+  Jobs listed before this was added, or whose ad couldn't be read, only carry the job details and ad link,
+  and Claude reads the ad from the link.

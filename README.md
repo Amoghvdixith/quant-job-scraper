@@ -52,7 +52,7 @@ Each job has an **Apply Link**: the employer's own application page when one is 
 (careers sites, LinkedIn "Apply on company website" jobs, Indeed), otherwise the listing itself.
 
 Each job also has two Claude links (in the email tables and as columns in every jobs sheet):
-**Tailor CV** opens claude.ai with a cv-tailoring request for that job typed in, and
+**Tailor CV** opens claude.ai with a cv-tailoring request for that job and its job ad typed in, and
 **Apply with Claude** also has Claude in Chrome fill the employer's application form from your
 apply profile. It stops before Submit, so you review and submit yourself. Setup and limits are in
 [docs/APPLY_ASSISTANT.md](docs/APPLY_ASSISTANT.md). The fields the apply profile needs are listed in

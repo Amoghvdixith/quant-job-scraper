@@ -67,3 +67,17 @@ def test_assist_apply_link_in_excel(tmp_path: Path):
     assert cell.hyperlink.target == job.assist_apply_link()
     # Columns after the new ones still line up with their headers.
     assert ws.cell(row=2, column=headers.index("Posted By") + 1).value == "Employer"
+
+
+def test_descriptions_kept_between_runs(tmp_path, monkeypatch):
+    from jobscraper import main
+    monkeypatch.setattr(main, "DESCRIPTIONS", tmp_path / "descriptions.json")
+    assert main.load_descriptions() == {}
+    main.save_descriptions({"k": main._clean_description("Price  swaps\n in Python. " * 1000)})
+    saved = main.load_descriptions()["k"]
+    assert saved.startswith("Price swaps in Python.") and len(saved) == main.DESCRIPTION_CHARS
+    assert main._clean_description(f"{main.linkedin.CLOSED_MARKER} gone") == ""
+    # A job rebuilt from the saved list gets its ad back, so the link carries it.
+    job = _job()
+    job.description = saved
+    assert "Price swaps in Python." in _prompt(job.tailor_link(max_len=6000))
