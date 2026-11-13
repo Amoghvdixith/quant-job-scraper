@@ -120,13 +120,14 @@ def _table(jobs: list[Job]) -> str:
         f"<td>{html.escape(j.company)}</td><td>{html.escape(j.location)}</td>"
         f"<td>{html.escape(j.sponsorship)}</td><td>{j.posted or ''}</td>"
         f"<td><a href='{html.escape(j.apply_link)}'>Apply</a> ({html.escape(j.apply_on)})</td>"
-        f"<td><a href='{html.escape(j.tailor_link(max_len=6000))}'>Tailor CV</a></td></tr>"
+        f"<td><a href='{html.escape(j.tailor_link(max_len=6000))}'>Tailor CV</a><br>"
+        f"<a href='{html.escape(j.assist_apply_link(max_len=6000))}'>Apply with Claude</a></td></tr>"
         for j in jobs
     )
     return (
         "<table border='1' cellpadding='5' cellspacing='0' style='border-collapse:collapse;font-size:13px'>"
         "<tr style='background:#1F3864;color:#fff'><th>Role</th><th>Company</th><th>Location</th>"
-        f"<th>Visa sponsorship</th><th>Posted</th><th>Apply</th><th>CV</th></tr>{rows}</table>"
+        f"<th>Visa sponsorship</th><th>Posted</th><th>Apply</th><th>Claude</th></tr>{rows}</table>"
     )
 
 

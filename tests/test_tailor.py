@@ -46,3 +46,24 @@ def test_tailor_link_in_email_and_excel(tmp_path: Path):
     cell = ws.cell(row=2, column=headers.index("Tailor CV") + 1)
     assert cell.value == "Tailor CV"
     assert cell.hyperlink.target == job.tailor_link()
+
+
+def test_assist_apply_link():
+    job = _job("Build pricing models in Python. " * 400)
+    link = job.assist_apply_link()
+    assert len(link) <= 2000
+    q = _prompt(link)
+    assert q.startswith("/apply-assistant")
+    assert "stop before Submit" in q
+    assert "https://acme.example/jobs/1?a=1&b=2" in q
+    assert "Apply with Claude" in _table([job])
+
+
+def test_assist_apply_link_in_excel(tmp_path: Path):
+    job = _job()
+    ws = load_workbook(write_workbook([job], set(), {}, tmp_path / "jobs.xlsx"))["Jobs"]
+    headers = [c.value for c in ws[1]]
+    cell = ws.cell(row=2, column=headers.index("Apply With Claude") + 1)
+    assert cell.hyperlink.target == job.assist_apply_link()
+    # Columns after the new ones still line up with their headers.
+    assert ws.cell(row=2, column=headers.index("Posted By") + 1).value == "Employer"

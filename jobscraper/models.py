@@ -66,7 +66,24 @@ class Job:
         than about 2,000 characters). Jobs loaded from data/jobs.json have no description, so
         those links carry only the title, company, location and job link.
         """
-        head = (f"/cv-tailoring Use my cv-tailoring skill to tailor my CV to this job.\n"
+        return self._claude_link(
+            "/cv-tailoring Use my cv-tailoring skill to tailor my CV to this job.", max_len)
+
+    def assist_apply_link(self, max_len: int = 2000) -> str:
+        """Link that opens claude.ai with an apply-assistant request for this job typed in.
+
+        The apply-assistant skill tailors the CV, then uses Claude in Chrome to fill the
+        application form from the apply profile and stops before Submit. Nothing is sent
+        until the person presses send in Claude, and nothing is submitted until they press
+        Submit on the employer's form.
+        """
+        return self._claude_link(
+            "/apply-assistant Use my apply-assistant skill to help me apply for this job. "
+            "Tailor my CV first, then fill the application form in Chrome and stop before Submit.",
+            max_len)
+
+    def _claude_link(self, request: str, max_len: int) -> str:
+        head = (f"{request}\n"
                 f"Job title: {self.title}\nCompany: {self.company}\nLocation: {self.location}\n"
                 f"Job ad: {self.apply_link}")
         if self.url and self.url != self.apply_link:
@@ -75,7 +92,7 @@ class Job:
         desc = re.sub(r"\s+", " ", self.description or "").strip()
         if desc:
             prefix = "\n\nJob description (from the listing, may be cut short):\n"
-            room = max_len - len(link) - len(quote(prefix, safe=""))
+            room = max_len - len(link) - len(quote(prefix, safe="")) - len(quote("...", safe=""))
             # Each character can grow up to 9 when encoded; trim until it fits.
             n = min(len(desc), max(room, 0))
             while n > 200 and len(quote(desc[:n], safe="")) > room:

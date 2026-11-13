@@ -1,0 +1,54 @@
+# Apply profile: the standard answers the apply-assistant skill uses to fill job application forms.
+#
+# This repository is PUBLIC. Do not put your real details in this file or commit them.
+# Your real answers live in the apply-assistant skill on claude.ai (Settings > Capabilities > Skills),
+# which is private to you. This file is only the template for what that skill needs.
+# If you want a local copy, save it as apply_profile.yaml (ignored by git).
+#
+# Anything left as <FILL IN> is never guessed: Claude leaves that field empty on the form
+# and asks you.
+
+personal:
+  full_name: <FILL IN>
+  preferred_name: <FILL IN>
+  email: <FILL IN>
+  phone: <FILL IN>
+  address_city: <FILL IN>          # e.g. Birmingham, UK
+  postcode: <FILL IN>              # only filled when a form requires it
+  linkedin: <FILL IN>
+  github: <FILL IN>
+  portfolio: <FILL IN>             # optional
+
+work_eligibility:
+  uk_right_to_work: <FILL IN>      # e.g. "Yes, Graduate visa valid until MM/YYYY"
+  needs_sponsorship_now: <FILL IN>         # Yes / No
+  needs_sponsorship_future: <FILL IN>      # Yes / No
+  other_countries: <FILL IN>       # e.g. "Would need sponsorship in the US, EU, Singapore"
+
+availability:
+  notice_period: <FILL IN>         # e.g. "Available immediately"
+  earliest_start: <FILL IN>
+  open_to_relocation: <FILL IN>    # e.g. "Yes, anywhere in the UK"
+  work_arrangement: <FILL IN>      # e.g. "Hybrid, on-site or remote"
+
+compensation:
+  uk_salary_expectation: <FILL IN> # e.g. "GBP 35,000 - 45,000, negotiable"
+  other_salary_expectation: <FILL IN>
+  current_salary: <FILL IN>        # often "Not applicable (student)"
+
+education_summary:                 # the CV itself comes from the cv-tailoring skill
+  highest_degree: <FILL IN>
+  university: <FILL IN>
+  graduation: <FILL IN>
+  grade: <FILL IN>
+
+equal_opportunities:               # Claude never answers these for you unless you set them here
+  policy: ask_me                   # ask_me | prefer_not_to_say | use_values_below
+  gender: <FILL IN>
+  ethnicity: <FILL IN>
+  disability: <FILL IN>
+
+other:
+  how_did_you_hear: <FILL IN>      # e.g. "Company careers site"
+  criminal_convictions: <FILL IN>
+  previously_applied_here: ask_me
