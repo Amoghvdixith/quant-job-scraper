@@ -31,12 +31,116 @@
     "raw_results": 19192
    },
    "utc": "2026-11-13T17:36:38+00:00"
+  },
+  {
+   "events": [],
+   "sources": {
+    "Careers sites": {
+     "errors": 19,
+     "found": 5920
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 130
+    },
+    "LinkedIn": {
+     "errors": 0,
+     "found": 5092
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3644
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4229
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 489,
+    "new_jobs": 34,
+    "raw_results": 19015
+   },
+   "utc": "2026-11-13T23:35:39+00:00"
   }
  ],
  "sites": {
-  "MetLife": {
+  "Apollo Global Management": {
    "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://athene.wd5.myworkdayjobs.com/wday/cxs/athene/Apollo_Careers/jobs"
+  },
+  "Brookfield": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://brookfield.wd5.myworkdayjobs.com/wday/cxs/brookfield/brookfield/jobs"
+  },
+  "Citi": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://citi.wd5.myworkdayjobs.com/wday/cxs/citi/2/jobs"
+  },
+  "FIS": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://fis.wd5.myworkdayjobs.com/wday/cxs/fis/SearchJobs/jobs"
+  },
+  "Fifth Third Bank": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://fifththird.wd5.myworkdayjobs.com/wday/cxs/fifththird/53careers/jobs"
+  },
+  "Fiserv": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://fiserv.wd5.myworkdayjobs.com/wday/cxs/fiserv/EXT/jobs"
+  },
+  "Franklin Templeton": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://franklintempleton.wd5.myworkdayjobs.com/wday/cxs/franklintempleton/Primary-External-1/jobs"
+  },
+  "KeyBank": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://keybank.wd5.myworkdayjobs.com/wday/cxs/keybank/External_Career_Site/jobs"
+  },
+  "M&T Bank": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://mtb.wd5.myworkdayjobs.com/wday/cxs/mtb/MTB/jobs"
+  },
+  "MetLife": {
+   "failed_runs": 2,
    "last_error": "HTTPError: 404 Client Error: Not Found for url: https://api.lever.co/v0/postings/metlife?mode=json"
+  },
+  "Morgan Stanley": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/External/jobs"
+  },
+  "Morningstar": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://morningstar.wd5.myworkdayjobs.com/wday/cxs/morningstar/Americas/jobs"
+  },
+  "PNC": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://pnc.wd5.myworkdayjobs.com/wday/cxs/pnc/External/jobs"
+  },
+  "Prudential plc": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://pru.wd5.myworkdayjobs.com/wday/cxs/pru/Careers/jobs"
+  },
+  "S&P Global": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://spgi.wd5.myworkdayjobs.com/wday/cxs/spgi/SPGI_Careers/jobs"
+  },
+  "T. Rowe Price": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://troweprice.wd5.myworkdayjobs.com/wday/cxs/troweprice/TRowePrice/jobs"
+  },
+  "Travelers": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://travelers.wd5.myworkdayjobs.com/wday/cxs/travelers/External/jobs"
+  },
+  "Vanguard": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://vanguard.wd5.myworkdayjobs.com/wday/cxs/vanguard/vanguard_external/jobs"
+  },
+  "Wellington Management": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://wellington.wd5.myworkdayjobs.com/wday/cxs/wellington/External/jobs"
   }
  }
 }
