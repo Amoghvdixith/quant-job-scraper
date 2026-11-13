@@ -122,7 +122,7 @@ def test_excel_and_email(tmp_path):
     path = write_workbook(jobs, {jobs[0].key}, stats, tmp_path / "t.xlsx")
     ws = load_workbook(path)["Jobs"]
     assert ws["A2"].value == "NEW" and ws["E2"].value == "Market Risk Analyst"
-    assert ws["Q2"].hyperlink.target == "https://x/1"
+    assert ws["T2"].hyperlink.target == "https://x/1"
     msg = build_email(jobs, {jobs[0].key}, stats, path, "a@gmail.com", "b@gmail.com")
     assert msg["To"] == "b@gmail.com"
     assert "1 new" in msg["Subject"]
@@ -226,9 +226,9 @@ def test_apply_links(tmp_path):
     assert job.apply_on == "Employer website" and easy.apply_on == "LinkedIn"
     path = write_workbook([job, easy], set(), {}, tmp_path / "a.xlsx")
     ws = load_workbook(path)["Jobs"]
-    assert ws["Q2"].hyperlink.target == "https://barclays.example/apply" and ws["Q2"].value == "https://barclays.example/apply"
-    assert ws["Q3"].hyperlink.target == easy.url
-    assert ws["S2"].hyperlink.target == job.url
+    assert ws["T2"].hyperlink.target == "https://barclays.example/apply" and ws["T2"].value == "https://barclays.example/apply"
+    assert ws["T3"].hyperlink.target == easy.url
+    assert ws["V2"].hyperlink.target == job.url
     assert needs_reread({"url": "https://www.linkedin.com/jobs/view/1"})
     assert needs_reread({"url": "https://www.linkedin.com/jobs/view/1", "apply_url": ""})
     assert not needs_reread({"url": "https://www.linkedin.com/jobs/view/1", "apply_url": "", "easy_apply": True, "experience": "",

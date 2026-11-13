@@ -102,7 +102,11 @@ def build_email(jobs: list[Job], new_keys: set[str], stats: dict, attachment: Pa
         f"<p><b>{len(new_jobs)}</b> new jobs since the last email, <b>{len(jobs)}</b> matching jobs posted in the last {max_age_days} days.</p>"
         f"<p>The full list is in the attached Excel file (new ones are marked NEW).</p>"
         f"{'<p>Top new jobs:</p>' if top else ''}{table}{remote_table}{grads_table}{interns_table}{gov_table}{hack_table}{startup_table}{health_html}"
-        f"<p style='color:#666;font-size:12px'>Found this run: {html.escape(source_line)}.</p>",
+        f"<p style='color:#666;font-size:12px'>Found this run: {html.escape(source_line)}.</p>"
+        "<p style='color:#666;font-size:12px'>People sponsored: UK figures are certificates of sponsorship "
+        "assigned to the employer (Home Office FOI release, see the Excel file for years and source); "
+        "\"1-4\" is how the Home Office shows small numbers. US figures are approved H-1B petitions "
+        "(USCIS H-1B Employer Data Hub). The Netherlands publishes no numbers.</p>",
         subtype="html",
     )
     msg.add_attachment(
@@ -118,7 +122,9 @@ def _table(jobs: list[Job]) -> str:
     rows = "".join(
         f"<tr><td><a href='{html.escape(j.url)}'>{html.escape(j.title)}</a></td>"
         f"<td>{html.escape(j.company)}</td><td>{html.escape(j.location)}</td>"
-        f"<td>{html.escape(j.sponsorship)}</td><td>{j.posted or ''}</td>"
+        f"<td>{html.escape(j.sponsorship)}"
+        + (f"<br><small>{html.escape(j.sponsor_summary)}</small>" if j.sponsor_summary else "")
+        + f"</td><td>{j.posted or ''}</td>"
         f"<td><a href='{html.escape(j.apply_link)}'>Apply</a> ({html.escape(j.apply_on)})</td>"
         f"<td><a href='{html.escape(j.tailor_link(max_len=6000))}'>Tailor CV</a><br>"
         f"<a href='{html.escape(j.assist_apply_link(max_len=6000))}'>Apply with Claude</a></td></tr>"
@@ -149,7 +155,9 @@ def _startup_table(opps: list, new_keys: set[str]) -> str:
     rows = "".join(
         f"<tr><td>{'<b>NEW</b> ' if o.key in new_keys else ''}<a href='{html.escape(o.url)}'>{html.escape(o.title)}</a></td>"
         f"<td>{html.escape(o.company)} ({html.escape(o.firm_type)})</td><td>{html.escape(o.focus)}</td><td>{html.escape(o.location)}</td>"
-        f"<td>{html.escape(o.graduate_fit)}</td><td>{html.escape(o.sponsorship)}</td></tr>"
+        f"<td>{html.escape(o.graduate_fit)}</td><td>{html.escape(o.sponsorship)}"
+        + (f"<br><small>{html.escape(o.sponsor_summary)}</small>" if getattr(o, "sponsor_summary", "") else "")
+        + "</td></tr>"
         for o in opps
     )
     return (

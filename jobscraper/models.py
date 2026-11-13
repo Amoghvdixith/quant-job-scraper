@@ -32,6 +32,11 @@ class Job:
     government: str = ""  # "NHS" or "Civil Service" for UK public-sector jobs
     qualification: str | None = None  # qualification the posting asks for, e.g. "CFA"; None = not checked yet
     employer_sponsor: str = ""
+    # Filled in by main.py from the government lists (see sponsor_registers.SponsorRegisters.record)
+    uk_licence: str = ""
+    uk_sponsored: str = ""   # certificates of sponsorship per year, with its source
+    us_h1b: str = ""         # H-1B petitions approved, with fiscal year
+    sponsor_summary: str = ""
     target_firm: str = ""
     recruiter: bool = False
     description_checked: bool = False

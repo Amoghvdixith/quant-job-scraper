@@ -12,7 +12,8 @@ from .models import Job
 COLUMNS = [
     ("New", 7), ("Tier", 6), ("Category", 22), ("Matched Role", 30), ("Job Title", 45),
     ("Company", 28), ("On Your Target List", 22), ("Location", 30), ("Work Type", 11), ("Posted", 11), ("Days Old", 9), ("Source", 18),
-    ("Visa Sponsorship", 16), ("Employer On Sponsor List", 22), ("Years Exp. Asked", 15), ("Qualification Asked", 16),
+    ("Visa Sponsorship", 16), ("Employer On Sponsor List", 22),
+    ("UK Sponsor Licence", 34), ("UK People Sponsored (CoS)", 46), ("US H-1B Approvals", 40), ("Years Exp. Asked", 15), ("Qualification Asked", 16),
     ("Apply Link", 60), ("Apply On", 18), ("Job Listing", 12), ("Tailor CV", 12), ("Apply With Claude", 14), ("Posted By", 18), ("Description Checked", 12), ("Sponsorship Evidence", 60),
 ]
 HEADER_FILL = PatternFill("solid", fgColor="1F3864")
@@ -31,7 +32,8 @@ HACKATHON_COLUMNS = [
 STARTUP_COLUMNS = [
     ("New", 7), ("Role", 45), ("Firm", 24), ("Firm Type", 11), ("What They Do", 40), ("Stage", 14), ("HQ", 18),
     ("Area", 20), ("Location", 30), ("Work Type", 11), ("Graduate Fit", 24), ("Why (posting's words)", 50),
-    ("Years Exp. Asked", 15), ("Visa Sponsorship", 16), ("Employer On Sponsor List", 22), ("Posted", 11),
+    ("Years Exp. Asked", 15), ("Visa Sponsorship", 16), ("Employer On Sponsor List", 22),
+    ("UK Sponsor Licence", 34), ("UK People Sponsored (CoS)", 46), ("US H-1B Approvals", 40), ("Posted", 11),
     ("Days Old", 9), ("Found On", 16), ("Apply", 12),
 ]
 
@@ -64,6 +66,7 @@ def _jobs_sheet(ws, title: str, jobs: list[Job], new_keys: set[str]) -> None:
         cell.font = Font(bold=True, color="FFFFFF")
         cell.fill = HEADER_FILL
         cell.alignment = Alignment(vertical="center", wrap_text=True)
+    col = {name: i for i, (name, _) in enumerate(COLUMNS, 1)}
     today = date.today()
     for job in jobs:
         is_new = job.key in new_keys
@@ -82,6 +85,9 @@ def _jobs_sheet(ws, title: str, jobs: list[Job], new_keys: set[str]) -> None:
             ", ".join(job.sources or [job.source]),
             job.sponsorship,
             job.employer_sponsor or "Not found",
+            job.uk_licence,
+            job.uk_sponsored,
+            job.us_h1b,
             job.years_required,
             job.qualification or "",
             job.apply_link,
@@ -94,27 +100,20 @@ def _jobs_sheet(ws, title: str, jobs: list[Job], new_keys: set[str]) -> None:
             job.sponsorship_evidence,
         ])
         row = ws.max_row
-        link = ws.cell(row=row, column=17)
-        link.hyperlink = job.apply_link
-        link.font = Font(color="0563C1", underline="single")
-        listing = ws.cell(row=row, column=19)
-        listing.hyperlink = job.url
-        listing.font = Font(color="0563C1", underline="single")
-        tailor = ws.cell(row=row, column=20)
-        tailor.hyperlink = job.tailor_link()
-        tailor.font = Font(color="0563C1", underline="single")
-        assist = ws.cell(row=row, column=21)
-        assist.hyperlink = job.assist_apply_link()
-        assist.font = Font(color="0563C1", underline="single")
-        ws.cell(row=row, column=10).number_format = "yyyy-mm-dd"
+        for name, url in (("Apply Link", job.apply_link), ("Job Listing", job.url), ("Tailor CV", job.tailor_link()),
+                          ("Apply With Claude", job.assist_apply_link())):
+            cell = ws.cell(row=row, column=col[name])
+            cell.hyperlink = url
+            cell.font = Font(color="0563C1", underline="single")
+        ws.cell(row=row, column=col["Posted"]).number_format = "yyyy-mm-dd"
         if is_new:
-            ws.cell(row=row, column=1).fill = NEW_FILL
+            ws.cell(row=row, column=col["New"]).fill = NEW_FILL
         if job.sponsorship == "Yes":
-            ws.cell(row=row, column=13).fill = YES_FILL
+            ws.cell(row=row, column=col["Visa Sponsorship"]).fill = YES_FILL
         if job.employer_sponsor:
-            ws.cell(row=row, column=14).fill = YES_FILL
+            ws.cell(row=row, column=col["Employer On Sponsor List"]).fill = YES_FILL
         if job.target_firm:
-            ws.cell(row=row, column=7).fill = YES_FILL
+            ws.cell(row=row, column=col["On Your Target List"]).fill = YES_FILL
     ws.freeze_panes = "A2"
     ws.auto_filter.ref = ws.dimensions
 
@@ -168,7 +167,7 @@ def _startups_sheet(ws, opps: list, new_keys: set[str]) -> None:
         ws.append([
             "NEW" if is_new else "", o.title, o.company, o.firm_type, o.focus, o.stage, o.hq, o.area, o.location,
             "Remote" if o.remote else "On-site/Hybrid", o.graduate_fit, o.graduate_evidence,
-            o.years_required, o.sponsorship, o.employer_sponsor, o.posted,
+            o.years_required, o.sponsorship, o.employer_sponsor, o.uk_licence, o.uk_sponsored, o.us_h1b, o.posted,
             (today - o.posted).days if o.posted else None, o.platform, "Apply",
         ])
         row = ws.max_row
