@@ -1,45 +1,45 @@
 {
- "finished_utc": "2026-11-12T23:32:37+00:00",
- "rotation_slot": 2959732,
+ "finished_utc": "2026-11-13T05:33:51+00:00",
+ "rotation_slot": 2959733,
  "sources": {
   "LinkedIn": {
-   "found": 4736,
+   "found": 4944,
    "errors": 0
   },
   "eFinancialCareers": {
-   "found": 4253,
+   "found": 4244,
    "errors": 0
   },
   "Indeed": {
-   "found": 3,
+   "found": 58,
    "errors": 0
   },
   "NHS Jobs": {
-   "found": 3589,
+   "found": 3585,
    "errors": 0
   },
   "Careers sites": {
-   "found": 6297,
-   "errors": 0
+   "found": 6274,
+   "errors": 1
   }
  },
- "raw_results": 18878,
- "after_filters": 937,
- "jobs_in_email": 360,
- "new_jobs": 18,
- "descriptions_read": 345,
+ "raw_results": 19105,
+ "after_filters": 934,
+ "jobs_in_email": 349,
+ "new_jobs": 22,
+ "descriptions_read": 335,
  "posted_by_recruiters": 3,
  "saved_jobs_dropped_by_rule": {
-  "employer not on a sponsor list": 1796,
-  "older than the age limit": 918,
-  "no sponsorship": 180,
-  "asks for a professional qualification": 174,
-  "asks for 1+ years": 372,
+  "employer not on a sponsor list": 1828,
+  "older than the age limit": 951,
+  "no sponsorship": 181,
+  "asks for a professional qualification": 177,
+  "asks for 1+ years": 376,
   "title doesn't match a target role": 153,
-  "asks for 5+ years": 322,
-  "asks for work experience": 629,
-  "asks for 3+ years": 595,
-  "asks for 2+ years": 580,
+  "asks for 5+ years": 324,
+  "asks for work experience": 637,
+  "asks for 3+ years": 598,
+  "asks for 2+ years": 582,
   "asks for 20+ years": 6,
   "too senior": 16,
   "asks for 7+ years": 42,
@@ -81,22 +81,21 @@
   "startups_listed": 79,
   "boards_known": 41,
   "errors": 0,
-  "roles_read": 2091,
-  "kept": 157,
+  "roles_read": 2094,
+  "kept": 158,
   "dropped": {
-   "too senior": 1053,
-   "not a quant, finance, data or engineering role": 484,
+   "too senior": 1052,
+   "not a quant, finance, data or engineering role": 487,
    "asks for experience": 310,
    "internship": 53,
    "excluded country": 16,
    "no sponsorship": 1
   },
-  "listed": 157,
-  "new": 0
+  "listed": 158,
+  "new": 1
  },
  "warnings": [
-  "2026-11-12 23:11:22,004 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-12 23:18:20,951 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-12 23:19:21,982 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s"
+  "2026-11-13 05:06:05,886 jobscraper.sources.careers: MetLife (lever) failed: 404 Client Error: Not Found for url: https://api.lever.co/v0/postings/metlife?mode=json",
+  "2026-11-13 05:06:05,886 jobscraper: Careers sites | MetLife failed: 404 Client Error: Not Found for url: https://api.lever.co/v0/postings/metlife?mode=json"
  ]
 }
