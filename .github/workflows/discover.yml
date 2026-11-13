@@ -30,6 +30,8 @@ jobs:
           git config user.name "job-digest-bot"
           git config user.email "job-digest-bot@users.noreply.github.com"
           git add data/careers_sites.json data/careers_report.json data/sponsor_registers.json
+          [ -f data/sponsor_details.json ] && git add data/sponsor_details.json
+          [ -f data/uk_cos.json ] && git add data/uk_cos.json
           git diff --cached --quiet && exit 0
           git commit -m "Update careers sites [skip ci]"
           for i in 1 2 3 4; do

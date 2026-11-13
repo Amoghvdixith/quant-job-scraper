@@ -405,7 +405,13 @@ def main() -> None:
         store[key] = {**job.to_dict(), "excluded": None, "emailed": emailed}
 
     registers = SponsorRegisters()
-    if not all(registers.loaded.values()):  # first run, or a list failed to download last time
+    if not registers.uk_cos:  # figures of people sponsored in the UK (Home Office FOI): downloaded once
+        healer.guard("UK sponsorship figures", sponsor_registers.update_uk_cos, None,
+                     "the UK people-sponsored column is empty this run; the download is retried next run")
+        registers = SponsorRegisters()
+    # First run, a list that failed to download last time, or lists saved before licence
+    # details and H-1B counts were kept.
+    if not all(registers.loaded.values()) or not registers.details.get("UK") or not registers.details.get("US"):
         healer.guard("Sponsor lists", sponsor_registers.update, None,
                      "used the lists already saved; a country whose list is missing doesn't drop its jobs")
         registers = SponsorRegisters()
@@ -421,6 +427,7 @@ def main() -> None:
         job.target_firm = institutions.match(job.company)
         job.recruiter = filters.is_recruiter(job.company)
         job.employer_sponsor = registers.status(job.company, job.location)
+        _sponsor_record(job, registers)
         reason = rule_broken(job, cfg, matcher, registers)
         rec["excluded"] = reason
         if reason:
@@ -436,6 +443,7 @@ def main() -> None:
 
     for o in opps or []:
         o.employer_sponsor = registers.status(o.company, o.location)
+        _sponsor_record(o, registers)
 
     stamp = datetime.now(timezone.utc).replace(tzinfo=None).strftime("%Y-%m-%d_%H%M")
     path = write_workbook(current, new_keys, stats, ROOT / "out" / f"quant_jobs_{stamp}.xlsx",
@@ -468,6 +476,15 @@ def main() -> None:
                         "emailed": emailed if not args.no_email else "dry run"})
     if not args.no_email and not emailed:
         raise SystemExit("The email could not be sent; see data/HEALTH.md. The next run sends these jobs.")
+
+
+def _sponsor_record(job, registers: SponsorRegisters) -> None:
+    """How many people the employer has sponsored, where a government source publishes it."""
+    rec = registers.record(job.company)
+    job.uk_licence = rec["uk"]
+    job.uk_sponsored = rec["uk_cos"]
+    job.us_h1b = rec["us"]
+    job.sponsor_summary = registers.summary(job.company, job.location)
 
 
 class _WarningBuffer(logging.Handler):

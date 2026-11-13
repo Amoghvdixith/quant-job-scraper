@@ -52,6 +52,10 @@ class Opportunity:
     sponsorship: str = "Not stated"
     sponsorship_evidence: str = ""
     employer_sponsor: str = ""      # filled in by main.py from the sponsor registers
+    uk_licence: str = ""
+    uk_sponsored: str = ""
+    us_h1b: str = ""
+    sponsor_summary: str = ""
     remote: bool = False
     posted: date | None = None
     platform: str = ""

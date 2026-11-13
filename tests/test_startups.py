@@ -129,7 +129,7 @@ def test_sheet_and_email(tmp_path):
     path = write_workbook([], set(), {}, tmp_path / "x.xlsx", startups=[opp], new_startups={opp.key})
     ws = load_workbook(path)["Startups & Boutiques"]
     assert ws["A2"].value == "NEW" and ws["B2"].value == "Graduate Trader" and ws["D2"].value == "Startup"
-    assert ws.cell(row=2, column=19).value == "Apply" and ws.cell(row=2, column=19).hyperlink.target == opp.url
+    assert ws.cell(row=2, column=22).value == "Apply" and ws.cell(row=2, column=22).hyperlink.target == opp.url
     msg = build_email([], set(), {}, path, "a@b.c", "a@b.c", startups=[opp], new_startups={opp.key})
     body = msg.get_body(("plain",)).get_content()
     assert "1 graduate roles at quant/fintech startups and boutique firms" in body and "NEW Graduate Trader | Wintermute" in body
