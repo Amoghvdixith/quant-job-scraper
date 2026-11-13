@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+from urllib.parse import quote
 from dataclasses import asdict, dataclass, field
 from datetime import date
 
@@ -58,6 +59,34 @@ class Job:
         """Where to apply: the employer's own page when we found one, otherwise the listing."""
         return self.apply_url or self.url
 
+    def tailor_link(self, max_len: int = 2000) -> str:
+        """Link that opens claude.ai with a cv-tailoring request for this job already typed in.
+
+        Includes as much of the description as fits in max_len (Excel ignores hyperlinks longer
+        than about 2,000 characters). Jobs loaded from data/jobs.json have no description, so
+        those links carry only the title, company, location and job link.
+        """
+        head = (f"/cv-tailoring Use my cv-tailoring skill to tailor my CV to this job.\n"
+                f"Job title: {self.title}\nCompany: {self.company}\nLocation: {self.location}\n"
+                f"Job ad: {self.apply_link}")
+        if self.url and self.url != self.apply_link:
+            head += f"\nListing: {self.url}"
+        link = _CLAUDE_NEW + quote(head, safe="")
+        desc = re.sub(r"\s+", " ", self.description or "").strip()
+        if desc:
+            prefix = "\n\nJob description (from the listing, may be cut short):\n"
+            room = max_len - len(link) - len(quote(prefix, safe=""))
+            # Each character can grow up to 9 when encoded; trim until it fits.
+            n = min(len(desc), max(room, 0))
+            while n > 200 and len(quote(desc[:n], safe="")) > room:
+                n = int(n * 0.8)
+            if n > 200:
+                cut = desc[:n] + ("..." if n < len(desc) else "")
+                extra = quote(prefix + cut, safe="")
+                if len(link) + len(extra) <= max_len:
+                    link += extra
+        return link
+
     @property
     def apply_on(self) -> str:
         if self.apply_url and self.apply_url != self.url:
@@ -81,6 +110,9 @@ class Job:
         d = dict(d)
         d["posted"] = date.fromisoformat(d["posted"]) if d.get("posted") else None
         return cls(**{k: v for k, v in d.items() if k in cls.__dataclass_fields__})
+
+
+_CLAUDE_NEW = "https://claude.ai/new?q="
 
 
 def _norm(s: str) -> str:

@@ -36,6 +36,13 @@ GitHub Actions and the email is the only output.
 Each job has an **Apply Link**: the employer's own application page when one is found
 (careers sites, LinkedIn "Apply on company website" jobs, Indeed), otherwise the listing itself.
 
+Each job also has a **Tailor CV** link (in the email tables and a "Tailor CV" column in
+every jobs sheet). It opens claude.ai with a cv-tailoring request for that job already typed
+in: title, company, location, the apply link and, for jobs found in this run, as much of
+the description as fits in the link. Press send and the cv-tailoring skill writes the
+tailored CV PDF. Jobs carried over from earlier runs have no stored description, so Claude
+reads the ad from the link (or asks you to paste it).
+
 Each email holds every matching job from the last 5 days. Jobs that weren't in
 any earlier email are marked **NEW** and listed first. `data/jobs.json` remembers
 what was already sent; the workflow commits it back after each run.

@@ -13,7 +13,7 @@ COLUMNS = [
     ("New", 7), ("Tier", 6), ("Category", 22), ("Matched Role", 30), ("Job Title", 45),
     ("Company", 28), ("On Your Target List", 22), ("Location", 30), ("Work Type", 11), ("Posted", 11), ("Days Old", 9), ("Source", 18),
     ("Visa Sponsorship", 16), ("Employer On Sponsor List", 22), ("Years Exp. Asked", 15), ("Qualification Asked", 16),
-    ("Apply Link", 60), ("Apply On", 18), ("Job Listing", 12), ("Posted By", 18), ("Description Checked", 12), ("Sponsorship Evidence", 60),
+    ("Apply Link", 60), ("Apply On", 18), ("Job Listing", 12), ("Tailor CV", 12), ("Posted By", 18), ("Description Checked", 12), ("Sponsorship Evidence", 60),
 ]
 HEADER_FILL = PatternFill("solid", fgColor="1F3864")
 NEW_FILL = PatternFill("solid", fgColor="E2EFDA")
@@ -87,6 +87,7 @@ def _jobs_sheet(ws, title: str, jobs: list[Job], new_keys: set[str]) -> None:
             job.apply_link,
             job.apply_on,
             "View",
+            "Tailor CV",
             "Recruitment agency" if job.recruiter else "Employer",
             "Yes" if job.description_checked else "No",
             job.sponsorship_evidence,
@@ -98,6 +99,9 @@ def _jobs_sheet(ws, title: str, jobs: list[Job], new_keys: set[str]) -> None:
         listing = ws.cell(row=row, column=19)
         listing.hyperlink = job.url
         listing.font = Font(color="0563C1", underline="single")
+        tailor = ws.cell(row=row, column=20)
+        tailor.hyperlink = job.tailor_link()
+        tailor.font = Font(color="0563C1", underline="single")
         ws.cell(row=row, column=10).number_format = "yyyy-mm-dd"
         if is_new:
             ws.cell(row=row, column=1).fill = NEW_FILL
