@@ -407,7 +407,8 @@ def main() -> None:
     registers = SponsorRegisters()
     if not registers.uk_cos:  # figures of people sponsored in the UK (Home Office FOI): downloaded once
         healer.guard("UK sponsorship figures", sponsor_registers.update_uk_cos, None,
-                     "the UK people-sponsored column is empty this run; the download is retried next run")
+                     "the UK people-sponsored column is empty this run. Fix: save the FOI workbook in data/foi/ "
+                     "(see UK_COS_SOURCES in jobscraper/sponsor_registers.py)")
         registers = SponsorRegisters()
     # First run, a list that failed to download last time, or lists saved before licence
     # details and H-1B counts were kept.
