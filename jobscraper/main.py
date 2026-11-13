@@ -15,6 +15,7 @@ import yaml
 
 from . import filters, institutions
 from .excel import write_workbook
+from .healer import Healer
 from .mailer import build_email, send
 from .models import Job
 from .schedule import slot_number
@@ -27,6 +28,7 @@ ROOT = Path(__file__).resolve().parent.parent
 STORE = ROOT / "data" / "jobs.json"
 HACKATHON_STORE = ROOT / "data" / "hackathons.json"
 STARTUP_STORE = ROOT / "data" / "startups.json"
+HEALTH_STORE = ROOT / "data" / "health.json"
 MAX_DESCRIPTION_FETCHES = 400
 KEEP_STORE_DAYS = 30
 
@@ -92,7 +94,8 @@ def plan(cfg: dict, roles: list[dict], slot: int) -> dict[str, list]:
     return tasks
 
 
-def scrape(cfg: dict, roles: list[dict], slot: int) -> tuple[list[Job], dict]:
+def scrape(cfg: dict, roles: list[dict], slot: int, healer: Healer | None = None) -> tuple[list[Job], dict]:
+    healer = healer or Healer(path=HEALTH_STORE, state={"runs": [], "sites": {}})
     tasks = plan(cfg, roles, slot)
     stats = {label: {"found": 0, "errors": 0} for label in tasks}
 
@@ -106,10 +109,8 @@ def scrape(cfg: dict, roles: list[dict], slot: int) -> tuple[list[Job], dict]:
             if time.monotonic() - started > budget:
                 log.warning("%s | time budget used up, skipped the last %d searches", label, len(tasks[label]) - i)
                 break
-            try:
-                found = fn(stats[label])
-            except Exception as e:
-                log.warning("%s | %s failed: %s", label, name, e)
+            found = healer.call(label, name, fn, stats[label])  # retries once; skips a site that keeps failing
+            if found is None:
                 stats[label]["errors"] += 1
                 continue
             log.info("%s | %s | %d results", label, name, len(found))
@@ -123,13 +124,12 @@ def scrape(cfg: dict, roles: list[dict], slot: int) -> tuple[list[Job], dict]:
 
         def one(item):
             name, fn = item
-            try:
-                return fn(stats[label])
-            except Exception as e:
-                log.warning("%s | %s failed: %s", label, name, e)
+            found = healer.call_site(name, fn, stats[label])  # retries once; rests a site failing run after run
+            if found is None:
                 with lock:
                     stats[label]["errors"] += 1
                 return []
+            return found
         with ThreadPoolExecutor(max_workers=8) as pool:
             out = [j for batch in pool.map(one, tasks[label]) for j in batch]
         stats[label]["found"] = len(out)
@@ -345,14 +345,23 @@ def main() -> None:
 
     now_utc = datetime.now(timezone.utc)
     slot = slot_number(cfg, now_utc)
+    healer = Healer.load(HEALTH_STORE)
     # Hackathons come from other sites, so they are searched alongside the job sources.
     # So are startups' job boards.
     with ThreadPoolExecutor(max_workers=2) as pool:
         hack_future = pool.submit(find_hackathons, cfg)
         startup_future = pool.submit(find_startup_roles, cfg)
-        raw, stats = scrape(cfg, roles, slot)
+        raw, stats = scrape(cfg, roles, slot, healer)
         hacks, new_hacks, hack_store, hack_stats = hack_future.result()
         opps, new_opps, startup_store, startup_stats = startup_future.result()
+    if not args.roles:  # a test run of a few roles always finds less than usual
+        healer.check_sources(stats)
+    if cfg.get("hackathons") and hacks is None:
+        healer.record("problem", "Hackathons", "the hackathon search failed (see warnings in data/last_run.json)",
+                      "sent the email without the Hackathons sheet")
+    if cfg.get("startups") and opps is None:
+        healer.record("problem", "Startups", "the startup search failed (see warnings in data/last_run.json)",
+                      "sent the email without the Startups sheet")
     matcher = filters.RoleMatcher(roles)
     candidates = apply_filters(raw, cfg, matcher)
     log.info("%d raw results, %d after title/seniority/location/date filters", len(raw), len(candidates))
@@ -397,8 +406,13 @@ def main() -> None:
 
     registers = SponsorRegisters()
     if not all(registers.loaded.values()):  # first run, or a list failed to download last time
-        sponsor_registers.update()
+        healer.guard("Sponsor lists", sponsor_registers.update, None,
+                     "used the lists already saved; a country whose list is missing doesn't drop its jobs")
         registers = SponsorRegisters()
+        missing = [c for c, ok in registers.loaded.items() if not ok]
+        if missing:
+            healer.record("problem", "Sponsor lists", f"no list loaded for {', '.join(missing)}",
+                          "jobs there are not dropped for sponsorship; the download is retried next run")
     log.info("Sponsor lists loaded: %s", {c: len(v) for c, v in registers.lists.items()})
     current = []
     dropped: dict[str, int] = {}
@@ -428,25 +442,32 @@ def main() -> None:
                           hacks, new_hacks, opps, new_opps)
     log.info("Wrote %s: %d jobs, %d new", path, len(current), len(new_keys))
 
+    emailed = False
     if not args.no_email:
         sender = os.environ["GMAIL_USER"]
         to = os.environ.get("MAIL_TO") or sender
-        send(build_email(current, new_keys, stats, path, sender, to, cfg["max_age_days"], hacks, new_hacks,
-                         opps, new_opps))
-        log.info("Emailed %s", to)
-        (ROOT / "data" / "last_email_utc").write_text(datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ") + "\n")
-        for key in new_keys:
-            store[key]["emailed"] = True
+        msg = build_email(current, new_keys, stats, path, sender, to, cfg["max_age_days"], hacks, new_hacks,
+                          opps, new_opps, health_html=healer.email_section())
+        emailed = healer.send_email(lambda: send(msg))
+        if emailed:
+            log.info("Emailed %s", to)
+            (ROOT / "data" / "last_email_utc").write_text(datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ") + "\n")
+            for key in new_keys:
+                store[key]["emailed"] = True
     save_store(store)
-    if hack_store is not None and not args.no_email:
+    if hack_store is not None and emailed:
         # Like jobs, a dry run doesn't use up "NEW": the next email still marks them new.
         HACKATHON_STORE.write_text(json.dumps(hack_store, indent=1, sort_keys=True))
-    if startup_store is not None and not args.no_email:
+    if startup_store is not None and emailed:
         STARTUP_STORE.write_text(json.dumps(startup_store, indent=1, sort_keys=True))
     dropped["sponsor lists loaded"] = {c: len(v) for c, v in registers.lists.items()}
     write_report(stats, len(raw), len(candidates), current, new_keys, slot, dropped,
                  {"sources": hack_stats, "listed": len(hacks or []), "new": len(new_hacks)},
                  {**startup_stats, "listed": len(opps or []), "new": len(new_opps)})
+    healer.save(stats, {"raw_results": len(raw), "jobs_in_email": len(current), "new_jobs": len(new_keys),
+                        "emailed": emailed if not args.no_email else "dry run"})
+    if not args.no_email and not emailed:
+        raise SystemExit("The email could not be sent; see data/HEALTH.md. The next run sends these jobs.")
 
 
 class _WarningBuffer(logging.Handler):
