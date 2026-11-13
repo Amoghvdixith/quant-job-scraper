@@ -1,0 +1,42 @@
+{
+ "runs": [
+  {
+   "events": [],
+   "sources": {
+    "Careers sites": {
+     "errors": 1,
+     "found": 6435
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 84
+    },
+    "LinkedIn": {
+     "errors": 0,
+     "found": 4802
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3624
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4247
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 455,
+    "new_jobs": 48,
+    "raw_results": 19192
+   },
+   "utc": "2026-11-13T17:36:38+00:00"
+  }
+ ],
+ "sites": {
+  "MetLife": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 404 Client Error: Not Found for url: https://api.lever.co/v0/postings/metlife?mode=json"
+  }
+ }
+}

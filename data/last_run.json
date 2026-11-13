@@ -1,50 +1,50 @@
 {
- "finished_utc": "2026-11-13T11:37:37+00:00",
- "rotation_slot": 2959734,
+ "finished_utc": "2026-11-13T17:36:38+00:00",
+ "rotation_slot": 2959735,
  "sources": {
   "LinkedIn": {
-   "found": 4984,
+   "found": 4802,
    "errors": 0
   },
   "eFinancialCareers": {
-   "found": 4235,
+   "found": 4247,
    "errors": 0
   },
   "Indeed": {
-   "found": 428,
+   "found": 84,
    "errors": 0
   },
   "NHS Jobs": {
-   "found": 3593,
+   "found": 3624,
    "errors": 0
   },
   "Careers sites": {
-   "found": 6311,
+   "found": 6435,
    "errors": 1
   }
  },
- "raw_results": 19551,
- "after_filters": 1260,
- "jobs_in_email": 409,
- "new_jobs": 63,
- "descriptions_read": 398,
- "posted_by_recruiters": 4,
+ "raw_results": 19192,
+ "after_filters": 1116,
+ "jobs_in_email": 455,
+ "new_jobs": 48,
+ "descriptions_read": 443,
+ "posted_by_recruiters": 5,
  "saved_jobs_dropped_by_rule": {
-  "employer not on a sponsor list": 1888,
-  "older than the age limit": 951,
-  "no sponsorship": 195,
-  "asks for a professional qualification": 192,
-  "asks for 1+ years": 388,
+  "employer not on a sponsor list": 1926,
+  "older than the age limit": 972,
+  "no sponsorship": 197,
+  "asks for a professional qualification": 198,
+  "asks for 1+ years": 402,
   "title doesn't match a target role": 153,
-  "asks for 5+ years": 333,
-  "asks for work experience": 671,
-  "asks for 3+ years": 624,
-  "asks for 2+ years": 599,
+  "asks for 5+ years": 343,
+  "asks for work experience": 697,
+  "asks for 3+ years": 641,
+  "asks for 2+ years": 608,
   "asks for 20+ years": 6,
   "too senior": 16,
   "asks for 7+ years": 43,
   "asks for 10+ years": 42,
-  "asks for 4+ years": 104,
+  "asks for 4+ years": 108,
   "asks for 6+ years": 33,
   "excluded country": 1,
   "asks for 8+ years": 26,
@@ -52,8 +52,8 @@
   "posting closed": 6,
   "asks for 12+ years": 2,
   "sponsor lists loaded": {
-   "UK": 121113,
-   "US": 59725,
+   "UK": 121101,
+   "US": 59720,
    "NL": 13082
   }
  },
@@ -64,11 +64,11 @@
     "errors": 0
    },
    "devpost": {
-    "found": 15,
+    "found": 14,
     "errors": 0
    },
    "dropped": {
-    "not quant finance": 30,
+    "not quant finance": 29,
     "deadline passed": 3,
     "closed": 37,
     "students only": 41
@@ -81,13 +81,13 @@
   "startups_listed": 79,
   "boards_known": 41,
   "errors": 0,
-  "roles_read": 2095,
+  "roles_read": 2092,
   "kept": 158,
   "dropped": {
-   "too senior": 1053,
+   "too senior": 1051,
    "not a quant, finance, data or engineering role": 486,
-   "asks for experience": 311,
-   "internship": 53,
+   "asks for experience": 309,
+   "internship": 54,
    "excluded country": 16,
    "no sponsorship": 1
   },
@@ -95,9 +95,12 @@
   "new": 1
  },
  "warnings": [
-  "2026-11-13 11:06:11,427 jobscraper.sources.careers: MetLife (lever) failed: 404 Client Error: Not Found for url: https://api.lever.co/v0/postings/metlife?mode=json",
-  "2026-11-13 11:06:11,427 jobscraper: Careers sites | MetLife failed: 404 Client Error: Not Found for url: https://api.lever.co/v0/postings/metlife?mode=json",
-  "2026-11-13 11:11:22,030 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-13 11:14:24,016 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s"
+  "2026-11-13 17:06:13,536 jobscraper.sources.careers: MetLife (lever) failed: 404 Client Error: Not Found for url: https://api.lever.co/v0/postings/metlife?mode=json",
+  "2026-11-13 17:06:18,660 jobscraper.sources.careers: MetLife (lever) failed: 404 Client Error: Not Found for url: https://api.lever.co/v0/postings/metlife?mode=json",
+  "2026-11-13 17:06:18,660 jobscraper.healer: Careers sites | MetLife failed twice: 404 Client Error: Not Found for url: https://api.lever.co/v0/postings/metlife?mode=json",
+  "2026-11-13 17:08:21,950 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
+  "2026-11-13 17:33:31,020 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/4490562991 -> 429, waiting 10s",
+  "2026-11-13 17:35:39,175 jobscraper.sponsor_registers: UK CoS figures from Home Office FOI 2025/12841 failed (File is not a zip file); keeping what was saved",
+  "2026-11-13 17:35:47,216 jobscraper.sponsor_registers: UK CoS figures from Home Office FOI 2025/12841 failed (File is not a zip file); keeping what was saved"
  ]
 }
