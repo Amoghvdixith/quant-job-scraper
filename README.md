@@ -48,6 +48,30 @@ Each email holds every matching job from the last 5 days. Jobs that weren't in
 any earlier email are marked **NEW** and listed first. `data/jobs.json` remembers
 what was already sent; the workflow commits it back after each run.
 
+## Problem solver and health report
+
+`jobscraper/healer.py` watches every run and deals with what goes wrong instead of just logging it:
+
+- **Failed search** (timeout, connection reset, parse error): tried once more after a pause.
+- **Site that keeps failing within a run** (5 failures in a row): its remaining searches are skipped,
+  so it stops eating the time budget, and the other sites still finish before the email.
+- **Careers site that fails on 3 runs in a row**: rested for 3 days, then tried again automatically.
+- **Sudden drop**: a source that finds under 20% of its usual number (median of recent runs) is flagged as
+  a likely block or page-layout change, with the file to look at.
+- **Email failure**: retried 3 times with backoff. If it still fails, the jobs are not marked as emailed,
+  so the next run sends them, and the run shows as failed in the Actions tab.
+- **Sponsor lists, hackathons, startups**: a failure there no longer stops the run. It is recorded and
+  the email goes out without that part.
+
+Each run writes `data/health.json` (state between runs) and **`data/HEALTH.md`**, a readable report
+covering what needs a look, what was fixed automatically, resting careers sites, jobs found per source over
+the last 10 runs and the most frequent problems. The email gets a short "Run health" section whenever
+something happened.
+
+To follow it in a Claude project (e.g. "Performance Analizer"): in that project choose **Add content →
+GitHub**, pick this repo and select `data/HEALTH.md` (and `data/last_run.json` if you want the raw
+figures). Press sync in the project to pull the latest report, then ask Claude about it there.
+
 ## Setup
 
 1. In the repo, go to **Settings → Secrets and variables → Actions → New repository secret** and add:

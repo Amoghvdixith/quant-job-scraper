@@ -13,7 +13,7 @@ from .models import Job
 def build_email(jobs: list[Job], new_keys: set[str], stats: dict, attachment: Path, sender: str, to: str,
                 max_age_days: int = 5, hackathons: list | None = None,
                 new_hackathons: set[str] | None = None, startups: list | None = None,
-                new_startups: set[str] | None = None) -> EmailMessage:
+                new_startups: set[str] | None = None, health_html: str = "") -> EmailMessage:
     new_jobs = [j for j in jobs if j.key in new_keys]
     msg = EmailMessage()
     msg["Subject"] = f"Quant jobs: {len(new_jobs)} new, {len(jobs)} in the last {max_age_days} days"
@@ -101,7 +101,7 @@ def build_email(jobs: list[Job], new_keys: set[str], stats: dict, attachment: Pa
     msg.add_alternative(
         f"<p><b>{len(new_jobs)}</b> new jobs since the last email, <b>{len(jobs)}</b> matching jobs posted in the last {max_age_days} days.</p>"
         f"<p>The full list is in the attached Excel file (new ones are marked NEW).</p>"
-        f"{'<p>Top new jobs:</p>' if top else ''}{table}{remote_table}{grads_table}{interns_table}{gov_table}{hack_table}{startup_table}"
+        f"{'<p>Top new jobs:</p>' if top else ''}{table}{remote_table}{grads_table}{interns_table}{gov_table}{hack_table}{startup_table}{health_html}"
         f"<p style='color:#666;font-size:12px'>Found this run: {html.escape(source_line)}.</p>",
         subtype="html",
     )

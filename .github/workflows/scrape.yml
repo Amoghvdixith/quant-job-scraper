@@ -81,6 +81,7 @@ jobs:
           [ -f data/hackathons.json ] && git add data/hackathons.json
           [ -f data/startups.json ] && git add data/startups.json
           [ -f data/last_email_utc ] && git add data/last_email_utc
+          [ -f data/health.json ] && git add data/health.json data/HEALTH.md
           git diff --cached --quiet && exit 0
           git commit -m "Update seen jobs [skip ci]"
           for i in 1 2 3 4; do
