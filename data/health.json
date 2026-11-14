@@ -255,38 +255,69 @@
     "raw_results": 18359
    },
    "utc": "2026-11-14T11:34:40+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | Marsh",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | Wells Fargo",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "skipped this run; each is retried when its rest ends",
+     "area": "Careers sites",
+     "kind": "fixed",
+     "what": "19 sites are resting after repeated failures"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 2,
+     "found": 5831
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 83
+    },
+    "LinkedIn": {
+     "errors": 0,
+     "found": 5183
+    },
+    "NHS Jobs": {
+     "errors": 2,
+     "found": 3018
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4230
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 525,
+    "new_jobs": 26,
+    "raw_results": 18345
+   },
+   "utc": "2026-11-14T17:36:28+00:00"
   }
  ],
  "sites": {
-  "AIG": {
-   "failed_runs": 2,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
-  },
   "Apollo Global Management": {
    "failed_runs": 0,
    "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
    "rest_until": "2026-11-17"
   },
-  "Aviva": {
-   "failed_runs": 2,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
-  },
-  "BlackRock": {
-   "failed_runs": 2,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
-  },
   "Brookfield": {
    "failed_runs": 0,
    "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
    "rest_until": "2026-11-17"
-  },
-  "CME Group": {
-   "failed_runs": 2,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
-  },
-  "Cboe Global Markets": {
-   "failed_runs": 2,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "Citi": {
    "failed_runs": 0,
@@ -313,18 +344,6 @@
    "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
    "rest_until": "2026-11-17"
   },
-  "Global Payments": {
-   "failed_runs": 2,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
-  },
-  "Houlihan Lokey": {
-   "failed_runs": 2,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
-  },
-  "Invesco": {
-   "failed_runs": 2,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
-  },
   "KeyBank": {
    "failed_runs": 0,
    "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
@@ -336,17 +355,14 @@
    "rest_until": "2026-11-17"
   },
   "Marsh": {
-   "failed_runs": 2,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "MetLife": {
    "failed_runs": 0,
    "last_error": "HTTPError: 404 Client Error: Not Found for url: https://api.lever.co/v0/postings/metlife?mode=json",
    "rest_until": "2026-11-17"
-  },
-  "Mizuho": {
-   "failed_runs": 2,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "Morgan Stanley": {
    "failed_runs": 0,
@@ -357,14 +373,6 @@
    "failed_runs": 0,
    "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
    "rest_until": "2026-11-17"
-  },
-  "Northern Trust": {
-   "failed_runs": 2,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
-  },
-  "Nuveen": {
-   "failed_runs": 2,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "PNC": {
    "failed_runs": 0,
@@ -381,10 +389,6 @@
    "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
    "rest_until": "2026-11-17"
   },
-  "State Street": {
-   "failed_runs": 2,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
-  },
   "T. Rowe Price": {
    "failed_runs": 0,
    "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
@@ -394,10 +398,6 @@
    "failed_runs": 0,
    "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
    "rest_until": "2026-11-17"
-  },
-  "U.S. Bank": {
-   "failed_runs": 2,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "Vanguard": {
    "failed_runs": 0,
@@ -410,8 +410,9 @@
    "rest_until": "2026-11-17"
   },
   "Wells Fargo": {
-   "failed_runs": 2,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   }
  }
 }
