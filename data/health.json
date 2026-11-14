@@ -306,6 +306,45 @@
     "raw_results": 18345
    },
    "utc": "2026-11-14T17:36:28+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "skipped this run; each is retried when its rest ends",
+     "area": "Careers sites",
+     "kind": "fixed",
+     "what": "21 sites are resting after repeated failures"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 0,
+     "found": 5827
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 452
+    },
+    "LinkedIn": {
+     "errors": 0,
+     "found": 5113
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3637
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4231
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 550,
+    "new_jobs": 25,
+    "raw_results": 19260
+   },
+   "utc": "2026-11-14T23:33:45+00:00"
   }
  ],
  "sites": {

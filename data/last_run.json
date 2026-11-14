@@ -1,51 +1,51 @@
 {
- "finished_utc": "2026-11-14T17:36:28+00:00",
- "rotation_slot": 2959739,
+ "finished_utc": "2026-11-14T23:33:45+00:00",
+ "rotation_slot": 2959740,
  "sources": {
   "LinkedIn": {
-   "found": 5183,
+   "found": 5113,
    "errors": 0
   },
   "eFinancialCareers": {
-   "found": 4230,
+   "found": 4231,
    "errors": 0
   },
   "Indeed": {
-   "found": 83,
+   "found": 452,
    "errors": 0
   },
   "NHS Jobs": {
-   "found": 3018,
-   "errors": 2
+   "found": 3637,
+   "errors": 0
   },
   "Careers sites": {
-   "found": 5831,
-   "errors": 2
+   "found": 5827,
+   "errors": 0
   }
  },
- "raw_results": 18345,
- "after_filters": 1090,
- "jobs_in_email": 525,
- "new_jobs": 26,
- "descriptions_read": 509,
+ "raw_results": 19260,
+ "after_filters": 1165,
+ "jobs_in_email": 550,
+ "new_jobs": 25,
+ "descriptions_read": 536,
  "posted_by_recruiters": 8,
  "saved_jobs_dropped_by_rule": {
-  "employer not on a sponsor list": 2085,
+  "employer not on a sponsor list": 2104,
   "older than the age limit": 1002,
-  "no sponsorship": 208,
-  "asks for a professional qualification": 221,
-  "asks for 1+ years": 419,
+  "no sponsorship": 213,
+  "asks for a professional qualification": 225,
+  "asks for 1+ years": 427,
   "title doesn't match a target role": 153,
-  "asks for 5+ years": 358,
-  "asks for work experience": 746,
-  "asks for 3+ years": 661,
-  "asks for 2+ years": 627,
+  "asks for 5+ years": 363,
+  "asks for work experience": 762,
+  "asks for 3+ years": 671,
+  "asks for 2+ years": 634,
   "asks for 20+ years": 6,
   "too senior": 16,
-  "asks for 7+ years": 44,
+  "asks for 7+ years": 46,
   "asks for 10+ years": 43,
   "asks for 4+ years": 113,
-  "asks for 6+ years": 34,
+  "asks for 6+ years": 36,
   "excluded country": 1,
   "asks for 8+ years": 26,
   "asks for 15+ years": 1,
@@ -64,18 +64,18 @@
     "errors": 0
    },
    "devpost": {
-    "found": 15,
+    "found": 13,
     "errors": 0
    },
    "dropped": {
-    "not quant finance": 30,
+    "not quant finance": 28,
     "deadline passed": 3,
     "closed": 37,
-    "students only": 41
+    "students only": 40
    }
   },
-  "listed": 31,
-  "new": 0
+  "listed": 32,
+  "new": 1
  },
  "startups": {
   "startups_listed": 79,
@@ -95,22 +95,10 @@
   "new": 0
  },
  "warnings": [
-  "2026-11-14 17:05:49,034 jobscraper.sources.careers: Marsh (workday) failed: Expecting value: line 1 column 1 (char 0)",
-  "2026-11-14 17:05:54,364 jobscraper.sources.careers: Marsh (workday) failed: Expecting value: line 1 column 1 (char 0)",
-  "2026-11-14 17:05:54,364 jobscraper.healer: Careers sites | Marsh failed twice: Expecting value: line 1 column 1 (char 0)",
-  "2026-11-14 17:05:54,364 jobscraper.healer: problem solver | Careers sites | Marsh | failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0)) -> resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-  "2026-11-14 17:06:02,336 jobscraper.sources.careers: Wells Fargo (workday) failed: Expecting value: line 1 column 1 (char 0)",
-  "2026-11-14 17:06:07,646 jobscraper.sources.careers: Wells Fargo (workday) failed: Expecting value: line 1 column 1 (char 0)",
-  "2026-11-14 17:06:07,646 jobscraper.healer: Careers sites | Wells Fargo failed twice: Expecting value: line 1 column 1 (char 0)",
-  "2026-11-14 17:06:07,646 jobscraper.healer: problem solver | Careers sites | Wells Fargo | failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0)) -> resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-  "2026-11-14 17:07:53,102 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
-  "2026-11-14 17:08:04,785 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 20s",
-  "2026-11-14 17:08:37,528 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
-  "2026-11-14 17:08:48,949 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 20s",
-  "2026-11-14 17:10:11,082 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
-  "2026-11-14 17:10:58,869 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
-  "2026-11-14 17:11:28,446 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
-  "2026-11-14 17:15:16,007 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-14 17:35:04,078 jobscraper.sponsor_registers: UK CoS figures from Home Office FOI 2025/12841 failed (File is not a zip file); keeping what was saved"
+  "2026-11-14 23:07:52,503 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
+  "2026-11-14 23:08:05,397 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
+  "2026-11-14 23:08:27,044 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
+  "2026-11-14 23:09:21,751 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
+  "2026-11-14 23:32:52,457 jobscraper.sponsor_registers: UK CoS figures from Home Office FOI 2025/12841 failed (File is not a zip file); keeping what was saved"
  ]
 }

@@ -2,22 +2,21 @@
 
 Written by the problem solver (`jobscraper/healer.py`) at the end of every run. Sync this file into the Performance Analizer Claude project to track it there.
 
-Last run: 2026-11-14T17:36:28+00:00
+Last run: 2026-11-14T23:33:45+00:00
 
 ## Status
 
-2 problem(s) need a look, 1 handled automatically.
+0 problem(s) need a look, 1 handled automatically.
 
-Jobs in email: 525, new: 26, raw results: 18345, emailed: True.
+Jobs in email: 550, new: 25, raw results: 19260, emailed: True.
 
 ## Needs a look
 
-- **Careers sites | Marsh**: failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0)). Resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml.
-- **Careers sites | Wells Fargo**: failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0)). Resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml.
+- Nothing.
 
 ## Fixed automatically
 
-- **Careers sites**: 19 sites are resting after repeated failures. Skipped this run; each is retried when its rest ends.
+- **Careers sites**: 21 sites are resting after repeated failures. Skipped this run; each is retried when its rest ends.
 
 ## Careers sites resting
 
@@ -45,15 +44,15 @@ Jobs in email: 525, new: 26, raw results: 18345, emailed: True.
 
 ## Jobs found per source, last runs (oldest first)
 
-| Source | 11-13 17:36 | 11-13 23:35 | 11-14 05:34 | 11-14 11:34 | 11-14 17:36 |
-|---|---|---|---|---|---|
-| Careers sites | 6435 (1 err) | 5920 (19 err) | 5410 (34 err) | 5408 (33 err) | 5831 (2 err) |
-| Indeed | 84 | 130 | 30 | 4 | 83 |
-| LinkedIn | 4802 | 5092 | 5233 | 5065 | 5183 |
-| NHS Jobs | 3624 | 3644 | 3640 | 3636 | 3018 (2 err) |
-| eFinancialCareers | 4247 | 4229 | 4217 | 4246 | 4230 |
+| Source | 11-13 17:36 | 11-13 23:35 | 11-14 05:34 | 11-14 11:34 | 11-14 17:36 | 11-14 23:33 |
+|---|---|---|---|---|---|---|
+| Careers sites | 6435 (1 err) | 5920 (19 err) | 5410 (34 err) | 5408 (33 err) | 5831 (2 err) | 5827 |
+| Indeed | 84 | 130 | 30 | 4 | 83 | 452 |
+| LinkedIn | 4802 | 5092 | 5233 | 5065 | 5183 | 5113 |
+| NHS Jobs | 3624 | 3644 | 3640 | 3636 | 3018 (2 err) | 3637 |
+| eFinancialCareers | 4247 | 4229 | 4217 | 4246 | 4230 | 4231 |
 
-## Most frequent problems, last 5 runs
+## Most frequent problems, last 6 runs
 
 - Careers sites | MetLife: 1 run(s)
 - Careers sites | Apollo Global Management: 1 run(s)
