@@ -63,84 +63,184 @@
     "raw_results": 19015
    },
    "utc": "2026-11-13T23:35:39+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | MetLife",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: HTTPError: 404 Client Error: Not Found for url: https://api.lever.co/v0/postings/metlife?mode=json)"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 34,
+     "found": 5410
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 30
+    },
+    "LinkedIn": {
+     "errors": 0,
+     "found": 5233
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3640
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4217
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 479,
+    "new_jobs": 20,
+    "raw_results": 18530
+   },
+   "utc": "2026-11-14T05:34:58+00:00"
   }
  ],
  "sites": {
-  "Apollo Global Management": {
+  "AIG": {
    "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://aig.wd1.myworkdayjobs.com/wday/cxs/aig/aig/jobs"
+  },
+  "Apollo Global Management": {
+   "failed_runs": 2,
    "last_error": "HTTPError: 521 Server Error: <none> for url: https://athene.wd5.myworkdayjobs.com/wday/cxs/athene/Apollo_Careers/jobs"
   },
-  "Brookfield": {
+  "Aviva": {
    "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://aviva.wd1.myworkdayjobs.com/wday/cxs/aviva/External/jobs"
+  },
+  "BlackRock": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://blackrock.wd1.myworkdayjobs.com/wday/cxs/blackrock/BlackRock_Professional/jobs"
+  },
+  "Brookfield": {
+   "failed_runs": 2,
    "last_error": "HTTPError: 521 Server Error: <none> for url: https://brookfield.wd5.myworkdayjobs.com/wday/cxs/brookfield/brookfield/jobs"
   },
-  "Citi": {
+  "CME Group": {
    "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://cmegroup.wd1.myworkdayjobs.com/wday/cxs/cmegroup/cme_careers/jobs"
+  },
+  "Cboe Global Markets": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://cboe.wd1.myworkdayjobs.com/wday/cxs/cboe/External_Career_CBOE/jobs"
+  },
+  "Citi": {
+   "failed_runs": 2,
    "last_error": "HTTPError: 521 Server Error: <none> for url: https://citi.wd5.myworkdayjobs.com/wday/cxs/citi/2/jobs"
   },
   "FIS": {
-   "failed_runs": 1,
+   "failed_runs": 2,
    "last_error": "HTTPError: 521 Server Error: <none> for url: https://fis.wd5.myworkdayjobs.com/wday/cxs/fis/SearchJobs/jobs"
   },
   "Fifth Third Bank": {
-   "failed_runs": 1,
+   "failed_runs": 2,
    "last_error": "HTTPError: 521 Server Error: <none> for url: https://fifththird.wd5.myworkdayjobs.com/wday/cxs/fifththird/53careers/jobs"
   },
   "Fiserv": {
-   "failed_runs": 1,
+   "failed_runs": 2,
    "last_error": "HTTPError: 521 Server Error: <none> for url: https://fiserv.wd5.myworkdayjobs.com/wday/cxs/fiserv/EXT/jobs"
   },
   "Franklin Templeton": {
-   "failed_runs": 1,
+   "failed_runs": 2,
    "last_error": "HTTPError: 521 Server Error: <none> for url: https://franklintempleton.wd5.myworkdayjobs.com/wday/cxs/franklintempleton/Primary-External-1/jobs"
   },
-  "KeyBank": {
+  "Global Payments": {
    "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://tsys.wd1.myworkdayjobs.com/wday/cxs/tsys/TSYS/jobs"
+  },
+  "Houlihan Lokey": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://hl.wd1.myworkdayjobs.com/wday/cxs/hl/Campus/jobs"
+  },
+  "Invesco": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://invesco.wd1.myworkdayjobs.com/wday/cxs/invesco/IVZ/jobs"
+  },
+  "KeyBank": {
+   "failed_runs": 2,
    "last_error": "HTTPError: 521 Server Error: <none> for url: https://keybank.wd5.myworkdayjobs.com/wday/cxs/keybank/External_Career_Site/jobs"
   },
   "M&T Bank": {
-   "failed_runs": 1,
+   "failed_runs": 2,
    "last_error": "HTTPError: 521 Server Error: <none> for url: https://mtb.wd5.myworkdayjobs.com/wday/cxs/mtb/MTB/jobs"
   },
+  "Marsh": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://mmc.wd1.myworkdayjobs.com/wday/cxs/mmc/MMC/jobs"
+  },
   "MetLife": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 404 Client Error: Not Found for url: https://api.lever.co/v0/postings/metlife?mode=json"
+   "failed_runs": 0,
+   "last_error": "HTTPError: 404 Client Error: Not Found for url: https://api.lever.co/v0/postings/metlife?mode=json",
+   "rest_until": "2026-11-17"
+  },
+  "Mizuho": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://mizuho.wd1.myworkdayjobs.com/wday/cxs/mizuho/mizuhoamericas/jobs"
   },
   "Morgan Stanley": {
-   "failed_runs": 1,
+   "failed_runs": 2,
    "last_error": "HTTPError: 521 Server Error: <none> for url: https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/External/jobs"
   },
   "Morningstar": {
-   "failed_runs": 1,
+   "failed_runs": 2,
    "last_error": "HTTPError: 521 Server Error: <none> for url: https://morningstar.wd5.myworkdayjobs.com/wday/cxs/morningstar/Americas/jobs"
   },
-  "PNC": {
+  "Northern Trust": {
    "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://ntrs.wd1.myworkdayjobs.com/wday/cxs/ntrs/northerntrust/jobs"
+  },
+  "Nuveen": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://tiaa.wd1.myworkdayjobs.com/wday/cxs/tiaa/Search/jobs"
+  },
+  "PNC": {
+   "failed_runs": 2,
    "last_error": "HTTPError: 521 Server Error: <none> for url: https://pnc.wd5.myworkdayjobs.com/wday/cxs/pnc/External/jobs"
   },
   "Prudential plc": {
-   "failed_runs": 1,
+   "failed_runs": 2,
    "last_error": "HTTPError: 521 Server Error: <none> for url: https://pru.wd5.myworkdayjobs.com/wday/cxs/pru/Careers/jobs"
   },
   "S&P Global": {
-   "failed_runs": 1,
+   "failed_runs": 2,
    "last_error": "HTTPError: 521 Server Error: <none> for url: https://spgi.wd5.myworkdayjobs.com/wday/cxs/spgi/SPGI_Careers/jobs"
   },
-  "T. Rowe Price": {
+  "State Street": {
    "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://statestreet.wd1.myworkdayjobs.com/wday/cxs/statestreet/Global/jobs"
+  },
+  "T. Rowe Price": {
+   "failed_runs": 2,
    "last_error": "HTTPError: 521 Server Error: <none> for url: https://troweprice.wd5.myworkdayjobs.com/wday/cxs/troweprice/TRowePrice/jobs"
   },
   "Travelers": {
-   "failed_runs": 1,
+   "failed_runs": 2,
    "last_error": "HTTPError: 521 Server Error: <none> for url: https://travelers.wd5.myworkdayjobs.com/wday/cxs/travelers/External/jobs"
   },
-  "Vanguard": {
+  "U.S. Bank": {
    "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://usbank.wd1.myworkdayjobs.com/wday/cxs/usbank/US_Bank_Careers/jobs"
+  },
+  "Vanguard": {
+   "failed_runs": 2,
    "last_error": "HTTPError: 521 Server Error: <none> for url: https://vanguard.wd5.myworkdayjobs.com/wday/cxs/vanguard/vanguard_external/jobs"
   },
   "Wellington Management": {
-   "failed_runs": 1,
+   "failed_runs": 2,
    "last_error": "HTTPError: 521 Server Error: <none> for url: https://wellington.wd5.myworkdayjobs.com/wday/cxs/wellington/External/jobs"
+  },
+  "Wells Fargo": {
+   "failed_runs": 1,
+   "last_error": "HTTPError: 521 Server Error: <none> for url: https://wf.wd1.myworkdayjobs.com/wday/cxs/wf/WellsFargoJobs/jobs"
   }
  }
 }
