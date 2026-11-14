@@ -102,80 +102,242 @@
     "raw_results": 18530
    },
    "utc": "2026-11-14T05:34:58+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | Apollo Global Management",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | Brookfield",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | Citi",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | FIS",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | Fifth Third Bank",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | Fiserv",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | Franklin Templeton",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | KeyBank",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | M&T Bank",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | Morgan Stanley",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | Morningstar",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | PNC",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | Prudential plc",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | S&P Global",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | T. Rowe Price",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | Travelers",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | Vanguard",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
+     "area": "Careers sites | Wellington Management",
+     "kind": "problem",
+     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
+    },
+    {
+     "action": "skipped this run; each is retried when its rest ends",
+     "area": "Careers sites",
+     "kind": "fixed",
+     "what": "1 sites are resting after repeated failures"
+    },
+    {
+     "action": "likely blocked or the site changed its page layout; the run carried on with the other sources. If it repeats next run, its scraper in jobscraper/sources needs a fix",
+     "area": "Indeed",
+     "kind": "problem",
+     "what": "found 4 jobs; it usually finds about 84"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 33,
+     "found": 5408
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 4
+    },
+    "LinkedIn": {
+     "errors": 0,
+     "found": 5065
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3636
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4246
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 499,
+    "new_jobs": 20,
+    "raw_results": 18359
+   },
+   "utc": "2026-11-14T11:34:40+00:00"
   }
  ],
  "sites": {
   "AIG": {
-   "failed_runs": 1,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://aig.wd1.myworkdayjobs.com/wday/cxs/aig/aig/jobs"
+   "failed_runs": 2,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "Apollo Global Management": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://athene.wd5.myworkdayjobs.com/wday/cxs/athene/Apollo_Careers/jobs"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "Aviva": {
-   "failed_runs": 1,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://aviva.wd1.myworkdayjobs.com/wday/cxs/aviva/External/jobs"
+   "failed_runs": 2,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "BlackRock": {
-   "failed_runs": 1,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://blackrock.wd1.myworkdayjobs.com/wday/cxs/blackrock/BlackRock_Professional/jobs"
+   "failed_runs": 2,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "Brookfield": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://brookfield.wd5.myworkdayjobs.com/wday/cxs/brookfield/brookfield/jobs"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "CME Group": {
-   "failed_runs": 1,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://cmegroup.wd1.myworkdayjobs.com/wday/cxs/cmegroup/cme_careers/jobs"
+   "failed_runs": 2,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "Cboe Global Markets": {
-   "failed_runs": 1,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://cboe.wd1.myworkdayjobs.com/wday/cxs/cboe/External_Career_CBOE/jobs"
+   "failed_runs": 2,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "Citi": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://citi.wd5.myworkdayjobs.com/wday/cxs/citi/2/jobs"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "FIS": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://fis.wd5.myworkdayjobs.com/wday/cxs/fis/SearchJobs/jobs"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "Fifth Third Bank": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://fifththird.wd5.myworkdayjobs.com/wday/cxs/fifththird/53careers/jobs"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "Fiserv": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://fiserv.wd5.myworkdayjobs.com/wday/cxs/fiserv/EXT/jobs"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "Franklin Templeton": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://franklintempleton.wd5.myworkdayjobs.com/wday/cxs/franklintempleton/Primary-External-1/jobs"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "Global Payments": {
-   "failed_runs": 1,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://tsys.wd1.myworkdayjobs.com/wday/cxs/tsys/TSYS/jobs"
+   "failed_runs": 2,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "Houlihan Lokey": {
-   "failed_runs": 1,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://hl.wd1.myworkdayjobs.com/wday/cxs/hl/Campus/jobs"
+   "failed_runs": 2,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "Invesco": {
-   "failed_runs": 1,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://invesco.wd1.myworkdayjobs.com/wday/cxs/invesco/IVZ/jobs"
+   "failed_runs": 2,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "KeyBank": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://keybank.wd5.myworkdayjobs.com/wday/cxs/keybank/External_Career_Site/jobs"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "M&T Bank": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://mtb.wd5.myworkdayjobs.com/wday/cxs/mtb/MTB/jobs"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "Marsh": {
-   "failed_runs": 1,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://mmc.wd1.myworkdayjobs.com/wday/cxs/mmc/MMC/jobs"
+   "failed_runs": 2,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "MetLife": {
    "failed_runs": 0,
@@ -183,64 +345,73 @@
    "rest_until": "2026-11-17"
   },
   "Mizuho": {
-   "failed_runs": 1,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://mizuho.wd1.myworkdayjobs.com/wday/cxs/mizuho/mizuhoamericas/jobs"
+   "failed_runs": 2,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "Morgan Stanley": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/External/jobs"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "Morningstar": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://morningstar.wd5.myworkdayjobs.com/wday/cxs/morningstar/Americas/jobs"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "Northern Trust": {
-   "failed_runs": 1,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://ntrs.wd1.myworkdayjobs.com/wday/cxs/ntrs/northerntrust/jobs"
+   "failed_runs": 2,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "Nuveen": {
-   "failed_runs": 1,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://tiaa.wd1.myworkdayjobs.com/wday/cxs/tiaa/Search/jobs"
+   "failed_runs": 2,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "PNC": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://pnc.wd5.myworkdayjobs.com/wday/cxs/pnc/External/jobs"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "Prudential plc": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://pru.wd5.myworkdayjobs.com/wday/cxs/pru/Careers/jobs"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "S&P Global": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://spgi.wd5.myworkdayjobs.com/wday/cxs/spgi/SPGI_Careers/jobs"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "State Street": {
-   "failed_runs": 1,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://statestreet.wd1.myworkdayjobs.com/wday/cxs/statestreet/Global/jobs"
+   "failed_runs": 2,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "T. Rowe Price": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://troweprice.wd5.myworkdayjobs.com/wday/cxs/troweprice/TRowePrice/jobs"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "Travelers": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://travelers.wd5.myworkdayjobs.com/wday/cxs/travelers/External/jobs"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "U.S. Bank": {
-   "failed_runs": 1,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://usbank.wd1.myworkdayjobs.com/wday/cxs/usbank/US_Bank_Careers/jobs"
+   "failed_runs": 2,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "Vanguard": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://vanguard.wd5.myworkdayjobs.com/wday/cxs/vanguard/vanguard_external/jobs"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "Wellington Management": {
-   "failed_runs": 2,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://wellington.wd5.myworkdayjobs.com/wday/cxs/wellington/External/jobs"
+   "failed_runs": 0,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "rest_until": "2026-11-17"
   },
   "Wells Fargo": {
-   "failed_runs": 1,
-   "last_error": "HTTPError: 521 Server Error: <none> for url: https://wf.wd1.myworkdayjobs.com/wday/cxs/wf/WellsFargoJobs/jobs"
+   "failed_runs": 2,
+   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   }
  }
 }
