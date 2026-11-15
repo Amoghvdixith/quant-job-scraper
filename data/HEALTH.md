@@ -2,13 +2,13 @@
 
 Written by the problem solver (`jobscraper/healer.py`) at the end of every run. Sync this file into the Performance Analizer Claude project to track it there.
 
-Last run: 2026-11-15T11:36:03+00:00
+Last run: 2026-11-15T17:32:16+00:00
 
 ## Status
 
 1 problem(s) need a look, 1 handled automatically.
 
-Jobs in email: 476, new: 20, raw results: 18446, emailed: True.
+Jobs in email: 480, new: 4, raw results: 18124, emailed: True.
 
 ## Needs a look
 
@@ -44,17 +44,17 @@ Jobs in email: 476, new: 20, raw results: 18446, emailed: True.
 
 ## Jobs found per source, last runs (oldest first)
 
-| Source | 11-13 17:36 | 11-13 23:35 | 11-14 05:34 | 11-14 11:34 | 11-14 17:36 | 11-14 23:33 | 11-15 05:34 | 11-15 11:36 |
-|---|---|---|---|---|---|---|---|---|
-| Careers sites | 6435 (1 err) | 5920 (19 err) | 5410 (34 err) | 5408 (33 err) | 5831 (2 err) | 5827 | 5820 | 5555 |
-| Indeed | 84 | 130 | 30 | 4 | 83 | 452 | 45 | 117 |
-| LinkedIn | 4802 | 5092 | 5233 | 5065 | 5183 | 5113 | 5108 | 4991 |
-| NHS Jobs | 3624 | 3644 | 3640 | 3636 | 3018 (2 err) | 3637 | 3535 | 3521 (1 err) |
-| eFinancialCareers | 4247 | 4229 | 4217 | 4246 | 4230 | 4231 | 4250 | 4262 |
+| Source | 11-13 17:36 | 11-13 23:35 | 11-14 05:34 | 11-14 11:34 | 11-14 17:36 | 11-14 23:33 | 11-15 05:34 | 11-15 11:36 | 11-15 17:32 |
+|---|---|---|---|---|---|---|---|---|---|
+| Careers sites | 6435 (1 err) | 5920 (19 err) | 5410 (34 err) | 5408 (33 err) | 5831 (2 err) | 5827 | 5820 | 5555 | 5559 |
+| Indeed | 84 | 130 | 30 | 4 | 83 | 452 | 45 | 117 | 21 |
+| LinkedIn | 4802 | 5092 | 5233 | 5065 | 5183 | 5113 | 5108 | 4991 | 4754 |
+| NHS Jobs | 3624 | 3644 | 3640 | 3636 | 3018 (2 err) | 3637 | 3535 | 3521 (1 err) | 3531 |
+| eFinancialCareers | 4247 | 4229 | 4217 | 4246 | 4230 | 4231 | 4250 | 4262 | 4259 |
 
-## Most frequent problems, last 8 runs
+## Most frequent problems, last 9 runs
 
-- UK sponsorship figures: 2 run(s)
+- UK sponsorship figures: 3 run(s)
 - Careers sites | MetLife: 1 run(s)
 - Careers sites | Apollo Global Management: 1 run(s)
 - Careers sites | Brookfield: 1 run(s)

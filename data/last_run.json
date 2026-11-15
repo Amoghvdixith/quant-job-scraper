@@ -1,50 +1,50 @@
 {
- "finished_utc": "2026-11-15T11:36:03+00:00",
- "rotation_slot": 2959742,
+ "finished_utc": "2026-11-15T17:32:16+00:00",
+ "rotation_slot": 2959743,
  "sources": {
   "LinkedIn": {
-   "found": 4991,
+   "found": 4754,
    "errors": 0
   },
   "eFinancialCareers": {
-   "found": 4262,
+   "found": 4259,
    "errors": 0
   },
   "Indeed": {
-   "found": 117,
+   "found": 21,
    "errors": 0
   },
   "NHS Jobs": {
-   "found": 3521,
-   "errors": 1
+   "found": 3531,
+   "errors": 0
   },
   "Careers sites": {
-   "found": 5555,
+   "found": 5559,
    "errors": 0
   }
  },
- "raw_results": 18446,
- "after_filters": 929,
- "jobs_in_email": 476,
- "new_jobs": 20,
- "descriptions_read": 469,
+ "raw_results": 18124,
+ "after_filters": 868,
+ "jobs_in_email": 480,
+ "new_jobs": 4,
+ "descriptions_read": 473,
  "posted_by_recruiters": 8,
  "saved_jobs_dropped_by_rule": {
-  "employer not on a sponsor list": 2164,
+  "employer not on a sponsor list": 2175,
   "older than the age limit": 1112,
-  "asks for work experience": 774,
+  "asks for work experience": 777,
   "no sponsorship": 213,
-  "asks for a professional qualification": 227,
-  "asks for 1+ years": 432,
+  "asks for a professional qualification": 228,
+  "asks for 1+ years": 433,
   "title doesn't match a target role": 153,
   "asks for 5+ years": 366,
   "asks for 3+ years": 678,
-  "asks for 2+ years": 640,
+  "asks for 2+ years": 644,
   "asks for 20+ years": 6,
   "too senior": 16,
   "asks for 7+ years": 46,
   "asks for 10+ years": 43,
-  "asks for 4+ years": 114,
+  "asks for 4+ years": 115,
   "asks for 6+ years": 37,
   "excluded country": 1,
   "asks for 8+ years": 26,
@@ -64,13 +64,13 @@
     "errors": 0
    },
    "devpost": {
-    "found": 13,
+    "found": 11,
     "errors": 0
    },
    "dropped": {
     "closed": 37,
     "students only": 39,
-    "not quant finance": 30,
+    "not quant finance": 28,
     "deadline passed": 3
    }
   },
@@ -81,11 +81,11 @@
   "startups_listed": 79,
   "boards_known": 41,
   "errors": 0,
-  "roles_read": 2093,
+  "roles_read": 2092,
   "kept": 159,
   "dropped": {
    "too senior": 1057,
-   "not a quant, finance, data or engineering role": 483,
+   "not a quant, finance, data or engineering role": 482,
    "asks for experience": 306,
    "internship": 54,
    "excluded country": 16,
@@ -95,10 +95,10 @@
   "new": 0
  },
  "warnings": [
-  "2026-11-15 11:08:50,467 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
-  "2026-11-15 11:09:02,064 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 20s",
-  "2026-11-15 11:09:25,083 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
-  "2026-11-15 11:12:28,493 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
-  "2026-11-15 11:35:18,748 jobscraper.healer: problem solver | UK sponsorship figures | failed (RuntimeError: UK CoS figures from Home Office FOI 2025/12841 could not be read (403 Client Error: Forbidden for url: https://www.whatdotheyknow.com/request/r...) -> the UK people-sponsored column is empty this run. Fix: save the FOI workbook in data/foi/ (see UK_COS_SOURCES in jobscraper/sponsor_registers.py)"
+  "2026-11-15 17:07:51,838 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
+  "2026-11-15 17:08:08,801 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
+  "2026-11-15 17:08:26,247 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
+  "2026-11-15 17:12:43,427 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
+  "2026-11-15 17:30:44,515 jobscraper.healer: problem solver | UK sponsorship figures | failed (RuntimeError: UK CoS figures from Home Office FOI 2025/12841 could not be read (403 Client Error: Forbidden for url: https://www.whatdotheyknow.com/request/r...) -> the UK people-sponsored column is empty this run. Fix: save the FOI workbook in data/foi/ (see UK_COS_SOURCES in jobscraper/sponsor_registers.py)"
  ]
 }
