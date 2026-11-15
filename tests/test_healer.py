@@ -125,3 +125,39 @@ def test_scrape_uses_the_problem_solver(tmp_path, monkeypatch):
     assert len(jobs) == 2
     assert stats == {"Indeed": {"found": 1, "errors": 1}, "Careers sites": {"found": 1, "errors": 1}}
     assert h.state["sites"]["Acme Bank"]["failed_runs"] == 1
+
+
+def test_platform_outage_does_not_rest_sites(tmp_path):
+    from jobscraper.healer import OUTAGE_SITES
+
+    def down(stat):
+        raise RuntimeError("521 Server Error: <none> for url: https://x.wd5.myworkdayjobs.com/jobs")
+
+    sites = [f"Bank {i}" for i in range(OUTAGE_SITES)]
+    for _ in range(REST_AFTER_FAILED_RUNS + 1):
+        h = _healer(tmp_path)
+        for s in sites:
+            assert h.call_site(s, down, {}) is None
+        h.check_sources({})
+        h.save({}, {})
+    h = _healer(tmp_path)
+    assert not any(h.site_resting(s) for s in sites)
+    assert all(h.state["sites"][s].get("failed_runs", 0) == 0 for s in sites)
+    assert "521" in h.state["sites"][sites[0]]["last_error"]
+    assert "hosting platform" in (tmp_path / "HEALTH.md").read_text()
+
+
+def test_a_few_failing_sites_still_count_towards_a_rest(tmp_path):
+    from jobscraper.healer import OUTAGE_SITES
+
+    def down(stat):
+        raise ValueError("Expecting value: line 1 column 1 (char 0)")
+
+    sites = [f"Bank {i}" for i in range(OUTAGE_SITES - 1)]
+    for _ in range(REST_AFTER_FAILED_RUNS):
+        h = _healer(tmp_path)
+        for s in sites:
+            assert h.call_site(s, down, {}) is None
+        h.check_sources({})
+        h.save({}, {})
+    assert all(_healer(tmp_path).site_resting(s) for s in sites)

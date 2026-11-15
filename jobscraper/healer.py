@@ -31,6 +31,7 @@ RETRY_PAUSE_SECONDS = 5
 TRIP_AFTER_FAILURES = 5           # failures in a row within one run before a site's remaining searches are skipped
 REST_AFTER_FAILED_RUNS = 3        # runs in a row a careers site fails before it is rested
 REST_DAYS = 3
+OUTAGE_SITES = 5                  # this many careers sites failing in one run = a platform outage, not site changes
 DROP_ALERT_SHARE = 0.2            # "found" below 20% of the usual figure counts as a sudden drop
 MIN_USUAL_FOR_ALERT = 20          # ignore sources that normally find very little
 
@@ -57,6 +58,8 @@ class Healer:
     _tripped: set[str] = field(default_factory=set)
     _skipped: dict[str, int] = field(default_factory=dict)
     _site_results: dict[str, bool] = field(default_factory=dict)
+    _site_before: dict[str, dict] = field(default_factory=dict)
+    _site_errors: dict[str, Exception] = field(default_factory=dict)
     _lock: threading.Lock = field(default_factory=threading.Lock)
 
     @classmethod
@@ -142,6 +145,8 @@ class Healer:
     def _site_failed(self, site: str, err: Exception) -> None:
         with self._lock:
             rec = self.state["sites"].setdefault(site, {})
+            self._site_before.setdefault(site, dict(rec))
+            self._site_errors[site] = err
             rec["failed_runs"] = rec.get("failed_runs", 0) + 1
             rec["last_error"] = _short(err)
             rest = rec["failed_runs"] >= REST_AFTER_FAILED_RUNS
@@ -156,8 +161,28 @@ class Healer:
 
     # ---- after the searches -----------------------------------------------------------------
 
+    def forgive_outage(self) -> None:
+        """Many careers sites failing in the same run is an outage or block at the hosting platform
+        (e.g. Workday returning errors or a challenge page for every site it hosts), not a change at
+        each firm, so those failures don't count towards resting them. Without this, a few hours'
+        outage would rest dozens of sites for days. A single site that keeps failing still rests."""
+        with self._lock:
+            hit = list(self._site_errors)
+            if len(hit) < OUTAGE_SITES:
+                return
+            for site in hit:
+                rec = dict(self._site_before.pop(site, {}))
+                rec["last_error"] = _short(self._site_errors.pop(site))
+                self.state["sites"][site] = rec
+        self.events = [e for e in self.events if not (e.kind == "problem" and e.area.removeprefix("Careers sites | ") in hit
+                                                      and "runs in a row" in e.what)]
+        self.record("problem", "Careers sites",
+                    f"{len(hit)} sites failed in the same run (likely an outage or block at their hosting platform)",
+                    "not counted towards resting them; they are tried again next run")
+
     def check_sources(self, stats: dict) -> None:
         """Flags sources that suddenly found far less than usual, and notes what was skipped."""
+        self.forgive_outage()
         for label, n in sorted(self._skipped.items()):
             if label == "Careers sites (resting)":
                 self.record("fixed", "Careers sites", f"{n} sites are resting after repeated failures",
