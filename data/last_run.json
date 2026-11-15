@@ -1,50 +1,50 @@
 {
- "finished_utc": "2026-11-14T23:33:45+00:00",
- "rotation_slot": 2959740,
+ "finished_utc": "2026-11-15T05:34:15+00:00",
+ "rotation_slot": 2959741,
  "sources": {
   "LinkedIn": {
-   "found": 5113,
+   "found": 5108,
    "errors": 0
   },
   "eFinancialCareers": {
-   "found": 4231,
+   "found": 4250,
    "errors": 0
   },
   "Indeed": {
-   "found": 452,
+   "found": 45,
    "errors": 0
   },
   "NHS Jobs": {
-   "found": 3637,
+   "found": 3535,
    "errors": 0
   },
   "Careers sites": {
-   "found": 5827,
+   "found": 5820,
    "errors": 0
   }
  },
- "raw_results": 19260,
- "after_filters": 1165,
- "jobs_in_email": 550,
- "new_jobs": 25,
- "descriptions_read": 536,
- "posted_by_recruiters": 8,
+ "raw_results": 18758,
+ "after_filters": 950,
+ "jobs_in_email": 457,
+ "new_jobs": 17,
+ "descriptions_read": 449,
+ "posted_by_recruiters": 6,
  "saved_jobs_dropped_by_rule": {
-  "employer not on a sponsor list": 2104,
-  "older than the age limit": 1002,
+  "employer not on a sponsor list": 2134,
+  "older than the age limit": 1112,
+  "asks for work experience": 765,
   "no sponsorship": 213,
-  "asks for a professional qualification": 225,
-  "asks for 1+ years": 427,
+  "asks for a professional qualification": 226,
+  "asks for 1+ years": 429,
   "title doesn't match a target role": 153,
-  "asks for 5+ years": 363,
-  "asks for work experience": 762,
-  "asks for 3+ years": 671,
-  "asks for 2+ years": 634,
+  "asks for 5+ years": 364,
+  "asks for 3+ years": 672,
+  "asks for 2+ years": 637,
   "asks for 20+ years": 6,
   "too senior": 16,
   "asks for 7+ years": 46,
   "asks for 10+ years": 43,
-  "asks for 4+ years": 113,
+  "asks for 4+ years": 114,
   "asks for 6+ years": 36,
   "excluded country": 1,
   "asks for 8+ years": 26,
@@ -64,14 +64,14 @@
     "errors": 0
    },
    "devpost": {
-    "found": 13,
+    "found": 14,
     "errors": 0
    },
    "dropped": {
-    "not quant finance": 28,
-    "deadline passed": 3,
     "closed": 37,
-    "students only": 40
+    "students only": 40,
+    "not quant finance": 29,
+    "deadline passed": 3
    }
   },
   "listed": 32,
@@ -81,10 +81,10 @@
   "startups_listed": 79,
   "boards_known": 41,
   "errors": 0,
-  "roles_read": 2094,
+  "roles_read": 2095,
   "kept": 160,
   "dropped": {
-   "too senior": 1057,
+   "too senior": 1058,
    "not a quant, finance, data or engineering role": 483,
    "asks for experience": 306,
    "internship": 54,
@@ -95,10 +95,9 @@
   "new": 0
  },
  "warnings": [
-  "2026-11-14 23:07:52,503 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
-  "2026-11-14 23:08:05,397 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
-  "2026-11-14 23:08:27,044 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
-  "2026-11-14 23:09:21,751 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
-  "2026-11-14 23:32:52,457 jobscraper.sponsor_registers: UK CoS figures from Home Office FOI 2025/12841 failed (File is not a zip file); keeping what was saved"
+  "2026-11-15 05:07:52,718 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
+  "2026-11-15 05:08:14,888 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
+  "2026-11-15 05:09:12,861 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
+  "2026-11-15 05:32:46,315 jobscraper.healer: problem solver | UK sponsorship figures | failed (RuntimeError: UK CoS figures from Home Office FOI 2025/12841 could not be read (403 Client Error: Forbidden for url: https://www.whatdotheyknow.com/request/r...) -> the UK people-sponsored column is empty this run. Fix: save the FOI workbook in data/foi/ (see UK_COS_SOURCES in jobscraper/sponsor_registers.py)"
  ]
 }

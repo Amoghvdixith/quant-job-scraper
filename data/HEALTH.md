@@ -2,17 +2,17 @@
 
 Written by the problem solver (`jobscraper/healer.py`) at the end of every run. Sync this file into the Performance Analizer Claude project to track it there.
 
-Last run: 2026-11-14T23:33:45+00:00
+Last run: 2026-11-15T05:34:15+00:00
 
 ## Status
 
-0 problem(s) need a look, 1 handled automatically.
+1 problem(s) need a look, 1 handled automatically.
 
-Jobs in email: 550, new: 25, raw results: 19260, emailed: True.
+Jobs in email: 457, new: 17, raw results: 18758, emailed: True.
 
 ## Needs a look
 
-- Nothing.
+- **UK sponsorship figures**: failed (RuntimeError: UK CoS figures from Home Office FOI 2025/12841 could not be read (403 Client Error: Forbidden for url: https://www.whatdotheyknow.com/request/r...). The UK people-sponsored column is empty this run. Fix: save the FOI workbook in data/foi/ (see UK_COS_SOURCES in jobscraper/sponsor_registers.py).
 
 ## Fixed automatically
 
@@ -44,15 +44,15 @@ Jobs in email: 550, new: 25, raw results: 19260, emailed: True.
 
 ## Jobs found per source, last runs (oldest first)
 
-| Source | 11-13 17:36 | 11-13 23:35 | 11-14 05:34 | 11-14 11:34 | 11-14 17:36 | 11-14 23:33 |
-|---|---|---|---|---|---|---|
-| Careers sites | 6435 (1 err) | 5920 (19 err) | 5410 (34 err) | 5408 (33 err) | 5831 (2 err) | 5827 |
-| Indeed | 84 | 130 | 30 | 4 | 83 | 452 |
-| LinkedIn | 4802 | 5092 | 5233 | 5065 | 5183 | 5113 |
-| NHS Jobs | 3624 | 3644 | 3640 | 3636 | 3018 (2 err) | 3637 |
-| eFinancialCareers | 4247 | 4229 | 4217 | 4246 | 4230 | 4231 |
+| Source | 11-13 17:36 | 11-13 23:35 | 11-14 05:34 | 11-14 11:34 | 11-14 17:36 | 11-14 23:33 | 11-15 05:34 |
+|---|---|---|---|---|---|---|---|
+| Careers sites | 6435 (1 err) | 5920 (19 err) | 5410 (34 err) | 5408 (33 err) | 5831 (2 err) | 5827 | 5820 |
+| Indeed | 84 | 130 | 30 | 4 | 83 | 452 | 45 |
+| LinkedIn | 4802 | 5092 | 5233 | 5065 | 5183 | 5113 | 5108 |
+| NHS Jobs | 3624 | 3644 | 3640 | 3636 | 3018 (2 err) | 3637 | 3535 |
+| eFinancialCareers | 4247 | 4229 | 4217 | 4246 | 4230 | 4231 | 4250 |
 
-## Most frequent problems, last 6 runs
+## Most frequent problems, last 7 runs
 
 - Careers sites | MetLife: 1 run(s)
 - Careers sites | Apollo Global Management: 1 run(s)
