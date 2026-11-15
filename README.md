@@ -41,11 +41,13 @@ nothing is estimated:
   the Home Office's Freedom of Information release FOI 2025/12841, which covers every licensed sponsor
   for 2021-2024 (Skilled Worker, plus Global Business Mobility / ICT shown separately). One certificate
   is one sponsored job offer. The Home Office shows 1 to 4 as "*", written here as "1-4". Newer
-  releases can be added to `UK_COS_SOURCES` in `jobscraper/sponsor_registers.py`. A firm that isn't in
+  releases can be added to `UK_COS_SOURCES` in `jobscraper/sponsor_registers.py`. The workbooks are
+  read from `data/foi/` (WhatDoTheyKnow doesn't serve the file to GitHub's servers, so a copy is kept there). A firm that isn't in
   the figures shows "Not found", never 0.
 - **UK Sponsor Licence:** licence rating and visa routes from the Home Office register.
-- **US H-1B Approvals:** approved H-1B petitions in the latest fiscal years (new employment and
-  extensions), from the USCIS H-1B Employer Data Hub.
+- **US H-1B Approvals:** approved H-1B petitions (new employment and extensions) from the two latest
+  yearly files USCIS offers for download, currently FY2023 and FY2022. Newer years are only in the
+  Data Hub's interactive view.
 - The Netherlands' IND register publishes names only, so there is no Dutch number.
 
 Each job has an **Apply Link**: the employer's own application page when one is found

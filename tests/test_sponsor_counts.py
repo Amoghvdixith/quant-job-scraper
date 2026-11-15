@@ -104,3 +104,29 @@ def test_columns_and_email(tmp_path: Path):
     assert row["US H-1B Approvals"].startswith("FY2025: 2,000 new")
     assert row["UK Sponsor Licence"].startswith("Licensed sponsor (A rating)")
     assert "6,026 since 2021" in _table([job])
+
+
+def test_update_uk_cos_reads_committed_copy_and_reports_failure(tmp_path, monkeypatch):
+    import pytest
+    monkeypatch.setattr(sr, "UK_COS_FILE", tmp_path / "uk_cos.json")
+    monkeypatch.setattr(sr, "FOI_DIR", tmp_path / "foi")
+    monkeypatch.setattr(sr, "parse_uk_cos", lambda raw: {"years": [2024], "SW": {f"firm{i}": [i] for i in range(1500)}})
+
+    class Page:
+        content = b"<html>Please enable cookies</html>"
+        headers = {"content-type": "text/html"}
+
+        def raise_for_status(self):
+            pass
+
+    monkeypatch.setattr(sr.requests, "get", lambda *a, **k: Page())
+    with pytest.raises(RuntimeError, match="data/foi/"):
+        sr.update_uk_cos()
+    assert not (tmp_path / "uk_cos.json").exists()
+
+    (tmp_path / "foi").mkdir()
+    (tmp_path / "foi" / sr.UK_COS_SOURCES[0]["file"]).write_bytes(b"PK fake workbook")
+    sr.update_uk_cos()
+    import json
+    saved = json.loads((tmp_path / "uk_cos.json").read_text())
+    assert saved["sources"] == ["Home Office FOI 2025/12841"] and len(saved["SW"]) == 1500

@@ -34,11 +34,13 @@ log = logging.getLogger(__name__)
 FILE = Path(__file__).resolve().parent.parent / "data" / "sponsor_registers.json"
 DETAILS_FILE = FILE.with_name("sponsor_details.json")
 UK_COS_FILE = FILE.with_name("uk_cos.json")
+FOI_DIR = FILE.parent / "foi"
 # Home Office FOI releases of certificates of sponsorship assigned per sponsor. Add newer ones here
 # (e.g. a 2025 release) and the next update picks them up; a later release wins for the same year.
 UK_COS_SOURCES = [
     {
         "ref": "Home Office FOI 2025/12841",
+        "file": "FOI 2025 12841 Annex.xlsx",
         "page": "https://www.whatdotheyknow.com/request/request_for_certificate_of_spons_2",
         "url": "https://www.whatdotheyknow.com/request/request_for_certificate_of_spons_2/response/3258743/"
                "attach/4/FOI%202025%2012841%20J%20Reddy%20Annex.xlsx",
@@ -196,7 +198,12 @@ def _add(a: int, b: int) -> int:
 
 
 def update_uk_cos(force: bool = False) -> None:
-    """Downloads the FOI workbooks into data/uk_cos.json. They don't change, so only when missing or new."""
+    """Builds data/uk_cos.json from the FOI workbooks. They don't change, so only when missing or new.
+
+    Each workbook is read from data/foi/ when a copy is committed there (file name in "file"),
+    otherwise downloaded. WhatDoTheyKnow serves GitHub's servers a web page instead of the file,
+    so the committed copy is the reliable route. Raises if a source can't be read, so the
+    problem solver records it."""
     have = json.loads(UK_COS_FILE.read_text()) if UK_COS_FILE.exists() else {}
     refs = [s["ref"] for s in UK_COS_SOURCES]
     if have.get("sources") == refs and not force:
@@ -204,18 +211,28 @@ def update_uk_cos(force: bool = False) -> None:
     merged: dict = {"sources": [], "source_pages": [], "years": [], "SW": {}, "GBM": {}}
     for src in UK_COS_SOURCES:
         try:
-            raw = requests.get(src["url"], headers=HEADERS, timeout=300).content
-            data = parse_uk_cos(raw)
+            data = parse_uk_cos(_foi_bytes(src))
             if len(data.get("SW", {})) < 1000:
                 raise ValueError(f"only {len(data.get('SW', {}))} sponsors")
         except Exception as e:
-            log.warning("UK CoS figures from %s failed (%s); keeping what was saved", src["ref"], e)
-            return
+            raise RuntimeError(f"UK CoS figures from {src['ref']} could not be read ({e}). "
+                               f"Save the workbook from {src['page']} as data/foi/{src['file']}") from e
         _merge_years(merged, data)
         merged["sources"].append(src["ref"])
         merged["source_pages"].append(src["page"])
     UK_COS_FILE.write_text(json.dumps(merged, separators=(",", ":"), sort_keys=True))
     log.info("UK CoS figures: %d sponsors, years %s", len(merged["SW"]), merged["years"])
+
+
+def _foi_bytes(src: dict) -> bytes:
+    local = FOI_DIR / src["file"]
+    if local.exists():
+        return local.read_bytes()
+    r = requests.get(src["url"], headers={**HEADERS, "Accept": "*/*"}, timeout=300)
+    r.raise_for_status()
+    if not r.content.startswith(b"PK"):
+        raise ValueError(f"got {r.headers.get('content-type', 'a web page')} instead of the workbook")
+    return r.content
 
 
 def _merge_years(into: dict, data: dict) -> None:
@@ -261,7 +278,10 @@ def update() -> None:
     FILE.parent.mkdir(parents=True, exist_ok=True)
     FILE.write_text(json.dumps(out))
     DETAILS_FILE.write_text(json.dumps(details, separators=(",", ":"), sort_keys=True))
-    update_uk_cos()
+    try:
+        update_uk_cos()
+    except Exception as e:
+        log.warning("%s", e)
 
 
 class SponsorRegisters:
