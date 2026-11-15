@@ -1,51 +1,51 @@
 {
- "finished_utc": "2026-11-15T05:34:15+00:00",
- "rotation_slot": 2959741,
+ "finished_utc": "2026-11-15T11:36:03+00:00",
+ "rotation_slot": 2959742,
  "sources": {
   "LinkedIn": {
-   "found": 5108,
+   "found": 4991,
    "errors": 0
   },
   "eFinancialCareers": {
-   "found": 4250,
+   "found": 4262,
    "errors": 0
   },
   "Indeed": {
-   "found": 45,
+   "found": 117,
    "errors": 0
   },
   "NHS Jobs": {
-   "found": 3535,
-   "errors": 0
+   "found": 3521,
+   "errors": 1
   },
   "Careers sites": {
-   "found": 5820,
+   "found": 5555,
    "errors": 0
   }
  },
- "raw_results": 18758,
- "after_filters": 950,
- "jobs_in_email": 457,
- "new_jobs": 17,
- "descriptions_read": 449,
- "posted_by_recruiters": 6,
+ "raw_results": 18446,
+ "after_filters": 929,
+ "jobs_in_email": 476,
+ "new_jobs": 20,
+ "descriptions_read": 469,
+ "posted_by_recruiters": 8,
  "saved_jobs_dropped_by_rule": {
-  "employer not on a sponsor list": 2134,
+  "employer not on a sponsor list": 2164,
   "older than the age limit": 1112,
-  "asks for work experience": 765,
+  "asks for work experience": 774,
   "no sponsorship": 213,
-  "asks for a professional qualification": 226,
-  "asks for 1+ years": 429,
+  "asks for a professional qualification": 227,
+  "asks for 1+ years": 432,
   "title doesn't match a target role": 153,
-  "asks for 5+ years": 364,
-  "asks for 3+ years": 672,
-  "asks for 2+ years": 637,
+  "asks for 5+ years": 366,
+  "asks for 3+ years": 678,
+  "asks for 2+ years": 640,
   "asks for 20+ years": 6,
   "too senior": 16,
   "asks for 7+ years": 46,
   "asks for 10+ years": 43,
   "asks for 4+ years": 114,
-  "asks for 6+ years": 36,
+  "asks for 6+ years": 37,
   "excluded country": 1,
   "asks for 8+ years": 26,
   "asks for 15+ years": 1,
@@ -64,40 +64,41 @@
     "errors": 0
    },
    "devpost": {
-    "found": 14,
+    "found": 13,
     "errors": 0
    },
    "dropped": {
     "closed": 37,
-    "students only": 40,
-    "not quant finance": 29,
+    "students only": 39,
+    "not quant finance": 30,
     "deadline passed": 3
    }
   },
-  "listed": 32,
-  "new": 1
+  "listed": 31,
+  "new": 0
  },
  "startups": {
   "startups_listed": 79,
   "boards_known": 41,
   "errors": 0,
-  "roles_read": 2095,
-  "kept": 160,
+  "roles_read": 2093,
+  "kept": 159,
   "dropped": {
-   "too senior": 1058,
+   "too senior": 1057,
    "not a quant, finance, data or engineering role": 483,
    "asks for experience": 306,
    "internship": 54,
    "excluded country": 16,
    "no sponsorship": 1
   },
-  "listed": 160,
+  "listed": 159,
   "new": 0
  },
  "warnings": [
-  "2026-11-15 05:07:52,718 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
-  "2026-11-15 05:08:14,888 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
-  "2026-11-15 05:09:12,861 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
-  "2026-11-15 05:32:46,315 jobscraper.healer: problem solver | UK sponsorship figures | failed (RuntimeError: UK CoS figures from Home Office FOI 2025/12841 could not be read (403 Client Error: Forbidden for url: https://www.whatdotheyknow.com/request/r...) -> the UK people-sponsored column is empty this run. Fix: save the FOI workbook in data/foi/ (see UK_COS_SOURCES in jobscraper/sponsor_registers.py)"
+  "2026-11-15 11:08:50,467 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
+  "2026-11-15 11:09:02,064 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 20s",
+  "2026-11-15 11:09:25,083 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
+  "2026-11-15 11:12:28,493 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
+  "2026-11-15 11:35:18,748 jobscraper.healer: problem solver | UK sponsorship figures | failed (RuntimeError: UK CoS figures from Home Office FOI 2025/12841 could not be read (403 Client Error: Forbidden for url: https://www.whatdotheyknow.com/request/r...) -> the UK people-sponsored column is empty this run. Fix: save the FOI workbook in data/foi/ (see UK_COS_SOURCES in jobscraper/sponsor_registers.py)"
  ]
 }

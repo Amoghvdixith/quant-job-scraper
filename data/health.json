@@ -390,6 +390,51 @@
     "raw_results": 18758
    },
    "utc": "2026-11-15T05:34:15+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "skipped this run; each is retried when its rest ends",
+     "area": "Careers sites",
+     "kind": "fixed",
+     "what": "21 sites are resting after repeated failures"
+    },
+    {
+     "action": "the UK people-sponsored column is empty this run. Fix: save the FOI workbook in data/foi/ (see UK_COS_SOURCES in jobscraper/sponsor_registers.py)",
+     "area": "UK sponsorship figures",
+     "kind": "problem",
+     "what": "failed (RuntimeError: UK CoS figures from Home Office FOI 2025/12841 could not be read (403 Client Error: Forbidden for url: https://www.whatdotheyknow.com/request/r...)"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 0,
+     "found": 5555
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 117
+    },
+    "LinkedIn": {
+     "errors": 0,
+     "found": 4991
+    },
+    "NHS Jobs": {
+     "errors": 1,
+     "found": 3521
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4262
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 476,
+    "new_jobs": 20,
+    "raw_results": 18446
+   },
+   "utc": "2026-11-15T11:36:03+00:00"
   }
  ],
  "sites": {
