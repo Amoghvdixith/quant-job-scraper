@@ -37,6 +37,8 @@ class Job:
     uk_sponsored: str = ""   # certificates of sponsorship per year, with its source
     us_h1b: str = ""         # H-1B petitions approved, with fiscal year
     sponsor_summary: str = ""
+    uk_town: str = ""        # where the UK sponsor is registered
+    uk_latest: int | None = None  # CoS in the latest FOI year (-1 = 1 to 4); None = not in the figures
     target_firm: str = ""
     recruiter: bool = False
     description_checked: bool = False

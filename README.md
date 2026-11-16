@@ -44,7 +44,13 @@ nothing is estimated:
   releases can be added to `UK_COS_SOURCES` in `jobscraper/sponsor_registers.py`. The workbooks are
   read from `data/foi/` (WhatDoTheyKnow doesn't serve the file to GitHub's servers, so a copy is kept there). A firm that isn't in
   the figures shows "Not found", never 0.
-- **UK Sponsor Licence:** licence rating and visa routes from the Home Office register.
+- **UK Sponsor Licence:** licence rating, visa routes and registered town from the Home Office register.
+  If GOV.UK can't be reached, the copy of the same register kept by
+  [visa-sponsor-finder](https://github.com/Maaz322131/visa-sponsor-finder) is used instead.
+- **Sponsor Finder sheet:** one row per employer in the file, biggest UK sponsors first, with
+  its licence, registered town, people sponsored, H-1B approvals and a LinkedIn link to all its
+  jobs near that town (the same search the visa-sponsor-finder app offers), limited to employers
+  hiring for your roles.
 - **US H-1B Approvals:** approved H-1B petitions (new employment and extensions) from the two latest
   yearly files USCIS offers for download, currently FY2023 and FY2022. Newer years are only in the
   Data Hub's interactive view.

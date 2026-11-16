@@ -51,6 +51,7 @@ def write_workbook(jobs: list[Job], new_keys: set[str], stats: dict, path: Path,
         _hackathons_sheet(wb.create_sheet("Hackathons"), hackathons, new_hackathons or set())
     if startups is not None:
         _startups_sheet(wb.create_sheet("Startups & Boutiques"), startups, new_startups or set())
+    _sponsor_finder_sheet(wb.create_sheet("Sponsor Finder"), jobs, new_keys, startups or [])
     _summary_sheet(wb, jobs, new_keys, stats, hackathons, startups)
     path.parent.mkdir(parents=True, exist_ok=True)
     wb.save(path)
@@ -183,6 +184,57 @@ def _startups_sheet(ws, opps: list, new_keys: set[str]) -> None:
             ws.cell(row=row, column=col["Visa Sponsorship"]).fill = YES_FILL
         if (o.employer_sponsor or "").startswith("Yes"):
             ws.cell(row=row, column=col["Employer On Sponsor List"]).fill = YES_FILL
+    ws.freeze_panes = "A2"
+    ws.auto_filter.ref = ws.dimensions
+
+
+SPONSOR_FINDER_COLUMNS = [
+    ("Employer", 34), ("Jobs In This File", 10), ("New Jobs", 9), ("UK Sponsor Licence", 40),
+    ("Registered Town", 16), ("UK CoS Latest Year", 12), ("UK People Sponsored (CoS)", 50),
+    ("US H-1B Approvals", 42), ("More Jobs At This Sponsor", 16),
+]
+
+
+def _sponsor_finder_sheet(ws, jobs: list[Job], new_keys: set[str], startups: list) -> None:
+    """One row per employer in this file with its sponsorship record, like the visa-sponsor-finder
+    app (github.com/Maaz322131/visa-sponsor-finder) but limited to employers that are hiring for
+    your roles. Biggest UK sponsors first."""
+    from urllib.parse import quote_plus
+    ws.title = "Sponsor Finder"
+    ws.append([c for c, _ in SPONSOR_FINDER_COLUMNS])
+    for i, (_, width) in enumerate(SPONSOR_FINDER_COLUMNS, 1):
+        ws.column_dimensions[get_column_letter(i)].width = width
+        cell = ws.cell(row=1, column=i)
+        cell.font = Font(bold=True, color="FFFFFF")
+        cell.fill = HEADER_FILL
+        cell.alignment = Alignment(vertical="center", wrap_text=True)
+    firms: dict[str, dict] = {}
+    for j in list(jobs) + list(startups):
+        if not j.company:
+            continue
+        f = firms.setdefault(j.company.strip().lower(), {"job": j, "count": 0, "new": 0})
+        f["count"] += 1
+        f["new"] += j.key in new_keys
+    col = {name: i for i, (name, _) in enumerate(SPONSOR_FINDER_COLUMNS, 1)}
+
+    def latest(j):
+        n = getattr(j, "uk_latest", None)
+        return 2 if n == -1 else (n or 0)  # "1-4" sorts just above zero
+
+    for f in sorted(firms.values(), key=lambda f: (-latest(f["job"]), -f["count"], f["job"].company.lower())):
+        j = f["job"]
+        n = getattr(j, "uk_latest", None)
+        town = getattr(j, "uk_town", "")
+        ws.append([
+            j.company, f["count"], f["new"] or None, getattr(j, "uk_licence", ""), town,
+            "1-4" if n == -1 else n, getattr(j, "uk_sponsored", ""), getattr(j, "us_h1b", ""), "LinkedIn jobs",
+        ])
+        link = ws.cell(row=ws.max_row, column=col["More Jobs At This Sponsor"])
+        link.hyperlink = ("https://www.linkedin.com/jobs/search/?keywords=" + quote_plus(j.company)
+                          + "&location=" + quote_plus(town or "United Kingdom"))
+        link.font = Font(color="0563C1", underline="single")
+        if (getattr(j, "uk_licence", "") or "").startswith("Licensed"):
+            ws.cell(row=ws.max_row, column=col["UK Sponsor Licence"]).fill = YES_FILL
     ws.freeze_panes = "A2"
     ws.auto_filter.ref = ws.dimensions
 
