@@ -518,6 +518,8 @@ def _sponsor_record(job, registers: SponsorRegisters) -> None:
     job.uk_sponsored = rec["uk_cos"]
     job.us_h1b = rec["us"]
     job.sponsor_summary = registers.summary(job.company, job.location)
+    job.uk_town = rec["uk_town"]
+    job.uk_latest = rec["uk_latest"]
 
 
 class _WarningBuffer(logging.Handler):

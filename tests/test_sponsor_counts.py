@@ -53,7 +53,7 @@ def test_parse_uk_register_and_h1b():
                 "Some Charity,Leeds,,Temporary Worker (A rating),Charity Worker\n")
     names, details = sr.parse_uk(csv_text)
     assert names == {"goldmansachs"}
-    assert details["goldmansachs"] == "A|GBM Graduate Trainee, Skilled Worker"
+    assert details["goldmansachs"] == "A|GBM Graduate Trainee, Skilled Worker|London"
 
     names, counts = set(), {}
     sr.parse_us("Fiscal Year\tEmployer (Petitioner) Name\tInitial Approval\tInitial Denial\tContinuing Approval\n"
@@ -130,3 +130,48 @@ def test_update_uk_cos_reads_committed_copy_and_reports_failure(tmp_path, monkey
     import json
     saved = json.loads((tmp_path / "uk_cos.json").read_text())
     assert saved["sources"] == ["Home Office FOI 2025/12841"] and len(saved["SW"]) == 1500
+
+
+def test_sponsor_finder_sheet(tmp_path: Path):
+    reg = _registers()
+    reg.details["UK"]["jpmorganchase"] += "|London"
+    jobs = []
+    for company in ("JPMorgan Chase", "JPMorgan Chase", "Tiny Quant Ltd", "Unheard Of Capital"):
+        j = Job(source="LinkedIn", title=f"Analyst {len(jobs)}", company=company, location="London, UK",
+                url=f"https://x/{len(jobs)}", posted=date.today())
+        rec = reg.record(company)
+        j.uk_licence, j.uk_sponsored, j.us_h1b = rec["uk"], rec["uk_cos"], rec["us"]
+        j.uk_town, j.uk_latest = rec["uk_town"], rec["uk_latest"]
+        jobs.append(j)
+    ws = load_workbook(write_workbook(jobs, {jobs[0].key}, {}, tmp_path / "x.xlsx"))["Sponsor Finder"]
+    rows = [[c.value for c in r] for r in ws.iter_rows(min_row=2)]
+    assert [r[0] for r in rows] == ["JPMorgan Chase", "Tiny Quant Ltd", "Unheard Of Capital"]
+    jpm = rows[0]
+    assert jpm[1:6] == [2, 1, "Licensed sponsor (A rating): GBM Senior or Specialist Worker, Skilled Worker",
+                        "London", 1515]
+    assert rows[1][5] == "1-4" and rows[2][3] == "Not on the register" and rows[2][5] is None
+    assert ws.cell(row=2, column=9).hyperlink.target == \
+        "https://www.linkedin.com/jobs/search/?keywords=JPMorgan+Chase&location=London"
+
+
+def test_uk_register_falls_back_to_visa_sponsor_finder_copy(monkeypatch):
+    calls = []
+
+    class Resp:
+        def __init__(self, url):
+            self.content = ("﻿Organisation Name,Town/City,County,Type & Rating,Route\n"
+                            " Goldman Sachs International , LONDON ,,Worker (A rating),Skilled Worker\n").encode()
+
+        def raise_for_status(self):
+            pass
+
+    def fake_get(url, **kw):
+        calls.append(url)
+        if "gov.uk" in url:
+            raise ConnectionError("blocked")
+        return Resp(url)
+
+    monkeypatch.setattr(sr.requests, "get", fake_get)
+    names, details = sr._uk()
+    assert calls[-1] == sr.UK_REGISTER_MIRROR
+    assert names == {"goldmansachs"} and details["goldmansachs"] == "A|Skilled Worker|London"

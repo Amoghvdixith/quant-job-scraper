@@ -64,19 +64,33 @@ def clean(name: str) -> str:
     return re.sub(r"\s+", "", name)
 
 
+# Copy of the same Home Office register kept by the visa-sponsor-finder project
+# (github.com/Maaz322131/visa-sponsor-finder). Used only when GOV.UK can't be reached.
+UK_REGISTER_MIRROR = "https://raw.githubusercontent.com/Maaz322131/visa-sponsor-finder/main/data/sponsors.csv"
+
+
 def _uk() -> tuple[set[str], dict[str, str]]:
-    page = requests.get("https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers",
-                        headers=HEADERS, timeout=60).text
-    link = re.search(r'href="(https://assets\.publishing\.service\.gov\.uk/[^"]+\.csv)"', page).group(1)
-    return parse_uk(requests.get(link, headers=HEADERS, timeout=300).text)
+    try:
+        page = requests.get("https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers",
+                            headers=HEADERS, timeout=60).text
+        link = re.search(r'href="(https://assets\.publishing\.service\.gov\.uk/[^"]+\.csv)"', page).group(1)
+        return parse_uk(requests.get(link, headers=HEADERS, timeout=300).text)
+    except Exception as e:
+        log.warning("UK register from GOV.UK failed (%s); using the visa-sponsor-finder copy", e)
+        r = requests.get(UK_REGISTER_MIRROR, headers=HEADERS, timeout=300)
+        r.raise_for_status()
+        return parse_uk(r.content.decode("utf-8-sig", "replace"))
 
 
 def parse_uk(text: str) -> tuple[set[str], dict[str, str]]:
-    """(names on a work route, {name: "rating|route, route"}) from the register CSV."""
+    """(names on a work route, {name: "rating|route, route|Town"}) from the register CSV.
+    Town is where the sponsor is registered (its most common one, if it has several entries)."""
     names: set[str] = set()
     ratings: dict[str, str] = {}
     routes: dict[str, list[str]] = {}
+    towns: dict[str, dict[str, int]] = {}
     for r in csv.DictReader(io.StringIO(text)):
+        r = {(k or "").strip(): v for k, v in r.items()}
         route = (r.get("Route") or "").strip()
         if "Skilled Worker" not in route and "Global Business Mobility" not in route and "Scale-up" not in route:
             continue
@@ -90,7 +104,13 @@ def parse_uk(text: str) -> tuple[set[str], dict[str, str]]:
         short = route.replace("Global Business Mobility: ", "GBM ")
         if short not in routes.setdefault(key, []):
             routes[key].append(short)
-    return names, {k: f"{ratings.get(k, '')}|{', '.join(sorted(routes[k]))}" for k in names}
+        town = re.sub(r"\s+", " ", (r.get("Town/City") or "").strip()).title()
+        if town:
+            towns.setdefault(key, {})[town] = towns.get(key, {}).get(town, 0) + 1
+    def town_of(k):
+        t = towns.get(k)
+        return max(sorted(t), key=t.get) if t else ""
+    return names, {k: f"{ratings.get(k, '')}|{', '.join(sorted(routes[k]))}|{town_of(k)}" for k in names}
 
 
 def _rating(text: str) -> str:
@@ -338,7 +358,8 @@ class SponsorRegisters:
         if company in cache:
             return cache[company]
         keys = self._keys(company)
-        out = {"uk": "", "uk_cos": "", "uk_short": "", "us": "", "us_new": None, "nl": ""}
+        out = {"uk": "", "uk_town": "", "uk_cos": "", "uk_short": "", "uk_latest": None,
+               "us": "", "us_new": None, "nl": ""}
 
         def first(country):
             return next((m for k in keys if (m := self._find(country, k))), None) if self.lists[country] else None
@@ -346,14 +367,17 @@ class SponsorRegisters:
         if self.loaded["UK"]:
             m = first("UK")
             if m:
-                rating, _, routes = self.details.get("UK", {}).get(m, "|").partition("|")
+                rating, routes, town = (self.details.get("UK", {}).get(m, "|").split("|") + [""])[:3]
                 out["uk"] = "Licensed sponsor" + (f" ({rating} rating)" if rating else "") + \
                     (f": {routes}" if routes else "")
+                out["uk_town"] = town
             else:
                 out["uk"] = "Not on the register"
         if self.uk_cos.get("SW"):
             m = next((m for k in keys if (m := self._find_in(self.uk_cos["SW"], k))), None)
             out["uk_cos"], out["uk_short"] = self._uk_cos_text(m)
+            if m:
+                out["uk_latest"] = self.uk_cos["SW"][m][-1]
         if self.loaded["US"]:
             m = first("US")
             years = self.details.get("US", {}).get(m) if m else None

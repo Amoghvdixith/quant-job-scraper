@@ -56,6 +56,8 @@ class Opportunity:
     uk_sponsored: str = ""
     us_h1b: str = ""
     sponsor_summary: str = ""
+    uk_town: str = ""
+    uk_latest: int | None = None
     remote: bool = False
     posted: date | None = None
     platform: str = ""
