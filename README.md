@@ -105,7 +105,7 @@ figures). Press sync in the project to pull the latest report, then ask Claude a
    Untick "Send the email" for a dry run; the Excel file is then downloadable from the run page.
 
 After that it runs by itself. The email arrives at the times in `email_times` in
-`config.yaml` (00:00, 06:00, 12:00 and 18:00 UK time); each run starts 55 minutes
+`config.yaml` (00:00, 06:00, 12:00 and 18:00 UK time); each run starts 75 minutes
 earlier. GitHub's own schedule skips many runs, so each run starts the next one itself
 (the `timer` job), and an hourly check catches any slot that was still missed. The
 timer waits at most 5.5 hours (a GitHub job may run for 6), so across the long
