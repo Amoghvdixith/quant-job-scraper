@@ -1,48 +1,48 @@
 {
- "finished_utc": "2026-11-15T23:29:07+00:00",
- "rotation_slot": 2959744,
+ "finished_utc": "2026-11-16T05:32:12+00:00",
+ "rotation_slot": 2959745,
  "sources": {
   "LinkedIn": {
-   "found": 4147,
+   "found": 4800,
    "errors": 0
   },
   "eFinancialCareers": {
-   "found": 4256,
+   "found": 4257,
    "errors": 0
   },
   "Indeed": {
-   "found": 8,
+   "found": 117,
    "errors": 0
   },
   "NHS Jobs": {
-   "found": 3531,
-   "errors": 0
+   "found": 3197,
+   "errors": 1
   },
   "Careers sites": {
-   "found": 5551,
+   "found": 5535,
    "errors": 1
   }
  },
- "raw_results": 17493,
- "after_filters": 842,
- "jobs_in_email": 480,
- "new_jobs": 0,
- "descriptions_read": 473,
+ "raw_results": 17906,
+ "after_filters": 848,
+ "jobs_in_email": 387,
+ "new_jobs": 6,
+ "descriptions_read": 379,
  "posted_by_recruiters": 8,
  "saved_jobs_dropped_by_rule": {
-  "employer not on a sponsor list": 2179,
-  "older than the age limit": 1112,
-  "asks for work experience": 778,
-  "no sponsorship": 213,
-  "asks for a professional qualification": 228,
+  "employer not on a sponsor list": 2188,
+  "older than the age limit": 1211,
+  "asks for work experience": 779,
+  "no sponsorship": 214,
+  "asks for a professional qualification": 231,
   "asks for 1+ years": 433,
   "title doesn't match a target role": 153,
   "asks for 5+ years": 366,
   "asks for 3+ years": 678,
-  "asks for 2+ years": 645,
+  "asks for 2+ years": 647,
   "asks for 20+ years": 6,
   "too senior": 16,
-  "asks for 7+ years": 46,
+  "asks for 7+ years": 47,
   "asks for 10+ years": 43,
   "asks for 4+ years": 115,
   "asks for 6+ years": 37,
@@ -64,13 +64,13 @@
     "errors": 0
    },
    "devpost": {
-    "found": 11,
+    "found": 10,
     "errors": 0
    },
    "dropped": {
     "closed": 37,
     "students only": 39,
-    "not quant finance": 28,
+    "not quant finance": 27,
     "deadline passed": 3
    }
   },
@@ -84,9 +84,9 @@
   "roles_read": 2090,
   "kept": 159,
   "dropped": {
-   "too senior": 1056,
+   "too senior": 1057,
    "not a quant, finance, data or engineering role": 481,
-   "asks for experience": 306,
+   "asks for experience": 305,
    "internship": 54,
    "excluded country": 16,
    "no sponsorship": 1
@@ -95,11 +95,13 @@
   "new": 0
  },
  "warnings": [
-  "2026-11-15 23:05:27,868 jobscraper.sources.careers: Accenture (workday) failed: 429 Client Error: Too Many Requests for url: https://accenture.wd103.myworkdayjobs.com/wday/cxs/accenture/AccentureCareers/jobs",
-  "2026-11-15 23:05:33,364 jobscraper.sources.careers: Accenture (workday) failed: 429 Client Error: Too Many Requests for url: https://accenture.wd103.myworkdayjobs.com/wday/cxs/accenture/AccentureCareers/jobs",
-  "2026-11-15 23:05:33,364 jobscraper.healer: Careers sites | Accenture failed twice: 429 Client Error: Too Many Requests for url: https://accenture.wd103.myworkdayjobs.com/wday/cxs/accenture/AccentureCareers/jobs",
-  "2026-11-15 23:19:20,026 jobscraper.http: GET https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search -> 429, waiting 10s",
-  "2026-11-15 23:26:59,627 jobscraper.healer: problem solver | Indeed | found 8 jobs; it usually finds about 83 -> likely blocked or the site changed its page layout; the run carried on with the other sources. If it repeats next run, its scraper in jobscraper/sources needs a fix",
-  "2026-11-15 23:27:35,509 jobscraper.healer: problem solver | UK sponsorship figures | failed (RuntimeError: UK CoS figures from Home Office FOI 2025/12841 could not be read (403 Client Error: Forbidden for url: https://www.whatdotheyknow.com/request/r...) -> the UK people-sponsored column is empty this run. Fix: save the FOI workbook in data/foi/ (see UK_COS_SOURCES in jobscraper/sponsor_registers.py)"
+  "2026-11-16 05:05:31,349 jobscraper.sources.careers: Accenture (workday) failed: 429 Client Error: Too Many Requests for url: https://accenture.wd103.myworkdayjobs.com/wday/cxs/accenture/AccentureCareers/jobs",
+  "2026-11-16 05:05:36,867 jobscraper.sources.careers: Accenture (workday) failed: 429 Client Error: Too Many Requests for url: https://accenture.wd103.myworkdayjobs.com/wday/cxs/accenture/AccentureCareers/jobs",
+  "2026-11-16 05:05:36,867 jobscraper.healer: Careers sites | Accenture failed twice: 429 Client Error: Too Many Requests for url: https://accenture.wd103.myworkdayjobs.com/wday/cxs/accenture/AccentureCareers/jobs",
+  "2026-11-16 05:08:03,649 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
+  "2026-11-16 05:08:14,816 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 20s",
+  "2026-11-16 05:11:15,913 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
+  "2026-11-16 05:11:58,745 jobscraper.http: GET https://www.jobs.nhs.uk/api/v1/search_xml -> 429, waiting 10s",
+  "2026-11-16 05:30:43,151 jobscraper.healer: problem solver | UK sponsorship figures | failed (RuntimeError: UK CoS figures from Home Office FOI 2025/12841 could not be read (403 Client Error: Forbidden for url: https://www.whatdotheyknow.com/request/r...) -> the UK people-sponsored column is empty this run. Fix: save the FOI workbook in data/foi/ (see UK_COS_SOURCES in jobscraper/sponsor_registers.py)"
  ]
 }
