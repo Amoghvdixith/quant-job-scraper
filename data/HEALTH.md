@@ -2,16 +2,17 @@
 
 Written by the problem solver (`jobscraper/healer.py`) at the end of every run. Sync this file into the Performance Analizer Claude project to track it there.
 
-Last run: 2026-11-16T05:32:12+00:00
+Last run: 2026-11-16T12:11:45+00:00
 
 ## Status
 
-1 problem(s) need a look, 1 handled automatically.
+2 problem(s) need a look, 1 handled automatically.
 
-Jobs in email: 387, new: 6, raw results: 17906, emailed: True.
+Jobs in email: 405, new: 18, raw results: 16707, emailed: True.
 
 ## Needs a look
 
+- **Careers sites**: 29 sites failed in the same run (likely an outage or block at their hosting platform). Not counted towards resting them; they are tried again next run.
 - **UK sponsorship figures**: failed (RuntimeError: UK CoS figures from Home Office FOI 2025/12841 could not be read (403 Client Error: Forbidden for url: https://www.whatdotheyknow.com/request/r...). The UK people-sponsored column is empty this run. Fix: save the FOI workbook in data/foi/ (see UK_COS_SOURCES in jobscraper/sponsor_registers.py).
 
 ## Fixed automatically
@@ -44,17 +45,17 @@ Jobs in email: 387, new: 6, raw results: 17906, emailed: True.
 
 ## Jobs found per source, last runs (oldest first)
 
-| Source | 11-13 23:35 | 11-14 05:34 | 11-14 11:34 | 11-14 17:36 | 11-14 23:33 | 11-15 05:34 | 11-15 11:36 | 11-15 17:32 | 11-15 23:29 | 11-16 05:32 |
+| Source | 11-14 05:34 | 11-14 11:34 | 11-14 17:36 | 11-14 23:33 | 11-15 05:34 | 11-15 11:36 | 11-15 17:32 | 11-15 23:29 | 11-16 05:32 | 11-16 12:11 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Careers sites | 5920 (19 err) | 5410 (34 err) | 5408 (33 err) | 5831 (2 err) | 5827 | 5820 | 5555 | 5559 | 5551 (1 err) | 5535 (1 err) |
-| Indeed | 130 | 30 | 4 | 83 | 452 | 45 | 117 | 21 | 8 | 117 |
-| LinkedIn | 5092 | 5233 | 5065 | 5183 | 5113 | 5108 | 4991 | 4754 | 4147 | 4800 |
-| NHS Jobs | 3644 | 3640 | 3636 | 3018 (2 err) | 3637 | 3535 | 3521 (1 err) | 3531 | 3531 | 3197 (1 err) |
-| eFinancialCareers | 4229 | 4217 | 4246 | 4230 | 4231 | 4250 | 4262 | 4259 | 4256 | 4257 |
+| Careers sites | 5410 (34 err) | 5408 (33 err) | 5831 (2 err) | 5827 | 5820 | 5555 | 5559 | 5551 (1 err) | 5535 (1 err) | 4265 (29 err) |
+| Indeed | 30 | 4 | 83 | 452 | 45 | 117 | 21 | 8 | 117 | 294 |
+| LinkedIn | 5233 | 5065 | 5183 | 5113 | 5108 | 4991 | 4754 | 4147 | 4800 | 4469 (3 err) |
+| NHS Jobs | 3640 | 3636 | 3018 (2 err) | 3637 | 3535 | 3521 (1 err) | 3531 | 3531 | 3197 (1 err) | 3395 |
+| eFinancialCareers | 4217 | 4246 | 4230 | 4231 | 4250 | 4262 | 4259 | 4256 | 4257 | 4284 |
 
-## Most frequent problems, last 11 runs
+## Most frequent problems, last 12 runs
 
-- UK sponsorship figures: 5 run(s)
+- UK sponsorship figures: 6 run(s)
 - Indeed: 2 run(s)
 - Careers sites | MetLife: 1 run(s)
 - Careers sites | Apollo Global Management: 1 run(s)
