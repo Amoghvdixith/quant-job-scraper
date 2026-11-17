@@ -7,7 +7,10 @@ from __future__ import annotations
 
 import json
 import logging
+import random
 import re
+import threading
+import time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
@@ -22,6 +25,37 @@ SITES_FILE = Path(__file__).resolve().parent.parent.parent / "data" / "careers_s
 # Workday search terms; other platforms return every opening in one request.
 WORKDAY_TERMS = ["risk", "quant", "valuation", "product control", "derivatives", "trading",
                  "treasury", "model", "analyst", "graduate"]
+
+
+# Workday rate-limits by client across all the firms it hosts (429 Too Many Requests from
+# 16 Nov 2026), so Workday sites are read two at a time with a short pause between requests,
+# and a 429 is waited out (Retry-After, else 10s, 20s, 30s) instead of failing the site. If one
+# site is still refused after that, Workday is blocking this run, so the rest fail at once
+# instead of each waiting a minute (the problem solver then records it as an outage).
+WORKDAY_AT_ONCE = 2
+WORKDAY_PAUSE = (1.0, 2.0)
+WORKDAY_429_TRIES = 4
+_workday_slots = threading.BoundedSemaphore(WORKDAY_AT_ONCE)
+_workday_blocked = threading.Event()
+
+
+def _workday_post(s, api: str, body: dict, sleep=time.sleep):
+    tries = 1 if _workday_blocked.is_set() else WORKDAY_429_TRIES
+    for attempt in range(tries):
+        sleep(random.uniform(*WORKDAY_PAUSE))
+        r = s.post(api, json=body, timeout=60)
+        if r.status_code != 429:
+            r.raise_for_status()
+            return r
+        if attempt == tries - 1:
+            _workday_blocked.set()
+            r.raise_for_status()
+        try:
+            wait = int(r.headers.get("Retry-After", ""))
+        except ValueError:
+            wait = 10 * (attempt + 1)
+        log.info("Workday 429 for %s, waiting %ss", api.split("/wday/")[0], min(wait, 30))
+        sleep(min(wait, 30))
 
 
 def load_sites() -> list[dict]:
@@ -139,10 +173,15 @@ def _workday(s, site, cfg):
     base = f"https://{host_part}.myworkdayjobs.com"
     api = f"{base}/wday/cxs/{tenant}/{path}/jobs"
     jobs: dict[str, Job] = {}
+    with _workday_slots:
+        _workday_terms(s, site, cfg, base, path, api, jobs)
+    return list(jobs.values())
+
+
+def _workday_terms(s, site, cfg, base, path, api, jobs) -> None:
     for term in WORKDAY_TERMS:
         for offset in range(0, 100, 20):
-            r = s.post(api, json={"appliedFacets": {}, "limit": 20, "offset": offset, "searchText": term}, timeout=60)
-            r.raise_for_status()
+            r = _workday_post(s, api, {"appliedFacets": {}, "limit": 20, "offset": offset, "searchText": term})
             postings = r.json().get("jobPostings", [])
             stop = False
             for p in postings:
@@ -157,7 +196,6 @@ def _workday(s, site, cfg):
                 jobs.setdefault(url, _job(site, p.get("title"), p.get("locationsText"), url, posted))
             if len(postings) < 20 or stop:
                 break
-    return list(jobs.values())
 
 
 def _oracle(s, site, cfg):
