@@ -116,11 +116,6 @@
   "PrimaryBid": {
    "checked": "2026-11-12"
   },
-  "Qonto": {
-   "checked": "2026-11-12",
-   "id": "qonto",
-   "platform": "lever"
-  },
   "Quadrature Capital": {
    "checked": "2026-11-12",
    "id": "quadraturecapital",
