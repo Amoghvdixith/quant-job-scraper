@@ -723,6 +723,51 @@
     "raw_results": 16935
    },
    "utc": "2026-11-16T23:33:49+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "not counted towards resting them; they are tried again next run",
+     "area": "Careers sites",
+     "kind": "problem",
+     "what": "50 sites failed in the same run (likely an outage or block at their hosting platform)"
+    },
+    {
+     "action": "likely blocked or the site changed its page layout; the run carried on with the other sources. If it repeats next run, its scraper in jobscraper/sources needs a fix",
+     "area": "Indeed",
+     "kind": "problem",
+     "what": "found 10 jobs; it usually finds about 83"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 50,
+     "found": 4254
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 10
+    },
+    "LinkedIn": {
+     "errors": 1,
+     "found": 4184
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3314
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4251
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 315,
+    "new_jobs": 5,
+    "raw_results": 16013
+   },
+   "utc": "2026-11-17T05:48:57+00:00"
   }
  ],
  "sites": {
@@ -735,7 +780,7 @@
   },
   "Apollo Global Management": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://athene.wd5.myworkdayjobs.com/wday/cxs/athene/Apollo_Careers/jobs",
    "rest_until": "2026-11-17"
   },
   "Aviva": {
@@ -752,7 +797,7 @@
   },
   "Brookfield": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://brookfield.wd5.myworkdayjobs.com/wday/cxs/brookfield/brookfield/jobs",
    "rest_until": "2026-11-17"
   },
   "CIBC": {
@@ -766,7 +811,7 @@
   },
   "Citi": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://citi.wd5.myworkdayjobs.com/wday/cxs/citi/2/jobs",
    "rest_until": "2026-11-17"
   },
   "Deutsche Bank": {
@@ -774,7 +819,7 @@
   },
   "FIS": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://fis.wd5.myworkdayjobs.com/wday/cxs/fis/SearchJobs/jobs",
    "rest_until": "2026-11-17"
   },
   "Fidelity International": {
@@ -782,17 +827,17 @@
   },
   "Fifth Third Bank": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://fifththird.wd5.myworkdayjobs.com/wday/cxs/fifththird/53careers/jobs",
    "rest_until": "2026-11-17"
   },
   "Fiserv": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://fiserv.wd5.myworkdayjobs.com/wday/cxs/fiserv/EXT/jobs",
    "rest_until": "2026-11-17"
   },
   "Franklin Templeton": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://franklintempleton.wd5.myworkdayjobs.com/wday/cxs/franklintempleton/Primary-External-1/jobs",
    "rest_until": "2026-11-17"
   },
   "Global Payments": {
@@ -812,7 +857,7 @@
   },
   "KeyBank": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://keybank.wd5.myworkdayjobs.com/wday/cxs/keybank/External_Career_Site/jobs",
    "rest_until": "2026-11-17"
   },
   "Lloyds Banking Group": {
@@ -823,7 +868,7 @@
   },
   "M&T Bank": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://mtb.wd5.myworkdayjobs.com/wday/cxs/mtb/MTB/jobs",
    "rest_until": "2026-11-17"
   },
   "MUFG": {
@@ -831,7 +876,7 @@
   },
   "Marsh": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://mmc.wd1.myworkdayjobs.com/wday/cxs/mmc/MMC/jobs",
    "rest_until": "2026-11-17"
   },
   "MetLife": {
@@ -844,12 +889,12 @@
   },
   "Morgan Stanley": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/External/jobs",
    "rest_until": "2026-11-17"
   },
   "Morningstar": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://morningstar.wd5.myworkdayjobs.com/wday/cxs/morningstar/Americas/jobs",
    "rest_until": "2026-11-17"
   },
   "NatWest Group": {
@@ -863,12 +908,12 @@
   },
   "PNC": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://pnc.wd5.myworkdayjobs.com/wday/cxs/pnc/External/jobs",
    "rest_until": "2026-11-17"
   },
   "Prudential plc": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://pru.wd5.myworkdayjobs.com/wday/cxs/pru/Careers/jobs",
    "rest_until": "2026-11-17"
   },
   "PwC": {
@@ -879,7 +924,7 @@
   },
   "S&P Global": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://spgi.wd5.myworkdayjobs.com/wday/cxs/spgi/SPGI_Careers/jobs",
    "rest_until": "2026-11-17"
   },
   "Santander UK": {
@@ -890,7 +935,7 @@
   },
   "T. Rowe Price": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://troweprice.wd5.myworkdayjobs.com/wday/cxs/troweprice/TRowePrice/jobs",
    "rest_until": "2026-11-17"
   },
   "TD Bank": {
@@ -898,7 +943,7 @@
   },
   "Travelers": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://travelers.wd5.myworkdayjobs.com/wday/cxs/travelers/External/jobs",
    "rest_until": "2026-11-17"
   },
   "U.S. Bank": {
@@ -906,17 +951,17 @@
   },
   "Vanguard": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://vanguard.wd5.myworkdayjobs.com/wday/cxs/vanguard/vanguard_external/jobs",
    "rest_until": "2026-11-17"
   },
   "Wellington Management": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wellington.wd5.myworkdayjobs.com/wday/cxs/wellington/External/jobs",
    "rest_until": "2026-11-17"
   },
   "Wells Fargo": {
    "failed_runs": 0,
-   "last_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wf.wd1.myworkdayjobs.com/wday/cxs/wf/WellsFargoJobs/jobs",
    "rest_until": "2026-11-17"
   }
  }
