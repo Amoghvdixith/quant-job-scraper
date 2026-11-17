@@ -807,6 +807,45 @@
     "raw_results": 16176
    },
    "utc": "2026-11-17T11:49:10+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "not counted towards resting them; they are tried again next run",
+     "area": "Careers sites",
+     "kind": "problem",
+     "what": "50 sites failed in the same run (likely an outage or block at their hosting platform)"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 50,
+     "found": 4301
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 318
+    },
+    "LinkedIn": {
+     "errors": 0,
+     "found": 5191
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3506
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4235
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 381,
+    "new_jobs": 56,
+    "raw_results": 17551
+   },
+   "utc": "2026-11-17T17:17:25+00:00"
   }
  ],
  "sites": {
@@ -831,9 +870,6 @@
   "Barclays": {
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://barclays.wd3.myworkdayjobs.com/wday/cxs/barclays/External_Career_Site_Barclays/jobs"
   },
-  "Belvedere Trading": {
-   "last_error": "ReadTimeout: HTTPSConnectionPool(host='api.lever.co', port=443): Read timed out. (read timeout=60)"
-  },
   "BlackRock": {
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://blackrock.wd1.myworkdayjobs.com/wday/cxs/blackrock/BlackRock_Professional/jobs"
   },
@@ -855,9 +891,6 @@
    "failed_runs": 0,
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://citi.wd5.myworkdayjobs.com/wday/cxs/citi/2/jobs",
    "rest_until": "2026-11-17"
-  },
-  "DNB": {
-   "last_error": "ReadTimeout: HTTPSConnectionPool(host='api.lever.co', port=443): Read timed out. (read timeout=60)"
   },
   "Deutsche Bank": {
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://db.wd3.myworkdayjobs.com/wday/cxs/db/DBWebsite/jobs"
@@ -900,9 +933,6 @@
   "Julius Baer": {
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://juliusbaer.wd3.myworkdayjobs.com/wday/cxs/juliusbaer/External/jobs"
   },
-  "KPMG": {
-   "last_error": "ReadTimeout: HTTPSConnectionPool(host='api.lever.co', port=443): Read timed out. (read timeout=60)"
-  },
   "KeyBank": {
    "failed_runs": 0,
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://keybank.wd5.myworkdayjobs.com/wday/cxs/keybank/External_Career_Site/jobs",
@@ -929,7 +959,7 @@
   },
   "MetLife": {
    "failed_runs": 0,
-   "last_error": "ReadTimeout: HTTPSConnectionPool(host='api.lever.co', port=443): Read timed out. (read timeout=60)",
+   "last_error": "HTTPError: 404 Client Error: Not Found for url: https://api.lever.co/v0/postings/metlife?mode=json",
    "rest_until": "2026-11-17"
   },
   "Mizuho": {
@@ -948,17 +978,11 @@
   "NatWest Group": {
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://rbs.wd3.myworkdayjobs.com/wday/cxs/rbs/RBS/jobs"
   },
-  "Nium": {
-   "last_error": "ReadTimeout: HTTPSConnectionPool(host='api.lever.co', port=443): Read timed out. (read timeout=60)"
-  },
   "Northern Trust": {
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://ntrs.wd1.myworkdayjobs.com/wday/cxs/ntrs/northerntrust/jobs"
   },
   "Nuveen": {
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://tiaa.wd1.myworkdayjobs.com/wday/cxs/tiaa/Search/jobs"
-  },
-  "Oliver Wyman": {
-   "last_error": "ReadTimeout: HTTPSConnectionPool(host='api.lever.co', port=443): Read timed out. (read timeout=60)"
   },
   "PNC": {
    "failed_runs": 0,

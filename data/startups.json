@@ -116,6 +116,11 @@
   "PrimaryBid": {
    "checked": "2026-11-12"
   },
+  "Qonto": {
+   "checked": "2026-11-17",
+   "id": "qonto",
+   "platform": "lever"
+  },
   "Quadrature Capital": {
    "checked": "2026-11-12",
    "id": "quadraturecapital",
@@ -346,6 +351,7 @@
   "technical consultant mid market|ramp|": "2026-11-12T11:06:04",
   "technical consultant strategic|ramp|US": "2026-11-13T23:05:37",
   "trading system support analyst|belvederetrading|US": "2026-11-12T11:06:04",
+  "trading systems configuration engineer product specialist middle back office|belvederetrading|US": "2026-11-17T16:45:27",
   "trading systems engineer|quberesearchtechnologies|UK": "2026-11-12T17:06:56",
   "trading systems engineer|quberesearchtechnologies|US": "2026-11-12T11:06:04",
   "trading systems reliability engineer c|quberesearchtechnologies|": "2026-11-12T11:06:04",
