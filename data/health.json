@@ -885,6 +885,117 @@
     "raw_results": 17354
    },
    "utc": "2026-11-17T23:17:18+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "worked on a second try",
+     "area": "Careers sites | Houlihan Lokey",
+     "kind": "fixed",
+     "what": "failed (HTTPError: 429 Client Error: Too Many Requests for url: https://hl.wd1.myworkdayjobs.com/wday/cxs/hl/Campus/jobs)"
+    },
+    {
+     "action": "worked on a second try",
+     "area": "Careers sites | T. Rowe Price",
+     "kind": "fixed",
+     "what": "failed (HTTPError: 429 Client Error: Too Many Requests for url: https://troweprice.wd5.myworkdayjobs.com/wday/cxs/troweprice/TRowePrice/jobs)"
+    },
+    {
+     "action": "worked on a second try",
+     "area": "Careers sites | Vanguard",
+     "kind": "fixed",
+     "what": "failed (HTTPError: 429 Client Error: Too Many Requests for url: https://vanguard.wd5.myworkdayjobs.com/wday/cxs/vanguard/vanguard_external/jobs)"
+    },
+    {
+     "action": "worked on a second try",
+     "area": "Careers sites | Wells Fargo",
+     "kind": "fixed",
+     "what": "failed (HTTPError: 429 Client Error: Too Many Requests for url: https://wf.wd1.myworkdayjobs.com/wday/cxs/wf/WellsFargoJobs/jobs)"
+    },
+    {
+     "action": "not counted towards resting them; they are tried again next run",
+     "area": "Careers sites",
+     "kind": "problem",
+     "what": "37 sites failed in the same run (likely an outage or block at their hosting platform)"
+    },
+    {
+     "action": "back in every run",
+     "area": "Careers sites | Marsh",
+     "kind": "fixed",
+     "what": "came back after a rest"
+    },
+    {
+     "action": "back in every run",
+     "area": "Careers sites | Morningstar",
+     "kind": "fixed",
+     "what": "came back after a rest"
+    },
+    {
+     "action": "back in every run",
+     "area": "Careers sites | Morgan Stanley",
+     "kind": "fixed",
+     "what": "came back after a rest"
+    },
+    {
+     "action": "back in every run",
+     "area": "Careers sites | Prudential plc",
+     "kind": "fixed",
+     "what": "came back after a rest"
+    },
+    {
+     "action": "back in every run",
+     "area": "Careers sites | T. Rowe Price",
+     "kind": "fixed",
+     "what": "came back after a rest"
+    },
+    {
+     "action": "back in every run",
+     "area": "Careers sites | Wellington Management",
+     "kind": "fixed",
+     "what": "came back after a rest"
+    },
+    {
+     "action": "back in every run",
+     "area": "Careers sites | Vanguard",
+     "kind": "fixed",
+     "what": "came back after a rest"
+    },
+    {
+     "action": "back in every run",
+     "area": "Careers sites | Wells Fargo",
+     "kind": "fixed",
+     "what": "came back after a rest"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 37,
+     "found": 4558
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 120
+    },
+    "LinkedIn": {
+     "errors": 0,
+     "found": 5073
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3291
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4240
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 322,
+    "new_jobs": 33,
+    "raw_results": 17282
+   },
+   "utc": "2026-11-18T05:21:53+00:00"
   }
  ],
  "sites": {
@@ -900,17 +1011,11 @@
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://athene.wd5.myworkdayjobs.com/wday/cxs/athene/Apollo_Careers/jobs",
    "rest_until": "2026-11-17"
   },
-  "Aviva": {
-   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://aviva.wd1.myworkdayjobs.com/wday/cxs/aviva/External/jobs"
-  },
   "BMO": {
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://bmo.wd3.myworkdayjobs.com/wday/cxs/bmo/External/jobs"
   },
   "Barclays": {
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://barclays.wd3.myworkdayjobs.com/wday/cxs/barclays/External_Career_Site_Barclays/jobs"
-  },
-  "BlackRock": {
-   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://blackrock.wd1.myworkdayjobs.com/wday/cxs/blackrock/BlackRock_Professional/jobs"
   },
   "Brookfield": {
    "failed_runs": 0,
@@ -922,9 +1027,6 @@
   },
   "CME Group": {
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://cmegroup.wd1.myworkdayjobs.com/wday/cxs/cmegroup/cme_careers/jobs"
-  },
-  "Cboe Global Markets": {
-   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://cboe.wd1.myworkdayjobs.com/wday/cxs/cboe/External_Career_CBOE/jobs"
   },
   "Citi": {
    "failed_runs": 0,
@@ -960,9 +1062,6 @@
   "Global Payments": {
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://tsys.wd1.myworkdayjobs.com/wday/cxs/tsys/TSYS/jobs"
   },
-  "Houlihan Lokey": {
-   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://hl.wd1.myworkdayjobs.com/wday/cxs/hl/Campus/jobs"
-  },
   "ING": {
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://ing.wd3.myworkdayjobs.com/wday/cxs/ing/ICSGBLCOR/jobs"
   },
@@ -991,11 +1090,6 @@
   "MUFG": {
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://mufgub.wd3.myworkdayjobs.com/wday/cxs/mufgub/MUFG-Careers/jobs"
   },
-  "Marsh": {
-   "failed_runs": 0,
-   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://mmc.wd1.myworkdayjobs.com/wday/cxs/mmc/MMC/jobs",
-   "rest_until": "2026-11-17"
-  },
   "MetLife": {
    "failed_runs": 0,
    "last_error": "HTTPError: 404 Client Error: Not Found for url: https://api.lever.co/v0/postings/metlife?mode=json",
@@ -1003,16 +1097,6 @@
   },
   "Mizuho": {
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://mizuho.wd1.myworkdayjobs.com/wday/cxs/mizuho/mizuhoamericas/jobs"
-  },
-  "Morgan Stanley": {
-   "failed_runs": 0,
-   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/External/jobs",
-   "rest_until": "2026-11-17"
-  },
-  "Morningstar": {
-   "failed_runs": 0,
-   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://morningstar.wd5.myworkdayjobs.com/wday/cxs/morningstar/Americas/jobs",
-   "rest_until": "2026-11-17"
   },
   "NatWest Group": {
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://rbs.wd3.myworkdayjobs.com/wday/cxs/rbs/RBS/jobs"
@@ -1026,11 +1110,6 @@
   "PNC": {
    "failed_runs": 0,
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://pnc.wd5.myworkdayjobs.com/wday/cxs/pnc/External/jobs",
-   "rest_until": "2026-11-17"
-  },
-  "Prudential plc": {
-   "failed_runs": 0,
-   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://pru.wd5.myworkdayjobs.com/wday/cxs/pru/Careers/jobs",
    "rest_until": "2026-11-17"
   },
   "PwC": {
@@ -1047,14 +1126,6 @@
   "Santander UK": {
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://santander.wd3.myworkdayjobs.com/wday/cxs/santander/SantanderCareers/jobs"
   },
-  "State Street": {
-   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://statestreet.wd1.myworkdayjobs.com/wday/cxs/statestreet/Global/jobs"
-  },
-  "T. Rowe Price": {
-   "failed_runs": 0,
-   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://troweprice.wd5.myworkdayjobs.com/wday/cxs/troweprice/TRowePrice/jobs",
-   "rest_until": "2026-11-17"
-  },
   "TD Bank": {
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://td.wd3.myworkdayjobs.com/wday/cxs/td/TD_Bank_Careers/jobs"
   },
@@ -1065,21 +1136,6 @@
   },
   "U.S. Bank": {
    "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://usbank.wd1.myworkdayjobs.com/wday/cxs/usbank/US_Bank_Careers/jobs"
-  },
-  "Vanguard": {
-   "failed_runs": 0,
-   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://vanguard.wd5.myworkdayjobs.com/wday/cxs/vanguard/vanguard_external/jobs",
-   "rest_until": "2026-11-17"
-  },
-  "Wellington Management": {
-   "failed_runs": 0,
-   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wellington.wd5.myworkdayjobs.com/wday/cxs/wellington/External/jobs",
-   "rest_until": "2026-11-17"
-  },
-  "Wells Fargo": {
-   "failed_runs": 0,
-   "last_error": "HTTPError: 429 Client Error: Too Many Requests for url: https://wf.wd1.myworkdayjobs.com/wday/cxs/wf/WellsFargoJobs/jobs",
-   "rest_until": "2026-11-17"
   }
  }
 }
