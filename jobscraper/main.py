@@ -134,8 +134,14 @@ def scrape(cfg: dict, roles: list[dict], slot: int, healer: Healer | None = None
                     stats[label]["errors"] += 1
                 return []
             return found
+        # Workday sites wait their turn at one shared gate (careers.WORKDAY_GAP apart), so they are
+        # read one after another on their own thread instead of holding up the other sites' workers.
+        on_workday = {x["institution"] for x in careers.load_sites() if x["platform"] == "workday"}
+        workday = [t for t in tasks[label] if t[0] in on_workday]
+        others = [t for t in tasks[label] if t[0] not in on_workday]
         with ThreadPoolExecutor(max_workers=8) as pool:
-            out = [j for batch in pool.map(one, tasks[label]) for j in batch]
+            slow = pool.submit(lambda: [j for item in workday for j in one(item)])
+            out = [j for batch in pool.map(one, others) for j in batch] + slow.result()
         stats[label]["found"] = len(out)
         return out
 
@@ -320,10 +326,12 @@ def sponsorship_rule(job: Job, mode: str, registers: SponsorRegisters) -> str | 
 
 
 def enrich_all(jobs: list[Job], budget_minutes: float = 10) -> None:
-    """Reads descriptions: LinkedIn one at a time (it blocks fast readers), other sites in parallel.
-    LinkedIn reading stops after budget_minutes so the email isn't late; the rest are read next run."""
+    """Reads descriptions: LinkedIn and Workday one at a time (they block fast readers), other sites
+    in parallel. That reading stops after budget_minutes so the email isn't late; the rest are read next run."""
     deadline = time.monotonic() + budget_minutes * 60
-    slow = [j for j in jobs if "linkedin.com" in j.url and len(j.description or "") < 600]
+    # Workday postings are read one at a time too: careers.py keeps Workday requests 15s apart.
+    slow = [j for j in jobs if ("linkedin.com" in j.url or "myworkdayjobs.com" in j.url)
+            and len(j.description or "") < 600]
     fast = [j for j in jobs if j not in slow]
 
     def one(job: Job) -> None:
@@ -345,7 +353,7 @@ def enrich_all(jobs: list[Job], budget_minutes: float = 10) -> None:
             else:
                 one(job)
         if skipped:
-            log.warning("LinkedIn descriptions: %d left for the next run (cap or time budget)", skipped)
+            log.warning("LinkedIn/Workday descriptions: %d left for the next run (cap or time budget)", skipped)
 
     with ThreadPoolExecutor(max_workers=6) as pool:
         slow_done = pool.submit(run_slow)

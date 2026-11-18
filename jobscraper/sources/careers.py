@@ -14,6 +14,7 @@ import time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
+import requests
 from bs4 import BeautifulSoup
 
 from ..http import session
@@ -22,40 +23,61 @@ from ..models import Job
 log = logging.getLogger(__name__)
 SITES_FILE = Path(__file__).resolve().parent.parent.parent / "data" / "careers_sites.json"
 
-# Workday search terms; other platforms return every opening in one request.
+# Search terms for Oracle sites; other platforms return every opening in one request.
 WORKDAY_TERMS = ["risk", "quant", "valuation", "product control", "derivatives", "trading",
                  "treasury", "model", "analyst", "graduate"]
 
 
 # Workday rate-limits by client across all the firms it hosts (429 Too Many Requests from
-# 16 Nov 2026), so Workday sites are read two at a time with a short pause between requests,
-# and a 429 is waited out (Retry-After, else 10s, 20s, 30s) instead of failing the site. If one
-# site is still refused after that, Workday is blocking this run, so the rest fail at once
-# instead of each waiting a minute (the problem solver then records it as an outage).
-WORKDAY_AT_ONCE = 2
-WORKDAY_PAUSE = (1.0, 2.0)
-WORKDAY_429_TRIES = 4
-_workday_slots = threading.BoundedSemaphore(WORKDAY_AT_ONCE)
+# 16 Nov 2026). Pacing alone (two sites at a time, 1-2s apart, PR #15) was not enough: it let
+# roughly one request through every 30 seconds, and the old search made up to 50 requests a site
+# (10 terms x 5 pages). So each Workday site now gets ONE request, for its newest postings with no
+# search text (titles are matched later, like every other source), and every Workday request in
+# the run goes through one gate that keeps them WORKDAY_GAP seconds apart. A 429 is waited out
+# once; if the site is still refused, Workday is blocking this run, so the rest fail at once
+# instead of each waiting (the problem solver then records it as an outage).
+WORKDAY_LIMIT = 20
+WORKDAY_GAP = 15.0
+WORKDAY_429_TRIES = 2
+WORKDAY_429_WAIT = 30
+_workday_gate = threading.Lock()
+_workday_last = [0.0]
 _workday_blocked = threading.Event()
 
 
-def _workday_post(s, api: str, body: dict, sleep=time.sleep):
-    tries = 1 if _workday_blocked.is_set() else WORKDAY_429_TRIES
-    for attempt in range(tries):
-        sleep(random.uniform(*WORKDAY_PAUSE))
-        r = s.post(api, json=body, timeout=60)
+def _workday_wait(sleep=time.sleep, clock=time.monotonic) -> None:
+    """Holds the caller until WORKDAY_GAP seconds have passed since the last Workday request."""
+    with _workday_gate:
+        gap = WORKDAY_GAP - (clock() - _workday_last[0])
+        if gap > 0:
+            sleep(gap)
+        _workday_last[0] = clock()
+
+
+def _workday_request(send, label: str, sleep=time.sleep, clock=time.monotonic):
+    """Sends one Workday request through the gate; waits out a 429 once."""
+    if _workday_blocked.is_set():
+        # Workday already refused this run: fail at once instead of queueing at the gate.
+        raise requests.HTTPError(f"429 Too Many Requests: Workday is refusing this run ({label} not tried)")
+    for attempt in range(WORKDAY_429_TRIES):
+        _workday_wait(sleep, clock)
+        r = send()
         if r.status_code != 429:
             r.raise_for_status()
             return r
-        if attempt == tries - 1:
+        if attempt == WORKDAY_429_TRIES - 1:
             _workday_blocked.set()
             r.raise_for_status()
         try:
             wait = int(r.headers.get("Retry-After", ""))
         except ValueError:
-            wait = 10 * (attempt + 1)
-        log.info("Workday 429 for %s, waiting %ss", api.split("/wday/")[0], min(wait, 30))
-        sleep(min(wait, 30))
+            wait = WORKDAY_429_WAIT
+        log.info("Workday 429 for %s, waiting %ss", label, min(wait, WORKDAY_429_WAIT))
+        sleep(min(wait, WORKDAY_429_WAIT))
+
+
+def _workday_post(s, api: str, body: dict, sleep=time.sleep, clock=time.monotonic):
+    return _workday_request(lambda: s.post(api, json=body, timeout=60), api.split("/wday/")[0], sleep, clock)
 
 
 def load_sites() -> list[dict]:
@@ -172,30 +194,18 @@ def _workday(s, site, cfg):
     tenant = host_part.split(".")[0]
     base = f"https://{host_part}.myworkdayjobs.com"
     api = f"{base}/wday/cxs/{tenant}/{path}/jobs"
+    r = _workday_post(s, api, {"appliedFacets": {}, "limit": WORKDAY_LIMIT, "offset": 0, "searchText": ""})
     jobs: dict[str, Job] = {}
-    with _workday_slots:
-        _workday_terms(s, site, cfg, base, path, api, jobs)
+    for p in r.json().get("jobPostings", []):
+        posted = _workday_posted(p.get("postedOn", ""))
+        if posted and (date.today() - posted).days > cfg["max_age_days"]:
+            continue
+        if posted is None and p.get("postedOn"):
+            log.info("%s: unreadable Workday date %r", site["institution"], p.get("postedOn"))
+        url = f"{base}/{path}{p.get('externalPath', '')}"
+        # No date if it couldn't be read: undated postings are dropped rather than shown as fresh.
+        jobs.setdefault(url, _job(site, p.get("title"), p.get("locationsText"), url, posted))
     return list(jobs.values())
-
-
-def _workday_terms(s, site, cfg, base, path, api, jobs) -> None:
-    for term in WORKDAY_TERMS:
-        for offset in range(0, 100, 20):
-            r = _workday_post(s, api, {"appliedFacets": {}, "limit": 20, "offset": offset, "searchText": term})
-            postings = r.json().get("jobPostings", [])
-            stop = False
-            for p in postings:
-                posted = _workday_posted(p.get("postedOn", ""))
-                if posted and (date.today() - posted).days > cfg["max_age_days"]:
-                    stop = True  # an old posting: finish this page, then move on to the next term
-                    continue
-                if posted is None and p.get("postedOn"):
-                    log.info("%s: unreadable Workday date %r", site["institution"], p.get("postedOn"))
-                url = f"{base}/{path}{p.get('externalPath', '')}"
-                # No date if it couldn't be read: undated postings are dropped rather than shown as fresh.
-                jobs.setdefault(url, _job(site, p.get("title"), p.get("locationsText"), url, posted))
-            if len(postings) < 20 or stop:
-                break
 
 
 def _oracle(s, site, cfg):
@@ -222,9 +232,11 @@ def fetch_description(job: Job) -> str:
     if not m:
         return ""
     tenant, wd, path, ext = m.groups()
+    if _workday_blocked.is_set():
+        return ""  # Workday is refusing this run; the description is read on a later run
+    api = f"https://{tenant}.{wd}.myworkdayjobs.com/wday/cxs/{tenant}/{path}{ext}"
     try:
-        r = session().get(f"https://{tenant}.{wd}.myworkdayjobs.com/wday/cxs/{tenant}/{path}{ext}", timeout=60)
-        r.raise_for_status()
+        r = _workday_request(lambda: session().get(api, timeout=60), api.split("/wday/")[0])
         return _text(r.json().get("jobPostingInfo", {}).get("jobDescription", ""))
     except Exception as e:
         log.info("Workday description fetch failed for %s: %s", job.url, e)
