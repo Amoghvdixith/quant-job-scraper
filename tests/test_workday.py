@@ -104,3 +104,28 @@ def test_descriptions_are_skipped_once_workday_is_blocking():
     job = Job(source="Careers sites", title="Risk Analyst", company="Barclays", location="London",
               url="https://barclays.wd3.myworkdayjobs.com/External/job/London/Risk_R1", posted=None)
     assert careers.fetch_description(job) == ""
+
+
+def _plan_firms(monkeypatch, blocked):
+    from jobscraper import main
+    sites = [{"institution": "Barclays", "platform": "workday", "id": "barclays.wd3/x"},
+             {"institution": "Stripe", "platform": "greenhouse", "id": "stripe"}]
+    insts = [{"name": n, "key": n.lower(), "sector": ""} for n in ("Barclays", "Stripe", "Jane Street", "Optiver")]
+    monkeypatch.setattr(main.careers, "load_sites", lambda: sites)
+    monkeypatch.setattr(main.institutions, "load", lambda: insts)
+    cfg = {"sources": ["linkedin", "careers"], "linkedin_locations": [], "linkedin_remote_search": False,
+           "linkedin_target_firms_per_run": 2, "linkedin_workday_firms_per_run": 1}
+    return [name for name, _ in main.plan(cfg, [], 0, workday_blocked=blocked)["LinkedIn"]]
+
+
+def test_workday_banks_are_searched_on_linkedin_while_workday_blocks(monkeypatch):
+    names = _plan_firms(monkeypatch, blocked=True)
+    assert names[0] == "firm Barclays (Workday blocked)"
+    assert len([n for n in names if n.startswith("firm ")]) == 2      # still 2 firm slots in all
+    assert "firm Stripe" not in names                                 # its own careers site still works
+
+
+def test_workday_banks_stay_off_linkedin_when_workday_works(monkeypatch):
+    names = _plan_firms(monkeypatch, blocked=False)
+    assert not any("Barclays" in n for n in names)
+    assert len(names) == 2

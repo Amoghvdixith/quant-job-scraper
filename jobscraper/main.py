@@ -47,8 +47,10 @@ def rotate(items: list, per_run: int, slot: int) -> list:
     return (items + items)[start:start + per_run]
 
 
-def plan(cfg: dict, roles: list[dict], slot: int) -> dict[str, list]:
-    """Every search this run will make, grouped by site. Each site's searches run one after another."""
+def plan(cfg: dict, roles: list[dict], slot: int, workday_blocked: bool = False) -> dict[str, list]:
+    """Every search this run will make, grouped by site. Each site's searches run one after another.
+    workday_blocked: Workday refused the last run, so the banks on Workday get LinkedIn company
+    searches instead (they are normally left out because their own careers site is read)."""
     tasks: dict[str, list] = {}
     sources = cfg["sources"]
     if "linkedin" in sources:
@@ -67,6 +69,18 @@ def plan(cfg: dict, roles: list[dict], slot: int) -> dict[str, list]:
                 (f"civil service {d}", lambda st, d=d: government.civil_service_search(d, cfg, st))
                 for d in cfg.get("government", {}).get("civil_service_departments", [])
             ]
+        firm_slots = cfg.get("linkedin_target_firms_per_run", 80)
+        stand_ins: list[dict] = []
+        if workday_blocked and "careers" in sources:
+            # Workday blocks GitHub's servers (since 16 Nov 2026): search those banks on LinkedIn instead,
+            # a few each run, ahead of the rotating locations so the time budget doesn't cut them.
+            on_workday = {institutions.norm(x["institution"]) for x in careers.load_sites() if x["platform"] == "workday"}
+            blocked = [i for i in institutions.load() if i["key"] in on_workday]
+            stand_ins = rotate(blocked, min(cfg.get("linkedin_workday_firms_per_run", 12), firm_slots), slot)
+            tasks["LinkedIn"] += [
+                (f"firm {inst['name']} (Workday blocked)", lambda st, inst=inst: linkedin.search_company(inst["name"], cfg, st))
+                for inst in stand_ins
+            ]
         tasks["LinkedIn"] += by_location(rotate(
             cfg.get("linkedin_rotating_locations", []), cfg.get("linkedin_locations_per_run", 2), slot))
         if "careers" in sources or cfg.get("linkedin_target_firms_per_run"):
@@ -74,7 +88,7 @@ def plan(cfg: dict, roles: list[dict], slot: int) -> dict[str, list]:
             firms = [i for i in institutions.load() if i["key"] not in have_site]
             tasks["LinkedIn"] += [
                 (f"firm {inst['name']}", lambda st, inst=inst: linkedin.search_company(inst["name"], cfg, st))
-                for inst in rotate(firms, cfg.get("linkedin_target_firms_per_run", 80), slot)
+                for inst in rotate(firms, firm_slots - len(stand_ins), slot)
             ]
     if "google" in sources:
         tasks["Google Jobs"] = [(role["title"], lambda st, role=role: google.search(role, cfg, st)) for role in roles]
@@ -100,7 +114,12 @@ def plan(cfg: dict, roles: list[dict], slot: int) -> dict[str, list]:
 
 def scrape(cfg: dict, roles: list[dict], slot: int, healer: Healer | None = None) -> tuple[list[Job], dict]:
     healer = healer or Healer(path=HEALTH_STORE, state={"runs": [], "sites": {}})
-    tasks = plan(cfg, roles, slot)
+    blocked = healer.state.get("workday_blocked")
+    if blocked is None:  # health.json from before this flag: judge by the Workday sites' last errors
+        errs = [healer.state["sites"].get(x["institution"], {}).get("last_error", "")
+                for x in careers.load_sites() if x["platform"] == "workday"]
+        blocked = bool(errs) and sum("429" in e for e in errs) > len(errs) / 2
+    tasks = plan(cfg, roles, slot, workday_blocked=blocked)
     stats = {label: {"found": 0, "errors": 0} for label in tasks}
 
     budget = cfg.get("source_time_budget_minutes", 40) * 60
@@ -142,6 +161,7 @@ def scrape(cfg: dict, roles: list[dict], slot: int, healer: Healer | None = None
         with ThreadPoolExecutor(max_workers=8) as pool:
             slow = pool.submit(lambda: [j for item in workday for j in one(item)])
             out = [j for batch in pool.map(one, others) for j in batch] + slow.result()
+        healer.state["workday_blocked"] = careers._workday_blocked.is_set()  # read by the next run's plan
         stats[label]["found"] = len(out)
         return out
 

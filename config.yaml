@@ -59,6 +59,8 @@ linkedin_remote_search: true
 # Firms from institutions.csv searched by name on LinkedIn each run (those without
 # a careers site we can read directly), searched last in each run.
 linkedin_target_firms_per_run: 40
+# While Workday blocks the runner, this many of the 40 go to banks whose careers site is on Workday.
+linkedin_workday_firms_per_run: 12
 linkedin_target_firm_pages: 1
 # LinkedIn experience levels: 1 = Internship, 2 = Entry level, 3 = Associate.
 linkedin_experience_levels: [1, 2, 3]
