@@ -116,7 +116,7 @@ def test_scrape_uses_the_problem_solver(tmp_path, monkeypatch):
     def boom(st):
         raise RuntimeError("blocked")
 
-    monkeypatch.setattr(main, "plan", lambda cfg, roles, slot: {
+    monkeypatch.setattr(main, "plan", lambda cfg, roles, slot, **kw: {
         "Indeed": [("a", lambda st: [job]), ("b", boom)],
         "Careers sites": [("Acme Bank", boom), ("Beta Bank", lambda st: [job])],
     })
