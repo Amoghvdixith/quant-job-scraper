@@ -1359,6 +1359,45 @@
     "raw_results": 14986
    },
    "utc": "2026-11-20T11:31:37+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "not counted towards resting them; they are tried again next run",
+     "area": "Careers sites",
+     "kind": "problem",
+     "what": "51 sites failed in the same run (likely an outage or block at their hosting platform)"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 51,
+     "found": 4267
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 428
+    },
+    "LinkedIn": {
+     "errors": 4,
+     "found": 3048
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3681
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4287
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 324,
+    "new_jobs": 22,
+    "raw_results": 15711
+   },
+   "utc": "2026-11-20T17:29:17+00:00"
   }
  ],
  "sites": {
