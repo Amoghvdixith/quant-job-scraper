@@ -51,7 +51,9 @@ linkedin_rotating_locations:
 linkedin_locations_per_run: 2
 # Each site gets at most this long per run. LinkedIn rate-limits heavy use, and without a
 # cap a run can overrun its email slot; the least important searches are the ones cut.
-source_time_budget_minutes: 40
+# 50 since 21 Nov 2026: LinkedIn throttling cut up to 108 of ~208 searches at 40, and runs
+# start 75 minutes before the email, so a throttled run still sends about 20 minutes early.
+source_time_budget_minutes: 50
 # Reading LinkedIn job pages after the searches gets at most this long; unread ones are read next run.
 description_time_budget_minutes: 10
 # Also search LinkedIn for remote jobs anywhere in the world, every run.
