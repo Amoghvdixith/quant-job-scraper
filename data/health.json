@@ -1515,6 +1515,51 @@
     "raw_results": 16099
    },
    "utc": "2026-11-21T11:39:30+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "not counted towards resting them; they are tried again next run",
+     "area": "Careers sites",
+     "kind": "problem",
+     "what": "52 sites failed in the same run (likely an outage or block at their hosting platform)"
+    },
+    {
+     "action": "likely blocked or the site changed its page layout; the run carried on with the other sources. If it repeats next run, its scraper in jobscraper/sources needs a fix",
+     "area": "Indeed",
+     "kind": "problem",
+     "what": "found 13 jobs; it usually finds about 71"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 52,
+     "found": 4289
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 13
+    },
+    "LinkedIn": {
+     "errors": 4,
+     "found": 4258
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3684
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4253
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 328,
+    "new_jobs": 14,
+    "raw_results": 16497
+   },
+   "utc": "2026-11-21T17:41:25+00:00"
   }
  ],
  "sites": {
