@@ -1437,9 +1437,51 @@
     "raw_results": 14645
    },
    "utc": "2026-11-20T23:30:14+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "not counted towards resting them; they are tried again next run",
+     "area": "Careers sites",
+     "kind": "problem",
+     "what": "52 sites failed in the same run (likely an outage or block at their hosting platform)"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 52,
+     "found": 4286
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 161
+    },
+    "LinkedIn": {
+     "errors": 5,
+     "found": 2667
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3683
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4285
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 308,
+    "new_jobs": 5,
+    "raw_results": 15082
+   },
+   "utc": "2026-11-21T05:28:54+00:00"
   }
  ],
  "sites": {
+  "AIG": {
+   "last_error": "HTTPError: 429 Too Many Requests: Workday is refusing this run (https://aig.wd1.myworkdayjobs.com not tried)"
+  },
   "Accenture": {
    "failed_runs": 2,
    "last_error": "HTTPError: 429 Too Many Requests: Workday is refusing this run (https://accenture.wd103.myworkdayjobs.com not tried)"
@@ -1454,6 +1496,9 @@
   },
   "BMO": {
    "last_error": "HTTPError: 429 Too Many Requests: Workday is refusing this run (https://bmo.wd3.myworkdayjobs.com not tried)"
+  },
+  "Bain Capital": {
+   "last_error": "HTTPError: 404 Client Error: Not Found for url: https://api.ashbyhq.com/posting-api/job-board/bain-capital"
   },
   "Barclays": {
    "last_error": "HTTPError: 429 Too Many Requests: Workday is refusing this run (https://barclays.wd3.myworkdayjobs.com not tried)"
