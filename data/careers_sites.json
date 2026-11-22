@@ -366,7 +366,7 @@
  },
  {
   "platform": "workday",
-  "id": "pwc.wd3/Global_Experienced_Careers",
+  "id": "pwc.wd3/Global_Campus_Careers",
   "institution": "PwC"
  },
  {
@@ -440,7 +440,7 @@
   "institution": "Travelers"
  },
  {
-  "platform": "greenhouse",
+  "platform": "ashby",
   "id": "truelayer",
   "institution": "TrueLayer"
  },
