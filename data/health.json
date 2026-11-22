@@ -1677,9 +1677,51 @@
     "raw_results": 17330
    },
    "utc": "2026-11-22T11:38:40+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "not counted towards resting them; they are tried again next run",
+     "area": "Careers sites",
+     "kind": "problem",
+     "what": "51 sites failed in the same run (likely an outage or block at their hosting platform)"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 51,
+     "found": 4296
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 144
+    },
+    "LinkedIn": {
+     "errors": 2,
+     "found": 5137
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3582
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4254
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 304,
+    "new_jobs": 12,
+    "raw_results": 17413
+   },
+   "utc": "2026-11-22T17:37:26+00:00"
   }
  ],
  "sites": {
+  "AIG": {
+   "last_error": "HTTPError: 429 Too Many Requests: Workday is refusing this run (https://aig.wd1.myworkdayjobs.com not tried)"
+  },
   "Accenture": {
    "failed_runs": 2,
    "last_error": "HTTPError: 429 Too Many Requests: Workday is refusing this run (https://accenture.wd103.myworkdayjobs.com not tried)"
@@ -1844,9 +1886,6 @@
    "failed_runs": 0,
    "last_error": "HTTPError: 429 Too Many Requests: Workday is refusing this run (https://travelers.wd5.myworkdayjobs.com not tried)",
    "rest_until": "2026-11-17"
-  },
-  "TrueLayer": {
-   "last_error": "HTTPError: 404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/truelayer/jobs?content=true"
   },
   "U.S. Bank": {
    "last_error": "HTTPError: 429 Too Many Requests: Workday is refusing this run (https://usbank.wd1.myworkdayjobs.com not tried)"
