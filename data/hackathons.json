@@ -902,6 +902,25 @@
      "url": "https://quantchallenges.com/challenges/citadel-datathons-qc-2735"
     }
    },
+   "https://quantchallenges.com/challenges/citadel-eqr-phd-fellowship-qc-2972": {
+    "checked": "2026-11-23",
+    "hackathon": {
+     "category": "Alpha research",
+     "dates": "31 Dec 2026",
+     "deadline": "2026-12-31",
+     "eligibility": "",
+     "eligibility_text": "Full-time PhD candidates at accredited U.S. universities conducting consequential research in statistics, economics, or machine learning",
+     "first_seen": "",
+     "format": "Hybrid",
+     "organiser": "Citadel",
+     "prize": "$25K",
+     "quant_link": "",
+     "source": "Quant Challenges",
+     "status": "Applications open \u00b7 Accepting entries",
+     "title": "Citadel EQR PhD Fellowship",
+     "url": "https://quantchallenges.com/challenges/citadel-eqr-phd-fellowship-qc-2972"
+    }
+   },
    "https://quantchallenges.com/challenges/citadel-fixed-income-and-macro-central-bank-challenge-2026-qc-2736": {
     "checked": "2026-11-21",
     "hackathon": {
@@ -919,6 +938,25 @@
      "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
      "title": "Citadel Fixed Income and Macro Central Bank Challenge 2026",
      "url": "https://quantchallenges.com/challenges/citadel-fixed-income-and-macro-central-bank-challenge-2026-qc-2736"
+    }
+   },
+   "https://quantchallenges.com/challenges/citadel-securities-quant-invitational-qc-2722": {
+    "checked": "2026-11-23",
+    "hackathon": {
+     "category": "Alpha research",
+     "dates": "25 Feb 2027 (EMEA)",
+     "deadline": "2027-02-25",
+     "eligibility": "",
+     "eligibility_text": "Students pursuing a bachelor's degree in mathematics, statistics, physics, computer science or another highly quantitative field; invite-only pairs",
+     "first_seen": "",
+     "format": "In person",
+     "organiser": "Citadel Securities",
+     "prize": "$25K",
+     "quant_link": "",
+     "source": "Quant Challenges",
+     "status": "Applications open \u00b7 Accepting entries",
+     "title": "Citadel Securities Quant Invitational",
+     "url": "https://quantchallenges.com/challenges/citadel-securities-quant-invitational-qc-2722"
     }
    },
    "https://quantchallenges.com/challenges/citicup-21st-financial-innovation-application-competition-citi-challenge-ml-driven-oil-price-factor-analysis-and-forecasting-qc-2920": {
@@ -1128,6 +1166,25 @@
      "status": "Weekly \u00b7 Accepting entries",
      "title": "DataCrunch Equity Market Neutral #2",
      "url": "https://quantchallenges.com/challenges/datacrunch-equity-market-neutral-2-qc-2608"
+    }
+   },
+   "https://quantchallenges.com/challenges/discover-citadel-and-citadel-securities-2027-qc-2974": {
+    "checked": "2026-11-23",
+    "hackathon": {
+     "category": "Trading systems",
+     "dates": "29 Jan 2027 (EMEA/SG) \u00b7 14 Feb (HK/IN) \u00b7 05 Mar (US)",
+     "deadline": "2027-01-29",
+     "eligibility": "",
+     "eligibility_text": "First- and second-year undergraduates (December 2028 \u2013 June 2030 graduation) in US/Canada, Europe, or APAC; resume with cumulative GPA required",
+     "first_seen": "",
+     "format": "In person",
+     "organiser": "Citadel \u00d7 Citadel Securities",
+     "prize": "$25K",
+     "quant_link": "",
+     "source": "Quant Challenges",
+     "status": "Applications open \u00b7 Accepting entries",
+     "title": "Discover Citadel & Citadel Securities 2027",
+     "url": "https://quantchallenges.com/challenges/discover-citadel-and-citadel-securities-2027-qc-2974"
     }
    },
    "https://quantchallenges.com/challenges/drw-crypto-market-prediction-qc-2726": {
@@ -2874,6 +2931,7 @@
   "alphanovabiweeklyseason1": "2026-11-11T23:07:39",
   "checkpoint1gamesforgood": "2026-11-11T23:07:39",
   "checkpointjourneyshanoi": "2026-11-11T23:07:39",
+  "citadeleqrphdfellowship": "2026-11-23T16:45:48",
   "clawstreetaitradingcompetitionseason2": "2026-11-11T23:07:39",
   "clawswapaiagenttradingarena": "2026-11-11T23:07:39",
   "creatorsaiwinterchallenge": "2026-11-19T10:45:36",
@@ -2883,6 +2941,7 @@
   "datacrunchequitymarketneutral": "2026-11-11T23:07:39",
   "datacrunchequitymarketneutral2": "2026-11-11T23:07:39",
   "datathonpolyfinancesbncxaws": "2026-11-15T05:06:34",
+  "discovercitadelcitadelsecurities2027": "2026-11-23T16:45:48",
   "diwalifestiversetheagenttoagenthackathonindiaedition": "2026-11-14T23:05:44",
   "financialmodelingworldcup2026": "2026-11-11T23:07:39",
   "forgealphachallenge": "2026-11-11T23:07:39",
