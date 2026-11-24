@@ -124,7 +124,7 @@
   },
   "quant_challenges": {
    "https://quantchallenges.com/challenges/115-trade-like-a-pro-qc-2921": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "31 Mar 2026",
@@ -134,10 +134,10 @@
      "first_seen": "",
      "format": "See official rules",
      "organiser": "Taiwan Futures Exchange (TAIFEX) / Economic Daily",
-     "prize": "$3.5K",
+     "prize": "$20K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "115\u5e74\u7e31\u6a6b\u671f\u6d77 Trade Like a Pro - \u5927\u5c08\u9662\u6821\u6a21\u64ec\u4ea4\u6613\u7af6\u8cfd",
      "url": "https://quantchallenges.com/challenges/115-trade-like-a-pro-qc-2921"
     }
@@ -181,7 +181,7 @@
     }
    },
    "https://quantchallenges.com/challenges/2026-ssc-student-research-presentation-awards-quantitative-finance-section-qc-2900": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Alpha research",
      "dates": "20 Feb 2026",
@@ -191,16 +191,16 @@
      "first_seen": "",
      "format": "See official rules",
      "organiser": "Statistical Society of Canada",
-     "prize": "10K INR",
+     "prize": "$25K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "2026 SSC Student Research Presentation Awards \u2014 Quantitative Finance section",
      "url": "https://quantchallenges.com/challenges/2026-ssc-student-research-presentation-awards-quantitative-finance-section-qc-2900"
     }
    },
    "https://quantchallenges.com/challenges/2026-ubs-finance-challenge-qc-2856": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Alpha research",
      "dates": "31 Mar 2026",
@@ -210,10 +210,10 @@
      "first_seen": "",
      "format": "See official rules",
      "organiser": "UBS",
-     "prize": "$2.5K",
+     "prize": "$25K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "2026 UBS Finance Challenge",
      "url": "https://quantchallenges.com/challenges/2026-ubs-finance-challenge-qc-2856"
     }
@@ -409,7 +409,7 @@
     }
    },
    "https://quantchallenges.com/challenges/ai-forecasting-benchmark-futureeval-bot-tournament-qc-2708": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Market forecasting",
      "dates": "Closed \u00b7 6 May 2026",
@@ -422,7 +422,7 @@
      "prize": "$50K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Spring tournament closed \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "AI Forecasting Benchmark / FutureEval Bot Tournament",
      "url": "https://quantchallenges.com/challenges/ai-forecasting-benchmark-futureeval-bot-tournament-qc-2708"
     }
@@ -485,7 +485,7 @@
     }
    },
    "https://quantchallenges.com/challenges/algo-trading-sprint-by-byte-2026-qc-2787": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "15 Mar 2026",
@@ -495,10 +495,10 @@
      "first_seen": "",
      "format": "See official rules",
      "organiser": "MAIT Delhi / BYTE",
-     "prize": "$36K",
+     "prize": "$20K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "Algo Trading Sprint by BYTE 2026",
      "url": "https://quantchallenges.com/challenges/algo-trading-sprint-by-byte-2026-qc-2787"
     }
@@ -542,7 +542,7 @@
     }
    },
    "https://quantchallenges.com/challenges/algotrade-hackathon-2026-qc-2772": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "01 Apr 2026",
@@ -555,7 +555,7 @@
      "prize": "10K EUR",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "AlgoTrade Hackathon 2026",
      "url": "https://quantchallenges.com/challenges/algotrade-hackathon-2026-qc-2772"
     }
@@ -694,7 +694,7 @@
     }
    },
    "https://quantchallenges.com/challenges/bitget-agent-hub-skills-challenge-qc-2902": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "10 Apr 2026",
@@ -704,10 +704,10 @@
      "first_seen": "",
      "format": "Online",
      "organiser": "Bitget",
-     "prize": "$20K",
+     "prize": "$4.8K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "Bitget Agent Hub Skills Challenge",
      "url": "https://quantchallenges.com/challenges/bitget-agent-hub-skills-challenge-qc-2902"
     }
@@ -751,7 +751,7 @@
     }
    },
    "https://quantchallenges.com/challenges/bnb-chain-x-yzi-labs-hack-series-bengaluru-qc-2756": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Market forecasting",
      "dates": "15 Feb 2026",
@@ -761,10 +761,10 @@
      "first_seen": "",
      "format": "See official rules",
      "organiser": "BNB Chain / YZi Labs",
-     "prize": "$250K",
+     "prize": "$7.5K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "BNB Chain x YZi Labs Hack Series: Bengaluru",
      "url": "https://quantchallenges.com/challenges/bnb-chain-x-yzi-labs-hack-series-bengaluru-qc-2756"
     }
@@ -808,7 +808,7 @@
     }
    },
    "https://quantchallenges.com/challenges/bridgewater-x-metaculus-forecasting-competition-2026-qc-2734": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Market forecasting",
      "dates": "13 Mar 2026",
@@ -821,13 +821,13 @@
      "prize": "$30K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "Bridgewater x Metaculus Forecasting Competition 2026",
      "url": "https://quantchallenges.com/challenges/bridgewater-x-metaculus-forecasting-competition-2026-qc-2734"
     }
    },
    "https://quantchallenges.com/challenges/capital-power-energy-trading-competition-2026-qc-2744": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "07 Feb 2026",
@@ -840,7 +840,7 @@
      "prize": "C$3.5K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "Capital Power Energy Trading Competition 2026",
      "url": "https://quantchallenges.com/challenges/capital-power-energy-trading-competition-2026-qc-2744"
     }
@@ -922,7 +922,7 @@
     }
    },
    "https://quantchallenges.com/challenges/citadel-fixed-income-and-macro-central-bank-challenge-2026-qc-2736": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "27 Feb 2026",
@@ -932,10 +932,10 @@
      "first_seen": "",
      "format": "See official rules",
      "organiser": "Citadel",
-     "prize": "",
+     "prize": "$20K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "Citadel Fixed Income and Macro Central Bank Challenge 2026",
      "url": "https://quantchallenges.com/challenges/citadel-fixed-income-and-macro-central-bank-challenge-2026-qc-2736"
     }
@@ -1017,7 +1017,7 @@
     }
    },
    "https://quantchallenges.com/challenges/cmu-quant-club-2026-market-making-game-qc-2749": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "07 Feb 2026",
@@ -1030,7 +1030,7 @@
      "prize": "$3.5K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "CMU Quant Club 2026 Market Making Game",
      "url": "https://quantchallenges.com/challenges/cmu-quant-club-2026-market-making-game-qc-2749"
     }
@@ -1093,7 +1093,7 @@
     }
    },
    "https://quantchallenges.com/challenges/cuhk-value-investment-proposal-competition-2026-qc-2893": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Market forecasting",
      "dates": "01 Mar 2026",
@@ -1103,10 +1103,10 @@
      "first_seen": "",
      "format": "See official rules",
      "organiser": "The Chinese University of Hong Kong IGEF",
-     "prize": "$100K",
+     "prize": "$7.5K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "CUHK Value Investment Proposal Competition 2026",
      "url": "https://quantchallenges.com/challenges/cuhk-value-investment-proposal-competition-2026-qc-2893"
     }
@@ -1207,7 +1207,7 @@
     }
    },
    "https://quantchallenges.com/challenges/dscubed-2026-kaggle-competition-stock-market-prediction-qc-2743": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Market forecasting",
      "dates": "09 May 2026",
@@ -1217,10 +1217,10 @@
      "first_seen": "",
      "format": "In person",
      "organiser": "DSCubed / University of Melbourne Data Science Student Society",
-     "prize": "$250K",
+     "prize": "$7.5K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "DSCubed 2026 Kaggle Competition: Stock Market Prediction",
      "url": "https://quantchallenges.com/challenges/dscubed-2026-kaggle-competition-stock-market-prediction-qc-2743"
     }
@@ -1245,7 +1245,7 @@
     }
    },
    "https://quantchallenges.com/challenges/ecb-forum-young-economist-prize-2026-qc-2905": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Alpha research",
      "dates": "02 Mar 2026",
@@ -1255,16 +1255,16 @@
      "first_seen": "",
      "format": "In person",
      "organiser": "European Central Bank",
-     "prize": "",
+     "prize": "$25K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "ECB Forum Young Economist Prize 2026",
      "url": "https://quantchallenges.com/challenges/ecb-forum-young-economist-prize-2026-qc-2905"
     }
    },
    "https://quantchallenges.com/challenges/ethglobal-hackmoney-2026-uniswap-v4-agentic-finance-qc-2766": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "08 Feb 2026",
@@ -1274,16 +1274,16 @@
      "first_seen": "",
      "format": "See official rules",
      "organiser": "ETHGlobal / Uniswap Foundation",
-     "prize": "",
+     "prize": "$25K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "ETHGlobal HackMoney 2026 - Uniswap v4 Agentic Finance",
      "url": "https://quantchallenges.com/challenges/ethglobal-hackmoney-2026-uniswap-v4-agentic-finance-qc-2766"
     }
    },
    "https://quantchallenges.com/challenges/ethglobal-hackmoney-2026-yellow-trading-and-prediction-markets-qc-2767": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Market forecasting",
      "dates": "08 Feb 2026",
@@ -1293,10 +1293,10 @@
      "first_seen": "",
      "format": "See official rules",
      "organiser": "ETHGlobal / Yellow Network",
-     "prize": "$250K",
+     "prize": "$7.5K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "ETHGlobal HackMoney 2026 - Yellow Trading & Prediction Markets",
      "url": "https://quantchallenges.com/challenges/ethglobal-hackmoney-2026-yellow-trading-and-prediction-markets-qc-2767"
     }
@@ -1378,7 +1378,7 @@
     }
    },
    "https://quantchallenges.com/challenges/finmmeval-lab-2026-qc-2842": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Financial ML",
      "dates": "23 Apr 2026",
@@ -1391,7 +1391,7 @@
      "prize": "",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "FinMMEval Lab 2026",
      "url": "https://quantchallenges.com/challenges/finmmeval-lab-2026-qc-2842"
     }
@@ -1625,20 +1625,20 @@
     }
    },
    "https://quantchallenges.com/challenges/imc-prosperity-4-global-trading-challenge-qc-2713": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
-     "dates": "14 Apr 2026",
-     "deadline": "2026-04-14",
+     "dates": "Apr 2026 edition ended \u00b7 next edition expected Spring 2027",
+     "deadline": null,
      "eligibility": "",
      "eligibility_text": "Designed for university students; prize eligibility requires student proof, age 18+, eligible region and verification call for top teams",
      "first_seen": "",
-     "format": "See official rules",
+     "format": "Online",
      "organiser": "IMC Trading",
-     "prize": "",
+     "prize": "$4.8K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "IMC Prosperity 4 Global Trading Challenge",
      "url": "https://quantchallenges.com/challenges/imc-prosperity-4-global-trading-challenge-qc-2713"
     }
@@ -1660,6 +1660,25 @@
      "status": "Forecasting open \u00b7 Accepting entries",
      "title": "Iran & Energy Challenge",
      "url": "https://quantchallenges.com/challenges/iran-and-energy-challenge-qc-2970"
+    }
+   },
+   "https://quantchallenges.com/challenges/jane-street-protocol-emulator-asic-competition-qc-2977": {
+    "checked": "2026-11-24",
+    "hackathon": {
+     "category": "Trading systems",
+     "dates": "18 Jan 2027 \u00b7 March 2027 shuttle",
+     "deadline": "2027-01-18",
+     "eligibility": "",
+     "eligibility_text": "Open globally to students and professionals; solo or teams of any size (one entry per team); open-source hardware designs only",
+     "first_seen": "",
+     "format": "Online",
+     "organiser": "Jane Street",
+     "prize": "$4.8K",
+     "quant_link": "",
+     "source": "Quant Challenges",
+     "status": "Submissions open \u00b7 Accepting entries",
+     "title": "Jane Street Protocol Emulator ASIC Competition",
+     "url": "https://quantchallenges.com/challenges/jane-street-protocol-emulator-asic-competition-qc-2977"
     }
    },
    "https://quantchallenges.com/challenges/jane-street-quant-programs-and-fellowships-fttp-amp-grf-qc-2956": {
@@ -1777,7 +1796,7 @@
     }
    },
    "https://quantchallenges.com/challenges/market-royale-2026-qc-2769": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "10 Apr 2026",
@@ -1790,7 +1809,7 @@
      "prize": "30K INR",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "Market Royale 2026",
      "url": "https://quantchallenges.com/challenges/market-royale-2026-qc-2769"
     }
@@ -1872,7 +1891,7 @@
     }
    },
    "https://quantchallenges.com/challenges/mig-quant-conference-2026-qc-2792": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "06 Mar 2026",
@@ -1882,10 +1901,10 @@
      "first_seen": "",
      "format": "See official rules",
      "organiser": "Michigan Investment Group",
-     "prize": "$10K",
+     "prize": "$20K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "MIG Quant Conference 2026",
      "url": "https://quantchallenges.com/challenges/mig-quant-conference-2026-qc-2792"
     }
@@ -2005,7 +2024,7 @@
     }
    },
    "https://quantchallenges.com/challenges/open-agents-qc-2820": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "22 Apr 2026",
@@ -2015,16 +2034,16 @@
      "first_seen": "",
      "format": "See official rules",
      "organiser": "ETHGlobal",
-     "prize": "",
+     "prize": "$20K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "Open Agents",
      "url": "https://quantchallenges.com/challenges/open-agents-qc-2820"
     }
    },
    "https://quantchallenges.com/challenges/optiver-and-imperial-trading-academy-2026-qc-2795": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "13 Apr 2026",
@@ -2034,10 +2053,10 @@
      "first_seen": "",
      "format": "See official rules",
      "organiser": "Optiver / Imperial College London",
-     "prize": "$5K",
+     "prize": "$20K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "Optiver & Imperial Trading Academy 2026",
      "url": "https://quantchallenges.com/challenges/optiver-and-imperial-trading-academy-2026-qc-2795"
     }
@@ -2081,7 +2100,7 @@
     }
    },
    "https://quantchallenges.com/challenges/ordeflow-001-qc-2784": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Market forecasting",
      "dates": "15 Mar 2026",
@@ -2094,7 +2113,7 @@
      "prize": "$700",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "Ordeflow 001",
      "url": "https://quantchallenges.com/challenges/ordeflow-001-qc-2784"
     }
@@ -2233,7 +2252,7 @@
     }
    },
    "https://quantchallenges.com/challenges/quantihack-2026-qc-2748": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Alpha research",
      "dates": "22 Mar 2026",
@@ -2243,16 +2262,16 @@
      "first_seen": "",
      "format": "See official rules",
      "organiser": "Quantihack",
-     "prize": "10K INR",
+     "prize": "$25K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "QuantiHack 2026",
      "url": "https://quantchallenges.com/challenges/quantihack-2026-qc-2748"
     }
    },
    "https://quantchallenges.com/challenges/quantpedia-awards-2026-qc-2720": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Alpha research",
      "dates": "30 Apr 2026",
@@ -2265,7 +2284,7 @@
      "prize": "$25K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "Quantpedia Awards 2026",
      "url": "https://quantchallenges.com/challenges/quantpedia-awards-2026-qc-2720"
     }
@@ -2385,7 +2404,7 @@
     }
    },
    "https://quantchallenges.com/challenges/solana-prediction-markets-hack-qc-2922": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Market forecasting",
      "dates": "27 Mar 2026",
@@ -2398,7 +2417,7 @@
      "prize": "$30K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "Solana Prediction Markets Hack",
      "url": "https://quantchallenges.com/challenges/solana-prediction-markets-hack-qc-2922"
     }
@@ -2518,7 +2537,7 @@
     }
    },
    "https://quantchallenges.com/challenges/texas-energy-trading-case-competition-2026-qc-2873": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "15 Feb 2026",
@@ -2528,10 +2547,10 @@
      "first_seen": "",
      "format": "See official rules",
      "organiser": "University of Texas at Austin \u2014 Kay Bailey Hutchison Energy Center",
-     "prize": "$240K",
+     "prize": "$20K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "Texas Energy Trading Case Competition 2026",
      "url": "https://quantchallenges.com/challenges/texas-energy-trading-case-competition-2026-qc-2873"
     }
@@ -2594,7 +2613,7 @@
     }
    },
    "https://quantchallenges.com/challenges/top-trader-stock-market-competition-2026-qc-2733": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "30 Apr 2026",
@@ -2607,13 +2626,13 @@
      "prize": "$6.3K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "Top Trader Stock Market Competition 2026",
      "url": "https://quantchallenges.com/challenges/top-trader-stock-market-competition-2026-qc-2733"
     }
    },
    "https://quantchallenges.com/challenges/trade-the-knight-2026-qc-2781": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "18 Mar 2026",
@@ -2626,7 +2645,7 @@
      "prize": "$5K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "Trade the Knight 2026",
      "url": "https://quantchallenges.com/challenges/trade-the-knight-2026-qc-2781"
     }
@@ -2651,7 +2670,7 @@
     }
    },
    "https://quantchallenges.com/challenges/traders-at-michigan-spring-trading-competition-2026-qc-2747": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "07 Feb 2026",
@@ -2664,7 +2683,7 @@
      "prize": "$5K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "Traders at Michigan Spring Trading Competition 2026",
      "url": "https://quantchallenges.com/challenges/traders-at-michigan-spring-trading-competition-2026-qc-2747"
     }
@@ -2727,7 +2746,7 @@
     }
    },
    "https://quantchallenges.com/challenges/uchicago-digital-assets-trading-competition-2026-qc-2751": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "17 Apr 2026",
@@ -2737,10 +2756,10 @@
      "first_seen": "",
      "format": "See official rules",
      "organiser": "University of Chicago Career Advancement / Brevan Howard",
-     "prize": "$3.6K",
+     "prize": "$20K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "UChicago Digital Assets Trading Competition 2026",
      "url": "https://quantchallenges.com/challenges/uchicago-digital-assets-trading-competition-2026-qc-2751"
     }
@@ -2765,7 +2784,7 @@
     }
    },
    "https://quantchallenges.com/challenges/university-trading-tournament-qc-2932": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "31 Mar 2026",
@@ -2775,10 +2794,10 @@
      "first_seen": "",
      "format": "See official rules",
      "organiser": "Financial Club Zagreb / University of Zagreb Faculty of Economics",
-     "prize": "$6.3K",
+     "prize": "",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "University Trading Tournament",
      "url": "https://quantchallenges.com/challenges/university-trading-tournament-qc-2932"
     }
@@ -2803,7 +2822,7 @@
     }
    },
    "https://quantchallenges.com/challenges/waterloo-trading-competition-2026-qc-2728": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Trading systems",
      "dates": "15 Feb 2026",
@@ -2813,10 +2832,10 @@
      "first_seen": "",
      "format": "See official rules",
      "organiser": "Waterloo Quant Club",
-     "prize": "$10K",
+     "prize": "$20K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Watch \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "Waterloo Trading Competition 2026",
      "url": "https://quantchallenges.com/challenges/waterloo-trading-competition-2026-qc-2728"
     }
@@ -2860,7 +2879,7 @@
     }
    },
    "https://quantchallenges.com/challenges/worldquant-iqc-2026-qc-2613": {
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "hackathon": {
      "category": "Alpha research",
      "dates": "Entries closed",
@@ -2873,7 +2892,7 @@
      "prize": "$25K",
      "quant_link": "",
      "source": "Quant Challenges",
-     "status": "Finals \u00b7 Entries closed \u00b7 check next cycle",
+     "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "WorldQuant IQC 2026",
      "url": "https://quantchallenges.com/challenges/worldquant-iqc-2026-qc-2613"
     }
@@ -2948,6 +2967,7 @@
   "globalquanttradingchallenge": "2026-11-11T23:07:39",
   "hackout2027": "2026-11-11T23:07:39",
   "ibmqiskithackathonbangladesh": "2026-11-11T23:07:39",
+  "janestreetprotocolemulatorasiccompetition": "2026-11-24T04:46:19",
   "keanuhackthis2027": "2026-11-11T23:07:39",
   "lancasterfinancialeconometricsprizefinec2027": "2026-11-11T23:07:39",
   "leagueofalgochallenge": "2026-11-11T23:07:39",

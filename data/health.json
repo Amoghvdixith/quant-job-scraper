@@ -4,45 +4,6 @@
    "events": [
     {
      "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | MetLife",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: HTTPError: 404 Client Error: Not Found for url: https://api.lever.co/v0/postings/metlife?mode=json)"
-    }
-   ],
-   "sources": {
-    "Careers sites": {
-     "errors": 34,
-     "found": 5410
-    },
-    "Indeed": {
-     "errors": 0,
-     "found": 30
-    },
-    "LinkedIn": {
-     "errors": 0,
-     "found": 5233
-    },
-    "NHS Jobs": {
-     "errors": 0,
-     "found": 3640
-    },
-    "eFinancialCareers": {
-     "errors": 0,
-     "found": 4217
-    }
-   },
-   "summary": {
-    "emailed": true,
-    "jobs_in_email": 479,
-    "new_jobs": 20,
-    "raw_results": 18530
-   },
-   "utc": "2026-11-14T05:34:58+00:00"
-  },
-  {
-   "events": [
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
      "area": "Careers sites | Apollo Global Management",
      "kind": "problem",
      "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
@@ -1847,12 +1808,48 @@
     "raw_results": 17148
    },
    "utc": "2026-11-23T23:31:50+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "not counted towards resting them; they are tried again next run",
+     "area": "Careers sites",
+     "kind": "problem",
+     "what": "50 sites failed in the same run (likely an outage or block at their hosting platform)"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 50,
+     "found": 4269
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 58
+    },
+    "LinkedIn": {
+     "errors": 2,
+     "found": 4942
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3448
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4287
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 231,
+    "new_jobs": 11,
+    "raw_results": 17004
+   },
+   "utc": "2026-11-24T05:37:34+00:00"
   }
  ],
  "sites": {
-  "AIG": {
-   "last_error": "HTTPError: 429 Too Many Requests: Workday is refusing this run (https://aig.wd1.myworkdayjobs.com not tried)"
-  },
   "Accenture": {
    "failed_runs": 2,
    "last_error": "HTTPError: 429 Too Many Requests: Workday is refusing this run (https://accenture.wd103.myworkdayjobs.com not tried)"
