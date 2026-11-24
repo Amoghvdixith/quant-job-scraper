@@ -4,159 +4,6 @@
    "events": [
     {
      "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | Apollo Global Management",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
-    },
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | Brookfield",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
-    },
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | Citi",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
-    },
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | FIS",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
-    },
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | Fifth Third Bank",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
-    },
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | Fiserv",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
-    },
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | Franklin Templeton",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
-    },
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | KeyBank",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
-    },
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | M&T Bank",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
-    },
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | Morgan Stanley",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
-    },
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | Morningstar",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
-    },
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | PNC",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
-    },
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | Prudential plc",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
-    },
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | S&P Global",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
-    },
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | T. Rowe Price",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
-    },
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | Travelers",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
-    },
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | Vanguard",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
-    },
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
-     "area": "Careers sites | Wellington Management",
-     "kind": "problem",
-     "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
-    },
-    {
-     "action": "skipped this run; each is retried when its rest ends",
-     "area": "Careers sites",
-     "kind": "fixed",
-     "what": "1 sites are resting after repeated failures"
-    },
-    {
-     "action": "likely blocked or the site changed its page layout; the run carried on with the other sources. If it repeats next run, its scraper in jobscraper/sources needs a fix",
-     "area": "Indeed",
-     "kind": "problem",
-     "what": "found 4 jobs; it usually finds about 84"
-    }
-   ],
-   "sources": {
-    "Careers sites": {
-     "errors": 33,
-     "found": 5408
-    },
-    "Indeed": {
-     "errors": 0,
-     "found": 4
-    },
-    "LinkedIn": {
-     "errors": 0,
-     "found": 5065
-    },
-    "NHS Jobs": {
-     "errors": 0,
-     "found": 3636
-    },
-    "eFinancialCareers": {
-     "errors": 0,
-     "found": 4246
-    }
-   },
-   "summary": {
-    "emailed": true,
-    "jobs_in_email": 499,
-    "new_jobs": 20,
-    "raw_results": 18359
-   },
-   "utc": "2026-11-14T11:34:40+00:00"
-  },
-  {
-   "events": [
-    {
-     "action": "resting it until 2026-11-17, then it is tried again; if it keeps failing, check its entry in careers_sites_manual.yaml",
      "area": "Careers sites | Marsh",
      "kind": "problem",
      "what": "failed on 3 runs in a row (last: JSONDecodeError: Expecting value: line 1 column 1 (char 0))"
@@ -1847,6 +1694,51 @@
     "raw_results": 17004
    },
    "utc": "2026-11-24T05:37:34+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "not counted towards resting them; they are tried again next run",
+     "area": "Careers sites",
+     "kind": "problem",
+     "what": "50 sites failed in the same run (likely an outage or block at their hosting platform)"
+    },
+    {
+     "action": "likely blocked or the site changed its page layout; the run carried on with the other sources. If it repeats next run, its scraper in jobscraper/sources needs a fix",
+     "area": "Indeed",
+     "kind": "problem",
+     "what": "found 15 jobs; it usually finds about 108"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 50,
+     "found": 4267
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 15
+    },
+    "LinkedIn": {
+     "errors": 4,
+     "found": 4166
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3491
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4247
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 233,
+    "new_jobs": 2,
+    "raw_results": 16186
+   },
+   "utc": "2026-11-24T11:39:33+00:00"
   }
  ],
  "sites": {
