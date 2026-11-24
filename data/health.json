@@ -7,45 +7,6 @@
      "area": "Careers sites",
      "kind": "fixed",
      "what": "21 sites are resting after repeated failures"
-    }
-   ],
-   "sources": {
-    "Careers sites": {
-     "errors": 0,
-     "found": 5827
-    },
-    "Indeed": {
-     "errors": 0,
-     "found": 452
-    },
-    "LinkedIn": {
-     "errors": 0,
-     "found": 5113
-    },
-    "NHS Jobs": {
-     "errors": 0,
-     "found": 3637
-    },
-    "eFinancialCareers": {
-     "errors": 0,
-     "found": 4231
-    }
-   },
-   "summary": {
-    "emailed": true,
-    "jobs_in_email": 550,
-    "new_jobs": 25,
-    "raw_results": 19260
-   },
-   "utc": "2026-11-14T23:33:45+00:00"
-  },
-  {
-   "events": [
-    {
-     "action": "skipped this run; each is retried when its rest ends",
-     "area": "Careers sites",
-     "kind": "fixed",
-     "what": "21 sites are resting after repeated failures"
     },
     {
      "action": "the UK people-sponsored column is empty this run. Fix: save the FOI workbook in data/foi/ (see UK_COS_SOURCES in jobscraper/sponsor_registers.py)",
@@ -1727,6 +1688,45 @@
     "raw_results": 16781
    },
    "utc": "2026-11-24T17:40:55+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "not counted towards resting them; they are tried again next run",
+     "area": "Careers sites",
+     "kind": "problem",
+     "what": "51 sites failed in the same run (likely an outage or block at their hosting platform)"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 51,
+     "found": 4278
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 368
+    },
+    "LinkedIn": {
+     "errors": 0,
+     "found": 4371
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3594
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4241
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 278,
+    "new_jobs": 30,
+    "raw_results": 16852
+   },
+   "utc": "2026-11-24T23:26:59+00:00"
   }
  ],
  "sites": {
