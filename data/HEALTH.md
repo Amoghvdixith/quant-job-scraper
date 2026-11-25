@@ -2,13 +2,13 @@
 
 Written by the problem solver (`jobscraper/healer.py`) at the end of every run. Sync this file into the Performance Analizer Claude project to track it there.
 
-Last run: 2026-11-25T05:40:41+00:00
+Last run: 2026-11-25T11:41:24+00:00
 
 ## Status
 
 1 problem(s) need a look, 0 handled automatically.
 
-Jobs in email: 213, new: 8, raw results: 16078, emailed: True.
+Jobs in email: 232, new: 20, raw results: 15679, emailed: True.
 
 ## Needs a look
 
@@ -24,16 +24,16 @@ Jobs in email: 213, new: 8, raw results: 16078, emailed: True.
 
 ## Jobs found per source, last runs (oldest first)
 
-| Source | 11-22 23:36 | 11-23 05:39 | 11-23 11:40 | 11-23 17:39 | 11-23 23:31 | 11-24 05:37 | 11-24 11:39 | 11-24 17:40 | 11-24 23:26 | 11-25 05:40 |
+| Source | 11-23 05:39 | 11-23 11:40 | 11-23 17:39 | 11-23 23:31 | 11-24 05:37 | 11-24 11:39 | 11-24 17:40 | 11-24 23:26 | 11-25 05:40 | 11-25 11:41 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Careers sites | 4314 (50 err) | 4260 (51 err) | 4251 (51 err) | 4259 (51 err) | 4255 (51 err) | 4269 (50 err) | 4267 (50 err) | 4254 (51 err) | 4278 (51 err) | 4266 (51 err) |
-| Indeed | 23 | 18 | 128 | 312 | 108 | 58 | 15 | 23 | 368 | 89 |
-| LinkedIn | 5065 (2 err) | 5102 (2 err) | 3747 (10 err) | 5144 (1 err) | 4914 (2 err) | 4942 (2 err) | 4166 (4 err) | 4664 (1 err) | 4371 | 4067 (5 err) |
-| NHS Jobs | 3581 | 3439 | 3493 | 3590 | 3592 | 3448 | 3491 | 3592 | 3594 | 3414 |
-| eFinancialCareers | 4240 | 4271 | 4270 | 4275 | 4279 | 4287 | 4247 | 4248 | 4241 | 4242 |
+| Careers sites | 4260 (51 err) | 4251 (51 err) | 4259 (51 err) | 4255 (51 err) | 4269 (50 err) | 4267 (50 err) | 4254 (51 err) | 4278 (51 err) | 4266 (51 err) | 4265 (51 err) |
+| Indeed | 18 | 128 | 312 | 108 | 58 | 15 | 23 | 368 | 89 | 162 |
+| LinkedIn | 5102 (2 err) | 3747 (10 err) | 5144 (1 err) | 4914 (2 err) | 4942 (2 err) | 4166 (4 err) | 4664 (1 err) | 4371 | 4067 (5 err) | 3534 (5 err) |
+| NHS Jobs | 3439 | 3493 | 3590 | 3592 | 3448 | 3491 | 3592 | 3594 | 3414 | 3467 |
+| eFinancialCareers | 4271 | 4270 | 4275 | 4279 | 4287 | 4247 | 4248 | 4241 | 4242 | 4251 |
 
 ## Most frequent problems, last 40 runs
 
-- Careers sites: 36 run(s)
-- UK sponsorship figures: 6 run(s)
+- Careers sites: 37 run(s)
 - Indeed: 6 run(s)
+- UK sponsorship figures: 5 run(s)
