@@ -18,51 +18,6 @@
    "sources": {
     "Careers sites": {
      "errors": 0,
-     "found": 5820
-    },
-    "Indeed": {
-     "errors": 0,
-     "found": 45
-    },
-    "LinkedIn": {
-     "errors": 0,
-     "found": 5108
-    },
-    "NHS Jobs": {
-     "errors": 0,
-     "found": 3535
-    },
-    "eFinancialCareers": {
-     "errors": 0,
-     "found": 4250
-    }
-   },
-   "summary": {
-    "emailed": true,
-    "jobs_in_email": 457,
-    "new_jobs": 17,
-    "raw_results": 18758
-   },
-   "utc": "2026-11-15T05:34:15+00:00"
-  },
-  {
-   "events": [
-    {
-     "action": "skipped this run; each is retried when its rest ends",
-     "area": "Careers sites",
-     "kind": "fixed",
-     "what": "21 sites are resting after repeated failures"
-    },
-    {
-     "action": "the UK people-sponsored column is empty this run. Fix: save the FOI workbook in data/foi/ (see UK_COS_SOURCES in jobscraper/sponsor_registers.py)",
-     "area": "UK sponsorship figures",
-     "kind": "problem",
-     "what": "failed (RuntimeError: UK CoS figures from Home Office FOI 2025/12841 could not be read (403 Client Error: Forbidden for url: https://www.whatdotheyknow.com/request/r...)"
-    }
-   ],
-   "sources": {
-    "Careers sites": {
-     "errors": 0,
      "found": 5555
     },
     "Indeed": {
@@ -1727,6 +1682,45 @@
     "raw_results": 16852
    },
    "utc": "2026-11-24T23:26:59+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "not counted towards resting them; they are tried again next run",
+     "area": "Careers sites",
+     "kind": "problem",
+     "what": "51 sites failed in the same run (likely an outage or block at their hosting platform)"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 51,
+     "found": 4266
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 89
+    },
+    "LinkedIn": {
+     "errors": 5,
+     "found": 4067
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3414
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4242
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 213,
+    "new_jobs": 8,
+    "raw_results": 16078
+   },
+   "utc": "2026-11-25T05:40:41+00:00"
   }
  ],
  "sites": {
