@@ -9,51 +9,6 @@
      "what": "21 sites are resting after repeated failures"
     },
     {
-     "action": "the UK people-sponsored column is empty this run. Fix: save the FOI workbook in data/foi/ (see UK_COS_SOURCES in jobscraper/sponsor_registers.py)",
-     "area": "UK sponsorship figures",
-     "kind": "problem",
-     "what": "failed (RuntimeError: UK CoS figures from Home Office FOI 2025/12841 could not be read (403 Client Error: Forbidden for url: https://www.whatdotheyknow.com/request/r...)"
-    }
-   ],
-   "sources": {
-    "Careers sites": {
-     "errors": 0,
-     "found": 5559
-    },
-    "Indeed": {
-     "errors": 0,
-     "found": 21
-    },
-    "LinkedIn": {
-     "errors": 0,
-     "found": 4754
-    },
-    "NHS Jobs": {
-     "errors": 0,
-     "found": 3531
-    },
-    "eFinancialCareers": {
-     "errors": 0,
-     "found": 4259
-    }
-   },
-   "summary": {
-    "emailed": true,
-    "jobs_in_email": 480,
-    "new_jobs": 4,
-    "raw_results": 18124
-   },
-   "utc": "2026-11-15T17:32:16+00:00"
-  },
-  {
-   "events": [
-    {
-     "action": "skipped this run; each is retried when its rest ends",
-     "area": "Careers sites",
-     "kind": "fixed",
-     "what": "21 sites are resting after repeated failures"
-    },
-    {
      "action": "likely blocked or the site changed its page layout; the run carried on with the other sources. If it repeats next run, its scraper in jobscraper/sources needs a fix",
      "area": "Indeed",
      "kind": "problem",
@@ -1715,6 +1670,45 @@
     "raw_results": 15679
    },
    "utc": "2026-11-25T11:41:24+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "not counted towards resting them; they are tried again next run",
+     "area": "Careers sites",
+     "kind": "problem",
+     "what": "51 sites failed in the same run (likely an outage or block at their hosting platform)"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 51,
+     "found": 4286
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 25
+    },
+    "LinkedIn": {
+     "errors": 2,
+     "found": 4612
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3599
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4261
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 251,
+    "new_jobs": 19,
+    "raw_results": 16783
+   },
+   "utc": "2026-11-25T17:31:35+00:00"
   }
  ],
  "sites": {

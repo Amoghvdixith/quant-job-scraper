@@ -1444,6 +1444,44 @@
      "url": "https://quantchallenges.com/challenges/forgealpha-challenge-qc-2908"
     }
    },
+   "https://quantchallenges.com/challenges/g-research-canberra-quant-challenge-2026-qc-2983": {
+    "checked": "2026-11-25",
+    "hackathon": {
+     "category": "Alpha research",
+     "dates": "02 Dec 2026 \u00b7 17:30\u201321:30 AEDT",
+     "deadline": "2026-12-02",
+     "eligibility": "",
+     "eligibility_text": "Students and quantitative researchers able to attend in person at the University of Canberra; advance registration required",
+     "first_seen": "",
+     "format": "In person",
+     "organiser": "G-Research",
+     "prize": "$25K",
+     "quant_link": "",
+     "source": "Quant Challenges",
+     "status": "Registration open \u00b7 Accepting entries",
+     "title": "G-Research Canberra Quant Challenge 2026",
+     "url": "https://quantchallenges.com/challenges/g-research-canberra-quant-challenge-2026-qc-2983"
+    }
+   },
+   "https://quantchallenges.com/challenges/g-research-melbourne-quant-challenge-2026-qc-2982": {
+    "checked": "2026-11-25",
+    "hackathon": {
+     "category": "Alpha research",
+     "dates": "30 Nov 2026 \u00b7 17:30\u201321:30 AEDT",
+     "deadline": "2026-11-30",
+     "eligibility": "",
+     "eligibility_text": "Students and quantitative researchers able to attend in person at the University of Melbourne; advance registration required",
+     "first_seen": "",
+     "format": "In person",
+     "organiser": "G-Research",
+     "prize": "$25K",
+     "quant_link": "",
+     "source": "Quant Challenges",
+     "status": "Registration open \u00b7 Accepting entries",
+     "title": "G-Research Melbourne Quant Challenge 2026",
+     "url": "https://quantchallenges.com/challenges/g-research-melbourne-quant-challenge-2026-qc-2982"
+    }
+   },
    "https://quantchallenges.com/challenges/g-research-spring-into-quant-finance-qc-2957": {
     "checked": "2026-11-23",
     "hackathon": {
@@ -2641,6 +2679,25 @@
      "url": "https://quantchallenges.com/challenges/the-economist-the-world-ahead-2027-qc-2966"
     }
    },
+   "https://quantchallenges.com/challenges/the-leap-sponsored-by-cme-group-november-2026-qc-2981": {
+    "checked": "2026-11-25",
+    "hackathon": {
+     "category": "Trading systems",
+     "dates": "Register by 11 Dec 2026 \u00b7 08:00 UTC (trading until 18 Dec)",
+     "deadline": "2026-12-11",
+     "eligibility": "",
+     "eligibility_text": "Individuals 18+ (or majority age) on Free, Paid, or Former Paid TradingView plans outside sanctioned jurisdictions; trade at least 5 days to qualify",
+     "first_seen": "",
+     "format": "Online",
+     "organiser": "TradingView \u00d7 CME Group",
+     "prize": "",
+     "quant_link": "",
+     "source": "Quant Challenges",
+     "status": "Open \u00b7 Accepting entries",
+     "title": "The Leap sponsored by CME Group \u2014 November, 2026",
+     "url": "https://quantchallenges.com/challenges/the-leap-sponsored-by-cme-group-november-2026-qc-2981"
+    }
+   },
    "https://quantchallenges.com/challenges/the-winton-stock-market-challenge-qc-2810": {
     "checked": "2026-11-23",
     "hackathon": {
@@ -3034,6 +3091,8 @@
   "financialmodelingworldcup2026": "2026-11-11T23:07:39",
   "forgealphachallenge": "2026-11-11T23:07:39",
   "globalquanttradingchallenge": "2026-11-11T23:07:39",
+  "gresearchcanberraquantchallenge2026": "2026-11-25T16:45:45",
+  "gresearchmelbournequantchallenge2026": "2026-11-25T16:45:45",
   "hackout2027": "2026-11-11T23:07:39",
   "ibmqiskithackathonbangladesh": "2026-11-11T23:07:39",
   "janestreetprotocolemulatorasiccompetition": "2026-11-24T04:46:19",
@@ -3060,6 +3119,7 @@
   "syntaxsummit": "2026-11-11T23:07:39",
   "synthsyntheticpricedata": "2026-11-11T23:07:39",
   "taskforge": "2026-11-11T23:07:39",
+  "theleapsponsoredbycmegroupnovember2026": "2026-11-25T16:45:45",
   "uchicagotradingcompetition2027": "2026-11-24T16:45:57",
   "uscxibmqiskitfallfest2026": "2026-11-13T23:05:43",
   "virtualsarena": "2026-11-11T23:07:39",
