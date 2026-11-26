@@ -6,51 +6,6 @@
      "action": "not counted towards resting them; they are tried again next run",
      "area": "Careers sites",
      "kind": "problem",
-     "what": "29 sites failed in the same run (likely an outage or block at their hosting platform)"
-    },
-    {
-     "action": "skipped this run; each is retried when its rest ends",
-     "area": "Careers sites",
-     "kind": "fixed",
-     "what": "21 sites are resting after repeated failures"
-    }
-   ],
-   "sources": {
-    "Careers sites": {
-     "errors": 29,
-     "found": 4279
-    },
-    "Indeed": {
-     "errors": 0,
-     "found": 60
-    },
-    "LinkedIn": {
-     "errors": 0,
-     "found": 4775
-    },
-    "NHS Jobs": {
-     "errors": 0,
-     "found": 3557
-    },
-    "eFinancialCareers": {
-     "errors": 0,
-     "found": 4264
-    }
-   },
-   "summary": {
-    "emailed": true,
-    "jobs_in_email": 435,
-    "new_jobs": 16,
-    "raw_results": 16935
-   },
-   "utc": "2026-11-16T23:33:49+00:00"
-  },
-  {
-   "events": [
-    {
-     "action": "not counted towards resting them; they are tried again next run",
-     "area": "Careers sites",
-     "kind": "problem",
      "what": "50 sites failed in the same run (likely an outage or block at their hosting platform)"
     },
     {
@@ -1673,6 +1628,45 @@
     "raw_results": 17274
    },
    "utc": "2026-11-26T17:39:42+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "not counted towards resting them; they are tried again next run",
+     "area": "Careers sites",
+     "kind": "problem",
+     "what": "51 sites failed in the same run (likely an outage or block at their hosting platform)"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 51,
+     "found": 4300
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 152
+    },
+    "LinkedIn": {
+     "errors": 0,
+     "found": 5213
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3576
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4237
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 299,
+    "new_jobs": 11,
+    "raw_results": 17478
+   },
+   "utc": "2026-11-26T23:21:17+00:00"
   }
  ],
  "sites": {
