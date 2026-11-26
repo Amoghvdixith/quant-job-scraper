@@ -1,13 +1,13 @@
 {
  "boards": {
   "Arma Partners": {
-   "checked": "2026-11-12"
+   "checked": "2026-11-26"
   },
   "Aspect Capital": {
    "checked": "2026-11-26"
   },
   "Avantage Reply": {
-   "checked": "2026-11-12"
+   "checked": "2026-11-26"
   },
   "Beacon Platform": {
    "checked": "2026-11-12",
@@ -20,7 +20,7 @@
    "platform": "greenhouse"
   },
   "Centerview Partners": {
-   "checked": "2026-11-12"
+   "checked": "2026-11-26"
   },
   "Chicago Trading Company": {
    "checked": "2026-11-12",
@@ -36,7 +36,7 @@
    "platform": "greenhouse"
   },
   "DC Advisory": {
-   "checked": "2026-11-12"
+   "checked": "2026-11-26"
   },
   "Da Vinci Trading": {
    "checked": "2026-11-26"
@@ -53,7 +53,7 @@
    "checked": "2026-11-26"
   },
   "Evercore": {
-   "checked": "2026-11-12"
+   "checked": "2026-11-26"
   },
   "Finster AI": {
    "checked": "2026-11-12",
@@ -79,7 +79,7 @@
    "checked": "2026-11-26"
   },
   "Lazard": {
-   "checked": "2026-11-12"
+   "checked": "2026-11-26"
   },
   "Lightyear": {
    "checked": "2026-11-26"
@@ -94,7 +94,7 @@
    "checked": "2026-11-26"
   },
   "Moelis": {
-   "checked": "2026-11-12"
+   "checked": "2026-11-26"
   },
   "Numerai": {
    "checked": "2026-11-26"
@@ -103,7 +103,7 @@
    "checked": "2026-11-26"
   },
   "PJT Partners": {
-   "checked": "2026-11-12"
+   "checked": "2026-11-26"
   },
   "Pennylane": {
    "checked": "2026-11-12",
@@ -111,7 +111,7 @@
    "platform": "ashby"
   },
   "Perella Weinberg": {
-   "checked": "2026-11-12"
+   "checked": "2026-11-26"
   },
   "PrimaryBid": {
    "checked": "2026-11-26"
@@ -127,7 +127,7 @@
    "platform": "greenhouse"
   },
   "Quant Foundry": {
-   "checked": "2026-11-12"
+   "checked": "2026-11-26"
   },
   "Quantexa": {
    "checked": "2026-11-12",
@@ -138,7 +138,7 @@
    "checked": "2026-11-26"
   },
   "Rothschild & Co": {
-   "checked": "2026-11-12"
+   "checked": "2026-11-26"
   },
   "Ruffer": {
    "checked": "2026-11-26"
@@ -184,7 +184,7 @@
    "checked": "2026-11-26"
   },
   "Zanders": {
-   "checked": "2026-11-12"
+   "checked": "2026-11-26"
   }
  },
  "first_seen": {
@@ -239,6 +239,7 @@
   "design engineer|rogo|US": "2026-11-12T11:06:04",
   "desk developer|chicagotrading|US": "2026-11-12T17:06:56",
   "developer support specialist|brex|": "2026-11-12T11:06:04",
+  "devops engineer w m remote|pennylane|": "2026-11-26T10:46:30",
   "devops engineer|quantexa|UK": "2026-11-12T11:06:04",
   "devops engineer|quberesearchtechnologies|": "2026-11-12T11:06:04",
   "digital assets quantitative trader|quberesearchtechnologies|": "2026-11-12T11:06:04",

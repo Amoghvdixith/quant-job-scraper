@@ -24,57 +24,6 @@
    "sources": {
     "Careers sites": {
      "errors": 29,
-     "found": 4265
-    },
-    "Indeed": {
-     "errors": 0,
-     "found": 294
-    },
-    "LinkedIn": {
-     "errors": 3,
-     "found": 4469
-    },
-    "NHS Jobs": {
-     "errors": 0,
-     "found": 3395
-    },
-    "eFinancialCareers": {
-     "errors": 0,
-     "found": 4284
-    }
-   },
-   "summary": {
-    "emailed": true,
-    "jobs_in_email": 405,
-    "new_jobs": 18,
-    "raw_results": 16707
-   },
-   "utc": "2026-11-16T12:11:45+00:00"
-  },
-  {
-   "events": [
-    {
-     "action": "not counted towards resting them; they are tried again next run",
-     "area": "Careers sites",
-     "kind": "problem",
-     "what": "29 sites failed in the same run (likely an outage or block at their hosting platform)"
-    },
-    {
-     "action": "skipped this run; each is retried when its rest ends",
-     "area": "Careers sites",
-     "kind": "fixed",
-     "what": "21 sites are resting after repeated failures"
-    },
-    {
-     "action": "the UK people-sponsored column is empty this run. Fix: save the FOI workbook in data/foi/ (see UK_COS_SOURCES in jobscraper/sponsor_registers.py)",
-     "area": "UK sponsorship figures",
-     "kind": "problem",
-     "what": "failed (RuntimeError: UK CoS figures from Home Office FOI 2025/12841 could not be read (403 Client Error: Forbidden for url: https://www.whatdotheyknow.com/request/r...)"
-    }
-   ],
-   "sources": {
-    "Careers sites": {
-     "errors": 29,
      "found": 4260
     },
     "Indeed": {
@@ -1697,12 +1646,48 @@
     "raw_results": 17224
    },
    "utc": "2026-11-26T05:43:01+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "not counted towards resting them; they are tried again next run",
+     "area": "Careers sites",
+     "kind": "problem",
+     "what": "50 sites failed in the same run (likely an outage or block at their hosting platform)"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 50,
+     "found": 4309
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 385
+    },
+    "LinkedIn": {
+     "errors": 0,
+     "found": 5136
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3428
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4261
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 265,
+    "new_jobs": 28,
+    "raw_results": 17519
+   },
+   "utc": "2026-11-26T11:43:42+00:00"
   }
  ],
  "sites": {
-  "AIG": {
-   "last_error": "HTTPError: 429 Too Many Requests: Workday is refusing this run (https://aig.wd1.myworkdayjobs.com not tried)"
-  },
   "Accenture": {
    "failed_runs": 2,
    "last_error": "HTTPError: 429 Too Many Requests: Workday is refusing this run (https://accenture.wd103.myworkdayjobs.com not tried)"
