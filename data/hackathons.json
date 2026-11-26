@@ -855,6 +855,25 @@
      "url": "https://quantchallenges.com/challenges/capital-power-energy-trading-competition-2026-qc-2744"
     }
    },
+   "https://quantchallenges.com/challenges/catalyst-2027-the-algo-trading-challenge-qc-2988": {
+    "checked": "2026-11-26",
+    "hackathon": {
+     "category": "Trading systems",
+     "dates": "05 Dec 2026 \u00b7 00:01 IST (Round 1)",
+     "deadline": "2026-12-05",
+     "eligibility": "",
+     "eligibility_text": "Registered participants on Unstop; strict anti-AI/no-tab-switch proctored Round 1 rules",
+     "first_seen": "",
+     "format": "Online",
+     "organiser": "IIT Madras",
+     "prize": "",
+     "quant_link": "",
+     "source": "Quant Challenges",
+     "status": "Registration open \u00b7 Accepting entries",
+     "title": "Catalyst 2027 (The Algo Trading Challenge)",
+     "url": "https://quantchallenges.com/challenges/catalyst-2027-the-algo-trading-challenge-qc-2988"
+    }
+   },
    "https://quantchallenges.com/challenges/cfa-society-italy-fund-management-challenge-2026-qc-2896": {
     "checked": "2026-11-26",
     "hackathon": {
@@ -1862,6 +1881,25 @@
      "url": "https://quantchallenges.com/challenges/league-of-algo-challenge-qc-2832"
     }
    },
+   "https://quantchallenges.com/challenges/mantic-crucible-series-2-qc-2985": {
+    "checked": "2026-11-26",
+    "hackathon": {
+     "category": "Market forecasting",
+     "dates": "Runs 30 Sep 2026 \u2013 20 Jan 2027 (by acceptance)",
+     "deadline": "2027-01-20",
+     "eligibility": "",
+     "eligibility_text": "Accepted AI bot developers and question-writers competing via Mantic's Crucible platform and API",
+     "first_seen": "",
+     "format": "Online",
+     "organiser": "Mantic",
+     "prize": "$7.5K",
+     "quant_link": "",
+     "source": "Quant Challenges",
+     "status": "Live (by application) \u00b7 Entry availability needs confirmation",
+     "title": "Mantic Crucible Series 2",
+     "url": "https://quantchallenges.com/challenges/mantic-crucible-series-2-qc-2985"
+    }
+   },
    "https://quantchallenges.com/challenges/market-royale-2026-qc-2769": {
     "checked": "2026-11-24",
     "hackathon": {
@@ -2641,6 +2679,25 @@
      "url": "https://quantchallenges.com/challenges/texas-energy-trading-case-competition-2026-qc-2873"
     }
    },
+   "https://quantchallenges.com/challenges/the-algo-trading-innovation-challenge-qc-2987": {
+    "checked": "2026-11-26",
+    "hackathon": {
+     "category": "Trading systems",
+     "dates": "29 Nov 2026 \u00b7 00:00 IST (Round 1)",
+     "deadline": "2026-11-29",
+     "eligibility": "",
+     "eligibility_text": "Students with a valid institutional ID; cross-institutional teams up to 4 members",
+     "first_seen": "",
+     "format": "Hybrid",
+     "organiser": "Techfest, IIT Bombay \u00d7 Delta Exchange",
+     "prize": "",
+     "quant_link": "",
+     "source": "Quant Challenges",
+     "status": "Submissions open \u00b7 Accepting entries",
+     "title": "The Algo Trading Innovation Challenge",
+     "url": "https://quantchallenges.com/challenges/the-algo-trading-innovation-challenge-qc-2987"
+    }
+   },
    "https://quantchallenges.com/challenges/the-big-data-combine-engineered-by-battlefin-qc-2812": {
     "checked": "2026-11-26",
     "hackathon": {
@@ -2926,6 +2983,25 @@
      "url": "https://quantchallenges.com/challenges/university-trading-tournament-qc-2932"
     }
    },
+   "https://quantchallenges.com/challenges/univion-chronos-de-novo-quant-finance-track-qc-2989": {
+    "checked": "2026-11-26",
+    "hackathon": {
+     "category": "Trading systems",
+     "dates": "26 Dec 2026 \u00b7 00:00 IST (Finale 15\u201316 Jan 2027)",
+     "deadline": "2027-01-16",
+     "eligibility": "",
+     "eligibility_text": "Undergraduate and postgraduate students from recognized institutions across India with valid institutional ID",
+     "first_seen": "",
+     "format": "Hybrid",
+     "organiser": "SIEEDS Foundation (IIT Delhi)",
+     "prize": "",
+     "quant_link": "",
+     "source": "Quant Challenges",
+     "status": "Submissions open \u00b7 Accepting entries",
+     "title": "UNIVION: CHRONOS DE NOVO \u2014 Quant Finance Track",
+     "url": "https://quantchallenges.com/challenges/univion-chronos-de-novo-quant-finance-track-qc-2989"
+    }
+   },
    "https://quantchallenges.com/challenges/virtuals-arena-qc-2847": {
     "checked": "2026-11-23",
     "hackathon": {
@@ -3073,6 +3149,7 @@
   "algoconnectquantathon2026": "2026-11-23T04:48:29",
   "algogeneglobalalgochallenge": "2026-11-11T23:07:39",
   "alphanovabiweeklyseason1": "2026-11-11T23:07:39",
+  "catalyst2027thealgotradingchallenge": "2026-11-26T16:45:51",
   "checkpoint1gamesforgood": "2026-11-11T23:07:39",
   "checkpointjourneyshanoi": "2026-11-11T23:07:39",
   "citadeleqrphdfellowship": "2026-11-23T16:45:48",
