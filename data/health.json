@@ -6,51 +6,6 @@
      "action": "not counted towards resting them; they are tried again next run",
      "area": "Careers sites",
      "kind": "problem",
-     "what": "50 sites failed in the same run (likely an outage or block at their hosting platform)"
-    },
-    {
-     "action": "likely blocked or the site changed its page layout; the run carried on with the other sources. If it repeats next run, its scraper in jobscraper/sources needs a fix",
-     "area": "Indeed",
-     "kind": "problem",
-     "what": "found 10 jobs; it usually finds about 83"
-    }
-   ],
-   "sources": {
-    "Careers sites": {
-     "errors": 50,
-     "found": 4254
-    },
-    "Indeed": {
-     "errors": 0,
-     "found": 10
-    },
-    "LinkedIn": {
-     "errors": 1,
-     "found": 4184
-    },
-    "NHS Jobs": {
-     "errors": 0,
-     "found": 3314
-    },
-    "eFinancialCareers": {
-     "errors": 0,
-     "found": 4251
-    }
-   },
-   "summary": {
-    "emailed": true,
-    "jobs_in_email": 315,
-    "new_jobs": 5,
-    "raw_results": 16013
-   },
-   "utc": "2026-11-17T05:48:57+00:00"
-  },
-  {
-   "events": [
-    {
-     "action": "not counted towards resting them; they are tried again next run",
-     "area": "Careers sites",
-     "kind": "problem",
      "what": "55 sites failed in the same run (likely an outage or block at their hosting platform)"
     }
    ],
@@ -1667,6 +1622,45 @@
     "raw_results": 17478
    },
    "utc": "2026-11-26T23:21:17+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "not counted towards resting them; they are tried again next run",
+     "area": "Careers sites",
+     "kind": "problem",
+     "what": "51 sites failed in the same run (likely an outage or block at their hosting platform)"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 51,
+     "found": 4281
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 29
+    },
+    "LinkedIn": {
+     "errors": 1,
+     "found": 5112
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3571
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4241
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 268,
+    "new_jobs": 17,
+    "raw_results": 17234
+   },
+   "utc": "2026-11-27T05:34:36+00:00"
   }
  ],
  "sites": {
