@@ -2,17 +2,17 @@
 
 Written by the problem solver (`jobscraper/healer.py`) at the end of every run. Sync this file into the Performance Analizer Claude project to track it there.
 
-Last run: 2026-11-27T05:34:36+00:00
+Last run: 2026-11-27T11:40:09+00:00
 
 ## Status
 
 1 problem(s) need a look, 0 handled automatically.
 
-Jobs in email: 268, new: 17, raw results: 17234, emailed: True.
+Jobs in email: 283, new: 15, raw results: 17190, emailed: True.
 
 ## Needs a look
 
-- **Careers sites**: 51 sites failed in the same run (likely an outage or block at their hosting platform). Not counted towards resting them; they are tried again next run.
+- **Careers sites**: 50 sites failed in the same run (likely an outage or block at their hosting platform). Not counted towards resting them; they are tried again next run.
 
 ## Fixed automatically
 
@@ -24,13 +24,13 @@ Jobs in email: 268, new: 17, raw results: 17234, emailed: True.
 
 ## Jobs found per source, last runs (oldest first)
 
-| Source | 11-24 23:26 | 11-25 05:40 | 11-25 11:41 | 11-25 17:31 | 11-25 23:25 | 11-26 05:43 | 11-26 11:43 | 11-26 17:39 | 11-26 23:21 | 11-27 05:34 |
+| Source | 11-25 05:40 | 11-25 11:41 | 11-25 17:31 | 11-25 23:25 | 11-26 05:43 | 11-26 11:43 | 11-26 17:39 | 11-26 23:21 | 11-27 05:34 | 11-27 11:40 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Careers sites | 4278 (51 err) | 4266 (51 err) | 4265 (51 err) | 4286 (51 err) | 4305 (51 err) | 4284 (51 err) | 4309 (50 err) | 4287 (51 err) | 4300 (51 err) | 4281 (51 err) |
-| Indeed | 368 | 89 | 162 | 25 | 8 | 49 | 385 | 65 | 152 | 29 |
-| LinkedIn | 4371 | 4067 (5 err) | 3534 (5 err) | 4612 (2 err) | 5143 (1 err) | 5229 (1 err) | 5136 | 5112 (3 err) | 5213 | 5112 (1 err) |
-| NHS Jobs | 3594 | 3414 | 3467 | 3599 | 3602 | 3383 | 3428 | 3571 | 3576 | 3571 |
-| eFinancialCareers | 4241 | 4242 | 4251 | 4261 | 4264 | 4279 | 4261 | 4239 | 4237 | 4241 |
+| Careers sites | 4266 (51 err) | 4265 (51 err) | 4286 (51 err) | 4305 (51 err) | 4284 (51 err) | 4309 (50 err) | 4287 (51 err) | 4300 (51 err) | 4281 (51 err) | 4277 (50 err) |
+| Indeed | 89 | 162 | 25 | 8 | 49 | 385 | 65 | 152 | 29 | 20 |
+| LinkedIn | 4067 (5 err) | 3534 (5 err) | 4612 (2 err) | 5143 (1 err) | 5229 (1 err) | 5136 | 5112 (3 err) | 5213 | 5112 (1 err) | 5075 (3 err) |
+| NHS Jobs | 3414 | 3467 | 3599 | 3602 | 3383 | 3428 | 3571 | 3576 | 3571 | 3592 |
+| eFinancialCareers | 4242 | 4251 | 4261 | 4264 | 4279 | 4261 | 4239 | 4237 | 4241 | 4226 |
 
 ## Most frequent problems, last 40 runs
 

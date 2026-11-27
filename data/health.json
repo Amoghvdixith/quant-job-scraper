@@ -6,45 +6,6 @@
      "action": "not counted towards resting them; they are tried again next run",
      "area": "Careers sites",
      "kind": "problem",
-     "what": "55 sites failed in the same run (likely an outage or block at their hosting platform)"
-    }
-   ],
-   "sources": {
-    "Careers sites": {
-     "errors": 55,
-     "found": 4128
-    },
-    "Indeed": {
-     "errors": 0,
-     "found": 20
-    },
-    "LinkedIn": {
-     "errors": 0,
-     "found": 4392
-    },
-    "NHS Jobs": {
-     "errors": 0,
-     "found": 3383
-    },
-    "eFinancialCareers": {
-     "errors": 0,
-     "found": 4253
-    }
-   },
-   "summary": {
-    "emailed": true,
-    "jobs_in_email": 326,
-    "new_jobs": 11,
-    "raw_results": 16176
-   },
-   "utc": "2026-11-17T11:49:10+00:00"
-  },
-  {
-   "events": [
-    {
-     "action": "not counted towards resting them; they are tried again next run",
-     "area": "Careers sites",
-     "kind": "problem",
      "what": "50 sites failed in the same run (likely an outage or block at their hosting platform)"
     }
    ],
@@ -1661,12 +1622,48 @@
     "raw_results": 17234
    },
    "utc": "2026-11-27T05:34:36+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "not counted towards resting them; they are tried again next run",
+     "area": "Careers sites",
+     "kind": "problem",
+     "what": "50 sites failed in the same run (likely an outage or block at their hosting platform)"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 50,
+     "found": 4277
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 20
+    },
+    "LinkedIn": {
+     "errors": 3,
+     "found": 5075
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3592
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4226
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 283,
+    "new_jobs": 15,
+    "raw_results": 17190
+   },
+   "utc": "2026-11-27T11:40:09+00:00"
   }
  ],
  "sites": {
-  "AIG": {
-   "last_error": "HTTPError: 429 Too Many Requests: Workday is refusing this run (https://aig.wd1.myworkdayjobs.com not tried)"
-  },
   "Accenture": {
    "failed_runs": 2,
    "last_error": "HTTPError: 429 Too Many Requests: Workday is refusing this run (https://accenture.wd103.myworkdayjobs.com not tried)"
