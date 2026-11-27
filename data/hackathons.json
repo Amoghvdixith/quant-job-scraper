@@ -1102,6 +1102,44 @@
      "url": "https://quantchallenges.com/challenges/cornell-trading-competition-2026-qc-2614"
     }
    },
+   "https://quantchallenges.com/challenges/crunchdao-falcon-the-collective-pricing-engine-qc-2991": {
+    "checked": "2026-11-27",
+    "hackathon": {
+     "category": "Financial ML",
+     "dates": "3-month live season (started 17 Nov 2026) \u00b7 weekly payouts",
+     "deadline": "2026-11-17",
+     "eligibility": "",
+     "eligibility_text": "Open globally to quantitative modelers and ML researchers",
+     "first_seen": "",
+     "format": "Online",
+     "organiser": "CrunchDAO",
+     "prize": "",
+     "quant_link": "",
+     "source": "Quant Challenges",
+     "status": "Live (Season 1) \u00b7 Accepting entries",
+     "title": "CrunchDAO Falcon: The Collective Pricing Engine",
+     "url": "https://quantchallenges.com/challenges/crunchdao-falcon-the-collective-pricing-engine-qc-2991"
+    }
+   },
+   "https://quantchallenges.com/challenges/crunchdao-numinous-predictive-agents-for-real-world-outcome-qc-2990": {
+    "checked": "2026-11-27",
+    "hackathon": {
+     "category": "Market forecasting",
+     "dates": "Weekly Mondays 12:00 GMT \u00b7 ongoing live seasons",
+     "deadline": null,
+     "eligibility": "",
+     "eligibility_text": "Open globally to ML engineers, forecasters, and researchers submitting Python TrackerBase agents",
+     "first_seen": "",
+     "format": "Online",
+     "organiser": "CrunchDAO \u00d7 Numinous",
+     "prize": "$7.5K",
+     "quant_link": "",
+     "source": "Quant Challenges",
+     "status": "Live (Phase 2) \u00b7 Accepting entries",
+     "title": "CrunchDAO Numinous: Predictive Agents For Real World Outcome",
+     "url": "https://quantchallenges.com/challenges/crunchdao-numinous-predictive-agents-for-real-world-outcome-qc-2990"
+    }
+   },
    "https://quantchallenges.com/challenges/cuats-challenge-coding-competition-2026-qc-2790": {
     "checked": "2026-11-26",
     "hackathon": {
@@ -2012,6 +2050,25 @@
      "status": "Entries closed \u00b7 Entries closed \u00b7 check next cycle",
      "title": "MIG Quant Conference 2026",
      "url": "https://quantchallenges.com/challenges/mig-quant-conference-2026-qc-2792"
+    }
+   },
+   "https://quantchallenges.com/challenges/mit-pokerbots-2027-qc-2992": {
+    "checked": "2026-11-27",
+    "hackathon": {
+     "category": "Trading systems",
+     "dates": "Pre-registration open \u00b7 IAP challenge unveils early Jan 2027",
+     "deadline": null,
+     "eligibility": "",
+     "eligibility_text": "Teams of 1\u20134 students eligible to register or cross-register for MIT IAP classes (at least one teammate with MIT certificate access)",
+     "first_seen": "",
+     "format": "Hybrid",
+     "organiser": "MIT Pokerbots (Course 6.9630)",
+     "prize": "$25K",
+     "quant_link": "",
+     "source": "Quant Challenges",
+     "status": "Pre-registration open \u00b7 Accepting entries",
+     "title": "MIT Pokerbots 2027",
+     "url": "https://quantchallenges.com/challenges/mit-pokerbots-2027-qc-2992"
     }
    },
    "https://quantchallenges.com/challenges/mitsui-and-co-commodity-prediction-challenge-qc-2739": {
