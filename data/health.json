@@ -3,45 +3,6 @@
   {
    "events": [
     {
-     "action": "not counted towards resting them; they are tried again next run",
-     "area": "Careers sites",
-     "kind": "problem",
-     "what": "50 sites failed in the same run (likely an outage or block at their hosting platform)"
-    }
-   ],
-   "sources": {
-    "Careers sites": {
-     "errors": 50,
-     "found": 4295
-    },
-    "Indeed": {
-     "errors": 0,
-     "found": 66
-    },
-    "LinkedIn": {
-     "errors": 0,
-     "found": 5194
-    },
-    "NHS Jobs": {
-     "errors": 0,
-     "found": 3542
-    },
-    "eFinancialCareers": {
-     "errors": 0,
-     "found": 4257
-    }
-   },
-   "summary": {
-    "emailed": true,
-    "jobs_in_email": 410,
-    "new_jobs": 30,
-    "raw_results": 17354
-   },
-   "utc": "2026-11-17T23:17:18+00:00"
-  },
-  {
-   "events": [
-    {
      "action": "worked on a second try",
      "area": "Careers sites | Houlihan Lokey",
      "kind": "fixed",
@@ -1661,9 +1622,51 @@
     "raw_results": 16494
    },
    "utc": "2026-11-27T17:41:26+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "not counted towards resting them; they are tried again next run",
+     "area": "Careers sites",
+     "kind": "problem",
+     "what": "51 sites failed in the same run (likely an outage or block at their hosting platform)"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 51,
+     "found": 4262
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 441
+    },
+    "LinkedIn": {
+     "errors": 10,
+     "found": 2866
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3658
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4215
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 306,
+    "new_jobs": 11,
+    "raw_results": 15442
+   },
+   "utc": "2026-11-27T23:42:04+00:00"
   }
  ],
  "sites": {
+  "AIG": {
+   "last_error": "HTTPError: 429 Too Many Requests: Workday is refusing this run (https://aig.wd1.myworkdayjobs.com not tried)"
+  },
   "Accenture": {
    "failed_runs": 2,
    "last_error": "HTTPError: 429 Too Many Requests: Workday is refusing this run (https://accenture.wd103.myworkdayjobs.com not tried)"
