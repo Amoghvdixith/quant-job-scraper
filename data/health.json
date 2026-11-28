@@ -6,45 +6,6 @@
      "action": "not counted towards resting them; they are tried again next run",
      "area": "Careers sites",
      "kind": "problem",
-     "what": "50 sites failed in the same run (likely an outage or block at their hosting platform)"
-    }
-   ],
-   "sources": {
-    "Careers sites": {
-     "errors": 50,
-     "found": 4288
-    },
-    "Indeed": {
-     "errors": 0,
-     "found": 22
-    },
-    "LinkedIn": {
-     "errors": 1,
-     "found": 4973
-    },
-    "NHS Jobs": {
-     "errors": 0,
-     "found": 3342
-    },
-    "eFinancialCareers": {
-     "errors": 0,
-     "found": 4226
-    }
-   },
-   "summary": {
-    "emailed": true,
-    "jobs_in_email": 330,
-    "new_jobs": 12,
-    "raw_results": 16851
-   },
-   "utc": "2026-11-18T11:32:15+00:00"
-  },
-  {
-   "events": [
-    {
-     "action": "not counted towards resting them; they are tried again next run",
-     "area": "Careers sites",
-     "kind": "problem",
      "what": "51 sites failed in the same run (likely an outage or block at their hosting platform)"
     },
     {
@@ -1589,6 +1550,45 @@
     "raw_results": 16706
    },
    "utc": "2026-11-28T05:43:38+00:00"
+  },
+  {
+   "events": [
+    {
+     "action": "not counted towards resting them; they are tried again next run",
+     "area": "Careers sites",
+     "kind": "problem",
+     "what": "51 sites failed in the same run (likely an outage or block at their hosting platform)"
+    }
+   ],
+   "sources": {
+    "Careers sites": {
+     "errors": 51,
+     "found": 4254
+    },
+    "Indeed": {
+     "errors": 0,
+     "found": 140
+    },
+    "LinkedIn": {
+     "errors": 9,
+     "found": 2516
+    },
+    "NHS Jobs": {
+     "errors": 0,
+     "found": 3655
+    },
+    "eFinancialCareers": {
+     "errors": 0,
+     "found": 4209
+    }
+   },
+   "summary": {
+    "emailed": true,
+    "jobs_in_email": 320,
+    "new_jobs": 1,
+    "raw_results": 14774
+   },
+   "utc": "2026-11-28T11:38:12+00:00"
   }
  ],
  "sites": {
